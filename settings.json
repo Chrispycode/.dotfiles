@@ -1,0 +1,288 @@
+{
+  "activitusbar.views": [
+    {
+      "name": "explorer",
+      "codicon": "explorer-view-icon",
+      "tooltip": "Explorer"
+    },
+    // {
+    //     "name": "debug",
+    //     "codicon": "run-view-icon",
+    //     "tooltip": "Debug"
+    // },
+    {
+      "name": "extensions",
+      "codicon": "extensions-view-icon",
+      "tooltip": "Extensions"
+    },
+    {
+      "name": "remoteTargets",
+      "codicon": "remote-explorer",
+      "tooltip": "Remote"
+    },
+    {
+      "name": "dockerContainers",
+      "codicon": "server",
+      "tooltip": "Docker"
+    },
+    {
+      "name": "terminal",
+      "codicon": "terminal",
+      "tooltip": "Terminal"
+    },
+    {
+      "name": "search",
+      "codicon": "search-view-icon",
+      "tooltip": "Search"
+    },
+    {
+      "name": "scm",
+      "codicon": "source-control-view-icon",
+      "tooltip": "SCM"
+    },
+    // {
+    //     "name": "command.workbench.panel.chat.view.copilot.focus",
+    //     "codicon": "copilot",
+    //     "tooltip": "Copilot Chat"
+    // },
+    {
+      "name": "command.workbench.action.toggleAuxiliaryBar",
+      "codicon": "list-flat"
+    }
+  ],
+  "activitusbar.showSourceControlCounter": true,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.emptySelectionClipboard": true,
+  "editor.fontSize": 11,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "editor.wordWrap": "on",
+  "editor.formatOnPaste": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "terminal.external.osxExec": "iTerm.app",
+  "editor.suggestSelection": "first",
+  "emmet.includeLanguages": {
+    "erb": "html",
+    "ruby": "html"
+  },
+  "git.autofetch": true,
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "files.autoSave": "afterDelay",
+  "files.associations": {},
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "gitlens.menus": {
+    "editor": {
+      "blame": false,
+      "clipboard": true,
+      "compare": true,
+      "history": false,
+      "remote": false
+    },
+    "editorGroup": false,
+    "editorTab": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "explorer": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": true
+    },
+    "scm": {
+      "authors": true
+    },
+    "scmGroupInline": {
+      "stash": true
+    },
+    "scmGroup": {
+      "compare": true,
+      "openClose": true,
+      "stash": true
+    },
+    "scmItem": {
+      "clipboard": true,
+      "compare": true,
+      "history": true,
+      "remote": false,
+      "stash": true
+    }
+  },
+  "workbench.preferredDarkColorTheme": "Abyss",
+  "terminal.integrated.gpuAcceleration": "off",
+  "search.actionsPosition": "auto",
+  "search.sortOrder": "fileNames",
+  "search.useIgnoreFiles": false,
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorCustomizations": {
+    "editor.background": "#000000",
+    "activityBar.background": "#000000",
+    "sideBar.background": "#000000",
+    "statusBar.background": "#000000",
+    "panel.background": "#000000",
+    "editorGroupHeader.tabsBackground": "#000000",
+    "tab.inactiveBackground": "#000000",
+    "tab.activeBackground": "#000000",
+    "terminal.background": "#000000",
+    "editorWidget.background": "#000000",
+    "peekViewEditor.background": "#000000",
+    "peekViewResult.background": "#000000",
+    "editorCursor.foreground": "#b30000",
+    "editor.selectionBackground": "#b30000",
+    "activityBarBadge.background": "#b30000",
+    "list.activeSelectionForeground": "#b30000",
+    "list.inactiveSelectionForeground": "#b30000",
+    "list.highlightForeground": "#b30000",
+    "scrollbarSlider.activeBackground": "#b30000",
+    "editorSuggestWidget.highlightForeground": "#b30000",
+    "textLink.foreground": "#b30000",
+    "progressBar.background": "#b30000",
+    "pickerGroup.foreground": "#b30000",
+    "tab.activeBorder": "#b30000",
+    "notificationLink.foreground": "#b30000",
+    "editorWidget.resizeBorder": "#b30000",
+    "editorWidget.border": "#b30000",
+    "settings.modifiedItemIndicator": "#b30000",
+    "settings.headerForeground": "#b30000",
+    "panelTitle.activeBorder": "#b30000",
+    "breadcrumb.activeSelectionForeground": "#b30000",
+    "menu.selectionForeground": "#b30000",
+    "menubar.selectionForeground": "#b30000",
+    "editorIndentGuide.background": "#2e0000",
+    "editorIndentGuide.activeBackground": "#990000"
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "editor.fontFamily": "'MesloLGS NF', 'monospace', monospace",
+  "gitlens.views.workspaces.pullRequests.enabled": false,
+  "editor.minimap.enabled": false,
+  "[ruby]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo",
+    "editor.formatOnType": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.rulers": [
+      120
+    ],
+    "editor.semanticHighlighting.enabled": true,
+    "editor.guides.bracketPairs": "active"
+  },
+  "editor.guides.bracketPairs": true,
+  "git.confirmSync": false,
+  "solargraph.checkGemVersion": false,
+  "workbench.tree.renderIndentGuides": "always",
+  "search.quickOpen.includeSymbols": true,
+  "search.smartCase": true,
+  "editor.indentSize": "tabSize",
+  "editor.detectIndentation": false,
+  "workbench.activityBar.location": "hidden",
+  "html.completion.attributeDefaultValue": "empty",
+  "workbench.settings.applyToAllProfiles": [
+    "html.completion.attributeDefaultValue"
+  ],
+  "git.repositoryScanIgnoredFolders": [
+    "node_modules",
+    "plugins_*",
+    "modules_*"
+  ],
+  "files.autoSaveDelay": 5000,
+  "continue.telemetryEnabled": false,
+  "continue.enableTabAutocomplete": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "telemetry.telemetryLevel": "off",
+  "window.menuBarVisibility": "toggle",
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
+  },
+  "gitlens.ai.experimental.generateCommitMessage.enabled": false,
+  "gitlens.focus.allowMultiple": false,
+  "scm.alwaysShowRepositories": true,
+  "search.exclude": {
+    "**/.git": true,
+    "**/.github": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true
+  },
+  "editor.tabCompletion": "on",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "gitlens.launchpad.indicator.enabled": false,
+  "editor.colorDecoratorsLimit": 2000,
+  "highlight.regexes": {
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#ffcc00",
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#ffcc00",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#cc0000",
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#cc0000",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#00ccff",
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#00ccff",
+          "color": "#1f1f1f"
+        }
+      ]
+    },
+    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
+      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
+      "decorations": [
+        {
+          "overviewRulerColor": "#cc00cc",
+          "backgroundColor": "#cc00cc",
+          "color": "#1f1f1f",
+          "fontWeight": "bold"
+        },
+        {
+          "backgroundColor": "#cc00cc",
+          "color": "#1f1f1f"
+        }
+      ]
+    }
+  }
+}

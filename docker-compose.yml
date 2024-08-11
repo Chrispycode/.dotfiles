@@ -1,0 +1,172 @@
+services:
+  redmine:
+    container_name: redmine
+    image: redmine
+    # restart: on-failure
+    depends_on:
+      - pg
+    ports:
+      - 8080:3000
+    environment:
+      REDMINE_DB_POSTGRES: pg
+      # REDMINE_DB_MYSQL: mysql
+      REDMINE_DB_PASSWORD: root
+      REDMINE_SECRET_KEY_BASE: supersecretkey
+    volumes:
+      - "./code/redmine:/usr/src/redmine/files"
+  adguard:
+    container_name: adguard
+    image: adguard/adguardhome
+    # restart: on-failure
+    volumes:
+      - "./Documents/adguard/work:/opt/adguardhome/work"
+      - "./Documents/adguard/conf:/opt/adguardhome/conf"
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      # - "67:67/udp"
+      # - "68:68/udp"
+      - "80:80/tcp"
+      - "443:443/tcp"
+      - "443:443/udp"
+      - "3000:3000/tcp"
+      - "853:853/tcp"
+      # - "784:784/udp"
+      - "853:853/udp"
+      - "8853:8853/udp"
+      - "5443:5443/tcp"
+      - "5443:5443/udp"
+
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    dns:
+      - 127.0.0.1
+      - 1.1.1.1
+    cap_add:
+      - NET_ADMIN
+    # restart: on-failure
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "67:67/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: 'Germany/Berlin'
+      ServerIP: "${ip:-0.0.0.0}"
+      # WEBPASSWORD: "${WEB_PASSWORD}"
+      QUERY_LOGGING: "false"
+      PIHOLE_DNS_: 208.67.222.222;208.67.220.220
+    volumes:
+      - './etc-pihole:/etc/pihole'
+      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+
+  mysql:
+    image: mysql:5.7.17
+    container_name: mysql
+    # restart: on-failure
+    command: mysqld --sql_mode=""
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mariadb:
+    image: mariadb:latest
+    command: --max_allowed_packet=100m --wait_timeout=600
+    volumes:
+      - ./code/mariadb:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+    logging:
+      options:
+        max-size: "50m"
+        max-file: "7"
+    container_name: mariadb
+
+  pg:
+    container_name: pg
+    image: postgres
+    # restart: on-failure
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: root
+
+  redis:
+    image: redis
+    container_name: redis
+    command: redis-server
+    ports:
+      - "6379:6379"
+
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    container_name: es
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  rabbit:
+    image: rabbitmq:management
+    container_name: rabbit
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - rabbit_data:/var/lib/rabbitmq
+      - rabbit_logs:/var/log/rabbitmq
+
+  chrome:
+    container_name: chrome
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+    volumes:
+      - /dev/shm:/dev/shm
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
+
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/var/lib/mongodb/data
+
+networks:
+  default:
+    name: shared
+
+volumes:
+  mysql_data:
+    name: mysql_data
+  pg_data:
+    name: pg_data
+  es_data:
+    name: es_data
+  rabbit_data:
+    name: rabbit_data
+  rabbit_logs:
+    name: rabbit_logs
+  mongodb_data:
+    name: mongodb_data
+  mariadb:
+
