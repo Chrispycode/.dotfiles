@@ -247,7 +247,7 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 
 # tmux_conf_theme_status_left=" ❐ #S | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} "
 tmux_conf_theme_status_left=" ❐ #S"
-tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} "
+tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , RAM: #{ram_percentage} CPU: #{cpu_percentage} #{cpu_temp} | %R %d %b | #{username}#{root} "
 
 # status left style
 tmux_conf_theme_status_left_fg="grey,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
@@ -255,8 +255,8 @@ tmux_conf_theme_status_left_bg="$tmux_conf_theme_colour_9,$tmux_conf_theme_colou
 tmux_conf_theme_status_left_attr="bold,none,none"
 
 # status right style
-tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
-tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_12,$tmux_conf_theme_colour_17"
+tmux_conf_theme_status_right_fg="$tmux_conf_theme_colour_4,$tmux_conf_theme_colour_13,$tmux_conf_theme_colour_14"
+tmux_conf_theme_status_right_bg="$tmux_conf_theme_colour_15,$tmux_conf_theme_colour_5,$tmux_conf_theme_colour_4"
 tmux_conf_theme_status_right_attr="none,none,bold"
 
 # pairing indicator
@@ -358,7 +358,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 
 # start with mouse mode enabled
 set -g mouse on
-set-option repeat-time 0
+#lset-option repeat-time 1
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
@@ -377,13 +377,19 @@ set-option repeat-time 0
 # move status line to top
 #set -g status-position top
 
-bind C-f run-shell "tmux neww $HOME/.dotfiles/tmux-sessionizer.sh" #!important
+bind C-f run-shell "tmux neww tmux-sessionizer" #!important
 
 # vim-like pane split
 bind C-l last-window #!important
 bind C-v split-window -h #!important
 bind C-s split-window -v #!important
+bind C-d split-window -vf -l10
 bind L switch-client -l
+
+bind h select-pane -L   
+bind j select-pane -D   
+bind k select-pane -U   
+bind l select-pane -R   
 
 # -- tpm -----------------------------------------------------------------------
 
@@ -397,7 +403,7 @@ bind L switch-client -l
 # by default, launching tmux will update tpm and all plugins
 #   - true (default)
 #   - false
-tmux_conf_update_plugins_on_launch=true
+tmux_conf_update_plugins_on_launch=false
 
 # by default, reloading the configuration will update tpm and all plugins
 #   - true (default)
@@ -421,7 +427,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 # to enable a plugin, use the 'set -g @plugin' syntax:
 # visit https://github.com/tmux-plugins for available plugins
 #set -g @plugin 'tmux-plugins/tmux-copycat'
-#set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'tmux-plugins/tmux-cpu'
 #set -g @plugin 'tmux-plugins/tmux-resurrect'
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'

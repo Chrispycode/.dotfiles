@@ -1,0 +1,46 @@
+#!/usr/bin/env bash
+
+if [[ $# -ne 1 ]]; then
+  >&2 echo "No preview for $word"
+  exit 1
+fi
+
+
+file=${1/#\~\//$HOME/}
+type=$(file --dereference --mime -- "$file")
+
+if [[ ! $type =~ image/ ]]; then
+	if [[ $type =~ =binary ]]; then
+		eza --git -hla --color=always --icons "$1"
+    # ls -1lah --color "$1"
+    exit
+  fi
+
+  # Sometimes bat is installed as batcat.
+  if command -v batcat > /dev/null; then
+    batname="batcat"
+  elif command -v bat > /dev/null; then
+    batname="bat"
+  else
+    cat "$1"
+    exit
+  fi
+
+  ${batname} --style="${BAT_STYLE:-numbers}" --color=always --pager=never -- "$file"
+  exit
+fi
+
+dim=${FZF_PREVIEW_COLUMNS}x${FZF_PREVIEW_LINES}
+if [[ $dim = x ]]; then
+  dim=$(stty size < /dev/tty | awk '{print $2 "x" $1}')
+elif ! [[ $KITTY_WINDOW_ID ]] && (( FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stty size < /dev/tty | awk '{print $1}') )); then
+  # Avoid scrolling issue when the Sixel image touches the bottom of the screen
+  # * https://github.com/junegunn/fzf/issues/2544
+  dim=${FZF_PREVIEW_COLUMNS}x$((FZF_PREVIEW_LINES - 1))
+fi
+
+if [[ $KITTY_WINDOW_ID ]]; then
+  kitty icat --clear --transfer-mode=memory --unicode-placeholder --stdin=no --place="$dim@0x0" "$file" | sed '$d' | sed $'$s/$/\e[m/'
+else
+  file "$file"
+fi

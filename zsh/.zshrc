@@ -4,10 +4,9 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+addToPathFront() { if [[ "$PATH" != *"$1"* ]]; then; export PATH=$1:$PATH; fi }
+addToPathFront $HOME/.local/bin
+addToPathFront $HOME/.dotfiles/scripts
 
 if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
   MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
@@ -18,20 +17,21 @@ export ZSH="$HOME/.oh-my-zsh"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
 export GOPATH="$HOME/.go"
+export TERM=xterm-kitty
 export EDITOR=nvim
 export VISUAL=nvim
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git cp bundler node npm ruby rails rbenv rake rake-fast redis-cli python pip fzf fzf-tab docker docker-compose docker-machine ansible sublime-merge sublime vscode zsh-autosuggestions zsh-syntax-highlighting mise tmux)
+plugins=(git cp bundler node npm ruby rails rbenv rake redis-cli python pip fzf fzf-tab docker docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise tmux)
 
 source $ZSH/oh-my-zsh.sh
-source ~/.dotfiles/styles.zsh
+source ~/.dotfiles/zsh/styles.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source ~/.dotfiles/aliases.sh
+source ~/.dotfiles/zsh/aliases.sh
 
 eval "$($HOME/.local/bin/mise activate zsh)"
 
-bindkey -s ^f "$HOME/.dotfiles/tmux-sessionizer.sh\n"
+bindkey -s ^f "tmux-sessionizer\n"
