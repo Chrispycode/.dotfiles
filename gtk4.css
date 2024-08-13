@@ -140,3 +140,8 @@ headerbar {
 .geary-main-layout .vertical {
 	background: black;
 }
+
+/*Junction*/
+.background.csd.main {
+	background: black;
+}

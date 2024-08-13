@@ -21,7 +21,6 @@ vim.g.NERDTreeIgnore = { 'node_modules', '.git' }
 vim.g.rails_syntax_enabled = 1
 vim.g.closetag_filenames = '*.html,*.erb'
 vim.g.ruby_host_prog = 'mise x -- neovim-ruby-host'
-
 vim.cmd('set runtimepath+="plugins"')
 vim.cmd('set runtimepath+="modules"')
 
@@ -49,7 +48,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'tpope/vim-rails'
-Plug 'David-Kunz/gen.nvim'
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug('mg979/vim-visual-multi', { ['branch'] = 'master' })
 Plug 'tpope/vim-dadbod'
@@ -78,7 +76,7 @@ vim.cmd.colorscheme("darkrose")
 require('gitblame').setup({ enabled = false })
 require('nvim-highlight-colors').setup({})
 require('fidget').setup({})
-require('lualine').setup({ sections = { lualine_c = { { 'filename', path = 1 } } } })
+require('lualine').setup({ options = { theme = require('darkrose_line') }, sections = { lualine_c = { { 'filename', path = 1 } } } })
 require('trouble').setup({})
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -92,13 +90,8 @@ vim.api.nvim_set_keymap('n', '<leader>q', ':copen<cr>', { noremap = true, desc =
 vim.api.nvim_set_keymap('n', '<leader>Q', ':cclose<cr>', { noremap = true, desc = 'close quickfix' })
 local harpoon = require("harpoon")
 harpoon:setup()
-
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end, { desc = 'add to harpoon' })
 vim.keymap.set("n", "<leader>ee", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = 'harpoon list' })
-
--- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set("n", "<C-S-P>", function() harpoon:list():prev() end, { desc = 'harpoon prev' })
-vim.keymap.set("n", "<C-S-N>", function() harpoon:list():next() end, { desc = 'harpoon next' })
 
 local telescope = require("telescope")
 telescope.load_extension('fzf')
@@ -213,8 +206,3 @@ require('nvim-treesitter.configs').setup({
 	endwise = { enable = true },
 })
 
-require('gen').setup({
-	model = "llama3.1",
-	host = "localhost",
-	port = "11434"
-})

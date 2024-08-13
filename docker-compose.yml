@@ -1,19 +1,18 @@
 services:
-  redmine:
-    container_name: redmine
-    image: redmine
-    # restart: on-failure
-    depends_on:
-      - pg
-    ports:
-      - 8080:3000
-    environment:
-      REDMINE_DB_POSTGRES: pg
-      # REDMINE_DB_MYSQL: mysql
-      REDMINE_DB_PASSWORD: root
-      REDMINE_SECRET_KEY_BASE: supersecretkey
+  open-webui:
+    image: ghcr.io/open-webui/open-webui:main
+    container_name: open-webui
     volumes:
-      - "./code/redmine:/usr/src/redmine/files"
+      - open-webui:/app/backend/data
+    network_mode: host 
+    ports:
+      - 3000:8080
+    environment:
+      WEBUI_AUTH: false
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped
+
   adguard:
     container_name: adguard
     image: adguard/adguardhome
@@ -107,7 +106,7 @@ services:
       - "6379:6379"
 
   es:
-    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    image: docker.elastic.co/elasticsearch/elasticsearch
     container_name: es
     environment:
       - xpack.security.enabled=false
@@ -151,22 +150,13 @@ services:
     volumes:
       - mongodb_data:/var/lib/mongodb/data
 
-networks:
-  default:
-    name: shared
-
 volumes:
   mysql_data:
-    name: mysql_data
   pg_data:
-    name: pg_data
   es_data:
-    name: es_data
   rabbit_data:
-    name: rabbit_data
   rabbit_logs:
-    name: rabbit_logs
   mongodb_data:
-    name: mongodb_data
   mariadb:
+  open-webui: {}
 
