@@ -31,7 +31,9 @@ source ~/.dotfiles/zsh/styles.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source ~/.dotfiles/zsh/aliases.sh
-
+if [ -f ~/.dotfiles/overrides ]; then
+  source ~/.dotfiles/overrides
+fi
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 bindkey -s ^f "tmux-sessionizer\n"

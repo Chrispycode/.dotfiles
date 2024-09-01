@@ -3,10 +3,11 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
-	folders="$HOME/.dotfiles\n"
-	folders+="$HOME/Documents\n"
-	folders+=$(find ~/repos ~/repos/code -mindepth 1 -maxdepth 1 -type d)
-	selected=$(echo -e "$folders" | fzf --tmux --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
+  TMUX_PATHS=${TMUX_PATHS:=}
+  folders="$HOME/.dotfiles\n$HOME/Documents\n"
+  folders+=$TMUX_PATHS
+  folders+=$(find ~/repos ~/repos/code -mindepth 1 -maxdepth 1 -type d)
+  selected=$(echo -e "$folders" | fzf --tmux --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
 fi
 
 if [[ -z $selected ]]; then
@@ -18,7 +19,7 @@ tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
   tmux new-session -s $selected_name -c $selected "BUNDLE_GEMFILE=~/Gemfile nvim . -c Alpha"
-	exit 0
+  exit 0
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
