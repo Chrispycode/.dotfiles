@@ -3,10 +3,10 @@
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
+  # export TMUX_PATHS="$HOME\n$(find ~/repos ~/repos/code -mindepth 1 -maxdepth 1 -type d)"
   TMUX_PATHS=${TMUX_PATHS:=}
   folders="$HOME/.dotfiles\n$HOME/Documents\n"
   folders+=$TMUX_PATHS
-  folders+=$(find ~/repos ~/repos/code -mindepth 1 -maxdepth 1 -type d)
   selected=$(echo -e "$folders" | fzf --tmux --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
 fi
 
