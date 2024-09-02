@@ -34,6 +34,9 @@ source ~/.dotfiles/zsh/aliases.sh
 if [ -f ~/.dotfiles/overrides ]; then
   source ~/.dotfiles/overrides
 fi
+
+export BUNDLE_GEMFILE=${BUNDLE_GEMFILE:=~/Gemfile}
+
 eval "$($HOME/.local/bin/mise activate zsh)"
 
 bindkey -s ^f "tmux-sessionizer\n"

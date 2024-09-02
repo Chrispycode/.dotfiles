@@ -62,6 +62,9 @@ return {
     local servers = {
       solargraph = {
         filetypes = { 'ruby', 'eruby' },
+        root_dir = function()
+          return vim.loop.cwd()
+        end,
         settings = {
           solargraph = {
             cmd = 'solargraph',
@@ -72,6 +75,9 @@ return {
       },
       ruby_lsp = {
         filetypes = { 'ruby', 'eruby' },
+        root_dir = function()
+          return vim.loop.cwd()
+        end,
       },
       html = {
         filetypes = { 'html', 'eruby' },
