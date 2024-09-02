@@ -76,6 +76,7 @@ require('lazy').setup {
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' } } },
   'tpope/vim-sleuth',
   'tpope/vim-rails',
+  'slim-template/vim-slim',
   'brenoprata10/nvim-highlight-colors',
   'kdheepak/lazygit.nvim',
   'alvan/vim-closetag',

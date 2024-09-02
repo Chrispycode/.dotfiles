@@ -71,7 +71,7 @@ return {
         },
       },
       ruby_lsp = {
-        filetypes = { 'ruby', 'eruby' },
+        filetypes = { 'ruby', 'eruby', 'slim' },
       },
       html = {
         filetypes = { 'html', 'eruby' },
