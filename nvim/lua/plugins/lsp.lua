@@ -94,6 +94,7 @@ return {
       'stylua',
       'css-lsp',
       'tsserver',
+      'bashls',
       'htmlbeautifier',
       'emmet-language-server',
       'rufo',
