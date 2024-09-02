@@ -61,7 +61,7 @@ return {
 
     local servers = {
       solargraph = {
-        filetypes = { 'ruby', 'eruby' },
+        filetypes = { 'ruby', 'eruby', 'slim' },
         settings = {
           solargraph = {
             cmd = 'solargraph',
@@ -71,7 +71,7 @@ return {
         },
       },
       ruby_lsp = {
-        filetypes = { 'ruby', 'eruby', 'slim' },
+        filetypes = { 'ruby', 'eruby' },
       },
       html = {
         filetypes = { 'html', 'eruby' },
