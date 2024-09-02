@@ -61,7 +61,7 @@ return {
 
     local servers = {
       solargraph = {
-        filetypes = { 'ruby', 'eruby', 'slim' },
+        filetypes = { 'ruby', 'eruby' },
         settings = {
           solargraph = {
             cmd = 'solargraph',
