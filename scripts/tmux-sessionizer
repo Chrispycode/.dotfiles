@@ -5,7 +5,7 @@ if [[ $# -eq 1 ]]; then
 else
   # export TMUX_PATHS="$HOME\n$(find ~/repos ~/repos/code -mindepth 1 -maxdepth 1 -type d)"
   TMUX_PATHS=${TMUX_PATHS:=}
-  folders="$HOME/.dotfiles\n$HOME/Documents\n"
+  folders="$HOME/.dotfiles\n"
   folders+=$TMUX_PATHS
   if [ -f "/etc/debian_version" ]; then
     selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); ls -1ah --color {})")
