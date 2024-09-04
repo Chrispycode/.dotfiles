@@ -98,5 +98,6 @@ vim.keymap.set('n', '<leader>lg', vim.cmd.LazyGitCurrentFile, { desc = 'LazyGit'
 vim.keymap.set('n', '<leader>lp', ':Lazy<cr>', { desc = 'Lazy' })
 vim.keymap.set('n', '<leader>ls', ':LspStart<cr>', { desc = 'LSP Start' })
 vim.keymap.set('n', '<leader>lk', ':LspStop<cr>', { desc = 'LSP stop' })
+vim.keymap.set('n', '<leader>lm', ':Mason<cr>', { desc = 'Mason' })
 vim.keymap.set('n', '<leader>aa', ':Alpha<cr>', { desc = 'Alpha' })
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'cancel search' })

@@ -179,7 +179,7 @@ local buttons = {
 		dashboard.button("e", "󱡅  Harpoon",
 			"<cmd>lua local harpoon = require('harpoon'); harpoon.ui:toggle_quick_menu(harpoon:list())<CR>"),
 		dashboard.button("lg", "  Git", "<cmd>LazyGit<CR>"),
-		dashboard.button("m", "󰏔  Mason", "<cmd>Mason<CR>"),
+		dashboard.button("lm", "󰏔  Mason", "<cmd>Mason<CR>"),
 		dashboard.button("lp", "  PLugins", "<cmd>Lazy<CR>"),
 		dashboard.button("q", "󰅚  Quit", "<cmd>qa<CR>"),
 	},
