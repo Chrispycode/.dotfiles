@@ -24,6 +24,7 @@ vim.cmd 'set runtimepath+="plugins"'
 vim.cmd 'set runtimepath+="modules"'
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
+vim.filetype.add({ pattern = { ['.*%.api%.rsb'] = 'ruby', } })
 
 require 'lazy_init'
 require('lazy').setup {
