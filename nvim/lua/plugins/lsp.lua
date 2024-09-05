@@ -104,7 +104,6 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua',
       'css-lsp',
-      'tsserver',
       'bashls',
       'htmlbeautifier',
       'emmet-language-server',
