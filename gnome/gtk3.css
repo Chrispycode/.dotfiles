@@ -143,7 +143,6 @@ headerbar {
 
 .geary-message-body {
 	background-color: black;
-	color: inverted(inherit)
 }
 
 .geary-main-layout .vertical {
