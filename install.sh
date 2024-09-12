@@ -18,6 +18,7 @@ ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 ln -fs $HOME/.dotfiles/nvim ~/.config 
 ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
+ln -fs $HOME/.dotfiles/ranger ~/.config
 
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 

@@ -20,6 +20,7 @@ export GOPATH="$HOME/.go"
 export TERM=xterm-kitty
 export EDITOR=nvim
 export VISUAL=nvim
+export RANGER_LOAD_DEFAULT_RC=false
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git cp bundler node npm ruby rails rbenv rake redis-cli python pip fzf fzf-tab docker docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise tmux)
