@@ -25,6 +25,7 @@ vim.cmd 'set runtimepath+="modules"'
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add({ pattern = { ['.*%.api%.rsb'] = 'ruby', } })
+vim.filetype.add({ pattern = { ['.*%.yml%.j2'] = 'yaml', } })
 
 require 'lazy_init'
 require('lazy').setup {
