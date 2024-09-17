@@ -60,19 +60,19 @@ return {
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
     local servers = {
-      solargraph = {
-        filetypes = { 'ruby', 'eruby' },
-        root_dir = function()
-          return vim.loop.cwd()
-        end,
-        settings = {
-          solargraph = {
-            cmd = 'solargraph',
-            diagnostics = false,
-            completion = true,
-          },
-        },
-      },
+      -- solargraph = {
+      --   filetypes = { 'ruby', 'eruby' },
+      --   root_dir = function()
+      --     return vim.loop.cwd()
+      --   end,
+      --   settings = {
+      --     solargraph = {
+      --       cmd = 'solargraph',
+      --       diagnostics = false,
+      --       completion = true,
+      --     },
+      --   },
+      -- },
       ruby_lsp = {
         filetypes = { 'ruby', 'eruby' },
         root_dir = function()
