@@ -13,7 +13,17 @@ return {
         end
         return 'make install_jsregexp'
       end)(),
-      dependencies = {},
+      dependencies = {
+        {
+          'rafamadriz/friendly-snippets',
+          config = function()
+            require('luasnip.loaders.from_vscode').lazy_load {
+              exclude = { 'javascript' },
+              include = { 'rails' },
+            }
+          end,
+        },
+      },
     },
     'saadparwaiz1/cmp_luasnip',
     'hrsh7th/cmp-nvim-lsp',
@@ -23,7 +33,7 @@ return {
     local cmp = require 'cmp'
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
-
+    luasnip.filetype_extend('ruby', { 'rails' })
     cmp.setup {
       snippet = {
         expand = function(args)

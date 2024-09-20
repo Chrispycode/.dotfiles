@@ -16,7 +16,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.laststatus = 3
 vim.opt.wrap = false
 vim.g.mapleader = ' '
-vim.g.rails_syntax_enabled = 1
 vim.g.loaded_netrin = 1
 vim.g.loaded_netrw = 0
 vim.g.NERDTreeMinimalUI=1
@@ -77,7 +76,6 @@ require('lazy').setup {
   { 'nvim-lualine/lualine.nvim', opts = { options = { theme = require 'styles.darkrose_line' }, sections = { lualine_c = { { 'filename', path = 1 } } } } },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' } } },
   'tpope/vim-sleuth',
-  'tpope/vim-rails',
   'slim-template/vim-slim',
   'brenoprata10/nvim-highlight-colors',
   'kdheepak/lazygit.nvim',
