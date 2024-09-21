@@ -73,8 +73,5 @@ require('lazy').setup {
   'folke/trouble.nvim',
   'robitx/gp.nvim',
   'mg979/vim-visual-multi',
-  'tpope/vim-dadbod',
-  'kristijanhusak/vim-dadbod-ui',
-  'kristijanhusak/vim-dadbod-completion',
   { import = 'plugins' },
 }
