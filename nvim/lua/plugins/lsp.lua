@@ -107,7 +107,6 @@ return {
         'css-lsp',
         'bashls',
         'htmlbeautifier',
-        'rufo',
         'prettier',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
@@ -143,7 +142,6 @@ return {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier' },
-        ruby = { 'rufo' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
