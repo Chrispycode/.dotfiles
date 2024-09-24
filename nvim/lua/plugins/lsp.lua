@@ -20,7 +20,6 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
       'hrsh7th/cmp-nvim-lsp',
-      'f3fora/cmp-spell',
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -185,6 +184,7 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
+      'f3fora/cmp-spell',
     },
     config = function()
       -- See `:help cmp`
@@ -269,7 +269,7 @@ return {
               enable_in_context = function()
                 return true
               end,
-              preselect_correct_word = true,
+              preselect_correct_word = false,
             },
           },
         },
