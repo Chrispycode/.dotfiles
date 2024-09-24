@@ -20,7 +20,7 @@ return {
       'WhoIsSethDaniel/mason-tool-installer.nvim',
       { 'j-hui/fidget.nvim', opts = {} },
       'hrsh7th/cmp-nvim-lsp',
-      'f3fora/cmp-spell'
+      'f3fora/cmp-spell',
     },
     config = function()
       vim.api.nvim_create_autocmd('LspAttach', {
@@ -109,6 +109,7 @@ return {
         'bashls',
         'htmlbeautifier',
         'prettier',
+        'rufo',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -143,6 +144,7 @@ return {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier' },
+        ruby = { 'rufo' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
