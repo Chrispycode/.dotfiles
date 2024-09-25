@@ -72,7 +72,6 @@ require('lazy').setup {
   'brenoprata10/nvim-highlight-colors',
   'kdheepak/lazygit.nvim',
   'alvan/vim-closetag',
-  'robitx/gp.nvim',
   'mg979/vim-visual-multi',
   { import = 'plugins' },
 }

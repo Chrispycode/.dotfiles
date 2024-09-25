@@ -1,2 +1,3 @@
 overrides
 preload
+nvim/lua/plugins/extra.lua
