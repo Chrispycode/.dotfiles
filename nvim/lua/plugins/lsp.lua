@@ -266,10 +266,6 @@ return {
             name = 'spell',
             option = {
               keep_all_entries = false,
-              enable_in_context = function()
-                return false
-              end,
-              preselect_correct_word = false,
             },
           },
         },
