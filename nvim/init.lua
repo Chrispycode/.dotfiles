@@ -7,8 +7,6 @@ vim.opt.showmode = false
 vim.schedule(function()
   vim.opt.clipboard = 'unnamedplus'
 end)
-
--- new
 vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.ignorecase = true
@@ -22,7 +20,6 @@ vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
-
 vim.opt.ru = true
 vim.opt_syntax = true
 vim.opt.tabstop = 2
@@ -70,7 +67,6 @@ require('lazy').setup {
   'tpope/vim-sleuth',
   'slim-template/vim-slim',
   'brenoprata10/nvim-highlight-colors',
-  'kdheepak/lazygit.nvim',
   'alvan/vim-closetag',
   'mg979/vim-visual-multi',
   { import = 'plugins' },

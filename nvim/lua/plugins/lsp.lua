@@ -144,7 +144,8 @@ return {
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier' },
         ruby = { 'rufo' },
-        javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        markdown = { 'prettier' },
+        javascript = { 'prettier', stop_after_first = true },
       },
     },
   },
@@ -184,7 +185,6 @@ return {
       --  into multiple repos for maintenance purposes.
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
-      'f3fora/cmp-spell',
     },
     config = function()
       -- See `:help cmp`
@@ -262,12 +262,6 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'vim-dadbod-completion' },
-          {
-            name = 'spell',
-            option = {
-              keep_all_entries = false,
-            },
-          },
         },
       }
     end,
@@ -308,6 +302,14 @@ return {
 
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
+    end,
+  },
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    dependencies = { 'hrsh7th/nvim-cmp' },
+    config = function()
+      require('nvim-autopairs').setup {}
     end,
   },
 }
