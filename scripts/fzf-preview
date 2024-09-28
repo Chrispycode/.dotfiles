@@ -44,7 +44,7 @@ elif ! [[ $KITTY_WINDOW_ID ]] && (( FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stt
 fi
 
 if [[ $KITTY_WINDOW_ID ]]; then
-  kitty icat --clear --transfer-mode=memory --unicode-placeholder --stdin=no --place="$dim@0x0" "$file" | sed '$d' | sed $'$s/$/\e[m/'
+  kitty icat --clear --transfer-mode=memory --unicode-placeholder --stdin=no --place=$dim@0x0 $file
 else
   file "$file"
 fi
