@@ -43,8 +43,13 @@ elif ! [[ $KITTY_WINDOW_ID ]] && (( FZF_PREVIEW_TOP + FZF_PREVIEW_LINES == $(stt
   dim=${FZF_PREVIEW_COLUMNS}x$((FZF_PREVIEW_LINES - 1))
 fi
 
+transfer_mode="memory"
+if [ -f "/etc/debian_version" ]; then
+  transfer_mode="stream"
+fi
+
 if [[ $KITTY_WINDOW_ID ]]; then
-  kitty icat --clear --transfer-mode=memory --unicode-placeholder --stdin=no --place=$dim@0x0 $file
+  kitty icat --clear --transfer-mode=$transfer_mode --unicode-placeholder --stdin=no --place=$dim@0x0 $file
 else
   file "$file"
 fi
