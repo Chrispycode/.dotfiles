@@ -2,6 +2,9 @@ export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
 --height=100%
+--tmux='90%,70%'
+--margin=5
+--border
 --multi
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --prompt='∼ '
