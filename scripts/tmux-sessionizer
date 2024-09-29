@@ -8,7 +8,7 @@ else
   folders="$HOME/.dotfiles\n"
   folders+=$TMUX_PATHS
   if [ -f "/etc/debian_version" ]; then
-    selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); ls -1ah --color {})")
+    selected=$(echo -e "$folders" | fzf --tmux='90%,70%' --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); ls -1ah --color {})")
   else
     selected=$(echo -e "$folders" | fzf --tmux='90%,70%' --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
   fi
