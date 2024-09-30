@@ -263,7 +263,6 @@ stage {
 
 .lg-dialog StEntry,
 StEntry {
-	border-radius: 8px;
 	background-color: rgba(248, 248, 242, 0.1);
 	color: rgba(248, 248, 242, 0.7);
 }
@@ -441,7 +440,6 @@ StEntry:insensitive {
 	background-color: rgba(0, 0, 0, 0.8);
 	color: #f8f8f2;
 	border: 1px solid rgba(248, 248, 242, 0.1);
-	border-radius: 99px;
 }
 
 /* WIDGETS */
@@ -524,11 +522,9 @@ StScrollBar StButton#hhandle:active {
 	background-color: none;
 	box-shadow: none;
 	box-shadow: none !important;
-	border-radius: 12px;
 }
 
 .popup-menu-item:insensitive {
-	color: rgba(248, 248, 242, 0.5);
 	background-color: rgba(248, 248, 242, 0.05);
 	background-color: transparent;
 	color: rgba(248, 248, 242, 0.5);
@@ -558,18 +554,6 @@ StScrollBar StButton#hhandle:active {
 	background-color: #555553;
 }
 
-.popup-menu-item:checked {
-	border-radius: 12px 12px 0 0 !important;
-}
-
-.popup-menu-item .toggle-switch:ltr {
-	margin-left: 4px;
-}
-
-.popup-menu-item .toggle-switch:rtl {
-	margin-right: 4px;
-}
-
 .popup-inactive-menu-item {
 	color: #f8f8f2;
 }
@@ -578,20 +562,9 @@ StScrollBar StButton#hhandle:active {
 	color: #82827f;
 }
 
-.popup-sub-menu {
-	border-radius: 0 0 13px 13px;
-	margin-bottom: 6px;
-}
-
-.popup-sub-menu .popup-menu-ornament {
-	min-width: 1.09em !important;
-}
-
 .popup-sub-menu .popup-menu-item {
-	border-radius: 0;
 	color: #f8f8f2;
 	background-color: #3e3e3d;
-	border-top-width: 0;
 }
 
 .popup-sub-menu .popup-menu-item:focus,
@@ -618,24 +591,6 @@ StScrollBar StButton#hhandle:active {
 	background-color: #656563;
 }
 
-.popup-sub-menu .popup-menu-item:last-child {
-	border-radius: 0 0 12px 12px;
-	border-bottom-width: 0;
-}
-
-.popup-sub-menu .popup-menu-section .popup-menu-item:last-child:hover,
-.popup-sub-menu .popup-menu-section .popup-menu-item:last-child:focus {
-	border-radius: 0;
-}
-
-.popup-sub-menu .popup-menu-section:last-child .popup-menu-item:last-child {
-	border-radius: 0 0 12px 12px;
-}
-
-.popup-separator-menu-item {
-	border: none !important;
-}
-
 .popup-separator-menu-item .popup-separator-menu-item-separator {
 	background-color: rgba(248, 248, 242, 0.1);
 }
@@ -651,8 +606,6 @@ StScrollBar StButton#hhandle:active {
 /* Date/Time Menu */
 /* today button (the date) */
 .datemenu-today-button {
-	border-radius: 12px;
-	margin: 4px;
 	background-color: transparent;
 	background-color: none;
 	box-shadow: none;
@@ -694,13 +647,10 @@ StScrollBar StButton#hhandle:active {
 
 /* Calendar */
 .calendar {
-	border-radius: 12px;
-	margin: 4px;
 	background-color: transparent;
 	background-color: none;
 	box-shadow: none;
 	box-shadow: none !important;
-	margin-top: 0;
 }
 
 .calendar:insensitive {
@@ -743,9 +693,6 @@ StScrollBar StButton#hhandle:active {
 
 .calendar .calendar-month-header .pager-button {
 	background-color: transparent;
-	height: 32px;
-	margin: 2px;
-	border-radius: 8px;
 }
 
 .calendar .calendar-month-header .pager-button:hover,
@@ -759,9 +706,6 @@ StScrollBar StButton#hhandle:active {
 
 .calendar .calendar-day {
 	background-color: transparent;
-	border-radius: 999px;
-	height: 3em;
-	margin: 2px;
 }
 
 .calendar .calendar-day:hover {
@@ -837,21 +781,16 @@ StScrollBar StButton#hhandle:active {
 }
 
 .calendar .calendar-week-number {
-	font-feature-settings: "tnum";
-	margin: 6px;
-	border-radius: 3px;
 	background-color: rgba(248, 248, 242, 0.1);
 	color: #82827f;
 }
 
 agenda-view .background {
-  background: #000;
+  background: black;
 }
 
 /* Events */
 .events-button {
-	border-radius: 12px;
-	margin: 4px;
 	color: #f8f8f2;
 	background-color: #121212;
 }
@@ -884,7 +823,6 @@ agenda-view .background {
 
 .events-button .events-title {
 	color: #82827f;
-	margin-bottom: 4px;
 }
 
 .events-button .event-time {
@@ -893,8 +831,6 @@ agenda-view .background {
 
 /* World clocks */
 .world-clocks-button {
-	border-radius: 12px;
-	margin: 4px;
 	color: #f8f8f2;
 	background-color: #121212;
 }
@@ -948,8 +884,6 @@ agenda-view .background {
 
 /* Weather */
 .weather-button {
-	border-radius: 12px;
-	margin: 4px;
 	color: #f8f8f2;
 	background-color: #121212;
 }
@@ -993,44 +927,8 @@ agenda-view .background {
 	border: solid rgba(248, 248, 242, 0.1);
 }
 
-.message-list:ltr {
-	margin-left: 0;
-	margin-right: 4px;
-	border-right-width: 1px;
-}
-
-.message-list:rtl {
-	margin-right: 0;
-	margin-left: 4px;
-	border-left-width: 1px;
-}
-
 .message-list .message-list-placeholder {
 	color: rgba(130, 130, 127, 0.5);
-}
-
-.message-list .message-list-placeholder>StIcon {
-	margin-bottom: 12px;
-	-st-icon-style: symbolic;
-}
-
-.message-list-sections {
-	margin: 0;
-}
-
-.message-list-sections:ltr {
-	margin-right: 12px;
-}
-
-.message-list-sections:rtl {
-	margin-left: 12px;
-}
-
-.message-list-controls .dnd-button {
-	border-width: 2px;
-	border-color: transparent;
-	border-radius: 32px;
-	border-style: solid;
 }
 
 .message-list-controls .dnd-button:focus {
@@ -1038,8 +936,6 @@ agenda-view .background {
 }
 
 .message {
-	border-radius: 12px;
-	margin: 4px;
 	color: #f8f8f2;
 	background-color: #121212;
 }
@@ -1133,23 +1029,11 @@ agenda-view .background {
 .notification-banner {
 	min-height: 64px;
 	box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
-	border-radius: 12px;
-	margin: 4px;
 }
 
 .summary-source-counter {
-	height: 1.6em;
-	-shell-counter-overlap-x: 3px;
-	-shell-counter-overlap-y: 3px;
 	background-color: #620000;
 	color: #f8f8f2;
-	border: 2px solid #f8f8f2;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-	border-radius: 0.9em;
-}
-
-.chat-response {
-	margin: 5px;
 }
 
 .chat-log-message {
@@ -1167,13 +1051,7 @@ agenda-view .background {
 /* Modal Dialogs */
 .modal-dialog {
 	background-color: rgba(0, 0, 0, 0.9);
-	border-radius: 16px;
 	box-shadow: inset 0 0 0 1px #1a1a1a;
-}
-
-.modal-dialog .modal-dialog-content-box {
-	margin: 32px 40px;
-	max-width: 28em;
 }
 
 /* End Session Dialog */
@@ -1193,30 +1071,8 @@ agenda-view .background {
 }
 
 /* Password or Authentication Dialog */
-.prompt-dialog .modal-dialog-content-box {
-	margin-bottom: 24px;
-}
-
-.prompt-dialog-password-grid {
-	spacing-rows: 8px;
-	spacing-columns: 4px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:ltr {
-	margin-left: 20px;
-}
-
-.prompt-dialog-password-grid .prompt-dialog-password-entry:rtl {
-	margin-right: 20px;
-}
-
 .prompt-dialog-error-label {
 	color: #cd9309;
-}
-
-/* Polkit Dialog */
-.polkit-dialog-user-layout {
-	margin-bottom: 6px;
 }
 
 .polkit-dialog-user-layout .polkit-dialog-user-root-label {
@@ -1224,14 +1080,6 @@ agenda-view .background {
 }
 
 /* Audio selection dialog */
-.audio-device-selection-dialog .modal-dialog-content-box {
-	margin-bottom: 28px;
-}
-
-.audio-selection-device {
-	border-radius: 16px;
-}
-
 .audio-selection-device:hover,
 .audio-selection-device:focus {
 	background-color: #262626;
@@ -1242,58 +1090,6 @@ agenda-view .background {
 	color: #f8f8f2;
 }
 
-/* Welcome dialog */
-.welcome-dialog-image {
-	background-image: url("resource:///org/gnome/shell/theme/gnome-shell-start.svg");
-	background-size: contain;
-	/* Reasonable maximum dimensions */
-	height: 300px;
-}
-
-/* Access portal dialog */
-
-/* OSD */
-.osd-window {
-	margin-bottom: 4em;
-}
-
-.osd-window StLabel:ltr {
-	margin-right: 6px;
-}
-
-.osd-window StLabel:rtl {
-	margin-left: 6px;
-}
-
-.osd-window .level {
-	margin-bottom: 4px;
-	height: 6px;
-	min-width: 10.9em;
-	-barlevel-height: 6px;
-	-barlevel-background-color: rgba(248, 248, 242, 0.1);
-	-barlevel-active-background-color: #f8f8f2;
-	-barlevel-overdrive-color: #c01c28;
-	-barlevel-overdrive-separator-width: 3px;
-}
-
-.osd-window .level:first-child {
-	margin-bottom: 0px;
-}
-
-.osd-window .level:ltr {
-	margin-right: 6px;
-}
-
-.osd-window .level:rtl {
-	margin-left: 6px;
-}
-
-.osd-monitor-label {
-	border-radius: 16px;
-	margin: 12px;
-	min-width: 1.3em;
-}
-
 /* Pad OSD */
 .pad-osd-window {
 	background-color: rgba(0, 0, 0, 0.8);
@@ -1301,7 +1097,6 @@ agenda-view .background {
 
 /* App Switcher */
 .switcher-list {
-	border-radius: 28px;
 	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -1360,10 +1155,6 @@ agenda-view .background {
 	background: rgba(248, 248, 242, 0.1);
 }
 
-.switcher-list .thumbnail {
-	border-radius: 8px;
-}
-
 .switcher-arrow {
 	border-color: rgba(248, 248, 242, 0.8);
 	color: rgba(248, 248, 242, 0.8);
@@ -1383,53 +1174,24 @@ agenda-view .background {
 }
 
 /* Workspace Switcher */
-.workspace-switcher {
-	margin-bottom: 4em;
-}
-
 .ws-switcher-indicator {
 	background-color: rgba(248, 248, 242, 0.5);
-	margin: 0.90833em;
-	border-radius: 2.18em;
 }
 
 .ws-switcher-indicator:active {
 	background-color: #f8f8f2;
-	margin: 0.72667em;
-}
-
-.screenshot-ui-panel {
-	border-radius: 37px;
-	margin-bottom: 4em;
 }
 
 .screenshot-ui-close-button {
-	margin-top: 12px;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-.screenshot-ui-close-button.left {
-	margin-left: 12px;
-}
-
-.screenshot-ui-close-button.right {
-	margin-right: 12px;
-}
-
-.screenshot-ui-type-button {
-	min-width: 48px;
-	border-radius: 19px;
-}
-
 .screenshot-ui-capture-button {
-	height: 36px;
-	border-radius: 99px;
 	border: 4px #f8f8f2;
 }
 
 .screenshot-ui-capture-button .screenshot-ui-capture-button-circle {
 	background-color: #f8f8f2;
-	border-radius: 99px;
 }
 
 .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:hover,
@@ -1461,20 +1223,10 @@ agenda-view .background {
 
 .screenshot-ui-shot-cast-container {
 	background-color: rgba(0, 0, 0, 0.9);
-	border-radius: 16px;
-}
-
-.screenshot-ui-shot-cast-container:ltr {
-	margin-left: 3px;
-}
-
-.screenshot-ui-shot-cast-container:rtl {
-	margin-right: 3px;
 }
 
 .screenshot-ui-shot-cast-button {
 	background-color: transparent;
-	border-radius: 13px;
 }
 
 .screenshot-ui-shot-cast-button:hover,
@@ -1495,10 +1247,6 @@ agenda-view .background {
 	color: rgba(248, 248, 242, 0.5);
 }
 
-.screenshot-ui-show-pointer-button {
-	border-radius: 99px;
-}
-
 .screenshot-ui-area-indicator-shade {
 	background-color: rgba(0, 0, 0, 0.3);
 }
@@ -1512,33 +1260,16 @@ agenda-view .background {
 }
 
 .screenshot-ui-area-selector-handle {
-	border-radius: 99px;
 	background-color: white;
 	box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
-	height: 24px;
 }
 
 .screenshot-ui-window-selector {
 	background-color: rgba(0, 0, 0, 0.8);
 }
 
-.screenshot-ui-window-selector .screenshot-ui-window-selector-window-container {
-	margin: 100px;
-}
-
-.screenshot-ui-window-selector:primary-monitor .screenshot-ui-window-selector-window-container {
-	margin-bottom: 200px;
-}
-
-.screenshot-ui-window-selector-window-border {
-	border-radius: 16px;
-	border: 6px transparent;
-}
-
 .screenshot-ui-window-selector-check {
 	color: transparent;
-	border-radius: 99px;
-	border-width: 12px;
 }
 
 .screenshot-ui-window-selector-window:hover .screenshot-ui-window-selector-window-border {
@@ -1569,20 +1300,16 @@ agenda-view .background {
 
 .screenshot-ui-screen-selector:checked {
 	background-color: transparent;
-	border: 2px white;
 }
 
 .screenshot-ui-tooltip {
 	color: #f8f8f2;
 	background-color: rgba(0, 0, 0, 0.8);
-	border-radius: 99px;
-	-y-offset: 24px;
 }
 
 /* Top Bar */
 #panel {
 	background-color: rgba(0, 0, 0, 0);
-	height: 2.2em;
 }
 
 #panel.unlock-screen,
@@ -1599,13 +1326,15 @@ agenda-view .background {
 	margin: 1px;
 }
 
+#panel .panel-button:last-child {
+	margin-right: 2px;
+}
+
 /*StBin Gjs_dashbar_fthx_extension_TaskBar.panel-button {*/
 
 #panel .panel-button.clock-display .clock {
 	background-color: rgba(0, 0, 0, 0.8);
 	border: 0.5px thin rgba(100, 0, 0, 0.8);
-	border-radius: 99px;
-	margin: 1px;
 }
 
 #panel .panel-button.screen-recording-indicator {
@@ -1614,10 +1343,6 @@ agenda-view .background {
 
 #panel .panel-button.screen-sharing-indicator {
 	box-shadow: inset 0 0 0 100px #cd9309;
-}
-
-#panel .panel-button.screen-sharing-indicator StBoxLayout {
-	margin: 0 6px;
 }
 
 #panel .panel-button:active,
@@ -1708,19 +1433,6 @@ agenda-view .background {
 #panel .panel-button:focus:hover.screen-sharing-indicator,
 #panel .panel-button:checked:hover.screen-sharing-indicator {
 	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.8);
-}
-
-#panel .panel-button .system-status-icon {
-	margin: 0 4px;
-}
-
-#panel .panel-button .panel-status-indicators-box .system-status-icon,
-#panel .panel-button .panel-status-menu-box .system-status-icon {
-	margin: 0;
-}
-
-#panel .panel-button .app-menu-icon {
-	-st-icon-style: symbolic;
 }
 
 #panel.unlock-screen .panel-button:active,
@@ -2021,7 +1733,6 @@ agenda-view .background {
 }
 
 .quick-toggle-menu .header .icon {
-	border-radius: 999px;
 	background-color: rgba(248, 248, 242, 0.2);
 }
 
@@ -2513,9 +2224,6 @@ agenda-view .background {
 }
 
 .word-suggestions StButton {
-	margin: 0 3px;
-	min-width: 32px;
-	border-radius: 6px;
 	background-color: transparent;
 	background-image: none;
 }
