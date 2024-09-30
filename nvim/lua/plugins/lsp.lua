@@ -179,6 +179,7 @@ return {
         },
       },
       'saadparwaiz1/cmp_luasnip',
+      'brenoprata10/nvim-highlight-colors',
 
       -- Adds other completion capabilities.
       --  nvim-cmp does not ship with all sources by default. They are split
@@ -263,6 +264,9 @@ return {
           { name = 'path' },
           { name = 'vim-dadbod-completion' },
         },
+        formatting = {
+          format = require('nvim-highlight-colors').format,
+        }
       }
     end,
   },
