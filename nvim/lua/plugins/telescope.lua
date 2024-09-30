@@ -15,6 +15,7 @@ return {
       'nvim-telescope/telescope-ui-select.nvim',
       'kdheepak/lazygit.nvim',
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'kevinhwang91/nvim-bqf', ft = 'qf' },
     },
     config = function()
       local focus_preview = function(prompt_bufnr)
