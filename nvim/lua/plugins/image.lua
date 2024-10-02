@@ -1,14 +1,16 @@
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
-package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
+package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share/lua/5.1/?/init.lua'
+package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share/lua/5.1/?.lua'
 
 return {
   {
     '3rd/image.nvim',
     config = function()
       -- default config
-      require('image').setup {}
+      require('image').setup {
+        hijack_file_patterns = { '*.png', '*.PNG', '*.jpg', '*.JPG', '*.jpeg', '*.gif', '*.webp', '*.WEBP', '*.avif' }
+      }
       function telescope_image_preview()
-        local supported_images = { 'svg', 'png', 'jpg', 'jpeg', 'gif', 'webp', 'avif' }
+        local supported_images = { 'svg', 'png', 'jpg', 'JPG', 'jpeg', 'gif', 'webp', 'WEBP', 'avif' }
         local from_entry = require 'telescope.from_entry'
         local Path = require 'plenary.path'
         local conf = require('telescope.config').values
