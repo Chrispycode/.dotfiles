@@ -32,6 +32,8 @@ vim.opt.spelllang = { 'en', 'de' }
 vim.cmd 'set runtimepath+="plugins"'
 vim.cmd 'set runtimepath+="modules"'
 vim.g.loaded_netrin = 1
+--- enable if spellfiles are missing
+vim.g.loaded_netrw = 0
 vim.g.NERDTreeMinimalUI = 1
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
