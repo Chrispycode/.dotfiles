@@ -79,6 +79,10 @@ return {
           root_dir = function()
             return vim.loop.cwd()
           end,
+          init_options = {
+            formatter = 'auto',
+            linters = { 'standard' },
+          },
         },
         emmet_language_server = {
           root_dir = function()
@@ -108,7 +112,7 @@ return {
         'bashls',
         'htmlbeautifier',
         'prettier',
-        'rufo',
+        'rubocop',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -143,7 +147,7 @@ return {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier' },
-        ruby = { 'rufo' },
+        ruby = { 'rubocop' },
         markdown = { 'prettier' },
         javascript = { 'prettier', stop_after_first = true },
       },
@@ -266,7 +270,7 @@ return {
         },
         formatting = {
           format = require('nvim-highlight-colors').format,
-        }
+        },
       }
     end,
   },
