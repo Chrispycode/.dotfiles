@@ -112,6 +112,7 @@ return {
         'bashls',
         'htmlbeautifier',
         'prettier',
+        'markdownlint',
         'rubocop',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
