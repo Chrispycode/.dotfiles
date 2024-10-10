@@ -1,5 +1,5 @@
 return {
-  -- {'github/copilot.vim'}
+  { 'github/copilot.vim' },
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
