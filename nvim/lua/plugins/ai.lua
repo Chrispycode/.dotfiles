@@ -1,4 +1,5 @@
 return {
+  -- {'github/copilot.vim'}
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
@@ -10,28 +11,9 @@ return {
     },
     config = function()
       require('codecompanion').setup {
-        strategies = {
-          chat = {
-            adapter = 'ollama',
-          },
-          inline = {
-            adapter = 'ollama',
-          },
-          agent = {
-            adapter = 'ollama',
-          },
-        },
         adapters = {
           ollama = function()
             return require('codecompanion.adapters').extend('ollama', {
-              env = {
-                url = 'http://localhost:11434',
-                -- api_key = '',
-              },
-              headers = {
-                ['Content-Type'] = 'application/json',
-                -- ['Authorization'] = 'Bearer ${api_key}',
-              },
               parameters = {
                 sync = true,
               },

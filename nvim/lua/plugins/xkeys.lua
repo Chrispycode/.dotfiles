@@ -60,6 +60,7 @@ return {
   { vim.keymap.set('n', '<leader>ls', ':LspStart<cr>', { desc = 'LSP Start' }) },
   { vim.keymap.set('n', '<leader>lk', ':LspStop<cr>', { desc = 'LSP stop' }) },
   { vim.keymap.set('n', '<leader>lm', ':Mason<cr>', { desc = 'Mason' }) },
+  { vim.keymap.set('n', '<leader>lc', ':CodeCompanionActions<cr>', { desc = 'CodeCompanion' }) },
   { vim.keymap.set('n', '<leader>aa', ':Alpha<cr>', { desc = 'Alpha' }) },
   { vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'cancel search' }) },
   { vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' }) },

@@ -14,7 +14,7 @@ return {
     init = function()
       -- Your DBUI configuration
       vim.g.db_ui_use_nerd_fonts = 1
-      vim.api.nvim_set_keymap('n', '<leader>td', ':DBUI<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<leader>db', ':DBUI<CR>', { noremap = true, silent = true, desc = "DBUI" })
     end,
   },
   {
@@ -33,8 +33,8 @@ return {
       function _lazydocker_toggle()
         lazydocker:toggle()
       end
-      vim.api.nvim_set_keymap('n', '<leader>tt', ':ToggleTerm<CR>', { noremap = true, silent = true })
-      vim.api.nvim_set_keymap('n', '<leader>ld', '<cmd>lua _lazydocker_toggle()<CR>', { noremap = true, silent = true })
+      vim.api.nvim_set_keymap('n', '<leader>lt', ':ToggleTerm<CR>', { noremap = true, silent = true, desc = "popup terminal" })
+      vim.api.nvim_set_keymap('n', '<leader>ld', '<cmd>lua _lazydocker_toggle()<CR>', { noremap = true, silent = true, desc = "lazydocker" })
     end,
   },
 }
