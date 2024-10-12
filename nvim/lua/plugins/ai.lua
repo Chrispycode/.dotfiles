@@ -14,9 +14,6 @@ return {
         adapters = {
           ollama = function()
             return require('codecompanion.adapters').extend('ollama', {
-              parameters = {
-                sync = true,
-              },
               schema = {
                 num_ctx = {
                   default = 8384,

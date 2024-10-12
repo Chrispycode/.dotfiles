@@ -79,10 +79,6 @@ return {
           root_dir = function()
             return vim.loop.cwd()
           end,
-          init_options = {
-            formatter = 'auto',
-            linters = { 'standard' },
-          },
         },
         emmet_language_server = {
           root_dir = function()

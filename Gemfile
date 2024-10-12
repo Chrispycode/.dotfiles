@@ -6,4 +6,4 @@ gem "rubocop-rails"
 gem 'rails'
 gem 'neovim'
 gem 'solargraph'
-gem 'ruby-lsp'
+gem 'ruby-lsp' #, path: 'repos/code/ruby-lsp'

@@ -26,6 +26,8 @@ ln -fs $HOME/.dotfiles/ranger ~/.config
 ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
 ln -fs $HOME/.dotfiles/gnome/gtk3.css ~/.config/gtk-3.0/gtk.css
 ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
+sudo flatpak override --filesystem=xdg-config/gtk-4.0/gtk.css:ro
+sudo flatpak override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
 
 
