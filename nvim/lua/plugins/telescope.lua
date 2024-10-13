@@ -65,6 +65,8 @@ return {
             '.cache',
             '*.o',
             '*.a',
+            '%.min.*',
+            '%.min-%.*',
             '*.out',
             '*.class',
             '*.pdf',
