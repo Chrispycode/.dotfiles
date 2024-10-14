@@ -52,6 +52,7 @@ return {
           file_ignore_patterns = {
             'node_modules',
             'tmp',
+            '.bundle',
             '.idea',
             '.loadpath',
             '.powrc',
