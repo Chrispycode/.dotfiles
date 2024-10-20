@@ -161,3 +161,8 @@ placessidebar list .sidebar-label {
 window.background.chromium {
 	background-color: rgb(20, 20, 20);
 }
+
+window,
+.background decoration {
+	border: 0.5px solid rgba(100, 0, 0, 0.8);
+}

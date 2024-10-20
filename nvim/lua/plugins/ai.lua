@@ -11,6 +11,14 @@ return {
     },
     config = function()
       require('codecompanion').setup {
+        strategies = {
+          chat = {
+            adapter = os.getenv("LLM"),
+          },
+          inline = {
+            adapter = os.getenv("LLM"),
+          },
+        },
         adapters = {
           ollama = function()
             return require('codecompanion.adapters').extend('ollama', {

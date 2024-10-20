@@ -18,8 +18,8 @@ services:
     image: adguard/adguardhome
     # restart: on-failure
     volumes:
-      - "./Documents/adguard/work:/opt/adguardhome/work"
-      - "./Documents/adguard/conf:/opt/adguardhome/conf"
+      - "./code/dc/adguard/work:/opt/adguardhome/work"
+      - "./code/dc/adguard/conf:/opt/adguardhome/conf"
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -57,11 +57,11 @@ services:
       QUERY_LOGGING: "false"
       PIHOLE_DNS_: 208.67.222.222;208.67.220.220
     volumes:
-      - './etc-pihole:/etc/pihole'
-      - './etc-dnsmasq.d:/etc/dnsmasq.d'
+      - './code/dc/etc-pihole:/etc/pihole'
+      - './code/dc/etc-dnsmasq.d:/etc/dnsmasq.d'
 
   mysql:
-    image: mysql:5.7.17
+    image: mysql
     container_name: mysql
     # restart: on-failure
     command: mysqld --sql_mode=""
@@ -76,7 +76,7 @@ services:
     image: mariadb:latest
     command: --max_allowed_packet=100m --wait_timeout=600
     volumes:
-      - ./code/mariadb:/var/lib/mysql
+      - ./code/dc/mariadb:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
@@ -136,8 +136,6 @@ services:
       driver: none
     ports:
       - "5900:5900"
-    volumes:
-      - /dev/shm:/dev/shm
     environment:
       - SCREEN_WIDTH=1920
       - SCREEN_HEIGHT=1080

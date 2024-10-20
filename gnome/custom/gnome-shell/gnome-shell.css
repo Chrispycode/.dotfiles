@@ -786,7 +786,7 @@ StScrollBar StButton#hhandle:active {
 }
 
 agenda-view .background {
-  background: black;
+	background: black;
 }
 
 /* Events */
@@ -1329,8 +1329,6 @@ agenda-view .background {
 	margin-right: 2px;
 }
 
-/*StBin Gjs_dashbar_fthx_extension_TaskBar.panel-button {*/
-
 #panel .panel-button.clock-display .clock {
 	background-color: rgba(0, 0, 0, 0.8);
 	border: 0.5px thin rgba(100, 0, 0, 0.8);
@@ -1627,6 +1625,10 @@ agenda-view .background {
 .ripple-box {
 	background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+}
+
+.quick-settings {
+	border: 0.5px solid rgba(100, 0, 0, 0.8);
 }
 
 .quick-toggle:checked {
