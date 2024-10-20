@@ -18,8 +18,8 @@ services:
     image: adguard/adguardhome
     # restart: on-failure
     volumes:
-      - "./code/dc/adguard/work:/opt/adguardhome/work"
-      - "./code/dc/adguard/conf:/opt/adguardhome/conf"
+      - "./.dc/adguard/work:/opt/adguardhome/work"
+      - "./.dc/adguard/conf:/opt/adguardhome/conf"
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -57,8 +57,8 @@ services:
       QUERY_LOGGING: "false"
       PIHOLE_DNS_: 208.67.222.222;208.67.220.220
     volumes:
-      - './code/dc/etc-pihole:/etc/pihole'
-      - './code/dc/etc-dnsmasq.d:/etc/dnsmasq.d'
+      - './.dc/etc-pihole:/etc/pihole'
+      - './.dc/etc-dnsmasq.d:/etc/dnsmasq.d'
 
   mysql:
     image: mysql
@@ -76,7 +76,7 @@ services:
     image: mariadb:latest
     command: --max_allowed_packet=100m --wait_timeout=600
     volumes:
-      - ./code/dc/mariadb:/var/lib/mysql
+      - ./.dc/mariadb:/var/lib/mysql
     ports:
       - "3306:3306"
     environment:
@@ -156,5 +156,5 @@ volumes:
   rabbit_logs:
   mongodb_data:
   mariadb:
-  open-webui: {}
+  open-webui: 
 
