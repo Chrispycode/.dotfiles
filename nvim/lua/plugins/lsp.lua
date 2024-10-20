@@ -72,9 +72,10 @@ return {
 
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
-
       local servers = {
         ruby_lsp = {
+          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv('GLOBAL_GEMFILE')},
+          cmd = { 'ruby-lsp' },
           filetypes = { 'ruby', 'eruby' },
           root_dir = function()
             return vim.loop.cwd()

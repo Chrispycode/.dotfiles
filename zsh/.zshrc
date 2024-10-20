@@ -41,7 +41,7 @@ if [ -f ~/.dotfiles/overrides ]; then
   source ~/.dotfiles/overrides
 fi
 
-export BUNDLE_GEMFILE=${BUNDLE_GEMFILE:=~/Gemfile}
+export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
 eval "$($HOME/.local/bin/mise activate zsh)"
 
