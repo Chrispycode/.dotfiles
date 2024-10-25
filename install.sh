@@ -1,10 +1,8 @@
 #!/usr/bin/env zsh
 
-# sudo pacman -Sy brave-browser neovim kitty btop appimagelauncher gcc docker easyeffects
-# flatpak install com.google.Chrome com.microsoft.Edge org.gnome.gitlab.YaLTeR.VideoTrimmer re.sonny.Junction
+# sudo pacman -Sy brave-browser tmux kitty btop docker easyeffects fzf neovim
 # sudo pamac build 1password annotator
-# dependencies ripgrep fzf zsh neovim 
-# ruby dependencies libffi-dev libyaml-dev
+
 # git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 # git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -18,7 +16,6 @@ ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 ln -fs $HOME/.dotfiles/nvim ~/.config 
 ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
 ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
-ln -fs $HOME/.dotfiles/ranger ~/.config
 # ln -fs $HOME/Gemfile ~/
 
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
@@ -26,8 +23,8 @@ ln -fs $HOME/.dotfiles/ranger ~/.config
 ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
 ln -fs $HOME/.dotfiles/gnome/gtk3.css ~/.config/gtk-3.0/gtk.css
 ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
-sudo flatpak override --filesystem=xdg-config/gtk-4.0/gtk.css:ro
-sudo flatpak override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
+# sudo flatpak override --filesystem=xdg-config/gtk-4.0/gtk.css:ro
+# sudo flatpak override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
 
 
@@ -40,11 +37,8 @@ sudo flatpak override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 # gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
 
-# make sripts executable
-# chmod a+x $HOME/.dotfiles/scripts/tmux-sessionizer
-# chmod a+x $HOME/.dotfiles/scripts/fzf-preview
 # curl https://mise.run | sh
-# mise use ruby node
+# mise use -g ruby node 
 
 # sudo groupadd docker
 # sudo usermod -aG docker $USER

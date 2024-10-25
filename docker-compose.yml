@@ -14,27 +14,17 @@ services:
     restart: unless-stopped
 
   adguard:
-    container_name: adguard
+    container_name: adguardhome
     image: adguard/adguardhome
-    # restart: on-failure
+    restart: unless-stopped
+    environment:
+    - TZ=Etc/UTC
+  # enable host mode to activate DHCP server on ports 67/udp & 68/tcp+udp
+  # note that you must also disable all other ports if you enable host mode
+    network_mode: host
     volumes:
-      - "./.dc/adguard/work:/opt/adguardhome/work"
-      - "./.dc/adguard/conf:/opt/adguardhome/conf"
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      # - "67:67/udp"
-      # - "68:68/udp"
-      - "80:80/tcp"
-      - "443:443/tcp"
-      - "443:443/udp"
-      - "3000:3000/tcp"
-      - "853:853/tcp"
-      # - "784:784/udp"
-      - "853:853/udp"
-      - "8853:8853/udp"
-      - "5443:5443/tcp"
-      - "5443:5443/udp"
+    - ./.dc/adguardhome/workdir:/opt/adguardhome/work
+    - ./.dc/adguardhome/confdir:/opt/adguardhome/conf
 
   pihole:
     container_name: pihole
