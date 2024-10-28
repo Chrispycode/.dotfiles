@@ -43,3 +43,6 @@ ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
 # newgrp docker
+
+# ln -fs $HOME/.dotfiles/easyeffects/input $HOME/.config/easyeffects
+# ln -fs $HOME/.dotfiles/easyeffects/output $HOME/.config/easyeffects
