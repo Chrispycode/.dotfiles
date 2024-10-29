@@ -77,6 +77,22 @@ services:
         max-file: "7"
     container_name: mariadb
 
+  redmine:
+    container_name: redmine
+    image: redmine:5.1
+    restart: always
+    depends_on:
+      - mariadb
+    ports:
+      - 8080:3000
+    environment:
+      REDMINE_DB_MYSQL: mariadb
+      REDMINE_DB_PASSWORD: root
+      REDMINE_PLUGINS_MIGRATE: 1
+      # REDMINE_SECRET_KEY_BASE: supersecretkey
+    volumes:
+      - ./.redmine-plugins:/usr/src/redmine/plugins:ro
+
   pg:
     container_name: pg
     image: postgres
@@ -146,5 +162,5 @@ volumes:
   rabbit_logs:
   mongodb_data:
   mariadb:
-  open-webui: 
+  open-webui:
 

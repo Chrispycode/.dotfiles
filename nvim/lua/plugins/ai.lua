@@ -13,10 +13,20 @@ return {
       require('codecompanion').setup {
         strategies = {
           chat = {
-            adapter = os.getenv("LLM"),
+            adapter = os.getenv 'LLM',
+            keymaps = {
+              debug = {
+                modes = {
+                  n = 'cd',
+                },
+                index = 14,
+                callback = 'keymaps.debug',
+                description = 'View debug info',
+              },
+            },
           },
           inline = {
-            adapter = os.getenv("LLM"),
+            adapter = os.getenv 'LLM',
           },
         },
         adapters = {
