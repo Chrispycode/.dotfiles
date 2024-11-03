@@ -25,12 +25,15 @@ return {
         local previewer = picker.previewer
         local winid = previewer.state.winid
         local bufnr = previewer.state.bufnr
+
         vim.keymap.set('n', '<Tab>', function()
           vim.cmd(string.format('noautocmd lua vim.api.nvim_set_current_win(%s)', prompt_win))
         end, { buffer = bufnr })
         vim.cmd(string.format('noautocmd lua vim.api.nvim_set_current_win(%s)', winid))
       end
 
+      local actions = require 'telescope.actions'
+      local action_layout = require 'telescope.actions.layout'
       require('telescope').setup {
         extensions = {
           ['ui-select'] = {
@@ -41,13 +44,18 @@ return {
           mappings = {
             n = {
               ['<Tab>'] = focus_preview,
+              ['<M-p>'] = action_layout.toggle_preview,
             },
             i = {
               ['<Tab>'] = focus_preview,
+              ['<esc>'] = actions.close,
+              ['<C-u>'] = false,
+              ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
+              ['<M-p>'] = action_layout.toggle_preview,
             },
           },
           layout_config = {
-            horizontal = { width = 0.95 },
+            -- horizontal = { width = 0.95 },
           },
           file_ignore_patterns = {
             'node_modules',
