@@ -2,9 +2,12 @@ package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share
 package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share/lua/5.1/?.lua'
 return {
   {
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-    opts = {},
+    'OXY2DEV/markview.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter',
+      'nvim-tree/nvim-web-devicons',
+    },
   },
   {
     '3rd/image.nvim',
@@ -13,7 +16,8 @@ return {
       require('image').setup {
         hijack_file_patterns = { '*.png', '*.PNG', '*.jpg', '*.JPG', '*.jpeg', '*.gif', '*.webp', '*.WEBP', '*.avif' },
         tmux_show_only_in_active_window = true,
-        window_overlap_clear_enabled = true
+        window_overlap_clear_enabled = true,
+        only_render_image_at_cursor = true,
       }
       function telescope_image_preview()
         local supported_images = { 'svg', 'png', 'jpg', 'JPG', 'jpeg', 'gif', 'webp', 'WEBP', 'avif' }
