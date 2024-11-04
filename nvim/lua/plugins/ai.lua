@@ -34,7 +34,16 @@ return {
             return require('codecompanion.adapters').extend('ollama', {
               schema = {
                 num_ctx = {
-                  default = 8384,
+                  default = 16384,
+                },
+              },
+            })
+          end,
+          copilot = function()
+            return require('codecompanion.adapters').extend('copilot', {
+              schema = {
+                model = {
+                  default = 'gpt-4o-2024-05-13',
                 },
               },
             })
