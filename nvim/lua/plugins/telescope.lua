@@ -48,7 +48,6 @@ return {
             },
             i = {
               ['<Tab>'] = focus_preview,
-              ['<esc>'] = actions.close,
               ['<C-u>'] = false,
               ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
               ['<M-p>'] = action_layout.toggle_preview,
