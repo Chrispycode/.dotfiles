@@ -144,10 +144,11 @@ return {
       formatters_by_ft = {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
-        eruby = { 'htmlbeautifier' },
+        eruby = { 'htmlbeautifier', stop_after_first = true },
         ruby = { 'rufo' },
         markdown = { 'prettier' },
         javascript = { 'prettier', stop_after_first = true },
+        css = { 'prettier', stop_after_first = true },
       },
     },
   },
