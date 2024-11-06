@@ -68,5 +68,6 @@ require('lazy').setup {
   'slim-template/vim-slim',
   'alvan/vim-closetag',
   'mg979/vim-visual-multi',
+  'nvim-pack/nvim-spectre',
   { import = 'plugins' },
 }

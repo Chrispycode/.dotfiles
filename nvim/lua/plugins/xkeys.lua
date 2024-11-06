@@ -68,4 +68,8 @@ return {
   { vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' }) },
   { vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' }) },
   { vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' }) },
+  { vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = 'Toggle Spectre' }) },
+  { vim.keymap.set('n', '<leader>sr', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = 'Search current word' }) },
+  { vim.keymap.set('v', '<leader>sr', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = 'Search current word' }) },
+  { vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = 'Search on current file' }) },
 }

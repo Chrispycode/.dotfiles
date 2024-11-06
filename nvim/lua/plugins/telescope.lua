@@ -137,9 +137,8 @@ return {
       vim.keymap.set('n', '<leader>sv', builtin.vim_options, { desc = 'Search vim options' })
       vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = 'search comands' })
       vim.keymap.set('n', '<leader>si', ':Telescope live_grep search_dirs=', { noremap = true, desc = 'Search in specific diretcory' })
-      vim.keymap.set('n', '<leader>ip', ':Telescope live_grep search_dirs=plugins,modules<CR>', { noremap = true, desc = 'search in plugins and modules' })
-      vim.keymap.set('n', '<leader>sp', ':Telescope find_files search_dirs=plugins,modules<CR>', { noremap = true, desc = 'search plugins' })
-      vim.keymap.set('n', '<leader>st', ':Telescope find_files search_dirs=test<CR>', { noremap = true, desc = 'search tests' })
+      vim.keymap.set('n', '<leader>pg', ':Telescope live_grep search_dirs=plugins,modules<CR>', { noremap = true, desc = 'search in plugins and modules' })
+      vim.keymap.set('n', '<leader>pf', ':Telescope find_files search_dirs=plugins,modules<CR>', { noremap = true, desc = 'search plugins' })
       vim.keymap.set('n', '<leader>sl', ":lua require('telescope').extensions.lazygit.lazygit()<CR>", { noremap = true, desc = 'search tests' })
       vim.keymap.set('n', '<leader>/', function()
         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
