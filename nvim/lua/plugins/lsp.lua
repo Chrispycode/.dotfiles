@@ -110,7 +110,6 @@ return {
         'htmlbeautifier',
         'prettier',
         'markdownlint',
-        'rufo',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -145,7 +144,6 @@ return {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier', stop_after_first = true },
-        ruby = { 'rufo' },
         markdown = { 'prettier' },
         javascript = { 'prettier', stop_after_first = true },
         css = { 'prettier', stop_after_first = true },
