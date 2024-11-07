@@ -3,6 +3,10 @@
 # sudo pacman -Sy brave-browser tmux kitty btop docker easyeffects fzf neovim
 # sudo pamac build 1password annotator
 
+# flatpak install brave ExtensionManager junction
+# sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
+# chsh -s /bin/zsh
+
 # git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 # git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -37,12 +41,12 @@ ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
 # dconf load /com/gexperts/Tilix/ < ./tilix.dconf
 # gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
 
-# curl https://mise.run | sh
-# mise use -g ruby node 
-
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
 # newgrp docker
 
 # ln -fs $HOME/.dotfiles/easyeffects/input $HOME/.config/easyeffects
 # ln -fs $HOME/.dotfiles/easyeffects/output $HOME/.config/easyeffects
+
+# curl https://mise.run | sh
+# mise use -g ruby node usage
