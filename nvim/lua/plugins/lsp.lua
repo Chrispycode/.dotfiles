@@ -74,12 +74,21 @@ return {
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       local servers = {
         ruby_lsp = {
-          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv('GLOBAL_GEMFILE')},
+          cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
           cmd = { 'ruby-lsp' },
           filetypes = { 'ruby', 'eruby' },
           root_dir = function()
             return vim.loop.cwd()
           end,
+          settings = {
+            formatting = {
+              enable = true,
+              default_config = {
+                indent_size = 2,
+                indent_style = 'space',
+              },
+            },
+          },
         },
         emmet_language_server = {
           root_dir = function()
