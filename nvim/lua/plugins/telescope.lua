@@ -45,11 +45,12 @@ return {
             n = {
               ['<Tab>'] = focus_preview,
               ['<M-p>'] = action_layout.toggle_preview,
+              ['<M-d>'] = actions.delete_buffer + actions.move_to_top,
             },
             i = {
               ['<Tab>'] = focus_preview,
               ['<C-u>'] = false,
-              ['<c-d>'] = actions.delete_buffer + actions.move_to_top,
+              ['<M-d>'] = actions.delete_buffer + actions.move_to_top,
               ['<M-p>'] = action_layout.toggle_preview,
             },
           },
