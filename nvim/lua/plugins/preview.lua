@@ -1,5 +1,6 @@
-package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share/lua/5.1/?/init.lua'
-package.path = package.path .. ';' .. vim.fn.expand '$HOME' .. '/.luarocks/share/lua/5.1/?.lua'
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
+package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
+
 return {
   {
     'OXY2DEV/markview.nvim',
@@ -11,6 +12,8 @@ return {
   },
   {
     '3rd/image.nvim',
+    build = false,
+    opt = {},
     config = function()
       -- default config
       require('image').setup {
@@ -18,6 +21,7 @@ return {
         tmux_show_only_in_active_window = true,
         window_overlap_clear_enabled = true,
         only_render_image_at_cursor = true,
+        processor = "magick_cli"
       }
       function telescope_image_preview()
         local supported_images = { 'svg', 'png', 'jpg', 'JPG', 'jpeg', 'gif', 'webp', 'WEBP', 'avif' }
