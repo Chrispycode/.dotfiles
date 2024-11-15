@@ -12,7 +12,7 @@
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# git clone https://github.com/gpakosz/.tmux.git && ln -s -f .tmux/.tmux.conf && cp .tmux/.tmux.conf.local .
+# git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
 
 # mv "$HOME/.zshrc_bu"
 ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
