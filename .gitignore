@@ -2,3 +2,5 @@ overrides
 preload
 nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl
+nvim/spell/*.*.spl
+nvim/spell/*.*.sug
