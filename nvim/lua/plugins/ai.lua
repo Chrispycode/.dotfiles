@@ -36,15 +36,17 @@ return {
                 num_ctx = {
                   default = 16384,
                 },
+                temperature = {default =  0.6},
               },
             })
           end,
           copilot = function()
             return require('codecompanion.adapters').extend('copilot', {
               schema = {
-                model = {
-                  default = 'gpt-4o-2024-05-13',
-                },
+                -- model = {
+                --   default = 'gpt-4o-2024-05-13',
+                -- },
+                temperature = {default =  0.6},
               },
             })
           end,
