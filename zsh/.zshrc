@@ -17,7 +17,6 @@ export ZSH="$HOME/.oh-my-zsh"
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
 export GOPATH="$HOME/.go"
-export TERM=xterm-kitty
 export EDITOR=nvim
 export VISUAL=nvim
 export RANGER_LOAD_DEFAULT_RC=false
