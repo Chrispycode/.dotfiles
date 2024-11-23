@@ -32,13 +32,11 @@ ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
 
 
-# ln -fs $HOME/.dotfiles/settings.json ~/.config/Code/User/settings.json
-# ln -fs $HOME/.dotfiles/Default\ \(Linux\).sublime-keymap ~/.config/sublime-text/Packages/User
-# ln -fs $HOME/.dotfiles/Preferences.sublime-settings ~/.config/sublime-text/Packages/User
-# ln -fs $HOME/.dotfiles/keybindings.json ~/.config/Code/User/keybindings.json
+# ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
+# ln -fs $HOME/.dotfiles/others/keybindings.json ~/.config/Code/User/keybindings.json
 
 # tilix create shortcut with "tilix --quake" command
-# dconf load /com/gexperts/Tilix/ < ./tilix.dconf
+# dconf load /com/gexperts/Tilix/ < $HOME/.dotfiles/others/tilix.dconf
 # gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
 
 # sudo groupadd docker

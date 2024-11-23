@@ -1,4 +1,4 @@
 # .dotfiles and setup
 
-![preview](./preview.png) 
+![preview](./others/preview.png) 
 

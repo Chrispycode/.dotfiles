@@ -1,0 +1,19 @@
+.ns-bottom-toolbar,
+.osx-gap,
+.window-controls,
+#app-viewport
+  > div
+  > div.ns-split-view
+  > div
+  > div:nth-child(1)
+  > div
+  > button:nth-child(5) {
+  display: none;
+}
+.chrome-top.flex.items-center.left-controls.no-controls.no-wrap.q-toolbar.row.text-default.window-drag {
+  padding-left: 10px;
+}
+#app-viewport {
+  border: solid 1px rgba(200, 0, 0, 0.4);
+  /* border-radius: 15px; */
+}
