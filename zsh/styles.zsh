@@ -2,8 +2,8 @@ export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
 --height=100%
---tmux='90%,70%'
---margin=5
+--tmux='90%,90%'
+--margin=3
 --border
 --multi
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
@@ -12,11 +12,8 @@ export FZF_DEFAULT_OPTS="
 --marker='✓'
 --bind='?:toggle-preview'
 --bind='ctrl-a:select-all'
---bind='ctrl-y:execute-silent(echo {+} | pbcopy)'
---bind='ctrl-e:execute(echo {+} | xargs -o vim)'
---bind='ctrl-v:execute(code {+})'
 "
-
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}' '+m:{_-}={-_}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $ZSH_CACHE_DIR
