@@ -81,14 +81,9 @@ return {
           root_dir = function()
             return vim.loop.cwd()
           end,
-          settings = {
-            formatting = {
-              enable = true,
-              default_config = {
-                indent_size = 2,
-                indent_style = 'space',
-              },
-            },
+          init_options = {
+            formatter = 'standard',
+            linters = { 'standard' },
           },
         },
         emmet_language_server = {
@@ -120,6 +115,7 @@ return {
         'htmlbeautifier',
         'prettier',
         'markdownlint',
+        'standardrb'
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
