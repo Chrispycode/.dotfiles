@@ -81,10 +81,6 @@ return {
           root_dir = function()
             return vim.loop.cwd()
           end,
-          init_options = {
-            formatter = 'standard',
-            linters = { 'standard' },
-          },
         },
         emmet_language_server = {
           root_dir = function()
@@ -115,7 +111,7 @@ return {
         'htmlbeautifier',
         'prettier',
         'markdownlint',
-        'standardrb'
+        'rufo',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -150,6 +146,7 @@ return {
         lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier', stop_after_first = true },
+        ruby = { 'rufo', stop_after_first = true },
         markdown = { 'prettier' },
         javascript = { 'prettier', stop_after_first = true },
         css = { 'prettier', stop_after_first = true },
