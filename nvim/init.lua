@@ -22,6 +22,8 @@ vim.opt.inccommand = 'split'
 vim.opt.scrolloff = 10
 vim.opt.ru = true
 vim.opt_syntax = true
+vim.opt.cursorline = true
+vim.opt.cursorcolumn = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = true
@@ -64,7 +66,7 @@ require('lazy').setup {
     opts = {
       colors = { bg = 'none' },
       overrides = function(c)
-        return { QuickFixLine = { fg = c.fg_dark } }
+        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = {bg = '#20111a' } }
       end,
     },
     priority = 1000,
@@ -80,7 +82,7 @@ require('lazy').setup {
     end,
   },
   { 'nvim-lualine/lualine.nvim', opts = { options = { theme = require 'styles.darkrose_line' }, sections = { lualine_c = { { 'filename', path = 1 } } } } },
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' } } },
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' }, scope = { enabled = true } } },
   'tpope/vim-sleuth',
   'slim-template/vim-slim',
   'alvan/vim-closetag',
