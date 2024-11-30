@@ -31,8 +31,6 @@ vim.opt.laststatus = 3
 vim.opt.wrap = false
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
-vim.cmd 'set runtimepath+="plugins"'
-vim.cmd 'set runtimepath+="modules"'
 vim.g.loaded_netrin = 1
 --- enable if spellfiles are missing
 vim.g.loaded_netrw = 0
