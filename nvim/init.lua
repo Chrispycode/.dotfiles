@@ -64,7 +64,7 @@ require('lazy').setup {
     opts = {
       colors = { bg = 'none' },
       overrides = function(c)
-        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = {bg = '#20111a' } }
+        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' } }
       end,
     },
     priority = 1000,
@@ -79,7 +79,6 @@ require('lazy').setup {
       require('alpha').setup(require('styles.alpha_startup').config)
     end,
   },
-  { 'nvim-lualine/lualine.nvim', opts = { options = { theme = require 'styles.darkrose_line' }, sections = { lualine_c = { { 'filename', path = 1 } } } } },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' }, scope = { enabled = true } } },
   'tpope/vim-sleuth',
   'slim-template/vim-slim',
