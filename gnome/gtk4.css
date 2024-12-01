@@ -13,7 +13,7 @@
 @define-color error_color #ff7b63;
 @define-color error_bg_color #c01c28;
 @define-color error_fg_color #ffffff;
-@define-color window_bg_color #000000;
+@define-color window_bg_color rgba(0,0,0,0.9);
 @define-color window_fg_color #f8f8f2;
 @define-color view_bg_color #000000;
 @define-color view_fg_color @window_fg_color;
@@ -122,19 +122,32 @@ button.titlebutton.minimize:hover,
 windowcontrols > button.minimize:hover {
   opacity: 0.8;
 }
+
 .top-bar {
-  background: black;
+  background: rgba(0,0,0,0.9);
   color: white;
 }
 .navigation-sidebar {
-  background: black;
+  background: rgba(0,0,0,0.9);
 }
 /*Junction*/
 .background.csd.main {
-  background: black;
+  background: rgba(0,0,0,0.9);
 }
 
 window,
 .background decoration {
   border: 0.5px solid rgba(100, 0, 0, 0.8);
+}
+
+.top-bar, top-bar * {
+  background: none;
+}
+
+.nautilus-window, .nautilus-window headerbar {
+  background: rgba(0,0,0,0.9);
+}
+
+.top-bar {
+  border-bottom: 1px solid rgba(100,0,0,0.8);
 }
