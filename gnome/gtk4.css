@@ -124,15 +124,15 @@ windowcontrols > button.minimize:hover {
 }
 
 .top-bar {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   color: white;
 }
 .navigation-sidebar {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 /*Junction*/
 .background.csd.main {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 window,
@@ -140,14 +140,16 @@ window,
   border: 0.5px solid rgba(100, 0, 0, 0.8);
 }
 
-.top-bar, top-bar * {
+.top-bar * {
   background: none;
 }
 
-.nautilus-window, .nautilus-window headerbar {
-  background: rgba(0,0,0,0.9);
+.nautilus-window,
+.nautilus-window headerbar {
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .top-bar {
-  border-bottom: 1px solid rgba(100,0,0,0.8);
+  border-bottom: 1px solid rgba(100, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }

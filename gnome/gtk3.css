@@ -141,7 +141,7 @@ window,
   border: 0.5px solid rgba(100, 0, 0, 0.8);
 }
 
-.top-bar, top-bar * {
+.top-bar * {
   background: none;
 }
 
@@ -151,4 +151,5 @@ window,
 
 .top-bar {
   border-bottom: 1px solid rgba(100, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
 }
