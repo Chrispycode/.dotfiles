@@ -129,6 +129,7 @@ windowcontrols > button.minimize:hover {
 }
 .navigation-sidebar {
   background: rgba(0, 0, 0, 0.9);
+  color: white;
 }
 /*Junction*/
 .background.csd.main {
