@@ -141,10 +141,6 @@ window,
   border: 0.5px solid rgba(100, 0, 0, 0.8);
 }
 
-.top-bar * {
-  background: none;
-}
-
 .nautilus-window,
 .nautilus-window headerbar {
   background: rgba(0, 0, 0, 0.9);
