@@ -53,7 +53,8 @@ return {
           lualine_a = { { 'mode', right_padding = 2 } },
           lualine_b = { 'branch' },
           lualine_c = {
-            {'filename', path = '1'}, '%='
+            { 'filename', path = 1 },
+            '%=',
           },
           lualine_x = {},
           lualine_y = { 'filetype', 'progress' },
