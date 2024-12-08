@@ -51,7 +51,7 @@ return {
         options = { theme = darkrose_bubble, component_separators = '', section_separators = { left = '', right = '' } },
         sections = {
           lualine_a = { { 'mode', right_padding = 2 } },
-          lualine_b = { 'branch' },
+          lualine_b = { 'branch', 'diff', 'diagnostics' },
           lualine_c = {
             { 'filename', path = 1 },
             '%=',
