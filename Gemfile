@@ -6,3 +6,5 @@ gem "rubocop-rails"
 gem 'rails'
 gem 'neovim'
 gem 'ruby-lsp'
+
+gem "debug", "~> 1.9"
