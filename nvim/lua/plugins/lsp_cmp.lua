@@ -76,9 +76,11 @@ return {
       local servers = {
         ruby_lsp = {
           cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
+          root_dir = function()
+            return vim.loop.cwd()
+          end,
         },
-        emmet_language_server = {
-        },
+        emmet_language_server = {},
         html = {
           filetypes = { 'html', 'eruby' },
         },
