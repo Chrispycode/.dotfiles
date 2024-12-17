@@ -25,8 +25,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git cp bundler node npm ruby rails rbenv rake redis-cli python pip fzf fzf-tab docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise tmux)
 
-if [ -f ~/.dotfiles/preload ]; then
-  source ~/.dotfiles/preload
+if [ -f ~/.dotfiles/preload.sh ]; then
+  source ~/.dotfiles/preload.sh
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -36,8 +36,8 @@ source ~/.dotfiles/zsh/styles.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source ~/.dotfiles/zsh/aliases.sh
-if [ -f ~/.dotfiles/overrides ]; then
-  source ~/.dotfiles/overrides
+if [ -f ~/.dotfiles/overrides.sh ]; then
+  source ~/.dotfiles/overrides.sh
 fi
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}

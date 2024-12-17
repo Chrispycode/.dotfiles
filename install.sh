@@ -15,18 +15,20 @@
 # git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
 
 # mv "$HOME/.zshrc_bu"
-ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
-ln -fs $HOME/.dotfiles/nvim ~/.config 
-ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
-ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
+# # ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+# # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+# # ln -fs $HOME/.dotfiles/nvim ~/.config 
+# # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+# ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
+# ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/Gemfile ~/
 
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
-ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
-ln -fs $HOME/.dotfiles/gnome/gtk3.css ~/.config/gtk-3.0/gtk.css
-ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
+# mkdir ~/.themes
+# ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
+# ln -fs $HOME/.dotfiles/gnome/gtk3.css ~/.config/gtk-3.0/gtk.css
+# ln -fs $HOME/.dotfiles/gnome/gtk4.css ~/.config/gtk-4.0/gtk.css
 # flatpak -u override --filesystem=xdg-config/gtk-4.0/gtk.css:ro
 # flatpak -u override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css

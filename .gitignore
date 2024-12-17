@@ -1,5 +1,5 @@
-overrides
-preload
+overrides.sh
+preload.sh
 nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
