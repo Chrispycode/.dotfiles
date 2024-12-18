@@ -81,9 +81,7 @@ return {
           end,
         },
         emmet_language_server = {},
-        html = {
-          filetypes = { 'html', 'eruby' },
-        },
+        html = {},
         lua_ls = {
           settings = {
             Lua = {
@@ -101,9 +99,9 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua',
         'css-lsp',
+        'ts_ls',
         'bashls',
         'htmlbeautifier',
-        'prettier',
         'markdownlint',
         'rufo',
       })
@@ -141,9 +139,6 @@ return {
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier', stop_after_first = true },
         ruby = { 'rufo', stop_after_first = true },
-        markdown = { 'prettier' },
-        javascript = { 'prettier', stop_after_first = true },
-        css = { 'prettier', stop_after_first = true },
       },
     },
   },
