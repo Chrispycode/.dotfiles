@@ -86,5 +86,7 @@ require('lazy').setup {
   'alvan/vim-closetag',
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
+  'kdheepak/lazygit.nvim',
+  {'kevinhwang91/nvim-bqf', ft = 'qf'},
   { import = 'plugins' },
 }
