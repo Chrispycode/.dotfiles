@@ -1,5 +1,14 @@
 return {
-  { 'github/copilot.vim' },
+  {
+    'github/copilot.vim',
+    config = function()
+      vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false
+      })
+      vim.g.copilot_no_tab_map = true
+    end
+  },
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
@@ -34,7 +43,7 @@ return {
                 num_ctx = {
                   default = 16384,
                 },
-                temperature = {default =  0.6},
+                temperature = { default = 0.6 },
               },
             })
           end,
@@ -44,7 +53,7 @@ return {
                 -- model = {
                 --   default = 'gpt-4o-2024-05-13',
                 -- },
-                temperature = {default =  0.6},
+                temperature = { default = 0.6 },
               },
             })
           end,

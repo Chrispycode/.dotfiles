@@ -4,47 +4,20 @@ return {
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     config = function()
       local fzf_lua = require 'fzf-lua'
+
       local file_ignore_patterns = {
-        'node_modules',
-        'tmp',
-        'log',
-        '.git',
-        '.bundle',
-        '.idea',
-        '.loadpath',
-        '.powrc',
-        '.rvmc',
-        '.ruby-version',
-        'db/*.db',
-        'db/*.sqlite3*',
-        'vendor/cache',
-        'files',
-        '_cacache',
-        '.cache',
-        '*.o',
-        '*.a',
-        '%.min.*',
-        '%.min-%.*',
-        '*.out',
-        '*.class',
-        '*.pdf',
-        '*.mkv',
-        '*.mp4',
-        '*.zip',
-        'plugins_*',
-        'modules_*',
-        '*.db',
-        '*.sqlite3',
-        '*.sqlite',
-        '*.sql',
-        '*.pyc',
-        '*.pyo',
-        '*.lock'
+        'node_modules', 'tmp', 'log', '.git', '.bundle', '.idea', '.loadpath', '.powrc',
+        '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*', 'vendor/cache', 'files',
+        '_cacache', '.cache', '*.o', '*.a', '%.min.*', '%.min-%.*', '*.out', '*.class',
+        '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db', '*.sqlite3',
+        '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock'
       }
+
       local rg_ignore_opts = ''
       for _, pattern in ipairs(file_ignore_patterns) do
         rg_ignore_opts = rg_ignore_opts .. ' -g "!' .. pattern .. '"'
       end
+
       local actions = require "fzf-lua.actions"
       fzf_lua.setup {
         { 'fzf-native' },
