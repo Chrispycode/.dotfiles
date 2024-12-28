@@ -10,7 +10,7 @@ return {
         '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*', 'vendor/cache', 'files',
         '_cacache', '.cache', '*.o', '*.a', '%.min.*', '%.min-%.*', '*.out', '*.class',
         '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db', '*.sqlite3',
-        '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock'
+        '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war'
       }
 
       local rg_ignore_opts = ''

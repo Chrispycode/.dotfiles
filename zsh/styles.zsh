@@ -3,7 +3,6 @@ export FZF_DEFAULT_OPTS="
 --info=inline
 --height=100%
 --tmux='90%,90%'
---margin=3
 --border
 --multi
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
