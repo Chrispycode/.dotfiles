@@ -48,7 +48,7 @@ if [ -f "/etc/debian_version" ]; then
   transfer_mode="stream"
 fi
 
-if [[ $KITTY_WINDOW_ID ]]; then
+if [[ $KITTY_WINDOW_ID ]] || [[ $GHOSTTY_BIN_DIR ]]; then
   kitty icat --clear --transfer-mode=$transfer_mode --unicode-placeholder --stdin=no --place=$dim@0x0 $file
 else
   file "$file"
