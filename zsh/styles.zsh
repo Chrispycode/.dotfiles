@@ -2,7 +2,6 @@ export FZF_DEFAULT_OPTS="
 --layout=reverse
 --info=inline
 --height=100%
---tmux='90%,90%'
 --border
 --multi
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
@@ -57,7 +56,7 @@ zstyle ':fzf-tab:complete:git-checkout:*' fzf-preview \
 
 zstyle ':fzf-tab:complete:-command-:*' fzf-preview '(out=$(MANWIDTH=$FZF_PREVIEW_COLUMNS man "$word") 2>/dev/null && echo $out) || (out=$(which "$word") && echo $out) || echo "${(P)word}"'
 zstyle ':fzf-tab:complete:docker:*' fzf-preview 'docker --help | grep $word'
-zstyle ':fzf-tab:complete:*:*' fzf-preview 'fzf-preview ${(Q)realpath}'
+zstyle ':fzf-tab:complete:*:*' fzf-preview 'fzf-preview.sh ${(Q)realpath}'
 zstyle ':fzf-tab:complete:*:options' fzf-preview
 zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
 zstyle ':fzf-tab:*' fzf-flags --height=100%
