@@ -20,7 +20,7 @@ return {
 
       local actions = require "fzf-lua.actions"
       fzf_lua.setup {
-        { 'fzf-native' },
+        { 'fzf-native', 'telescope' },
         fzf_colors = true,
         previewers = {
           bat = {

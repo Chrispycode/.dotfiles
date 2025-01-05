@@ -58,7 +58,7 @@ if command -v kitten > /dev/null; then
   #    So we remove the last line and append the reset code to its previous line.
   kitty icat --clear --transfer-mode=$transfer_mode --unicode-placeholder --stdin=no --place=$dim@0x0 $file
 
-elif [[ $TERM = "xterm-kitty" ]] || [[ $TERM = "xterm-ghostty" ]]; then
+elif [[ $TERM = "xterm-ghostty" ]] || [[ $GHOSTTY_BIN_DIR ]]; then
   chafa --clear -f kitty -d 0 --animate=off -s "$dim" "$file"
 
 # 2. Use chafa with Sixel output
