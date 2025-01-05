@@ -18,7 +18,6 @@ return {
         rg_ignore_opts = rg_ignore_opts .. ' -g "!' .. pattern .. '"'
       end
 
-      local actions = require "fzf-lua.actions"
       fzf_lua.setup {
         { 'fzf-native', 'telescope' },
         fzf_colors = true,
@@ -29,19 +28,9 @@ return {
         },
         files = {
           rg_opts = [[ --color=always --files --hidden --no-ignore --follow]] .. rg_ignore_opts,
-          actions = {
-            ['ctrl-q'] = {
-              fn = actions.file_edit_or_qf, prefix = 'select-all+'
-            },
-          },
         },
         grep = {
           rg_opts = [[ --color=always --hidden --no-ignore --follow]] .. rg_ignore_opts,
-          actions = {
-            ['ctrl-q'] = {
-              fn = actions.file_edit_or_qf, prefix = 'select-all+'
-            },
-          }
         },
       }
 
