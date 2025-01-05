@@ -13,7 +13,7 @@
 @define-color error_color #ff7b63;
 @define-color error_bg_color #c01c28;
 @define-color error_fg_color #ffffff;
-@define-color window_bg_color rgba(0,0,0,0.9);
+@define-color window_bg_color rgba(0, 0, 0, 0.9);
 @define-color window_fg_color #f8f8f2;
 @define-color view_bg_color #000000;
 @define-color view_fg_color @window_fg_color;
@@ -79,7 +79,7 @@
 
 /* GTK4 */
 
-windowcontrols > button {
+windowcontrols>button {
   color: transparent;
   min-width: 2px;
   min-height: 2px;
@@ -88,38 +88,38 @@ windowcontrols > button {
   margin: 0 5px;
 }
 
-windowcontrols > button > image {
+windowcontrols>button>image {
   color: white;
   padding: 0;
 }
 
 button.titlebutton.close,
-windowcontrols > button.close {
+windowcontrols>button.close {
   background-color: #505050;
 }
 
 button.titlebutton.close:hover,
-windowcontrols > button.close:hover {
+windowcontrols>button.close:hover {
   opacity: 0.8;
 }
 
 button.titlebutton.maximize,
-windowcontrols > button.maximize {
+windowcontrols>button.maximize {
   background-color: #505050;
 }
 
 button.titlebutton.maximize:hover,
-windowcontrols > button.maximize:hover {
+windowcontrols>button.maximize:hover {
   opacity: 0.8;
 }
 
 button.titlebutton.minimize,
-windowcontrols > button.minimize {
+windowcontrols>button.minimize {
   background-color: #505050;
 }
 
 button.titlebutton.minimize:hover,
-windowcontrols > button.minimize:hover {
+windowcontrols>button.minimize:hover {
   opacity: 0.8;
 }
 
@@ -127,6 +127,7 @@ windowcontrols > button.minimize:hover {
   background: rgba(0, 0, 0, 0.9);
   color: white;
 }
+
 /*Junction*/
 .background.csd.main {
   background: rgba(0, 0, 0, 0.9);
@@ -138,7 +139,8 @@ window:not(.adw),
 }
 
 .nautilus-window,
-.nautilus-window headerbar {
+.nautilus-window headerbar,
+.sidebar-pane {
   background: rgba(0, 0, 0, 0.9);
 }
 
