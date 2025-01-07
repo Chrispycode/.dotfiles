@@ -73,7 +73,6 @@ return {
           end
         end,
       })
-      local capabilities = require('blink.cmp').get_lsp_capabilities()
       local servers = {
         ruby_lsp = {
           cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
@@ -112,6 +111,7 @@ return {
         handlers = {
           function(server_name)
             local server = servers[server_name] or {}
+            local capabilities = require('blink.cmp').get_lsp_capabilities()
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
