@@ -46,8 +46,16 @@ return {
       vim.keymap.set('n', '<leader>s.', fzf_lua.oldfiles, { desc = '[S]earch Recent Files' })
       vim.keymap.set('n', '<leader><leader>', fzf_lua.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>sc', fzf_lua.commands, { desc = 'search commands' })
-      vim.keymap.set('n', '<leader>si', ':FzfLua live_grep search_dirs=',
-        { noremap = true, desc = 'Search in specific diretcory' })
+      vim.keymap.set('n', '<leader>si', function()
+        fzf_lua.fzf_exec('find . -type d', {
+          prompt = 'Select Directory> ',
+          actions = {
+            ['default'] = function(selected)
+              fzf_lua.live_grep { cwd = selected[1] }
+            end
+          }
+        })
+      end, { noremap = true, desc = 'Search in specific diretcory' })
       vim.keymap.set('n', '<leader>pg', function()
         fzf_lua.live_grep { cwd = 'plugins' }
       end, { noremap = true, desc = 'search in plugins and modules' })
