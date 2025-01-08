@@ -30,7 +30,7 @@ return {
           rg_opts = [[ --color=always --files --hidden --no-ignore --follow]] .. rg_ignore_opts,
         },
         grep = {
-          rg_opts = [[ --color=always --hidden --no-ignore --follow]] .. rg_ignore_opts,
+          rg_opts = [[ --color=always --column --hidden --no-ignore --follow]] .. rg_ignore_opts,
         },
       }
 
