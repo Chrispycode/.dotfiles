@@ -32,8 +32,6 @@ vim.opt.wrap = false
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
 vim.g.loaded_netrin = 1
---- enable if spellfiles are missing
-vim.g.loaded_netrw = 0
 vim.diagnostic.config { virtual_text = false }
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
@@ -70,13 +68,6 @@ require('lazy').setup {
     priority = 1000,
     init = function()
       vim.cmd.colorscheme 'darkrose'
-    end,
-  },
-  {
-    'goolord/alpha-nvim',
-    dependencies = { 'echasnovski/mini.icons' },
-    config = function()
-      require('alpha').setup(require('styles.alpha_startup').config)
     end,
   },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' }, scope = { enabled = true } } },
