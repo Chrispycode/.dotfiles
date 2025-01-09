@@ -1,6 +1,6 @@
 /* Global Values */
 stage {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 /* Common Stylings */
@@ -10,8 +10,8 @@ stage {
 .resize-popup,
 .osd-monitor-label,
 .osd-window {
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 1px solid rgba(248, 248, 242, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(248, 248, 242, 0.1);
 }
 
 .app-well-app.app-folder .overview-icon,
@@ -22,7 +22,7 @@ stage {
 .list-search-result,
 .search-provider-icon,
 .switcher-list .item-box {
-	border: 2px solid transparent;
+  border: 2px solid transparent;
 }
 
 #LookingGlassDialog .notebook-tab,
@@ -35,8 +35,8 @@ stage {
 .login-dialog-button.switch-user-button,
 .login-dialog-button.login-dialog-session-list-button,
 .background-app-item .close-button {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 #LookingGlassDialog .notebook-tab:focus,
@@ -46,9 +46,9 @@ stage {
 .login-dialog-button:focus,
 .icon-button:focus,
 .background-app-item .close-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 #LookingGlassDialog .notebook-tab:focus:hover,
@@ -58,8 +58,8 @@ stage {
 .login-dialog-button:focus:hover,
 .icon-button:focus:hover,
 .background-app-item .close-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassDialog .notebook-tab:focus:active,
@@ -69,8 +69,8 @@ stage {
 .login-dialog-button:focus:active,
 .icon-button:focus:active,
 .background-app-item .close-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassDialog .notebook-tab:hover,
@@ -80,8 +80,8 @@ stage {
 .login-dialog-button:hover,
 .icon-button:hover,
 .background-app-item .close-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 #LookingGlassDialog .notebook-tab:insensitive,
@@ -91,8 +91,8 @@ stage {
 .login-dialog-button:insensitive,
 .icon-button:insensitive,
 .background-app-item .close-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
 }
 
 #LookingGlassDialog .notebook-tab:selected,
@@ -109,8 +109,8 @@ stage {
 .login-dialog-button:active,
 .icon-button:active,
 .background-app-item .close-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 #LookingGlassDialog .notebook-tab:checked,
@@ -120,8 +120,8 @@ stage {
 .login-dialog-button:checked,
 .icon-button:checked,
 .background-app-item .close-button:checked {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 #LookingGlassDialog .notebook-tab:checked:hover,
@@ -131,7 +131,7 @@ stage {
 .login-dialog-button:checked:hover,
 .icon-button:checked:hover,
 .background-app-item .close-button:checked:hover {
-	background-color: #41413f;
+  background-color: #41413f;
 }
 
 #LookingGlassDialog .notebook-tab:checked:active,
@@ -141,7 +141,7 @@ stage {
 .login-dialog-button:checked:active,
 .icon-button:checked:active,
 .background-app-item .close-button:checked:active {
-	background-color: #494947;
+  background-color: #494947;
 }
 
 #LookingGlassDialog .flat.notebook-tab,
@@ -151,9 +151,9 @@ stage {
 .flat.login-dialog-button,
 .flat.icon-button,
 .background-app-item .flat.close-button {
-	color: #f8f8f2;
-	background-color: #121212;
-	background-color: transparent;
+  color: #f8f8f2;
+  background-color: #121212;
+  background-color: transparent;
 }
 
 #LookingGlassDialog .flat.notebook-tab:focus,
@@ -163,9 +163,9 @@ stage {
 .flat.login-dialog-button:focus,
 .flat.icon-button:focus,
 .background-app-item .flat.close-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 #LookingGlassDialog .flat.notebook-tab:focus:hover,
@@ -175,8 +175,8 @@ stage {
 .flat.login-dialog-button:focus:hover,
 .flat.icon-button:focus:hover,
 .background-app-item .flat.close-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassDialog .flat.notebook-tab:focus:active,
@@ -186,8 +186,8 @@ stage {
 .flat.login-dialog-button:focus:active,
 .flat.icon-button:focus:active,
 .background-app-item .flat.close-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassDialog .flat.notebook-tab:hover,
@@ -197,8 +197,8 @@ stage {
 .flat.login-dialog-button:hover,
 .flat.icon-button:hover,
 .background-app-item .flat.close-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 #LookingGlassDialog .flat.notebook-tab:insensitive,
@@ -208,8 +208,8 @@ stage {
 .flat.login-dialog-button:insensitive,
 .flat.icon-button:insensitive,
 .background-app-item .flat.close-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
 }
 
 #LookingGlassDialog .flat.notebook-tab:selected,
@@ -226,8 +226,8 @@ stage {
 .flat.login-dialog-button:active,
 .flat.icon-button:active,
 .background-app-item .flat.close-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 #LookingGlassDialog .flat.notebook-tab:checked,
@@ -237,8 +237,8 @@ stage {
 .flat.login-dialog-button:checked,
 .flat.icon-button:checked,
 .background-app-item .flat.close-button:checked {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 #LookingGlassDialog .flat.notebook-tab:checked:hover,
@@ -248,7 +248,7 @@ stage {
 .flat.login-dialog-button:checked:hover,
 .flat.icon-button:checked:hover,
 .background-app-item .flat.close-button:checked:hover {
-	background-color: #41413f;
+  background-color: #41413f;
 }
 
 #LookingGlassDialog .flat.notebook-tab:checked:active,
@@ -258,1178 +258,1178 @@ stage {
 .flat.login-dialog-button:checked:active,
 .flat.icon-button:checked:active,
 .background-app-item .flat.close-button:checked:active {
-	background-color: #494947;
+  background-color: #494947;
 }
 
 .lg-dialog StEntry,
 StEntry {
-	background-color: rgba(248, 248, 242, 0.1);
-	color: rgba(248, 248, 242, 0.7);
+  background-color: rgba(248, 248, 242, 0.1);
+  color: rgba(248, 248, 242, 0.7);
 }
 
 StEntry:hover {
-	background-color: rgba(248, 248, 242, 0.2);
-	color: inherit;
+  background-color: rgba(248, 248, 242, 0.2);
+  color: inherit;
 }
 
 StEntry:focus {
-	background-color: rgba(200, 168, 164, 0.24);
-	box-shadow: inset 0 0 0 2px #620000;
-	color: #f8f8f2;
+  background-color: rgba(200, 168, 164, 0.24);
+  box-shadow: inset 0 0 0 2px #620000;
+  color: #f8f8f2;
 }
 
 StEntry:insensitive {
-	background-color: rgba(130, 130, 127, 0.2);
-	color: #82827f;
+  background-color: rgba(130, 130, 127, 0.2);
+  color: #82827f;
 }
 
 .modal-dialog .modal-dialog-linked-button,
 .hotplug-notification-item,
 .notification-banner .notification-button {
-	color: #f8f8f2;
-	background-color: #2e2e2d;
+  color: #f8f8f2;
+  background-color: #2e2e2d;
 }
 
 .modal-dialog .modal-dialog-linked-button:insensitive,
 .hotplug-notification-item:insensitive,
 .notification-banner .notification-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
 }
 
 .modal-dialog .modal-dialog-linked-button:focus,
 .hotplug-notification-item:focus,
 .notification-banner .notification-button:focus {
-	color: #f8f8f2;
-	background-color: #332929;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #332929;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .modal-dialog .modal-dialog-linked-button:focus:hover,
 .hotplug-notification-item:focus:hover,
 .notification-banner .notification-button:focus:hover {
-	background-color: #3a302f;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #3a302f;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .modal-dialog .modal-dialog-linked-button:focus:active,
 .hotplug-notification-item:focus:active,
 .notification-banner .notification-button:focus:active {
-	background-color: #413736;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #413736;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .modal-dialog .modal-dialog-linked-button:hover,
 .hotplug-notification-item:hover,
 .notification-banner .notification-button:hover {
-	color: #f8f8f2;
-	background-color: #363635;
+  color: #f8f8f2;
+  background-color: #363635;
 }
 
 .modal-dialog .modal-dialog-linked-button:active,
 .hotplug-notification-item:active,
 .notification-banner .notification-button:active {
-	color: #f8f8f2;
-	background-color: #454544;
+  color: #f8f8f2;
+  background-color: #454544;
 }
 
 .modal-dialog .modal-dialog-linked-button:checked,
 .hotplug-notification-item:checked,
 .notification-banner .notification-button:checked {
-	color: #f8f8f2;
-	background-color: #454544;
+  color: #f8f8f2;
+  background-color: #454544;
 }
 
 .modal-dialog .modal-dialog-linked-button:checked:hover,
 .hotplug-notification-item:checked:hover,
 .notification-banner .notification-button:checked:hover {
-	background-color: #4d4d4b;
+  background-color: #4d4d4b;
 }
 
 .modal-dialog .modal-dialog-linked-button:checked:active,
 .hotplug-notification-item:checked:active,
 .notification-banner .notification-button:checked:active {
-	background-color: #555553;
+  background-color: #555553;
 }
 
 .screenshot-ui-show-pointer-button,
 .screenshot-ui-type-button {
-	background-color: transparent;
-	background-color: none;
-	box-shadow: none;
+  background-color: transparent;
+  background-color: none;
+  box-shadow: none;
 }
 
 .screenshot-ui-show-pointer-button:insensitive,
 .screenshot-ui-type-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: transparent;
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: transparent;
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .screenshot-ui-show-pointer-button:insensitive,
 .screenshot-ui-type-button:insensitive {
-	background-color: transparent;
-	background-color: none;
-	box-shadow: none;
+  background-color: transparent;
+  background-color: none;
+  box-shadow: none;
 }
 
 .screenshot-ui-show-pointer-button:insensitive:insensitive,
 .screenshot-ui-type-button:insensitive:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: transparent;
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: transparent;
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .screenshot-ui-show-pointer-button:focus,
 .screenshot-ui-type-button:focus {
-	color: #f8f8f2;
-	background-color: #1e1414;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #1e1414;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .screenshot-ui-show-pointer-button:focus:hover,
 .screenshot-ui-type-button:focus:hover {
-	background-color: #241b1b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #241b1b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .screenshot-ui-show-pointer-button:focus:active,
 .screenshot-ui-type-button:focus:active {
-	background-color: #2b2222;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2b2222;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .screenshot-ui-show-pointer-button:hover,
 .screenshot-ui-type-button:hover {
-	color: #f8f8f2;
-	background-color: #1e1e1e;
+  color: #f8f8f2;
+  background-color: #1e1e1e;
 }
 
 .screenshot-ui-show-pointer-button:active,
 .screenshot-ui-type-button:active {
-	color: #f8f8f2;
-	background-color: #2d2d2d;
+  color: #f8f8f2;
+  background-color: #2d2d2d;
 }
 
 .screenshot-ui-show-pointer-button:outlined,
 .screenshot-ui-type-button:outlined,
 .screenshot-ui-show-pointer-button:checked,
 .screenshot-ui-type-button:checked {
-	color: #f8f8f2;
-	background-color: #2d2d2d;
+  color: #f8f8f2;
+  background-color: #2d2d2d;
 }
 
 .screenshot-ui-show-pointer-button:outlined:hover,
 .screenshot-ui-type-button:outlined:hover,
 .screenshot-ui-show-pointer-button:checked:hover,
 .screenshot-ui-type-button:checked:hover {
-	background-color: #353535;
+  background-color: #353535;
 }
 
 .screenshot-ui-show-pointer-button:outlined:active,
 .screenshot-ui-type-button:outlined:active,
 .screenshot-ui-show-pointer-button:checked:active,
 .screenshot-ui-type-button:checked:active {
-	background-color: #3c3c3c;
+  background-color: #3c3c3c;
 }
 
 .dash-label,
 .window-caption {
-	background-color: rgba(0, 0, 0, 0.8);
-	color: #f8f8f2;
-	border: 1px solid rgba(248, 248, 242, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #f8f8f2;
+  border: 1px solid rgba(248, 248, 242, 0.1);
 }
 
 /* WIDGETS */
 .shell-link {
-	color: #c80000;
+  color: #c80000;
 }
 
 .shell-link:hover {
-	color: #fb0000;
+  color: #fb0000;
 }
 
 .lowres-icon {
-	icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  icon-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .icon-dropshadow {
-	icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
+  icon-shadow: 0 1px 5px rgba(0, 0, 0, 0.8);
 }
 
 /* Entries */
 StEntry StIcon.capslock-warning {
-	warning-color: #cd9309;
+  warning-color: #cd9309;
 }
 
 StEntry StLabel.hint-text {
-	color: rgba(248, 248, 242, 0.7);
+  color: rgba(248, 248, 242, 0.7);
 }
 
 
 /* Slider */
 .slider {
-	-barlevel-height: 4px;
-	-barlevel-background-color: rgba(248, 248, 242, 0.2);
-	-barlevel-border-width: 2px;
-	-barlevel-border-color: transparent;
-	-barlevel-active-background-color: #620000;
-	-barlevel-active-border-color: transparent;
-	-barlevel-overdrive-color: #c01c28;
-	-barlevel-overdrive-border-color: transparent;
-	-barlevel-overdrive-separator-width: 1px;
-	-slider-handle-radius: 8px;
-	-slider-handle-border-width: 0;
-	-slider-handle-border-color: transparent;
+  -barlevel-height: 4px;
+  -barlevel-background-color: rgba(248, 248, 242, 0.2);
+  -barlevel-border-width: 2px;
+  -barlevel-border-color: transparent;
+  -barlevel-active-background-color: #620000;
+  -barlevel-active-border-color: transparent;
+  -barlevel-overdrive-color: #c01c28;
+  -barlevel-overdrive-border-color: transparent;
+  -barlevel-overdrive-separator-width: 1px;
+  -slider-handle-radius: 8px;
+  -slider-handle-border-width: 0;
+  -slider-handle-border-color: transparent;
 }
 
 StScrollBar StBin#trough {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 StScrollBar StButton#vhandle,
 StScrollBar StButton#hhandle {
-	background-color: #535352;
-	border: 3px solid transparent;
+  background-color: #535352;
+  border: 3px solid transparent;
 }
 
 StScrollBar StButton#vhandle:hover,
 StScrollBar StButton#hhandle:hover {
-	background-color: #82827f;
+  background-color: #82827f;
 }
 
 StScrollBar StButton#vhandle:active,
 StScrollBar StButton#hhandle:active {
-	background-color: #6b6b68;
+  background-color: #6b6b68;
 }
 
 /* Popovers/Menus */
 .popup-menu {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .popup-menu-content,
 .candidate-popup-content {
-	background-color: rgba(0, 0, 0, 0.9);
-	border: 1px solid #1a1a1a;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid #1a1a1a;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .popup-menu-item {
-	background-color: transparent;
-	background-color: none;
-	box-shadow: none;
-	box-shadow: none !important;
+  background-color: transparent;
+  background-color: none;
+  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .popup-menu-item:insensitive {
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: transparent;
-	color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: transparent;
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .popup-menu-item:focus,
 .popup-menu-item:hover {
-	color: #f8f8f2;
-	background-color: #363635;
+  color: #f8f8f2;
+  background-color: #363635;
 }
 
 .popup-menu-item:active {
-	color: #f8f8f2;
-	background-color: #454544;
+  color: #f8f8f2;
+  background-color: #454544;
 }
 
 .popup-menu-item:checked {
-	color: #f8f8f2;
-	background-color: #454544;
+  color: #f8f8f2;
+  background-color: #454544;
 }
 
 .popup-menu-item:checked:hover {
-	background-color: #4d4d4b;
+  background-color: #4d4d4b;
 }
 
 .popup-menu-item:checked:active {
-	background-color: #555553;
+  background-color: #555553;
 }
 
 .popup-inactive-menu-item {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .popup-inactive-menu-item:insensitive {
-	color: #82827f;
+  color: #82827f;
 }
 
 .popup-sub-menu .popup-menu-item {
-	color: #f8f8f2;
-	background-color: #3e3e3d;
+  color: #f8f8f2;
+  background-color: #3e3e3d;
 }
 
 .popup-sub-menu .popup-menu-item:focus,
 .popup-sub-menu .popup-menu-item:hover {
-	color: #f8f8f2;
-	background-color: #464645;
+  color: #f8f8f2;
+  background-color: #464645;
 }
 
 .popup-sub-menu .popup-menu-item:active {
-	color: #f8f8f2;
-	background-color: #555554;
+  color: #f8f8f2;
+  background-color: #555554;
 }
 
 .popup-sub-menu .popup-menu-item:checked {
-	color: #f8f8f2;
-	background-color: #555554;
+  color: #f8f8f2;
+  background-color: #555554;
 }
 
 .popup-sub-menu .popup-menu-item:checked:hover {
-	background-color: #5d5d5b;
+  background-color: #5d5d5b;
 }
 
 .popup-sub-menu .popup-menu-item:checked:active {
-	background-color: #656563;
+  background-color: #656563;
 }
 
 .popup-separator-menu-item .popup-separator-menu-item-separator {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .popup-sub-menu .popup-separator-menu-item {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 /* Date/Time Menu */
 /* today button (the date) */
 .datemenu-today-button {
-	background-color: transparent;
-	background-color: none;
-	box-shadow: none;
-	box-shadow: none !important;
+  background-color: transparent;
+  background-color: none;
+  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .datemenu-today-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: transparent;
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: transparent;
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .datemenu-today-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .datemenu-today-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .datemenu-today-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .datemenu-today-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .datemenu-today-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 /* Calendar */
 .calendar {
-	background-color: transparent;
-	background-color: none;
-	box-shadow: none;
-	box-shadow: none !important;
+  background-color: transparent;
+  background-color: none;
+  box-shadow: none;
+  box-shadow: none !important;
 }
 
 .calendar:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: transparent;
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: transparent;
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .calendar:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .calendar:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .calendar:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .calendar:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .calendar:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .calendar .calendar-month-header .calendar-month-label {
-	background-color: transparent;
+  background-color: transparent;
 
 }
 
 .calendar .calendar-month-header .pager-button {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .calendar .calendar-month-header .pager-button:hover,
 .calendar .calendar-month-header .pager-button:focus {
-	background-color: #262626;
+  background-color: #262626;
 }
 
 .calendar .calendar-month-header .pager-button:active {
-	background-color: #2b2b2b;
+  background-color: #2b2b2b;
 }
 
 .calendar .calendar-day {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .calendar .calendar-day:hover {
-	background-color: #262626;
+  background-color: #262626;
 }
 
 .calendar .calendar-day:focus {
-	background-color: #1e0a0a;
-	color: #f8f8f2;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
+  background-color: #1e0a0a;
+  color: #f8f8f2;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
 }
 
 .calendar .calendar-day:active,
 .calendar .calendar-day:selected {
-	color: white;
-	background-color: #2b2b2b;
+  color: white;
+  background-color: #2b2b2b;
 }
 
 .calendar .calendar-day:active:focus,
 .calendar .calendar-day:selected:focus {
-	background-color: #362323;
+  background-color: #362323;
 }
 
 .calendar .calendar-day-heading {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .calendar .calendar-day.calendar-day-heading {
-	color: #82827f;
-	height: 16px !important;
+  color: #82827f;
+  height: 16px !important;
 }
 
 .calendar .calendar-nonwork-day {
-	color: #82827f;
+  color: #82827f;
 }
 
 .calendar .calendar-other-month-day {
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .calendar .calendar-other-month-day.calendar-nonwork-day {
-	color: rgba(130, 130, 127, 0.5);
+  color: rgba(130, 130, 127, 0.5);
 }
 
 .calendar .calendar-today {
-	background-color: #620000;
-	color: #f8f8f2 !important;
+  background-color: #620000;
+  color: #f8f8f2 !important;
 }
 
 .calendar .calendar-today:hover,
 .calendar .calendar-today:focus {
-	background-color: #710000;
-	color: inherit;
+  background-color: #710000;
+  color: inherit;
 }
 
 .calendar .calendar-today:active,
 .calendar .calendar-today:selected {
-	background-color: #620000;
-	color: inherit;
+  background-color: #620000;
+  color: inherit;
 }
 
 .calendar .calendar-today:active:hover,
 .calendar .calendar-today:active:focus,
 .calendar .calendar-today:selected:hover,
 .calendar .calendar-today:selected:focus {
-	background-color: #710000;
-	color: inherit;
+  background-color: #710000;
+  color: inherit;
 }
 
 .calendar .calendar-day-with-events {
-	background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
-	background-size: contain;
+  background-image: url("resource:///org/gnome/shell/theme/calendar-today.svg");
+  background-size: contain;
 }
 
 .calendar .calendar-week-number {
-	background-color: rgba(248, 248, 242, 0.1);
-	color: #82827f;
+  background-color: rgba(248, 248, 242, 0.1);
+  color: #82827f;
 }
 
 agenda-view .background {
-	background: black;
+  background: black;
 }
 
 /* Events */
 .events-button {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .events-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .events-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .events-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .events-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .events-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .events-button .events-title {
-	color: #82827f;
+  color: #82827f;
 }
 
 .events-button .event-time {
-	color: #82827f;
+  color: #82827f;
 }
 
 /* World clocks */
 .world-clocks-button {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .world-clocks-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .world-clocks-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .world-clocks-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .world-clocks-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .world-clocks-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .world-clocks-button .world-clocks-grid {
-	spacing-rows: 6px;
-	spacing-columns: 12px;
+  spacing-rows: 6px;
+  spacing-columns: 12px;
 }
 
 .world-clocks-button .world-clocks-header {
-	color: #82827f;
+  color: #82827f;
 }
 
 .world-clocks-button .world-clocks-city {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .world-clocks-button .world-clocks-time {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .world-clocks-button .world-clocks-timezone {
-	color: #82827f;
+  color: #82827f;
 }
 
 /* Weather */
 .weather-button {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .weather-button:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .weather-button:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .weather-button:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .weather-button:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .weather-button:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .weather-button .weather-header {
-	color: #82827f;
+  color: #82827f;
 }
 
 .weather-button .weather-forecast-time {
-	color: #c2c28f;
+  color: #c2c28f;
 }
 
 /* Message List */
 .message-list {
-	border: solid rgba(248, 248, 242, 0.1);
+  border: solid rgba(248, 248, 242, 0.1);
 }
 
 .message-list .message-list-placeholder {
-	color: rgba(130, 130, 127, 0.5);
+  color: rgba(130, 130, 127, 0.5);
 }
 
 .message-list-controls .dnd-button:focus {
-	border-color: rgba(98, 0, 0, 0.6);
+  border-color: rgba(98, 0, 0, 0.6);
 }
 
 .message {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .message:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .message:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .message:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .message:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .message:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .message .message-close-button {
-	color: #f8f8f2;
-	background-color: rgba(248, 248, 242, 0.1);
+  color: #f8f8f2;
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .message .message-close-button:hover {
-	background-color: rgba(248, 248, 242, 0.2);
+  background-color: rgba(248, 248, 242, 0.2);
 }
 
 .message .message-close-button:active {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .message .message-body {
-	color: #e6e6d1;
+  color: #e6e6d1;
 }
 
 .url-highlighter {
-	link-color: #c80000;
+  link-color: #c80000;
 }
 
 /* Media Controls */
 .message-media-control {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .message-media-control:hover {
-	background-color: #333333;
-	color: #f8f8f2;
+  background-color: #333333;
+  color: #f8f8f2;
 }
 
 .message-media-control:active {
-	background-color: #383838;
-	color: #f8f8f2;
+  background-color: #383838;
+  color: #f8f8f2;
 }
 
 .message-media-control:insensitive {
-	color: #8f8f8c;
+  color: #8f8f8c;
 }
 
 .media-message-cover-icon.fallback {
-	color: #dadaba;
-	background-color: rgba(0, 0, 0, 0.9);
+  color: #dadaba;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .candidate-index {
-	color: #82827f;
+  color: #82827f;
 }
 
 .candidate-box:selected {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 .candidate-box:hover {
-	background-color: #262626;
-	color: white;
+  background-color: #262626;
+  color: white;
 }
 
 /* Notifications & Message Tray */
 .notification-banner {
-	min-height: 64px;
-	box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  min-height: 64px;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .summary-source-counter {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 .chat-log-message {
-	color: #e6e6d1;
+  color: #e6e6d1;
 }
 
 .chat-sent {
-	color: white;
+  color: white;
 }
 
 .chat-meta-message {
-	color: white;
+  color: white;
 }
 
 /* Modal Dialogs */
 .modal-dialog {
-	background-color: rgba(0, 0, 0, 0.9);
-	box-shadow: inset 0 0 0 1px #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 1px #1a1a1a;
 }
 
 /* End Session Dialog */
 .end-session-dialog .end-session-dialog-battery-warning,
 .end-session-dialog .dialog-list-title {
-	color: #cd9309;
+  color: #cd9309;
 }
 
 /* Dialog List */
 .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
-	color: #efefe1;
+  color: #efefe1;
 }
 
 /* Run Dialog */
 .run-dialog .run-dialog-description {
-	color: #d4d4b0;
+  color: #d4d4b0;
 }
 
 /* Password or Authentication Dialog */
 .prompt-dialog-error-label {
-	color: #cd9309;
+  color: #cd9309;
 }
 
 .polkit-dialog-user-layout .polkit-dialog-user-root-label {
-	color: #cd9309;
+  color: #cd9309;
 }
 
 /* Audio selection dialog */
 .audio-selection-device:hover,
 .audio-selection-device:focus {
-	background-color: #262626;
+  background-color: #262626;
 }
 
 .audio-selection-device:active {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 /* Pad OSD */
 .pad-osd-window {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* App Switcher */
 .switcher-list {
-	box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .switcher-list .item-box {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .switcher-list .item-box:hover {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .switcher-list .item-box:selected,
 .switcher-list .item-box:focus {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .switcher-list .item-box:selected:hover,
 .switcher-list .item-box:focus:hover {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .switcher-list .item-box:selected:active,
 .switcher-list .item-box:focus:active {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .switcher-list .item-box:active {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .switcher-list .item-box:outlined,
 .switcher-list .item-box:checked {
-	background-color: rgba(248, 248, 242, 0.19);
+  background-color: rgba(248, 248, 242, 0.19);
 }
 
 .switcher-list .item-box:outlined:active,
 .switcher-list .item-box:checked:active {
-	background-color: rgba(248, 248, 242, 0.22);
+  background-color: rgba(248, 248, 242, 0.22);
 }
 
 .switcher-list .item-box:outlined:hover,
 .switcher-list .item-box:checked:hover {
-	background-color: rgba(248, 248, 242, 0.25);
+  background-color: rgba(248, 248, 242, 0.25);
 }
 
 .switcher-list .item-box:drop {
-	border: 2px solid rgba(98, 0, 0, 0.8);
-	background-color: rgba(98, 0, 0, 0.2);
+  border: 2px solid rgba(98, 0, 0, 0.8);
+  background-color: rgba(98, 0, 0, 0.2);
 }
 
 .switcher-list .item-box:hover {
-	background: none;
+  background: none;
 }
 
 .switcher-list .separator {
-	background: rgba(248, 248, 242, 0.1);
+  background: rgba(248, 248, 242, 0.1);
 }
 
 .switcher-arrow {
-	border-color: rgba(248, 248, 242, 0.8);
-	color: rgba(248, 248, 242, 0.8);
+  border-color: rgba(248, 248, 242, 0.8);
+  color: rgba(248, 248, 242, 0.8);
 }
 
 .switcher-arrow:highlighted {
-	border-color: #f8f8f2;
-	color: #f8f8f2;
+  border-color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .input-source-switcher-symbol {
-	height: 96px;
+  height: 96px;
 }
 
 .cycler-highlight {
-	border: 5px solid #620000;
+  border: 5px solid #620000;
 }
 
 /* Workspace Switcher */
 .ws-switcher-indicator {
-	background-color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.5);
 }
 
 .ws-switcher-indicator:active {
-	background-color: #f8f8f2;
+  background-color: #f8f8f2;
 }
 
 .screenshot-ui-close-button {
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .screenshot-ui-capture-button {
-	border: 4px #f8f8f2;
+  border: 4px #f8f8f2;
 }
 
 .screenshot-ui-capture-button .screenshot-ui-capture-button-circle {
-	background-color: #f8f8f2;
+  background-color: #f8f8f2;
 }
 
 .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:hover,
 .screenshot-ui-capture-button .screenshot-ui-capture-button-circle:focus {
-	background-color: #262626;
+  background-color: #262626;
 }
 
 .screenshot-ui-capture-button:hover .screenshot-ui-capture-button-circle,
 .screenshot-ui-capture-button:focus .screenshot-ui-capture-button-circle {
-	background-color: #ddddc0;
+  background-color: #ddddc0;
 }
 
 .screenshot-ui-capture-button:active .screenshot-ui-capture-button-circle {
-	background-color: #999952;
+  background-color: #999952;
 }
 
 .screenshot-ui-capture-button:cast .screenshot-ui-capture-button-circle {
-	background-color: #c01c28;
+  background-color: #c01c28;
 }
 
 .screenshot-ui-capture-button:cast:hover .screenshot-ui-capture-button-circle,
 .screenshot-ui-capture-button:cast:focus .screenshot-ui-capture-button-circle {
-	background-color: #d61f2d;
+  background-color: #d61f2d;
 }
 
 .screenshot-ui-capture-button:cast:active .screenshot-ui-capture-button-circle {
-	background-color: #a11722;
+  background-color: #a11722;
 }
 
 .screenshot-ui-shot-cast-container {
-	background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .screenshot-ui-shot-cast-button {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .screenshot-ui-shot-cast-button:hover,
 .screenshot-ui-shot-cast-button:focus {
-	background-color: #1a1a1a;
+  background-color: #1a1a1a;
 }
 
 .screenshot-ui-shot-cast-button:active {
-	background-color: #383838;
+  background-color: #383838;
 }
 
 .screenshot-ui-shot-cast-button:checked {
-	background-color: white;
-	color: black;
+  background-color: white;
+  color: black;
 }
 
 .screenshot-ui-shot-cast-button:insensitive {
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .screenshot-ui-area-indicator-shade {
-	background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .screenshot-ui-area-selector .screenshot-ui-area-indicator-shade {
-	background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .screenshot-ui-area-selector .screenshot-ui-area-indicator-selection {
-	border: 2px white;
+  border: 2px white;
 }
 
 .screenshot-ui-area-selector-handle {
-	background-color: white;
-	box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 .screenshot-ui-window-selector {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .screenshot-ui-window-selector-check {
-	color: transparent;
+  color: transparent;
 }
 
 .screenshot-ui-window-selector-window:hover .screenshot-ui-window-selector-window-border {
-	border-color: #160000;
+  border-color: #160000;
 }
 
 .screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-window-border {
-	border-color: #620000;
-	background-color: rgba(98, 0, 0, 0.2);
+  border-color: #620000;
+  background-color: rgba(98, 0, 0, 0.2);
 }
 
 .screenshot-ui-window-selector-window:checked .screenshot-ui-window-selector-check {
-	color: #f8f8f2;
-	background-color: #620000;
+  color: #f8f8f2;
+  background-color: #620000;
 }
 
 .screenshot-ui-screen-selector {
-	background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .screenshot-ui-screen-selector:hover {
-	background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .screenshot-ui-screen-selector:active {
-	background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .screenshot-ui-screen-selector:checked {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .screenshot-ui-tooltip {
-	color: #f8f8f2;
-	background-color: rgba(0, 0, 0, 0.8);
+  color: #f8f8f2;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Top Bar */
 #panel {
-	background-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #panel.unlock-screen,
 #panel.login-screen,
 #panel:overview {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 #panel .panel-button {
-	color: #efefe1;
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 0.5px thin rgba(100, 0, 0, 0.8);
-	margin: 1px;
+  color: #efefe1;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.5px thin rgba(100, 0, 0, 0.8);
+  margin: 1px;
 }
 
 #panel .panel-button:last-child {
-	margin-right: 2px;
+  margin-right: 2px;
 }
 
 #panel .panel-button.clock-display .clock {
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 0.5px thin rgba(100, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 0.5px thin rgba(100, 0, 0, 0.8);
 }
 
 #panel .panel-button.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px #c01c28;
+  box-shadow: inset 0 0 0 100px #c01c28;
 }
 
 #panel .panel-button.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px #cd9309;
+  box-shadow: inset 0 0 0 100px #cd9309;
 }
 
 #panel .panel-button:active,
 #panel .panel-button:overview,
 #panel .panel-button:focus,
 #panel .panel-button:checked {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.2);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.2);
 }
 
 #panel .panel-button:active.clock-display,
 #panel .panel-button:overview.clock-display,
 #panel .panel-button:focus.clock-display,
 #panel .panel-button:checked.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel .panel-button:active.clock-display .clock,
 #panel .panel-button:overview.clock-display .clock,
 #panel .panel-button:focus.clock-display .clock,
 #panel .panel-button:checked.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.2);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.2);
 }
 
 #panel .panel-button:active.screen-recording-indicator,
 #panel .panel-button:overview.screen-recording-indicator,
 #panel .panel-button:focus.screen-recording-indicator,
 #panel .panel-button:checked.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.85);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.85);
 }
 
 #panel .panel-button:active.screen-sharing-indicator,
 #panel .panel-button:overview.screen-sharing-indicator,
 #panel .panel-button:focus.screen-sharing-indicator,
 #panel .panel-button:checked.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.85);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.85);
 }
 
 #panel .panel-button:hover {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.15);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.15);
 }
 
 #panel .panel-button:hover.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel .panel-button:hover.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.15);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.15);
 }
 
 #panel .panel-button:hover.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.9);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.9);
 }
 
 #panel .panel-button:hover.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.9);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.9);
 }
 
 #panel .panel-button:active:hover,
 #panel .panel-button:overview:hover,
 #panel .panel-button:focus:hover,
 #panel .panel-button:checked:hover {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.25);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.25);
 }
 
 #panel .panel-button:active:hover.clock-display,
 #panel .panel-button:overview:hover.clock-display,
 #panel .panel-button:focus:hover.clock-display,
 #panel .panel-button:checked:hover.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel .panel-button:active:hover.clock-display .clock,
 #panel .panel-button:overview:hover.clock-display .clock,
 #panel .panel-button:focus:hover.clock-display .clock,
 #panel .panel-button:checked:hover.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.25);
+  box-shadow: inset 0 0 0 100px rgba(239, 239, 225, 0.25);
 }
 
 #panel .panel-button:active:hover.screen-recording-indicator,
 #panel .panel-button:overview:hover.screen-recording-indicator,
 #panel .panel-button:focus:hover.screen-recording-indicator,
 #panel .panel-button:checked:hover.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.8);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.8);
 }
 
 #panel .panel-button:active:hover.screen-sharing-indicator,
 #panel .panel-button:overview:hover.screen-sharing-indicator,
 #panel .panel-button:focus:hover.screen-sharing-indicator,
 #panel .panel-button:checked:hover.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.8);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.8);
 }
 
 #panel.unlock-screen .panel-button:active,
@@ -1444,7 +1444,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview,
 #panel:overview .panel-button:focus,
 #panel:overview .panel-button:checked {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.15);
 }
 
 #panel.unlock-screen .panel-button:active.clock-display,
@@ -1459,7 +1459,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview.clock-display,
 #panel:overview .panel-button:focus.clock-display,
 #panel:overview .panel-button:checked.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel.unlock-screen .panel-button:active.clock-display .clock,
@@ -1474,7 +1474,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview.clock-display .clock,
 #panel:overview .panel-button:focus.clock-display .clock,
 #panel:overview .panel-button:checked.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.15);
 }
 
 #panel.unlock-screen .panel-button:active.screen-recording-indicator,
@@ -1489,7 +1489,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview.screen-recording-indicator,
 #panel:overview .panel-button:focus.screen-recording-indicator,
 #panel:overview .panel-button:checked.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.85);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.85);
 }
 
 #panel.unlock-screen .panel-button:active.screen-sharing-indicator,
@@ -1504,37 +1504,37 @@ agenda-view .background {
 #panel:overview .panel-button:overview.screen-sharing-indicator,
 #panel:overview .panel-button:focus.screen-sharing-indicator,
 #panel:overview .panel-button:checked.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.85);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.85);
 }
 
 #panel.unlock-screen .panel-button:hover,
 #panel.login-screen .panel-button:hover,
 #panel:overview .panel-button:hover {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.1);
 }
 
 #panel.unlock-screen .panel-button:hover.clock-display,
 #panel.login-screen .panel-button:hover.clock-display,
 #panel:overview .panel-button:hover.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel.unlock-screen .panel-button:hover.clock-display .clock,
 #panel.login-screen .panel-button:hover.clock-display .clock,
 #panel:overview .panel-button:hover.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.1);
 }
 
 #panel.unlock-screen .panel-button:hover.screen-recording-indicator,
 #panel.login-screen .panel-button:hover.screen-recording-indicator,
 #panel:overview .panel-button:hover.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.9);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.9);
 }
 
 #panel.unlock-screen .panel-button:hover.screen-sharing-indicator,
 #panel.login-screen .panel-button:hover.screen-sharing-indicator,
 #panel:overview .panel-button:hover.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.9);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.9);
 }
 
 #panel.unlock-screen .panel-button:active:hover,
@@ -1549,7 +1549,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview:hover,
 #panel:overview .panel-button:focus:hover,
 #panel:overview .panel-button:checked:hover {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
 }
 
 #panel.unlock-screen .panel-button:active:hover.clock-display,
@@ -1564,7 +1564,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview:hover.clock-display,
 #panel:overview .panel-button:focus:hover.clock-display,
 #panel:overview .panel-button:checked:hover.clock-display {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #panel.unlock-screen .panel-button:active:hover.clock-display .clock,
@@ -1579,7 +1579,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview:hover.clock-display .clock,
 #panel:overview .panel-button:focus:hover.clock-display .clock,
 #panel:overview .panel-button:checked:hover.clock-display .clock {
-	box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 100px rgba(255, 255, 255, 0.2);
 }
 
 #panel.unlock-screen .panel-button:active:hover.screen-recording-indicator,
@@ -1594,7 +1594,7 @@ agenda-view .background {
 #panel:overview .panel-button:overview:hover.screen-recording-indicator,
 #panel:overview .panel-button:focus:hover.screen-recording-indicator,
 #panel:overview .panel-button:checked:hover.screen-recording-indicator {
-	box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.8);
+  box-shadow: inset 0 0 0 100px rgba(192, 28, 40, 0.8);
 }
 
 #panel.unlock-screen .panel-button:active:hover.screen-sharing-indicator,
@@ -1609,896 +1609,896 @@ agenda-view .background {
 #panel:overview .panel-button:overview:hover.screen-sharing-indicator,
 #panel:overview .panel-button:focus:hover.screen-sharing-indicator,
 #panel:overview .panel-button:checked:hover.screen-sharing-indicator {
-	box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.8);
+  box-shadow: inset 0 0 0 100px rgba(205, 147, 9, 0.8);
 }
 
 #panel .screencast-indicator,
 #panel .remote-access-indicator {
-	color: #cd9309;
+  color: #cd9309;
 }
 
 #appMenu .label-shadow {
-	color: transparent;
+  color: transparent;
 }
 
 /* Activities Ripple */
 .ripple-box {
-	background-color: rgba(255, 255, 255, 0.2);
-	box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.2);
 }
 
 .quick-settings {
-	border: 0.5px solid rgba(100, 0, 0, 0.8);
+  border: 0.5px solid rgba(100, 0, 0, 0.8);
 }
 
 .quick-toggle:checked {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 .quick-toggle:checked:focus {
-	box-shadow: inset 0 0 0 2px rgba(248, 248, 242, 0.6) !important;
+  box-shadow: inset 0 0 0 2px rgba(248, 248, 242, 0.6) !important;
 }
 
 .quick-toggle:checked:hover,
 .quick-toggle:checked:focus {
-	background-color: #7c0000;
-	color: white;
+  background-color: #7c0000;
+  color: white;
 }
 
 .quick-toggle:checked:active {
-	background-color: #3e0000;
-	color: #ececdb;
+  background-color: #3e0000;
+  color: #ececdb;
 }
 
 .quick-toggle:checked:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: rgba(98, 0, 0, 0.5);
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: rgba(98, 0, 0, 0.5);
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked {
-	background-color: #620000;
-	color: #f8f8f2;
-	border-color: black;
+  background-color: #620000;
+  color: #f8f8f2;
+  border-color: black;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:focus {
-	box-shadow: inset 0 0 0 2px rgba(248, 248, 242, 0.6) !important;
+  box-shadow: inset 0 0 0 2px rgba(248, 248, 242, 0.6) !important;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:hover,
 .quick-menu-toggle .quick-toggle-arrow:checked:focus {
-	background-color: #7c0000;
-	color: white;
+  background-color: #7c0000;
+  color: white;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:active {
-	background-color: #3e0000;
-	color: #ececdb;
+  background-color: #3e0000;
+  color: #ececdb;
 }
 
 .quick-menu-toggle .quick-toggle-arrow:checked:insensitive {
-	color: rgba(248, 248, 242, 0.5);
-	background-color: rgba(248, 248, 242, 0.05);
-	background-color: rgba(98, 0, 0, 0.5);
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
+  background-color: rgba(248, 248, 242, 0.05);
+  background-color: rgba(98, 0, 0, 0.5);
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .quick-slider .slider-bin:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .quick-slider .slider-bin:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .quick-slider .slider-bin:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .quick-toggle-menu {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .quick-toggle-menu:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .quick-toggle-menu:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .quick-toggle-menu:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .quick-toggle-menu:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .quick-toggle-menu:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .quick-toggle-menu .header .icon {
-	background-color: rgba(248, 248, 242, 0.2);
+  background-color: rgba(248, 248, 242, 0.2);
 }
 
 .quick-toggle-menu .header .icon.active {
-	background-color: #620000;
+  background-color: #620000;
 }
 
 .quick-settings-system-item .power-item:insensitive {
-	color: #f8f8f2;
-	background-color: #121212;
-	background-color: transparent;
+  color: #f8f8f2;
+  background-color: #121212;
+  background-color: transparent;
 }
 
 .device-subtitle {
-	color: rgba(248, 248, 242, 0.5);
+  color: rgba(248, 248, 242, 0.5);
 }
 
 .background-apps-quick-toggle {
-	min-height: 40px;
-	background-color: transparent;
+  min-height: 40px;
+  background-color: transparent;
 }
 
 .background-app-item.popup-inactive-menu-item {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 /* OVERVIEW */
 #overviewGroup {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Window Picker */
 .workspace-background {
-	background-color: rgba(3, 2, 1, 0);
-	box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
+  background-color: rgba(3, 2, 1, 0);
+  box-shadow: 0 4px 16px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Search */
 .search-section .search-section-separator {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .search-section-content {
-	background-color: rgba(0, 0, 0, 0.9);
-	box-shadow: inset 0 0 0 1px solid #1a1a1a;
-	color: #f8f8f2;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 1px solid #1a1a1a;
+  color: #f8f8f2;
 }
 
 .list-search-result,
 .search-provider-icon {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .list-search-result:hover,
 .search-provider-icon:hover {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .list-search-result:selected,
 .search-provider-icon:selected,
 .list-search-result:focus,
 .search-provider-icon:focus {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .list-search-result:selected:hover,
 .search-provider-icon:selected:hover,
 .list-search-result:focus:hover,
 .search-provider-icon:focus:hover {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .list-search-result:selected:active,
 .search-provider-icon:selected:active,
 .list-search-result:focus:active,
 .search-provider-icon:focus:active {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .list-search-result:active,
 .search-provider-icon:active {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .list-search-result:outlined,
 .search-provider-icon:outlined,
 .list-search-result:checked,
 .search-provider-icon:checked {
-	background-color: rgba(248, 248, 242, 0.19);
+  background-color: rgba(248, 248, 242, 0.19);
 }
 
 .list-search-result:outlined:active,
 .search-provider-icon:outlined:active,
 .list-search-result:checked:active,
 .search-provider-icon:checked:active {
-	background-color: rgba(248, 248, 242, 0.22);
+  background-color: rgba(248, 248, 242, 0.22);
 }
 
 .list-search-result:outlined:hover,
 .search-provider-icon:outlined:hover,
 .list-search-result:checked:hover,
 .search-provider-icon:checked:hover {
-	background-color: rgba(248, 248, 242, 0.25);
+  background-color: rgba(248, 248, 242, 0.25);
 }
 
 .list-search-result:drop,
 .search-provider-icon:drop {
-	border: 2px solid rgba(98, 0, 0, 0.8);
-	background-color: rgba(98, 0, 0, 0.2);
+  border: 2px solid rgba(98, 0, 0, 0.8);
+  background-color: rgba(98, 0, 0, 0.2);
 }
 
 .search-provider-icon .list-search-provider-content .list-search-provider-details {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .list-search-result .list-search-result-description {
-	color: #aeaea9;
+  color: #aeaea9;
 }
 
 /* App Grid */
 .app-well-app .overview-icon,
 .grid-search-result .overview-icon {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .app-well-app:hover .overview-icon,
 .grid-search-result:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .app-well-app:selected .overview-icon,
 .grid-search-result:selected .overview-icon,
 .app-well-app:focus .overview-icon,
 .grid-search-result:focus .overview-icon {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .app-well-app:selected .overview-icon:hover .overview-icon,
 .grid-search-result:selected .overview-icon:hover .overview-icon,
 .app-well-app:focus .overview-icon:hover .overview-icon,
 .grid-search-result:focus .overview-icon:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .app-well-app:selected .overview-icon:active .overview-icon,
 .grid-search-result:selected .overview-icon:active .overview-icon,
 .app-well-app:focus .overview-icon:active .overview-icon,
 .grid-search-result:focus .overview-icon:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .app-well-app:active .overview-icon,
 .grid-search-result:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .app-well-app:outlined .overview-icon,
 .grid-search-result:outlined .overview-icon,
 .app-well-app:checked .overview-icon,
 .grid-search-result:checked .overview-icon {
-	background-color: rgba(248, 248, 242, 0.19);
+  background-color: rgba(248, 248, 242, 0.19);
 }
 
 .app-well-app:outlined .overview-icon:active .overview-icon,
 .grid-search-result:outlined .overview-icon:active .overview-icon,
 .app-well-app:checked .overview-icon:active .overview-icon,
 .grid-search-result:checked .overview-icon:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.22);
+  background-color: rgba(248, 248, 242, 0.22);
 }
 
 .app-well-app:outlined .overview-icon:hover .overview-icon,
 .grid-search-result:outlined .overview-icon:hover .overview-icon,
 .app-well-app:checked .overview-icon:hover .overview-icon,
 .grid-search-result:checked .overview-icon:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.25);
+  background-color: rgba(248, 248, 242, 0.25);
 }
 
 .app-well-app:drop .overview-icon,
 .grid-search-result:drop .overview-icon {
-	border: 2px solid rgba(98, 0, 0, 0.8);
-	background-color: rgba(98, 0, 0, 0.2);
+  border: 2px solid rgba(98, 0, 0, 0.8);
+  background-color: rgba(98, 0, 0, 0.2);
 }
 
 .app-well-app.app-folder .overview-icon,
 .app-folder.grid-search-result .overview-icon {
-	background-color: rgba(248, 248, 242, 0.07);
+  background-color: rgba(248, 248, 242, 0.07);
 }
 
 .app-well-app.app-folder:hover .overview-icon,
 .app-folder.grid-search-result:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.1);
+  background-color: rgba(248, 248, 242, 0.1);
 }
 
 .app-well-app.app-folder:selected .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon,
 .app-well-app.app-folder:focus .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .app-well-app.app-folder:selected .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon:hover .overview-icon,
 .app-well-app.app-folder:focus .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .app-well-app.app-folder:selected .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:selected .overview-icon:active .overview-icon,
 .app-well-app.app-folder:focus .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:focus .overview-icon:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.13);
+  background-color: rgba(248, 248, 242, 0.13);
 }
 
 .app-well-app.app-folder:active .overview-icon,
 .app-folder.grid-search-result:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.16);
+  background-color: rgba(248, 248, 242, 0.16);
 }
 
 .app-well-app.app-folder:outlined .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon,
 .app-well-app.app-folder:checked .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon {
-	background-color: rgba(248, 248, 242, 0.19);
+  background-color: rgba(248, 248, 242, 0.19);
 }
 
 .app-well-app.app-folder:outlined .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon:active .overview-icon,
 .app-well-app.app-folder:checked .overview-icon:active .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon:active .overview-icon {
-	background-color: rgba(248, 248, 242, 0.22);
+  background-color: rgba(248, 248, 242, 0.22);
 }
 
 .app-well-app.app-folder:outlined .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:outlined .overview-icon:hover .overview-icon,
 .app-well-app.app-folder:checked .overview-icon:hover .overview-icon,
 .app-folder.grid-search-result:checked .overview-icon:hover .overview-icon {
-	background-color: rgba(248, 248, 242, 0.25);
+  background-color: rgba(248, 248, 242, 0.25);
 }
 
 .app-well-app.app-folder:drop .overview-icon,
 .app-folder.grid-search-result:drop .overview-icon {
-	border: 2px solid rgba(98, 0, 0, 0.8);
-	background-color: rgba(98, 0, 0, 0.2);
+  border: 2px solid rgba(98, 0, 0, 0.8);
+  background-color: rgba(98, 0, 0, 0.2);
 }
 
 .app-folder-dialog {
-	border-radius: 64px;
-	background-color: rgba(0, 0, 0, 0.9);
-	box-shadow: inset 0 0 0 1px #1a1a1a;
+  border-radius: 64px;
+  background-color: rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 0 0 1px #1a1a1a;
 }
 
 /* Workspace pager */
 .workspace-thumbnail-indicator {
-	border: 3px solid #620000;
-	border-radius: 8px;
+  border: 3px solid #620000;
+  border-radius: 8px;
 }
 
 .ripple-pointer-location {
-	height: 50px;
-	border-radius: 25px;
-	background-color: rgba(251, 0, 0, 0.3);
-	box-shadow: 0 0 2px 2px #c80000;
+  height: 50px;
+  border-radius: 25px;
+  background-color: rgba(251, 0, 0, 0.3);
+  box-shadow: 0 0 2px 2px #c80000;
 }
 
 .magnifier-zoom-region {
-	border: 2px solid #620000;
+  border: 2px solid #620000;
 }
 
 .magnifier-zoom-region.full-screen {
-	border-width: 0;
+  border-width: 0;
 }
 
 .select-area-rubberband {
-	background-color: rgba(98, 0, 0, 0.3);
-	border: 1px solid #620000;
+  background-color: rgba(98, 0, 0, 0.3);
+  border: 1px solid #620000;
 }
 
 .user-icon {
-	background-size: contain;
-	color: #f8f8f2;
-	border-radius: 99px;
+  background-size: contain;
+  color: #f8f8f2;
+  border-radius: 99px;
 }
 
 .user-icon StIcon {
-	background-color: rgba(248, 248, 242, 0.05);
-	border-radius: 99px;
-	height: 2.725em;
+  background-color: rgba(248, 248, 242, 0.05);
+  border-radius: 99px;
+  height: 2.725em;
 }
 
 .user-icon.user-avatar {
-	box-shadow: inset 0 0 0 1px rgba(248, 248, 242, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(248, 248, 242, 0.1);
 }
 
 .lightbox {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .flashspot {
-	background-color: white;
+  background-color: white;
 }
 
 .hidden {
-	color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
 }
 
 .caps-lock-warning-label {
-	color: #cd9309;
+  color: #cd9309;
 }
 
 /* Workspace animation */
 .workspace-animation {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Tiled window previews */
 .tile-preview {
-	background-color: rgba(98, 0, 0, 0.5);
-	border: 1px solid #620000;
+  background-color: rgba(98, 0, 0, 0.5);
+  border: 1px solid #620000;
 }
 
 /* On-screen Keyboard */
 #keyboard {
-	background-color: rgba(0, 0, 0, 0.8);
-	box-shadow: inset 0 1px 0 0 rgba(248, 248, 242, 0.1);
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 1px 0 0 rgba(248, 248, 242, 0.1);
 }
 
 #keyboard .page-indicator .page-indicator-icon {
-	height: 8px;
+  height: 8px;
 }
 
 .keyboard-key {
-	min-height: 1.2em;
-	min-width: 1.2em;
-	border-width: 1px;
-	border-style: solid;
-	border-radius: 12px;
-	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
-	color: #f8f8f2;
-	background-color: #606034;
+  min-height: 1.2em;
+  min-width: 1.2em;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 12px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.2);
+  color: #f8f8f2;
+  background-color: #606034;
 }
 
 .keyboard-key:focus {
-	color: #f8f8f2;
-	background-color: #110707;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
+  color: #f8f8f2;
+  background-color: #110707;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
 }
 
 .keyboard-key:focus:hover {
-	background-color: #1c1212;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #1c1212;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .keyboard-key:focus:active {
-	background-color: #211717;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #211717;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .keyboard-key:hover {
-	color: #f8f8f2;
-	background-color: #6e6e3b;
+  color: #f8f8f2;
+  background-color: #6e6e3b;
 }
 
 .keyboard-key:active {
-	color: #f8f8f2;
-	background-color: #787840;
+  color: #f8f8f2;
+  background-color: #787840;
 }
 
 .keyboard-key:checked {
-	color: #f8f8f2;
-	background-color: #888849;
+  color: #f8f8f2;
+  background-color: #888849;
 }
 
 .keyboard-key:grayed {
-	background-color: #050505;
-	color: #f8f8f2;
-	border-color: rgba(0, 0, 0, 0.7);
+  background-color: #050505;
+  color: #f8f8f2;
+  border-color: rgba(0, 0, 0, 0.7);
 }
 
 .keyboard-key.default-key {
-	color: #f8f8f2;
-	background-color: #3f3f22;
-	border-radius: 12px;
+  color: #f8f8f2;
+  background-color: #3f3f22;
+  border-radius: 12px;
 }
 
 .keyboard-key.default-key:hover {
-	color: #f8f8f2;
-	background-color: #4d4d29;
+  color: #f8f8f2;
+  background-color: #4d4d29;
 }
 
 .keyboard-key.default-key:active {
-	color: #f8f8f2;
-	background-color: #56562f;
+  color: #f8f8f2;
+  background-color: #56562f;
 }
 
 .keyboard-key.default-key:checked {
-	color: #f8f8f2;
-	background-color: #676737;
+  color: #f8f8f2;
+  background-color: #676737;
 }
 
 .keyboard-key.default-key:latched {
-	border-color: #7c0000;
-	background-color: #620000;
+  border-color: #7c0000;
+  background-color: #620000;
 }
 
 .keyboard-key.enter-key {
-	color: #f8f8f2;
-	background-color: #710000;
-	border-radius: 12px;
-	color: #f8f8f2;
+  color: #f8f8f2;
+  background-color: #710000;
+  border-radius: 12px;
+  color: #f8f8f2;
 }
 
 .keyboard-key.enter-key:hover {
-	color: #f8f8f2;
-	background-color: #860000;
+  color: #f8f8f2;
+  background-color: #860000;
 }
 
 .keyboard-key.enter-key:active {
-	color: #f8f8f2;
-	background-color: #950000;
+  color: #f8f8f2;
+  background-color: #950000;
 }
 
 .keyboard-key.enter-key:checked {
-	color: #f8f8f2;
-	background-color: #af0000;
+  color: #f8f8f2;
+  background-color: #af0000;
 }
 
 .keyboard-key.shift-key-uppercase {
-	background-color: #999952;
-	color: black;
+  background-color: #999952;
+  color: black;
 }
 
 .keyboard-key.shift-key-uppercase:hover {
-	background-color: #a8a85d;
-	color: rgba(0, 0, 0, 0.9);
+  background-color: #a8a85d;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .keyboard-subkeys .keyboard-key {
-	color: #f8f8f2;
-	background-color: #606034;
-	border-radius: 12px;
+  color: #f8f8f2;
+  background-color: #606034;
+  border-radius: 12px;
 }
 
 .keyboard-subkeys .keyboard-key:focus {
-	color: #f8f8f2;
-	background-color: #110707;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
+  color: #f8f8f2;
+  background-color: #110707;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
 }
 
 .keyboard-subkeys .keyboard-key:focus:hover {
-	background-color: #1c1212;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #1c1212;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .keyboard-subkeys .keyboard-key:focus:active {
-	background-color: #211717;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #211717;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .keyboard-subkeys .keyboard-key:hover {
-	color: #f8f8f2;
-	background-color: #6e6e3b;
+  color: #f8f8f2;
+  background-color: #6e6e3b;
 }
 
 .keyboard-subkeys .keyboard-key:active {
-	color: #f8f8f2;
-	background-color: #787840;
+  color: #f8f8f2;
+  background-color: #787840;
 }
 
 .keyboard-subkeys .keyboard-key:checked {
-	color: #f8f8f2;
-	background-color: #888849;
+  color: #f8f8f2;
+  background-color: #888849;
 }
 
 .emoji-page .keyboard-key {
-	background-color: transparent;
-	border: none;
-	color: initial;
+  background-color: transparent;
+  border: none;
+  color: initial;
 }
 
 .emoji-panel .keyboard-key:latched {
-	border-color: #7c0000;
-	background-color: #620000;
+  border-color: #7c0000;
+  background-color: #620000;
 }
 
 .word-suggestions {
-	min-height: 17pt;
-	color: #f8f8f2;
+  min-height: 17pt;
+  color: #f8f8f2;
 }
 
 .word-suggestions StButton {
-	background-color: transparent;
-	background-image: none;
+  background-color: transparent;
+  background-image: none;
 }
 
 .word-suggestions StButton:focus {
-	color: #f8f8f2;
-	background-color: #110707;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
+  color: #f8f8f2;
+  background-color: #110707;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6);
 }
 
 .word-suggestions StButton:focus:hover {
-	background-color: #1c1212;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #1c1212;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .word-suggestions StButton:focus:active {
-	background-color: #211717;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
+  background-color: #211717;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7);
 }
 
 .word-suggestions StButton:hover {
-	color: #f8f8f2;
-	background-color: #6e6e3b;
+  color: #f8f8f2;
+  background-color: #6e6e3b;
 }
 
 .word-suggestions StButton:active {
-	color: #f8f8f2;
-	background-color: #787840;
+  color: #f8f8f2;
+  background-color: #787840;
 }
 
 .word-suggestions StButton:checked {
-	color: #f8f8f2;
-	background-color: #888849;
+  color: #f8f8f2;
+  background-color: #888849;
 }
 
 /* Looking Glass */
 #LookingGlassDialog {
-	background-color: rgba(13, 13, 13, 0.95);
-	border: 1px solid #1a1a1a;
-	color: #f8f8f2;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: rgba(13, 13, 13, 0.95);
+  border: 1px solid #1a1a1a;
+  color: #f8f8f2;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 #LookingGlassDialog>#Toolbar {
-	border: none;
-	border-radius: 0;
-	background-color: transparent;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .lg-dialog .shell-link {
-	color: #c80000;
+  color: #c80000;
 }
 
 .lg-dialog .shell-link:hover {
-	color: #fb0000;
+  color: #fb0000;
 }
 
 .lg-dialog .shell-link:active {
-	color: #950000;
+  color: #950000;
 }
 
 .lg-dialog .actor-link {
-	color: #82827f;
+  color: #82827f;
 }
 
 .lg-dialog .actor-link:hover {
-	color: #b4b4b3;
+  color: #b4b4b3;
 }
 
 .lg-dialog .actor-link:active {
-	color: #4e4e4d;
+  color: #4e4e4d;
 }
 
 .lg-obj-inspector-button {
-	border: 1px solid rgba(248, 248, 242, 0.1);
+  border: 1px solid rgba(248, 248, 242, 0.1);
 }
 
 .lg-obj-inspector-button:hover {
-	border: 1px solid #f8f8f2;
+  border: 1px solid #f8f8f2;
 }
 
 .lg-extension {
-	color: #f8f8f2;
-	background-color: #121212;
+  color: #f8f8f2;
+  background-color: #121212;
 }
 
 .lg-extension:hover {
-	color: #f8f8f2;
-	background-color: #191919;
+  color: #f8f8f2;
+  background-color: #191919;
 }
 
 .lg-extension:active {
-	color: #f8f8f2;
-	background-color: #393938;
+  color: #f8f8f2;
+  background-color: #393938;
 }
 
 .lg-extension:focus {
-	color: #f8f8f2;
-	background-color: #281f1e;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  color: #f8f8f2;
+  background-color: #281f1e;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
 }
 
 .lg-extension:focus:hover {
-	background-color: #2f2624;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #2f2624;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 .lg-extension:focus:active {
-	background-color: #362d2b;
-	box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
+  background-color: #362d2b;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassPropertyInspector {
-	background: rgba(0, 0, 0, 0.9);
-	border: 1px solid rgba(248, 248, 242, 0.1);
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(248, 248, 242, 0.1);
 }
 
 .lg-debug-flag-button {
-	color: #f8f8f2;
+  color: #f8f8f2;
 }
 
 .lg-debug-flag-button:hover {
-	color: white;
+  color: white;
 }
 
 .lg-debug-flag-button:active {
-	color: #d4d4b0;
+  color: #d4d4b0;
 }
 
 .login-dialog .caps-lock-warning-label,
 .login-dialog .login-dialog-message-warning,
 .unlock-dialog .caps-lock-warning-label,
 .unlock-dialog .login-dialog-message-warning {
-	color: white;
+  color: white;
 }
 
 /* Login Dialog */
 .login-dialog {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .login-dialog-banner {
-	color: #e6e6e6;
+  color: #e6e6e6;
 }
 
 .login-dialog-not-listed-label {
-	color: #b3b3b3;
+  color: #b3b3b3;
 }
 
 .login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
 .login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
-	color: white;
+  color: white;
 }
 
 .login-dialog-auth-list-item {
-	color: #b3b3b3;
+  color: #b3b3b3;
 }
 
 .login-dialog-auth-list-item:focus,
 .login-dialog-auth-list-item:selected {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 .login-dialog-user-list .login-dialog-user-list-item {
-	background-color: rgba(255, 255, 255, 0.05);
-	color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
 }
 
 .login-dialog-user-list .login-dialog-user-list-item .user-widget .user-icon {
-	border: 4px solid transparent;
+  border: 4px solid transparent;
 }
 
 .login-dialog-user-list .login-dialog-user-list-item .login-dialog-timed-login-indicator {
-	background-color: #b3b3b3;
+  background-color: #b3b3b3;
 }
 
 .login-dialog-user-list .login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
-	background-color: #f8f8f2;
+  background-color: #f8f8f2;
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:hover {
-	background-color: rgba(255, 255, 255, 0.1);
-	color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:selected {
-	background-color: #620000;
-	color: #f8f8f2;
+  background-color: #620000;
+  color: #f8f8f2;
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:selected:hover {
-	background-color: #7c0000;
+  background-color: #7c0000;
 }
 
 .login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in .user-widget .user-icon {
-	border-color: #620000;
+  border-color: #620000;
 }
 
 /* Screen Shield */
 .unlock-dialog {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .screen-shield-background {
-	background: black;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  background: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 #lockDialogGroup {
-	background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .unlock-dialog-clock {
-	color: white;
+  color: white;
 }
 
 #unlockDialogNotifications StButton#hhandle {
-	background-color: rgba(13, 13, 13, 0.3);
+  background-color: rgba(13, 13, 13, 0.3);
 }
 
 #unlockDialogNotifications StButton#vhandle:hover,
 #unlockDialogNotifications StButton#vhandle:focus,
 #unlockDialogNotifications StButton#hhandle:hover,
 #unlockDialogNotifications StButton#hhandle:focus {
-	background-color: rgba(13, 13, 13, 0.5);
+  background-color: rgba(13, 13, 13, 0.5);
 }
 
 #unlockDialogNotifications StButton#vhandle:active,
 #unlockDialogNotifications StButton#hhandle:active {
-	background-color: rgba(98, 0, 0, 0.5);
+  background-color: rgba(98, 0, 0, 0.5);
 }
 
 .unlock-dialog-notifications-container {
-	background-color: transparent;
+  background-color: transparent;
 }
 
 .unlock-dialog-notifications-container .notification,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source {
-	background-color: rgba(255, 255, 255, 0.1);
-	color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 .unlock-dialog-notifications-container .notification.critical,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source.critical {
-	background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .unlock-dialog-notification-count-text {
-	color: white;
-	background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .user-widget .user-widget-label {
-	color: white;
+  color: white;
 }
 
 .user-widget.horizontal .user-icon StIcon {
-	background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .user-widget.vertical .user-icon StIcon {
-	background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 #dashtopanelTaskbar,
 .show-apps:last {
-	/*border-radius: 99999px;*/
-	/*background-color: rgba(0, 0, 0, 0.8);*/
-	/*box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;*/
-	background: transparent;
+  /*border-radius: 99999px;*/
+  /*background-color: rgba(0, 0, 0, 0.8);*/
+  /*box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;*/
+  background: transparent;
 }
 
 HassPanelSensor.panel-button {
-	padding-left: 5px;
-	padding-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }

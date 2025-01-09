@@ -12,8 +12,9 @@ return {
   {
     'olimorris/codecompanion.nvim',
     dependencies = {
-      'nvim-lua/plenary.nvim',
       'nvim-treesitter/nvim-treesitter',
+      { "nvim-lua/plenary.nvim",  branch = "master" },
+      { 'OXY2DEV/markview.nvim',  ft = { "markdown", "codecompanion" } },
       { 'stevearc/dressing.nvim', opts = {} }, -- Optional: Improves `vim.ui.select`
     },
     config = function()
