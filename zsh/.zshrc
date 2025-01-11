@@ -24,7 +24,7 @@ export LLM="ollama"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git cp fzf fzf-tab tmux docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise bundler node npm ruby rails rake redis-cli python pip rust golang)
-# plugins+=(dnf)
+# plugins=(dnf)
 
 if [ -f ~/.dotfiles/preload.sh ]; then
   source ~/.dotfiles/preload.sh

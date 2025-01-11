@@ -181,8 +181,6 @@ return {
           dashboard.button("n", "  New file", "<cmd>ene<CR>"),
           dashboard.button("f", "󰈞  Find file", "<cmd>FzfLua files<CR>"),
           dashboard.button("g", "󰊄  Live grep", "<cmd>FzfLua live_grep<CR>"),
-          dashboard.button("e", "󱡅  Harpoon",
-            "<cmd>lua local harpoon = require('harpoon'); harpoon.ui:toggle_quick_menu(harpoon:list())<CR>"),
           dashboard.button("lg", "  Git", "<cmd>LazyGit<CR>"),
           dashboard.button("lm", "󰏔  Mason", "<cmd>Mason<CR>"),
           dashboard.button("lc", "  Code", "<cmd>CodeCompanionActions<CR>"),
