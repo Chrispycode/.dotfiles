@@ -10,6 +10,8 @@ export FZF_DEFAULT_OPTS="
 --marker='✓'
 --bind='?:toggle-preview'
 --bind='ctrl-a:select-all'
+--bind='ctrl-d:preview-half-page-down'
+--bind='ctrl-u:preview-half-page-up'
 "
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
 zstyle ':completion:*' matcher-list '' '+m:{[:lower:]}={[:upper:]}' '+m:{[:upper:]}={[:lower:]}' '+m:{_-}={-_}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'

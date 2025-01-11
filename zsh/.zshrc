@@ -23,7 +23,8 @@ export RANGER_LOAD_DEFAULT_RC=false
 export LLM="ollama"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git cp bundler node npm ruby rails rbenv rake redis-cli python pip fzf fzf-tab docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise tmux)
+plugins=(git cp fzf fzf-tab tmux docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise bundler node npm ruby rails rake redis-cli python pip rust golang)
+# plugins+=(dnf)
 
 if [ -f ~/.dotfiles/preload.sh ]; then
   source ~/.dotfiles/preload.sh
