@@ -12,6 +12,7 @@ return {
     ft = { "markdown", "codecompanion" },
     opts = {
       filetypes = { "markdown", "quarto", "rmd", "codecompanion" },
+      buf_ignore = {},
     }
   },
   -- {
