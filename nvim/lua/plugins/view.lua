@@ -9,6 +9,10 @@ return {
       'nvim-treesitter/nvim-treesitter',
       'nvim-tree/nvim-web-devicons',
     },
+    ft = { "markdown", "codecompanion" },
+    opts = {
+      filetypes = { "markdown", "quarto", "rmd", "codecompanion" },
+    }
   },
   -- {
   --   '3rd/image.nvim',
