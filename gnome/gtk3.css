@@ -131,6 +131,10 @@ windowcontrols>button.minimize:hover {
   opacity: 0.8;
 }
 
+.frame.sidebar {
+  background: none;
+}
+
 /* active tab, and the toolbar underneath it*/
 window.background.chromium {
   background-color: rgb(20, 20, 20);
