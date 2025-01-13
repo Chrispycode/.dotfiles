@@ -38,7 +38,7 @@ return {
           map('<leader>D', fzf_lua.lsp_typedefs, 'Type [D]efinition')
           map('<leader>ds', fzf_lua.lsp_document_symbols, '[D]ocument [S]ymbols')
           map('<leader>ws', fzf_lua.lsp_live_workspace_symbols, '[W]orkspace [S]ymbols')
-          map('<leader>f', vim.lsp.buf.format, 'LSP [F]ormat')
+          map('<leader>F', vim.lsp.buf.format, 'LSP [F]ormat')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
@@ -118,5 +118,29 @@ return {
         },
       }
     end,
+  },
+  {
+    'stevearc/conform.nvim',
+    event = { 'BufWritePre' },
+    cmd = { 'ConformInfo' },
+    keys = {
+      {
+        '<leader>f',
+        function()
+          require('conform').format { async = true, lsp_fallback = true }
+        end,
+        mode = '',
+        desc = '[F]ormat buffer',
+      },
+    },
+    opts = {
+      notify_on_error = false,
+      formatters_by_ft = {
+        lua = { 'stylua' },
+        html = { 'htmlbeautifier', stop_after_first = true },
+        eruby = { 'htmlbeautifier', stop_after_first = true },
+        ruby = { 'rufo', stop_after_first = true },
+      },
+    },
   },
 }
