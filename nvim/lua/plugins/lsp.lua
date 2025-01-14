@@ -25,6 +25,7 @@ return {
       'saghen/blink.cmp',
     },
     config = function()
+      vim.diagnostic.config { virtual_text = false }
       vim.api.nvim_create_autocmd('LspAttach', {
         group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
         callback = function(event)
@@ -42,6 +43,7 @@ return {
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+          map('<leader>ld', vim.diagnostic.open_float, '[l]ine [D]iagnostic')
           local client = vim.lsp.get_client_by_id(event.data.client_id)
           if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
             local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
@@ -136,7 +138,6 @@ return {
     opts = {
       notify_on_error = false,
       formatters_by_ft = {
-        lua = { 'stylua' },
         html = { 'htmlbeautifier', stop_after_first = true },
         eruby = { 'htmlbeautifier', stop_after_first = true },
         ruby = { 'rufo', stop_after_first = true },

@@ -5,21 +5,20 @@ return {
     config = function()
       local fzf_lua = require 'fzf-lua'
 
-      local file_ignore_patterns = {
-        'node_modules', 'tmp', 'log', '.git', '.bundle', '.idea', '.loadpath', '.powrc',
-        '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*', 'vendor/cache', 'files',
-        '_cacache', '.cache', '*.o', '*.a', '%.min.*', '%.min-%.*', '*.out', '*.class',
-        '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db', '*.sqlite3',
-        '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war'
-      }
+      local file_ignore_patterns = { 'node_modules', 'tmp', 'log', '.git', '.bundle',
+        '.idea', '.loadpath', '.powrc', '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*',
+        'vendor/cache', 'files', '_cacache', '.cache', '*.o', '*.a', '%.min.*', '%.min-%.*',
+        '*.out', '*.class', '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db',
+        '*.sqlite3', '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war' }
 
       local rg_ignore_opts = ''
       for _, pattern in ipairs(file_ignore_patterns) do
         rg_ignore_opts = rg_ignore_opts .. ' -g "!' .. pattern .. '"'
       end
 
+      local actions = fzf_lua.actions
       fzf_lua.setup {
-        { 'fzf-native', 'telescope' },
+        { 'fzf-native' },
         fzf_colors = true,
         previewers = {
           bat = {
@@ -28,9 +27,19 @@ return {
         },
         files = {
           rg_opts = [[ --color=always --files --hidden --no-ignore --follow]] .. rg_ignore_opts,
+          actions = {
+            ['ctrl-q'] = {
+              fn = actions.file_edit_or_qf, prefix = 'select-all+'
+            },
+          },
         },
         grep = {
           rg_opts = [[ --color=always --column --hidden --no-ignore --follow]] .. rg_ignore_opts,
+          actions = {
+            ['ctrl-q'] = {
+              fn = actions.file_edit_or_qf, prefix = 'select-all+'
+            },
+          },
         },
       }
 

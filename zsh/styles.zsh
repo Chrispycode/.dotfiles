@@ -4,11 +4,12 @@ export FZF_DEFAULT_OPTS="
 --height=100%
 --border
 --multi
+--tmux=100%
 --color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
 --prompt='∼ '
 --pointer='▶'
 --marker='✓'
---bind='?:toggle-preview'
+--bind='alt-p:toggle-preview'
 --bind='ctrl-a:select-all'
 --bind='ctrl-d:preview-half-page-down'
 --bind='ctrl-u:preview-half-page-up'

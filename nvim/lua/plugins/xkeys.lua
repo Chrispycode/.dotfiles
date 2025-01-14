@@ -59,6 +59,7 @@ return {
   { vim.keymap.set('n', '<leader>lk', ':LspStop<cr>', { desc = 'LSP stop' }) },
   { vim.keymap.set('n', '<leader>lm', ':Mason<cr>', { desc = 'Mason' }) },
   { vim.keymap.set('n', '<leader>lc', ':CodeCompanionActions<cr>', { desc = 'CodeCompanion' }) },
+  { vim.keymap.set('n', '<leader>lz', ':ZenMode<cr>', { desc = 'ZenMode' }) },
   {
     'brenoprata10/nvim-highlight-colors',
     config = function()
