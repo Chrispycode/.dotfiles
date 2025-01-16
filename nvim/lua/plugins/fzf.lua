@@ -20,6 +20,14 @@ return {
       fzf_lua.setup {
         { 'fzf-native' },
         fzf_colors = true,
+        actions = {
+          files = {
+            ['ctrl-q'] = { fn = actions.file_edit_or_qf, prefix = 'select-all+' },
+            ["ctrl-s"] = actions.file_split,
+            ["ctrl-v"] = actions.file_vsplit,
+            ["ctrl-t"] = actions.file_tabedit,
+          },
+        },
         previewers = {
           bat = {
             theme = 'ansi',
@@ -27,19 +35,9 @@ return {
         },
         files = {
           rg_opts = [[ --color=always --files --hidden --no-ignore --follow]] .. rg_ignore_opts,
-          actions = {
-            ['ctrl-q'] = {
-              fn = actions.file_edit_or_qf, prefix = 'select-all+'
-            },
-          },
         },
         grep = {
           rg_opts = [[ --color=always --column --hidden --no-ignore --follow]] .. rg_ignore_opts,
-          actions = {
-            ['ctrl-q'] = {
-              fn = actions.file_edit_or_qf, prefix = 'select-all+'
-            },
-          },
         },
       }
 
