@@ -11,7 +11,6 @@ return {
       },
     },
   },
-  { 'Bilal2453/luvit-meta', lazy = true },
   {
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -39,7 +38,6 @@ return {
           map('<leader>D', fzf_lua.lsp_typedefs, 'Type [D]efinition')
           map('<leader>ds', fzf_lua.lsp_document_symbols, '[D]ocument [S]ymbols')
           map('<leader>ws', fzf_lua.lsp_live_workspace_symbols, '[W]orkspace [S]ymbols')
-          map('<leader>F', vim.lsp.buf.format, 'LSP [F]ormat')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')

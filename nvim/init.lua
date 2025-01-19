@@ -34,6 +34,7 @@ vim.opt.spelllang = { 'en', 'de' }
 vim.g.loaded_netrin = 1
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
+vim.filetype.add { pattern = { ['.*%.slim'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 
@@ -71,8 +72,6 @@ require('lazy').setup {
   },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' }, scope = { enabled = true } } },
   'tpope/vim-sleuth',
-  'slim-template/vim-slim',
-  'alvan/vim-closetag',
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
   'kdheepak/lazygit.nvim',
