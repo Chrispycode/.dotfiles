@@ -31,7 +31,13 @@ return {
   -- },
   {
     "folke/zen-mode.nvim",
-    opts = {
-    }
-  }
+    opts = {}
+  },
+  {
+    'brenoprata10/nvim-highlight-colors',
+    config = function()
+      local hlc = require('nvim-highlight-colors')
+      vim.keymap.set('n', '<leader>lh', hlc.toggle, { desc = 'Toggle HighlightColors' })
+    end
+  },
 }

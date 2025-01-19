@@ -1,5 +1,5 @@
 return {
-  { -- Useful plugin to show you pending keybinds.
+  {                     -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
@@ -42,7 +42,7 @@ return {
 
       -- Document existing key chains
       spec = {
-        { '<leader>c', group = '[C]ode', mode = { 'n', 'x' } },
+        { '<leader>c', group = '[C]ode',     mode = { 'n', 'x' } },
         { '<leader>d', group = '[D]ocument' },
         { '<leader>r', group = '[R]ename' },
         { '<leader>s', group = '[S]earch' },
@@ -51,31 +51,26 @@ return {
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
+    keys = {
+      { '<leader>tn', vim.cmd.tabnew,                                                         desc = 'new Tab' },
+      { '<leader>lg', vim.cmd.LazyGitCurrentFile,                                             desc = 'LazyGit' },
+      { '<leader>lp', ':Lazy<cr>',                                                            desc = 'Lazy' },
+      { '<leader>ls', ':LspStart<cr>',                                                        desc = 'LSP Start' },
+      { '<leader>lk', ':LspStop<cr>',                                                         desc = 'LSP stop' },
+      { '<leader>lm', ':Mason<cr>',                                                           desc = 'Mason' },
+      { '<leader>lc', ':CodeCompanionActions<cr>',                                            desc = 'CodeCompanion' },
+      { '<leader>lz', ':ZenMode<cr>',                                                         desc = 'ZenMode' },
+      { '<leader>aa', ':Alpha<cr>',                                                           desc = 'Alpha' },
+      { '<Esc>',      '<cmd>nohlsearch<CR>',                                                  desc = 'cancel search' },
+      { '<leader>q',  vim.diagnostic.setloclist,                                              desc = 'Open diagnostic [Q]uickfix list' },
+      { '<C-h>',      '<C-w><C-h>',                                                           desc = 'Move focus to the left window' },
+      { '<C-l>',      '<C-w><C-l>',                                                           desc = 'Move focus to the right window' },
+      { '<C-j>',      '<C-w><C-j>',                                                           desc = 'Move focus to the lower window' },
+      { '<C-k>',      '<C-w><C-k>',                                                           desc = 'Move focus to the upper window' },
+      { '<leader>S',  '<cmd>lua require("spectre").toggle()<CR>',                             desc = 'Toggle Spectre' },
+      { '<leader>sr', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>',      desc = 'Search current word' },
+      { '<leader>sr', '<esc><cmd>lua require("spectre").open_visual()<CR>',                   desc = 'Search current word',            mode = "v" },
+      { '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', desc = 'Search on current file' },
+    },
   },
-  { vim.keymap.set('n', '<leader>tn', vim.cmd.tabnew, { desc = 'new Tab' }) },
-  { vim.keymap.set('n', '<leader>lg', vim.cmd.LazyGitCurrentFile, { desc = 'LazyGit' }) },
-  { vim.keymap.set('n', '<leader>lp', ':Lazy<cr>', { desc = 'Lazy' }) },
-  { vim.keymap.set('n', '<leader>ls', ':LspStart<cr>', { desc = 'LSP Start' }) },
-  { vim.keymap.set('n', '<leader>lk', ':LspStop<cr>', { desc = 'LSP stop' }) },
-  { vim.keymap.set('n', '<leader>lm', ':Mason<cr>', { desc = 'Mason' }) },
-  { vim.keymap.set('n', '<leader>lc', ':CodeCompanionActions<cr>', { desc = 'CodeCompanion' }) },
-  { vim.keymap.set('n', '<leader>lz', ':ZenMode<cr>', { desc = 'ZenMode' }) },
-  {
-    'brenoprata10/nvim-highlight-colors',
-    config = function()
-      local hlc = require('nvim-highlight-colors')
-      vim.keymap.set('n', '<leader>lh', hlc.toggle, { desc = 'Toggle HighlightColors' })
-    end
-  },
-  { vim.keymap.set('n', '<leader>aa', ':Alpha<cr>', { desc = 'Alpha' }) },
-  { vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'cancel search' }) },
-  { vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' }) },
-  { vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' }) },
-  { vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' }) },
-  { vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' }) },
-  { vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' }) },
-  { vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = 'Toggle Spectre' }) },
-  { vim.keymap.set('n', '<leader>sr', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = 'Search current word' }) },
-  { vim.keymap.set('v', '<leader>sr', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = 'Search current word' }) },
-  { vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = 'Search on current file' }) },
 }
