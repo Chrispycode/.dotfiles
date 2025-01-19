@@ -8,14 +8,36 @@ local rg_ignore_opts = ''
 for _, pattern in ipairs(file_ignore_patterns) do
   rg_ignore_opts = rg_ignore_opts .. ' -g "!' .. pattern .. '"'
 end
+
+local img_previewer ---@type string[]?
+for _, v in ipairs({
+  { cmd = "ueberzug", args = {} },
+  { cmd = "chafa",    args = { "{file}", "--format=symbols" } },
+  { cmd = "viu",      args = { "-b" } },
+}) do
+  if vim.fn.executable(v.cmd) == 1 then
+    img_previewer = vim.list_extend({ v.cmd }, v.args)
+    break
+  end
+end
+
 return {
   {
     'ibhagwan/fzf-lua',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
     opts = {
-      { 'fzf-native' },
       fzf_colors = true,
       previewers = {
+        builtin = {
+          extensions = {
+            ["png"] = img_previewer,
+            ["jpg"] = img_previewer,
+            ["jpeg"] = img_previewer,
+            ["gif"] = img_previewer,
+            ["webp"] = img_previewer,
+            ["svg"] = img_previewer,
+          },
+          ueberzug_scaler = "fit_contain",
+        },
         bat = {
           theme = 'ansi',
         },
@@ -29,19 +51,12 @@ return {
     },
     keys = function()
       local fzf_lua = require 'fzf-lua'
-      local actions = fzf_lua.actions
-      fzf_lua.setup {
-        actions = {
-          files = {
-            ['ctrl-q'] = { fn = actions.file_edit_or_qf, prefix = 'select-all+' },
-            ["ctrl-s"] = actions.file_split,
-            ["ctrl-v"] = actions.file_vsplit,
-            ["ctrl-t"] = actions.file_tabedit,
-          },
-        },
-      }
-
-      -- Keymaps
+      local config = fzf_lua.config
+      config.defaults.keymap.fzf["ctrl-q"] = "select-all+accept"
+      config.defaults.keymap.fzf["ctrl-u"] = "preview-page-up"
+      config.defaults.keymap.fzf["ctrl-d"] = "preview-page-down"
+      config.defaults.keymap.builtin["<c-u>"] = "preview-page-up"
+      config.defaults.keymap.builtin["<c-d>"] = "preview-page-down"
       vim.keymap.set('n', '<leader>sh', fzf_lua.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', fzf_lua.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', fzf_lua.files, { desc = '[S]earch [F]iles' })
