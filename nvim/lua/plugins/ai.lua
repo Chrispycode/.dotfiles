@@ -34,6 +34,7 @@ return {
               },
               model = {
                 default = 'llama3.1:latest',
+                -- default = 'deepseek-r1:14b',
               },
               temperature = { default = 0.6 },
             },

@@ -60,6 +60,7 @@ return {
       { '<leader>lm', ':Mason<cr>',                                                           desc = 'Mason' },
       { '<leader>lc', ':CodeCompanionActions<cr>',                                            desc = 'CodeCompanion' },
       { '<leader>lz', ':ZenMode<cr>',                                                         desc = 'ZenMode' },
+      { '<leader>lo', ':Oil<cr>',                                                             desc = 'Oil' },
       { '<leader>aa', ':Alpha<cr>',                                                           desc = 'Alpha' },
       { '<Esc>',      '<cmd>nohlsearch<CR>',                                                  desc = 'cancel search' },
       { '<leader>q',  '<cmd>lua vim.diagnostic.setloclist()',                                 desc = 'Open diagnostic [Q]uickfix list' },
