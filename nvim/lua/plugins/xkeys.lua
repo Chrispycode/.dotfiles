@@ -63,7 +63,7 @@ return {
       { '<leader>lo', ':Oil<cr>',                                                             desc = 'Oil' },
       { '<leader>aa', ':Alpha<cr>',                                                           desc = 'Alpha' },
       { '<Esc>',      '<cmd>nohlsearch<CR>',                                                  desc = 'cancel search' },
-      { '<leader>q',  '<cmd>lua vim.diagnostic.setloclist()',                                 desc = 'Open diagnostic [Q]uickfix list' },
+      { '<leader>q',  '<cmd>lua vim.diagnostic.setloclist()<CR>',                                 desc = 'Open diagnostic [Q]uickfix list' },
       { '<C-h>',      '<C-w><C-h>',                                                           desc = 'Move focus to the left window' },
       { '<C-l>',      '<C-w><C-l>',                                                           desc = 'Move focus to the right window' },
       { '<C-j>',      '<C-w><C-j>',                                                           desc = 'Move focus to the lower window' },
