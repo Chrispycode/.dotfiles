@@ -43,7 +43,7 @@ fi
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
-if [ "$OS_CHECK" == "Darwin" ]; then
+if [ $(uname -s) = "Darwin" ]; then
   eval "$(/usr/local/bin/mise activate zsh)"
 else
   eval "$($HOME/.local/bin/mise activate zsh)"
