@@ -43,6 +43,10 @@ fi
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
-eval "$($HOME/.local/bin/mise activate zsh)"
+if [ "$OS_CHECK" == "Darwin" ]; then
+  eval "$(/usr/local/bin/mise activate zsh)"
+else
+  eval "$($HOME/.local/bin/mise activate zsh)"
+fi
 
 bindkey -s ^f "tmux-sessionizer\n"

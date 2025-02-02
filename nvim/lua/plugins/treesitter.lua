@@ -16,6 +16,9 @@ return {
       'css',
       'bash',
       'javascript',
+      'json',
+      'xml',
+      'csv'
     },
     endwise = { enable = true },
     auto_install = true,

@@ -100,6 +100,7 @@ return {
         'stylua',
         'css-lsp',
         'ts_ls',
+        'jsonls',
         'bashls',
         'htmlbeautifier',
         'markdownlint',
