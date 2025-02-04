@@ -28,9 +28,13 @@ return {
       adapters = {
         ollama = function()
           return require('codecompanion.adapters').extend('ollama', {
+            env = {
+              url = os.getenv 'LLM_URL',
+              api_key = os.getenv 'LLM_API_KEY',
+            },
             schema = {
               num_ctx = {
-                default = 16384,
+                default = 32000,
               },
               model = {
                 default = 'llama3.1:latest',
