@@ -75,7 +75,6 @@ require('lazy').setup {
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
   'kdheepak/lazygit.nvim',
-  'sindrets/diffview.nvim',
   {'kevinhwang91/nvim-bqf', ft = 'qf'},
   { import = 'plugins' },
 }

@@ -34,7 +34,7 @@ return {
             },
             schema = {
               num_ctx = {
-                default = 32000,
+                default = 64000,
               },
               model = {
                 default = 'llama3.1:latest',
@@ -47,6 +47,9 @@ return {
         copilot = function()
           return require('codecompanion.adapters').extend('copilot', {
             schema = {
+              model = {
+                default = 'claude-3.5-sonnet',
+              },
               temperature = { default = 0.6 },
             },
           })
