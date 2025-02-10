@@ -70,7 +70,6 @@ require('lazy').setup {
       vim.cmd.colorscheme 'darkrose'
     end,
   },
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = { indent = { char = '▏' }, scope = { enabled = true } } },
   'tpope/vim-sleuth',
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
