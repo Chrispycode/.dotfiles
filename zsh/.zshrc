@@ -8,14 +8,9 @@ addToPathFront() { if [[ "$PATH" != *"$1"* ]]; then; export PATH=$1:$PATH; fi }
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.dotfiles/scripts
 
-if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
-  MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
-fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export QT_AUTO_SCREEN_SCALE_FACTOR=1
-export QT_ENABLE_HIGHDPI_SCALING=1
 export GOPATH="$HOME/.go"
 export EDITOR=nvim
 export VISUAL=nvim
@@ -47,6 +42,14 @@ if [ $(uname -s) = "Darwin" ]; then
   eval "$(/usr/local/bin/mise activate zsh)"
 else
   eval "$($HOME/.local/bin/mise activate zsh)"
+
+  export ELECTRON_OZONE_PLATFORM_HINT=auto
+  export QT_AUTO_SCREEN_SCALE_FACTOR=1
+  export QT_ENABLE_HIGHDPI_SCALING=1
+
+  if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
+    MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
+  fi
 fi
 
 bindkey -s ^f "tmux-sessionizer\n"
