@@ -57,6 +57,7 @@ return {
       config.defaults.keymap.fzf["ctrl-d"] = "preview-page-down"
       config.defaults.keymap.builtin["<c-u>"] = "preview-page-up"
       config.defaults.keymap.builtin["<c-d>"] = "preview-page-down"
+      config.defaults.keymap.builtin["<m-p>"] = "toggle-preview"
       vim.keymap.set('n', '<leader>sh', fzf_lua.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', fzf_lua.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', fzf_lua.files, { desc = '[S]earch [F]iles' })
