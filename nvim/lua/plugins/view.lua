@@ -1,3 +1,4 @@
+local has_redrawn = false
 return {
   {
     'OXY2DEV/markview.nvim',
@@ -14,16 +15,10 @@ return {
       }
     }
   },
+
+  'folke/which-key.nvim',
   {
     "folke/snacks.nvim",
-    dependencies = {
-      'folke/which-key.nvim',
-      opts = {
-        layout = {
-          spacing = 2
-        }
-      }
-    },
     priority = 1000,
     lazy = false,
     opts = {
@@ -31,6 +26,7 @@ return {
       bigfile = { enabled = true },
       notifier = { enabled = true },
       zen = { enabled = true },
+      explorer = { enabled = true },
       dashboard = {
         preset = {
           keys = {
@@ -58,8 +54,14 @@ return {
         },
         sections = {
           { section = "header", indent = 60 },
-          { section = "keys", gap = 1, padding = 1 },
-          { indent = -60, pane = 2, padding = 10 },
+          { section = "keys",   gap = 1,    padding = 1 },
+          function()
+            if not has_redrawn then
+              Snacks.explorer.open()
+              has_redrawn = true
+            end
+            return { indent = -60, pane = 2, padding = 10 }
+          end,
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1, pane = 2 },
           {
             icon = " ",
@@ -99,6 +101,8 @@ return {
       { '<leader>lz', '<cmd>lua Snacks.zen()<cr>',                                            desc = 'ZenMode' },
       { '<leader>lo', ':Oil<cr>',                                                             desc = 'Oil' },
       { '<leader>lb', '<cmd>lua Snacks.dashboard.open()<cr>',                                 desc = 'Dash[b]oard' },
+      { '<leader>k',  '<cmd>lua Snacks.explorer.open()<cr>',                                  desc = 'Filestree' },
+      { '<leader>o',  '<cmd>lua Snacks.explorer.reveal()<cr>',                                desc = 'Filestree' },
       { '<Esc>',      '<cmd>nohlsearch<CR>',                                                  desc = 'cancel search' },
       { '<leader>q',  '<cmd>lua vim.diagnostic.setloclist()<CR>',                             desc = 'Open diagnostic [Q]uickfix list' },
       { '<C-h>',      '<C-w><C-h>',                                                           desc = 'Move focus to the left window' },
