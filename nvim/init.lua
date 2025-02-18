@@ -31,7 +31,7 @@ vim.opt.laststatus = 3
 vim.opt.wrap = false
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
-vim.g.loaded_netrin = 1
+vim.g.loaded_netrin = 0
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.slim'] = 'ruby' } }
