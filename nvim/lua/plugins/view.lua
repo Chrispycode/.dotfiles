@@ -27,7 +27,7 @@ return {
       notifier = { enabled = true },
       zen = { enabled = true },
       explorer = { enabled = true },
-      picker = { include = { "plugins*/*", "modules*/*" } },
+      picker = { include = { "plugins/*", "modules/*", "plugins*", "modules*" } },
       dashboard = {
         preset = {
           keys = {
