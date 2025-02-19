@@ -54,7 +54,7 @@ return {
 
         },
         sections = {
-          { section = "header", padding = 1 },
+          { section = "header",  padding = 1 },
           { section = "startup", padding = 1 },
           function()
             local version = vim.version()
@@ -98,6 +98,7 @@ return {
       { '<leader>lc', ':CodeCompanionActions<cr>',                                            desc = 'CodeCompanion' },
       { '<leader>lz', '<cmd>lua Snacks.zen()<cr>',                                            desc = 'ZenMode' },
       { '<leader>lf', '<cmd>lua Snacks.picker.files()<cr>',                                   desc = 'Files' },
+      { '<leader>lw', ':set wrap<cr>',                                                        desc = 'Toggle Wrap' },
       { '<leader>lo', ':Oil<cr>',                                                             desc = 'Oil' },
       { '<leader>lb', '<cmd>lua Snacks.dashboard.open()<cr>',                                 desc = 'Dash[b]oard' },
       { '<leader>k',  '<cmd>lua Snacks.explorer.open()<cr>',                                  desc = 'Filestree' },
