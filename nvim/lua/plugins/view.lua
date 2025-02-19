@@ -54,38 +54,35 @@ return {
 
         },
         sections = {
-          { section = "header", indent = 60 },
-          { section = "keys",   gap = 1,    padding = 1 },
+          { section = "header", padding = 1 },
+          { section = "startup", padding = 1 },
+          function()
+            local version = vim.version()
+            return {
+              align = 'center',
+              text = "   v" .. version.major .. "." .. version.minor .. "." .. version.patch,
+              padding = 1,
+            }
+          end,
+          { section = "keys", padding = 1 },
+          { icon = " ", title = "Recent Files", section = "recent_files", cwd = true, indent = 2, padding = 1 },
           function()
             if not has_redrawn then
               Snacks.explorer.open()
               has_redrawn = true
             end
-            return { indent = -60, pane = 2, padding = 10 }
-          end,
-          { icon = " ", title = "Recent Files", section = "recent_files", cwd = true, indent = 2, padding = 1, pane = 2 },
-          {
-            icon = " ",
-            title = "Git Status",
-            section = "terminal",
-            enabled = function()
-              return Snacks.git.get_root() ~= nil
-            end,
-            cmd = "git status --short --branch --renames",
-            height = 5,
-            padding = 1,
-            ttl = 5 * 60,
-            indent = 3,
-            pane = 2,
-          },
-          { section = "startup", indent = 60, padding = 1 },
-          function()
-            local version = vim.version()
             return {
-              align = 'center',
-              text = "   v" .. version.major .. "." .. version.minor .. "." .. version.patch,
+              icon = " ",
+              title = "Git Status",
+              section = "terminal",
+              enabled = function()
+                return Snacks.git.get_root() ~= nil
+              end,
+              cmd = "git status --short --branch --renames",
+              height = 5,
               padding = 1,
-              indent = 60
+              ttl = 5 * 60,
+              indent = 3,
             }
           end,
         },
@@ -100,6 +97,7 @@ return {
       { '<leader>lm', ':Mason<cr>',                                                           desc = 'Mason' },
       { '<leader>lc', ':CodeCompanionActions<cr>',                                            desc = 'CodeCompanion' },
       { '<leader>lz', '<cmd>lua Snacks.zen()<cr>',                                            desc = 'ZenMode' },
+      { '<leader>lf', '<cmd>lua Snacks.picker.files()<cr>',                                   desc = 'Files' },
       { '<leader>lo', ':Oil<cr>',                                                             desc = 'Oil' },
       { '<leader>lb', '<cmd>lua Snacks.dashboard.open()<cr>',                                 desc = 'Dash[b]oard' },
       { '<leader>k',  '<cmd>lua Snacks.explorer.open()<cr>',                                  desc = 'Filestree' },
