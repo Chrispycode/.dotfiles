@@ -27,13 +27,13 @@ return {
           local map = function(keys, func, desc)
             vim.keymap.set('n', keys, func, { desc = 'LSP: ' .. desc })
           end
-          local fzf_lua = require 'fzf-lua'
-          map('gd', fzf_lua.lsp_definitions, '[G]oto [D]efinition')
-          map('gr', fzf_lua.lsp_references, '[G]oto [R]eferences')
-          map('gI', fzf_lua.lsp_implementations, '[G]oto [I]mplementation')
-          map('<leader>D', fzf_lua.lsp_typedefs, 'Type [D]efinition')
-          map('<leader>ds', fzf_lua.lsp_document_symbols, '[D]ocument [S]ymbols')
-          map('<leader>ws', fzf_lua.lsp_live_workspace_symbols, '[W]orkspace [S]ymbols')
+          -- local fzf_lua = require 'fzf-lua'
+          -- map('gd', fzf_lua.lsp_definitions, '[G]oto [D]efinition')
+          -- map('gr', fzf_lua.lsp_references, '[G]oto [R]eferences')
+          -- map('gI', fzf_lua.lsp_implementations, '[G]oto [I]mplementation')
+          -- map('<leader>D', fzf_lua.lsp_typedefs, 'Type [D]efinition')
+          -- map('<leader>ds', fzf_lua.lsp_document_symbols, '[D]ocument [S]ymbols')
+          -- map('<leader>ws', fzf_lua.lsp_live_workspace_symbols, '[W]orkspace [S]ymbols')
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
