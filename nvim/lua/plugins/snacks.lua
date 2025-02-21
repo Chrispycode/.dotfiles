@@ -1,4 +1,10 @@
 local has_redrawn = false
+local file_ignore_patterns = { 'node_modules', 'tmp', 'log', '.git', '.bundle', 'public/plugin_assets',
+  '.idea', '.loadpath', '.powrc', '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*',
+  'vendor/cache', 'files', '_cacache', '.cache', '*.o', '*.a', '*.min.*', '*.min-*.*',
+  '*.out', '*.class', '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db',
+  '*.sqlite3', '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war' }
+
 return {
   'folke/which-key.nvim',
   {
@@ -10,8 +16,14 @@ return {
       bigfile = { enabled = true },
       notifier = { enabled = true },
       zen = { enabled = true },
-      explorer = { enabled = true },
-      picker = { include = { "plugins/*", "modules/*" } },
+      explorer = { enabled = true, },
+      picker = {
+        include = { "plugins/*", "modules/*" },
+        sources = {
+          files = { ignored = true, exclude = file_ignore_patterns },
+          grep = { ignored = true, exclude = file_ignore_patterns },
+        }
+      },
       dashboard = {
         preset = {
           keys = {

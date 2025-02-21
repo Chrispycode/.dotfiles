@@ -39,7 +39,6 @@ vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.slim'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
-
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
@@ -64,7 +63,7 @@ require('lazy').setup {
     opts = {
       colors = { bg = 'none' },
       overrides = function(c)
-        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' } }
+        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' },  NormalFloat = { bg = c.bg } }
       end,
     },
     priority = 1000,
@@ -76,6 +75,6 @@ require('lazy').setup {
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
   'kdheepak/lazygit.nvim',
-  {'kevinhwang91/nvim-bqf', ft = 'qf'},
+  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
   { import = 'plugins' },
 }
