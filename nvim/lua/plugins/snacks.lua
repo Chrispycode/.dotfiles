@@ -20,8 +20,8 @@ return {
       picker = {
         include = { "plugins/*", "modules/*" },
         sources = {
-          files = { ignored = true, hidden = true, exclude = file_ignore_patterns, allow_patterns = { ".*" } },
-          grep = { ignored = true, hidden = true, exclude = file_ignore_patterns, allow_patterns = { ".*" } },
+          files = { ignored = true, hidden = true, exclude = file_ignore_patterns },
+          grep = { ignored = true, hidden = true, exclude = file_ignore_patterns },
         }
       },
       dashboard = {
@@ -135,7 +135,6 @@ return {
       { "<leader>sS",      function() Snacks.picker.lsp_workspace_symbols() end,                       desc = "LSP Workspace Symbols" },
       -- Custom
       { "<leader>k",       function() Snacks.explorer() end,                                           desc = "File Explorer" },
-      -- { '<leader>o',       function() Snacks.explorer.reveal() end,                                    desc = 'Filestree' },
       { '<leader>lb',      function() Snacks.dashboard.open() end,                                     desc = 'Dash[b]oard' },
       { '<leader>lz',      function() Snacks.zen() end,                                                desc = 'ZenMode' },
       { '<leader>tn',      '<cmd>tabnew<cr>',                                                          desc = 'new Tab' },

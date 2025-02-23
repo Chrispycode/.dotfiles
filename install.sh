@@ -19,7 +19,7 @@
 # # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 # # ln -fs $HOME/.dotfiles/nvim ~/.config 
 # # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
-ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
+# ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/Gemfile ~/
