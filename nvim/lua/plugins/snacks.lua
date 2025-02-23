@@ -12,16 +12,16 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      image = { enabled = true },
-      bigfile = { enabled = true },
-      notifier = { enabled = true },
-      zen = { enabled = true },
-      explorer = { enabled = true, },
+      image = {},
+      bigfile = {},
+      notifier = {},
+      zen = {},
+      explorer = {},
       picker = {
         include = { "plugins/*", "modules/*" },
         sources = {
-          files = { ignored = true, exclude = file_ignore_patterns },
-          grep = { ignored = true, exclude = file_ignore_patterns },
+          files = { ignored = true, hidden = true, exclude = file_ignore_patterns, allow_patterns = { ".*" } },
+          grep = { ignored = true, hidden = true, exclude = file_ignore_patterns, allow_patterns = { ".*" } },
         }
       },
       dashboard = {
@@ -118,22 +118,6 @@ return {
       { "<leader>sh",      function() Snacks.picker.help() end,                                        desc = "Help Pages" },
       { "<leader>sH",      function() Snacks.picker.highlights() end,                                  desc = "Highlights" },
       { "<leader>sj",      function() Snacks.picker.jumps() end,                                       desc = "Jumps" },
-      -- {
-      --   "<leader>si",
-      --   function()
-      --     Snacks.picker.files {
-      --       cmd = "find",            -- Use 'find' command to list directories
-      --       args = { "-type", "d" }, -- Filter for directories only
-      --       dirs = { "." },
-      --       on_choice = function(selected)
-      --         if selected then
-      --           Snacks.picker.grep { cwd = selected }
-      --         end
-      --       end
-      --     }
-      --   end,
-      --   desc = "Search in specific directory"
-      -- },
       { "<leader>sk",      function() Snacks.picker.keymaps() end,                                     desc = "Keymaps" },
       { "<leader>sm",      function() Snacks.picker.marks() end,                                       desc = "Marks" },
       { "<leader>sM",      function() Snacks.picker.man() end,                                         desc = "Man Pages" },
@@ -151,7 +135,7 @@ return {
       { "<leader>sS",      function() Snacks.picker.lsp_workspace_symbols() end,                       desc = "LSP Workspace Symbols" },
       -- Custom
       { "<leader>k",       function() Snacks.explorer() end,                                           desc = "File Explorer" },
-      { '<leader>o',       function() Snacks.explorer.reveal() end,                                    desc = 'Filestree' },
+      -- { '<leader>o',       function() Snacks.explorer.reveal() end,                                    desc = 'Filestree' },
       { '<leader>lb',      function() Snacks.dashboard.open() end,                                     desc = 'Dash[b]oard' },
       { '<leader>lz',      function() Snacks.zen() end,                                                desc = 'ZenMode' },
       { '<leader>tn',      '<cmd>tabnew<cr>',                                                          desc = 'new Tab' },
