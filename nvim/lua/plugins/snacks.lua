@@ -21,7 +21,10 @@ return {
         include = { "plugins/*", "modules/*" },
         sources = {
           files = { ignored = true, hidden = true, exclude = file_ignore_patterns },
+          explorer = { ignored = true, hidden = true },
           grep = { ignored = true, hidden = true, exclude = file_ignore_patterns },
+          grep_word = { ignored = true, hidden = true, exclude = file_ignore_patterns },
+          grep_buffers = { ignored = true, hidden = true, exclude = file_ignore_patterns },
         }
       },
       dashboard = {
