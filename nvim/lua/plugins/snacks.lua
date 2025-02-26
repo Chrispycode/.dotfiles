@@ -95,6 +95,7 @@ return {
       { "<leader>n",       function() Snacks.picker.notifications() end,                               desc = "Notification History" },
       -- find
       { "<leader>sf",      function() Snacks.picker.files() end,                                       desc = "Find Files" },
+      { "<leader>pf",      function() Snacks.picker.files({cwd = 'plugins'}) end,                                       desc = "Find Files" },
       { "<leader>fg",      function() Snacks.picker.git_files() end,                                   desc = "Find Git Files" },
       { "<leader>fr",      function() Snacks.picker.recent() end,                                      desc = "Recent" },
       -- git
@@ -108,6 +109,7 @@ return {
       -- Grep
       { "<leader>sB",      function() Snacks.picker.grep_buffers() end,                                desc = "Grep Open Buffers" },
       { "<leader>sg",      function() Snacks.picker.grep() end,                                        desc = "Grep" },
+      { "<leader>pg",      function() Snacks.picker.grep({cwd = 'plugins'}) end,                                        desc = "Grep" },
       { "<leader>sw",      function() Snacks.picker.grep_word() end,                                   desc = "Visual selection or word",       mode = { "n", "x" } },
       -- search
       { '<leader>s"',      function() Snacks.picker.registers() end,                                   desc = "Registers" },

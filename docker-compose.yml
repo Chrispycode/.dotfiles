@@ -62,20 +62,20 @@ services:
   #   volumes:
   #     - mysql_data:/var/lib/mysql
   #
-  # mariadb:
-  #   image: mariadb:latest
-  #   command: --max_allowed_packet=100m --wait_timeout=600
-  #   volumes:
-  #     - ./.dc/mariadb:/var/lib/mariadb
-  #   ports:
-  #     - "3306:3306"
-  #   environment:
-  #     MYSQL_ROOT_PASSWORD: "root"
-  #   logging:
-  #     options:
-  #       max-size: "50m"
-  #       max-file: "7"
-  #   container_name: mariadb
+  mariadb:
+    image: mariadb:latest
+    command: --max_allowed_packet=100m --wait_timeout=600
+    volumes:
+      - ./.dc/mariadb:/var/lib/mariadb
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+    logging:
+      options:
+        max-size: "50m"
+        max-file: "7"
+    container_name: mariadb
   #
   # redmine:
   #   container_name: redmine
@@ -135,16 +135,16 @@ services:
   #     - rabbit_data:/var/lib/rabbitmq
   #     - rabbit_logs:/var/log/rabbitmq
   #
-  # chrome:
-  #   container_name: chrome
-  #   image: selenium/standalone-chrome-debug
-  #   logging:
-  #     driver: none
-  #   ports:
-  #     - "5900:5900"
-  #   environment:
-  #     - SCREEN_WIDTH=1920
-  #     - SCREEN_HEIGHT=1080
+  chrome:
+    container_name: chrome
+    image: selenium/standalone-chrome-debug
+    logging:
+      driver: none
+    ports:
+      - "5900:5900"
+    environment:
+      - SCREEN_WIDTH=1920
+      - SCREEN_HEIGHT=1080
   #
   # mongodb:
   #   image: mongo
@@ -161,6 +161,6 @@ volumes:
   # rabbit_data:
   # rabbit_logs:
   # mongodb_data:
-  # mariadb:
+  mariadb:
   open-webui:
 
