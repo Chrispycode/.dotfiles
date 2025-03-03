@@ -374,7 +374,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 20000
 
 set -gq allow-passthrough on
 set -ga update-environment TERM
