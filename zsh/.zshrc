@@ -19,7 +19,7 @@ export LLM="ollama"
 export VI_MODE_SET_CURSOR=true
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-plugins=(git cp fzf fzf-tab tmux vi-mode docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise bundler node npm ruby rails rake redis-cli python pip rust golang)
+plugins=(git cp vi-mode fzf fzf-tab tmux docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise bundler node npm ruby rails rake redis-cli python pip rust golang)
 
 if [ -f ~/.dotfiles/preload.sh ]; then
   source ~/.dotfiles/preload.sh
