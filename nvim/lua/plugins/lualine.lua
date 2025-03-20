@@ -47,6 +47,54 @@ return {
           c = { bg = colors.darkgray, fg = colors.gray },
         },
       }
+      local CC = require("lualine.component"):extend()
+
+      CC.processing = false
+      CC.spinner_index = 1
+
+      local spinner_symbols = {
+        "⠋",
+        "⠙",
+        "⠹",
+        "⠸",
+        "⠼",
+        "⠴",
+        "⠦",
+        "⠧",
+        "⠇",
+        "⠏",
+      }
+      local spinner_symbols_len = 10
+
+      -- Initializer
+      function CC:init(options)
+        CC.super.init(self, options)
+
+        local group = vim.api.nvim_create_augroup("CodeCompanionHooks", {})
+
+        vim.api.nvim_create_autocmd({ "User" }, {
+          pattern = "CodeCompanionRequest*",
+          group = group,
+          callback = function(request)
+            if request.match == "CodeCompanionRequestStarted" then
+              self.processing = true
+            elseif request.match == "CodeCompanionRequestFinished" then
+              self.processing = false
+            end
+          end,
+        })
+      end
+
+      -- Function that runs every time statusline is updated
+      function CC:update_status()
+        if self.processing then
+          self.spinner_index = (self.spinner_index % spinner_symbols_len) + 1
+          return spinner_symbols[self.spinner_index]
+        else
+          return nil
+        end
+      end
+
       require('lualine').setup {
         options = { theme = darkrose_bubble, component_separators = '', section_separators = { left = '', right = '' } },
         sections = {
@@ -56,7 +104,7 @@ return {
             { 'filename', path = 1 },
             '%=',
           },
-          lualine_x = {},
+          lualine_x = { CC },
           lualine_y = { 'filetype', 'progress' },
           lualine_z = {
             { 'location', left_padding = 2 },
