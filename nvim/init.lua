@@ -74,7 +74,6 @@ require('lazy').setup {
   'tpope/vim-sleuth',
   'mg979/vim-visual-multi',
   'nvim-pack/nvim-spectre',
-  'kdheepak/lazygit.nvim',
   { 'kevinhwang91/nvim-bqf', ft = 'qf' },
   { import = 'plugins' },
 }

@@ -38,11 +38,8 @@ return {
       return { anchor = 'SE', col = vim.o.columns, row = vim.o.lines - pad }
     end
     require('mini.notify').setup({ window = { config = win_config } })
-    require('mini.git').setup()
     require('mini.pairs').setup()
-    require('mini.animate').setup({ scroll = { enable = false } })
-    require('mini.cursorword').setup()
-    require('mini.indentscope').setup({ draw = { delay = 1 }, symbol = '▏ ' })
+    require('mini.cursorword').setup() 
 
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
