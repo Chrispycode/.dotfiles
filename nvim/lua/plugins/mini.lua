@@ -39,7 +39,7 @@ return {
     end
     require('mini.notify').setup({ window = { config = win_config } })
     require('mini.pairs').setup()
-    require('mini.cursorword').setup() 
+    require('mini.cursorword').setup()
 
     -- ... and there is more!
     --  Check out: https://github.com/echasnovski/mini.nvim
