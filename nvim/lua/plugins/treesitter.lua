@@ -1,6 +1,7 @@
 return {
   'nvim-treesitter/nvim-treesitter',
   run = ':TSUpdate',
+  main = 'nvim-treesitter.configs',
   opts = {
     ensure_installed = {
       'lua',
