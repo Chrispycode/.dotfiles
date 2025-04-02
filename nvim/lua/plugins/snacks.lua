@@ -28,6 +28,11 @@ return {
           grep = { ignored = true, hidden = true, exclude = file_ignore_patterns },
           grep_word = { ignored = true, hidden = true, exclude = file_ignore_patterns },
           grep_buffers = { ignored = true, hidden = true, exclude = file_ignore_patterns },
+        },
+        formatters = {
+          file = {
+            truncate = 200
+          }
         }
       },
       dashboard = {
