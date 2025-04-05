@@ -39,8 +39,6 @@ return {
         preset = {
           keys = {
             { icon = "", key = "n", desc = "New file", action = "<cmd>ene<CR>" },
-            { icon = "󰈞", key = "f", desc = "Find file", action = function() Snacks.picker.files() end },
-            { icon = "󰊄", key = "g", desc = "Live grep", action = function() Snacks.picker.grep() end },
             { icon = "", key = "lg", desc = "Git", action = function() Snacks.lazygit() end },
             { icon = "󰏔", key = "lm", desc = "Mason", action = "<cmd>Mason<CR>" },
             { icon = "", key = "lc", desc = "Code", action = "<cmd>CodeCompanionActions<CR>" },
@@ -193,7 +191,6 @@ return {
       { '<leader>lm', ':Mason<cr>',                                                               desc = 'Mason' },
       { '<leader>lc', ':CodeCompanionActions<cr>',                                                desc = 'CodeCompanion' },
       { '<leader>lw', ':set wrap<cr>',                                                            desc = 'Toggle Wrap' },
-      { '<leader>lo', ':Oil<cr>',                                                                 desc = 'Oil' },
       { '<Esc>',      '<cmd>nohlsearch<CR>',                                                      desc = 'cancel search' },
       { '<leader>q',  function() vim.diagnostic.setloclist() end,                                 desc = 'Open diagnostic [Q]uickfix list' },
       { '<C-h>',      '<C-w><C-h>',                                                               desc = 'Move focus to the left window' },
