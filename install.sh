@@ -22,6 +22,7 @@
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs $HOME/.dotfiles/zathura ~/.config
+# ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/Gemfile ~/
 
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"

@@ -19,6 +19,7 @@ return {
       explorer = {},
       git = {},
       indent = {},
+      scope = {},
       lazygit = {},
       picker = {
         include = { "plugins/*", "modules/*" },

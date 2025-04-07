@@ -7,6 +7,6 @@ alias n="nvim ."
 alias lg="lazygit"
 alias icat="kitty +kitten icat"
 dca() { dcup -d $@ && docker attach $@ }
-alias dev_start="sudo systemctl start ollama.service docker.service docker.socket"
-alias dev_stop="sudo systemctl stop ollama.service docker.service docker.socket containerd.service"
+alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.socket"
+alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
 
