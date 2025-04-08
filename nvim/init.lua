@@ -41,6 +41,7 @@ vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevelstart = 1
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
