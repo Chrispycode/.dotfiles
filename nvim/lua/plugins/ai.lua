@@ -17,6 +17,11 @@ return {
       { 'stevearc/dressing.nvim', opts = {} }, -- Optional: Improves `vim.ui.select`
     },
     opts = {
+      display = {
+        action_palette = {
+          provider = "default"
+        },
+      },
       strategies = {
         chat = {
           adapter = os.getenv 'LLM',
