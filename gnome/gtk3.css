@@ -77,11 +77,10 @@
 @define-color dark_4 #241f31;
 @define-color dark_5 #000000;
 
+/* GTK3 */
+
 button.titlebutton {
-  /* GTK3 */
-  color: transparent;
-  min-width: 18px;
-  min-height: 18px;
+  color: white;
 }
 
 button.titlebutton:backdrop {
@@ -89,12 +88,7 @@ button.titlebutton:backdrop {
 }
 
 windowcontrols>button {
-  color: transparent;
-  min-width: 2px;
-  min-height: 2px;
-  border-radius: 100%;
-  padding: 0;
-  margin: 0 2px;
+  color: white;
 }
 
 windowcontrols>button>image {
