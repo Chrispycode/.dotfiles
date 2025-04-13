@@ -21,6 +21,7 @@ return {
       indent = {},
       scope = {},
       lazygit = {},
+      quickfile = {},
       picker = {
         include = { "plugins/*", "modules/*" },
         sources = {
