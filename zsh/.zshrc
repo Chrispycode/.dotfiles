@@ -39,8 +39,10 @@ fi
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
 if [ $(uname -s) = "Darwin" ]; then
+	bat=batcat
   eval "$(/usr/local/bin/mise activate zsh)"
 else
+	bat=bat
   eval "$($HOME/.local/bin/mise activate zsh)"
 
   export ELECTRON_OZONE_PLATFORM_HINT=auto
@@ -51,5 +53,7 @@ else
     MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
   fi
 fi
+
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | $bat -p -lman'"
 
 bindkey -s ^f "tmux-sessionizer\n"
