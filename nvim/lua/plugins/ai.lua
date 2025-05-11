@@ -42,8 +42,9 @@ return {
 								default = 64000,
 							},
 							model = {
-								default = 'llama3.1:latest',
+								-- default = 'llama3.1:latest',
 								-- default = 'deepseek-r1:14b',
+								default = 'qwen2.5-coder:14b',
 							},
 							temperature = { default = 0.6 },
 						},

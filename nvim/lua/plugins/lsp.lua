@@ -2,20 +2,21 @@ return {
 	{
 		-- `lazydev` configures Lua LSP for your Neovim config, runtime and plugins
 		-- used for completion, annotations and signatures of Neovim apis
-    'folke/lazydev.nvim',
-    ft = 'lua',
-    opts = {
-      library = {
-        -- Load luvit types when the `vim.uv` word is found
-        { path = '${3rd}/luv/library', words = { 'vim%.uv' } },
-      },
-    }
+		'folke/lazydev.nvim',
+		ft = 'lua',
+		opts = {
+			library = {
+				-- Load luvit types when the `vim.uv` word is found
+				{ path = '${3rd}/luv/library', words = { 'vim%.uv' } },
+			},
+		}
 	},
 	{
 		'neovim/nvim-lspconfig',
 		dependencies = {
 			{ 'williamboman/mason.nvim',          config = true },
 			{ 'williamboman/mason-lspconfig.nvim' },
+			'WhoIsSethDaniel/mason-tool-installer.nvim',
 			'saghen/blink.cmp',
 		},
 		config = function()
@@ -76,8 +77,6 @@ return {
 						return vim.loop.cwd()
 					end,
 				},
-				emmet_language_server = {},
-				html = {},
 				lua_ls = {
 					settings = {
 						Lua = {
@@ -88,21 +87,22 @@ return {
 						},
 					},
 				},
+				cssls = {},
+				ts_ls = {},
+				bashls = {},
+				emmet_language_server = {},
 			}
 
-			require('mason').setup()
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				'stylua',
-				'css-lsp',
-				'ts_ls',
-				'bashls',
 				'htmlbeautifier',
 				'markdownlint',
 				'rufo',
 				'prettier'
 			})
-
+			require('mason').setup()
+			require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 			require('mason-lspconfig').setup {
 				automatic_installation = true,
 				automatic_enable = true,
