@@ -8,7 +8,6 @@ addToPathFront() { if [[ "$PATH" != *"$1"* ]]; then; export PATH=$1:$PATH; fi }
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.dotfiles/scripts
 
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export GOPATH="$HOME/.go"
@@ -21,9 +20,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(git cp vi-mode fzf fzf-tab tmux docker-compose ansible zsh-autosuggestions zsh-syntax-highlighting mise bundler node npm ruby rails rake redis-cli python pip rust golang)
 
-if [ -f ~/.dotfiles/preload.sh ]; then
-  source ~/.dotfiles/preload.sh
-fi
+[ -f ~/.dotfiles/preload.sh ] && source ~/.dotfiles/preload.sh
 
 source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/zsh/styles.zsh
@@ -32,9 +29,7 @@ source ~/.dotfiles/zsh/styles.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source ~/.dotfiles/zsh/aliases.sh
-if [ -f ~/.dotfiles/overrides.sh ]; then
-  source ~/.dotfiles/overrides.sh
-fi
+[[ -f ~/.dotfiles/overrides.sh  ]] && source ~/.dotfiles/overrides.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 

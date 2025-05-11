@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
 
+[[ ! -f $HOME/.dotfiles/sessionizer-additions.sh ]] || source $HOME/.dotfiles/sessionizer-additions.sh
+
 if [[ $# -eq 1 ]]; then
   selected=$1
 else
   # export TMUX_PATHS="$HOME\n$HOME/.config\n$HOME/.local/share/applications\n$HOME/Documents"
-  TMUX_PATHS=${TMUX_PATHS:=}
-  TMUX_FIND_PATHS="$HOME/repos $HOME/repos/code $TMUX_FIND_PATHS"
-  folders="$HOME/.dotfiles\n$TMUX_PATHS\n$(find $TMUX_FIND_PATHS -mindepth 1 -maxdepth 1 -type d 2>/dev/null)"
+	find_paths=$TMUX_PATHS
+	find_depth_paths="$HOME/repos $HOME/repos/code $TMUX_FIND_PATHS"
+	folders="$HOME/.dotfiles\n$find_paths\n$(find $find_depth_paths -mindepth 1 -maxdepth 1 -type d 2>/dev/null)"
   if [ -f "/etc/debian_version" ]; then
     selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); ls -1ah --color {})")
   else

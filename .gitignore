@@ -1,5 +1,6 @@
 overrides.sh
 preload.sh
+sessionizer-additions.sh
 nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl

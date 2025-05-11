@@ -1,56 +1,4 @@
 {
-  "activitusbar.views": [
-    {
-      "name": "explorer",
-      "codicon": "explorer-view-icon",
-      "tooltip": "Explorer"
-    },
-    // {
-    //     "name": "debug",
-    //     "codicon": "run-view-icon",
-    //     "tooltip": "Debug"
-    // },
-    {
-      "name": "extensions",
-      "codicon": "extensions-view-icon",
-      "tooltip": "Extensions"
-    },
-    {
-      "name": "remoteTargets",
-      "codicon": "remote-explorer",
-      "tooltip": "Remote"
-    },
-    {
-      "name": "dockerContainers",
-      "codicon": "server",
-      "tooltip": "Docker"
-    },
-    {
-      "name": "terminal",
-      "codicon": "terminal",
-      "tooltip": "Terminal"
-    },
-    {
-      "name": "search",
-      "codicon": "search-view-icon",
-      "tooltip": "Search"
-    },
-    {
-      "name": "scm",
-      "codicon": "source-control-view-icon",
-      "tooltip": "SCM"
-    },
-    // {
-    //     "name": "command.workbench.panel.chat.view.copilot.focus",
-    //     "codicon": "copilot",
-    //     "tooltip": "Copilot Chat"
-    // },
-    {
-      "name": "command.workbench.action.toggleAuxiliaryBar",
-      "codicon": "list-flat"
-    }
-  ],
-  "activitusbar.showSourceControlCounter": true,
   "editor.acceptSuggestionOnEnter": "off",
   "editor.emptySelectionClipboard": true,
   "editor.fontSize": 11,
@@ -154,14 +102,20 @@
     "menu.selectionForeground": "#b30000",
     "menubar.selectionForeground": "#b30000",
     "editorIndentGuide.background": "#2e0000",
-    "editorIndentGuide.activeBackground": "#990000"
+    "editorIndentGuide.activeBackground": "#990000",
+    "titleBar.activeBackground": "#000000",
+    "titleBar.inactiveBackground": "#000000",
+    "activityBarTop.activeBackground": "#000000",
+    "activityBarTop.background": "#000000",
+    "statusBar.noFolderBackground": "#000000",
+    "statusBar.border": "#990000",
+    "statusBar.noFolderBorder": "#990000",
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.fontFamily": "'MesloLGS NF', 'monospace', monospace",
   "gitlens.views.workspaces.pullRequests.enabled": false,
   "editor.minimap.enabled": false,
   "[ruby]": {
-    "editor.defaultFormatter": "jnbt.vscode-rufo",
     "editor.formatOnType": true,
     "editor.tabSize": 2,
     "editor.insertSpaces": true,
@@ -182,7 +136,6 @@
   "search.smartCase": true,
   "editor.indentSize": "tabSize",
   "editor.detectIndentation": false,
-  "workbench.activityBar.location": "hidden",
   "html.completion.attributeDefaultValue": "empty",
   "workbench.settings.applyToAllProfiles": [
     "html.completion.attributeDefaultValue"
@@ -202,7 +155,6 @@
     "scminput": false
   },
   "telemetry.telemetryLevel": "off",
-  "window.menuBarVisibility": "toggle",
   "[erb]": {
     "editor.defaultFormatter": "aliariff.vscode-erb-beautify"
   },
@@ -223,66 +175,78 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   "gitlens.launchpad.indicator.enabled": false,
   "editor.colorDecoratorsLimit": 2000,
-  "highlight.regexes": {
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *TODO(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#ffcc00",
-          "backgroundColor": "#ffcc00",
-          "color": "#1f1f1f",
-          "fontWeight": "bold"
-        },
-        {
-          "backgroundColor": "#ffcc00",
-          "color": "#1f1f1f"
-        }
-      ]
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "top",
+  "window.customTitleBarVisibility": "never",
+  "chat.agent.enabled": true,
+  "github.copilot.chat.newWorkspaceCreation.enabled": false,
+  "vim.enableNeovim": true,
+  "vim.highlightedyank.enable": true,
+  "vim.smartRelativeLine": true,
+  "rubyLsp.enabledFeatures": {
+    "codeActions": true,
+    "diagnostics": true,
+    "documentHighlights": true,
+    "documentLink": true,
+    "documentSymbols": true,
+    "foldingRanges": true,
+    "formatting": true,
+    "hover": true,
+    "inlayHint": true,
+    "onTypeFormatting": true,
+    "selectionRanges": true,
+    "semanticHighlighting": true,
+    "completion": true,
+    "codeLens": true,
+    "definition": true,
+    "workspaceSymbol": true,
+    "signatureHelp": true,
+    "typeHierarchy": true
+  },
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "language": "ruby",
+      "instruction": "Generate idiomatic Ruby on Rails code for Redmine plugins. Follow Rails 7 and Redmine plugin development best practices. Use strong parameters, service objects, and concerns where appropriate. Leverage the Redmine API and plugin conventions. Write clear, maintainable, and well-documented code. Prefer explicitness over cleverness."
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:FIXME|FIX|BUG|UGLY|DEBUG|HACK)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#cc0000",
-          "backgroundColor": "#cc0000",
-          "color": "#1f1f1f",
-          "fontWeight": "bold"
-        },
-        {
-          "backgroundColor": "#cc0000",
-          "color": "#1f1f1f"
-        }
-      ]
+    {
+      "language": "erb",
+      "instruction": "Generate clean, maintainable ERB templates for Redmine plugin views. Use Rails view helpers and partials where appropriate. Ensure code is secure and avoids XSS vulnerabilities. Follow Rails and Redmine conventions for HTML structure and accessibility."
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:REVIEW|OPTIMIZE|TSC)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#00ccff",
-          "backgroundColor": "#00ccff",
-          "color": "#1f1f1f",
-          "fontWeight": "bold"
-        },
-        {
-          "backgroundColor": "#00ccff",
-          "color": "#1f1f1f"
-        }
-      ]
+    {
+      "language": "javascript",
+      "instruction": "Write JavaScript for Redmine plugins using jQuery, as Redmine relies on it. Ensure code is unobtrusive, modular, and maintainable. Use jQuery for DOM manipulation and event handling. Avoid ES6+ features that may not be supported in all Redmine environments. Ensure compatibility with the Rails asset pipeline and Redmine's frontend structure."
     },
-    "((?:<!-- *)?(?:#|// @|//|./\\*+|<!--|--|\\* @|{!|{{!--|{{!) *(?:IDEA)(?:\\s*\\([^)]+\\))?:?)((?!\\w)(?: *-->| *\\*/| *!}| *--}}| *}}|(?= *(?:[^:]//|/\\*+|<!--|@|--|{!|{{!--|{{!))|(?: +[^\\n@]*?)(?= *(?:[^:]//|/\\*+|<!--|@|--(?!>)|{!|{{!--|{{!))|(?: +[^@\\n]+)?))": {
-      "filterFileRegex": ".*(?<!CHANGELOG.md)$",
-      "decorations": [
-        {
-          "overviewRulerColor": "#cc00cc",
-          "backgroundColor": "#cc00cc",
-          "color": "#1f1f1f",
-          "fontWeight": "bold"
-        },
-        {
-          "backgroundColor": "#cc00cc",
-          "color": "#1f1f1f"
-        }
-      ]
+    {
+      "language": "css",
+      "instruction": "Write modular, maintainable CSS for Redmine plugins. Follow BEM or similar naming conventions. Ensure styles do not conflict with Redmine core or other plugins. Use variables and mixins where appropriate."
+    },
+    {
+      "language": "yaml",
+      "instruction": "Generate valid YAML for Redmine plugin configuration, localization, or CI/CD. Use proper indentation and follow Redmine conventions for keys and structure."
+    },
+    {
+      "language": "markdown",
+      "instruction": "Write clear, well-structured Markdown for Redmine plugin documentation, including README and CHANGELOG files. Use proper headings, lists, and code blocks. Follow Redmine and open source documentation standards."
+    },
+    {
+      "language": "html",
+      "instruction": "Generate clean, semantic HTML for use in Redmine plugin views. Follow accessibility best practices and ensure compatibility with ERB templates and Rails helpers. Structure markup to integrate smoothly with Redmine's UI."
+    },
+    {
+      "language": "rake",
+      "instruction": "Write Rake tasks for Redmine plugins following Ruby and Rails conventions. Ensure tasks are idempotent, well-documented, and placed in the appropriate namespace. Use Redmine and Rails APIs where applicable."
+    },
+    {
+      "text": "Tests for Redmine plugins",
+      "instruction": "Generate Minitest tests for Redmine plugins. Follow Redmine and Rails testing conventions. Ensure tests are clear, maintainable, and cover edge cases. Use fixtures for test data. Structure tests to be independent and idempotent."
+    },
+    {
+      "text": "Dev/Test setup",
+      "instruction": "Use docker compose, the container is always named like the workspace name."
+    },
+    {
+      "text": "General code generation",
+      "instruction": "Write readable, maintainable code. Follow best practices for the specific language and framework. Use idiomatic constructs and avoid unnecessary complexity. Only add comments for edge cases. Generate valid code for the Rails version defined for the redmine version of the current project, you get the redmine version from the changelog in the root directory."
     }
-  }
+  ]
 }
