@@ -109,7 +109,7 @@
     "activityBarTop.background": "#000000",
     "statusBar.noFolderBackground": "#000000",
     "statusBar.border": "#990000",
-    "statusBar.noFolderBorder": "#990000",
+    "statusBar.noFolderBorder": "#990000"
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.fontFamily": "'MesloLGS NF', 'monospace', monospace",
@@ -122,9 +122,7 @@
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "editor.rulers": [
-      120
-    ],
+    "editor.rulers": [120],
     "editor.semanticHighlighting.enabled": true,
     "editor.guides.bracketPairs": "active"
   },
@@ -202,51 +200,6 @@
     "workspaceSymbol": true,
     "signatureHelp": true,
     "typeHierarchy": true
-  },
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "language": "ruby",
-      "instruction": "Generate idiomatic Ruby on Rails code for Redmine plugins. Follow Rails 7 and Redmine plugin development best practices. Use strong parameters, service objects, and concerns where appropriate. Leverage the Redmine API and plugin conventions. Write clear, maintainable, and well-documented code. Prefer explicitness over cleverness."
-    },
-    {
-      "language": "erb",
-      "instruction": "Generate clean, maintainable ERB templates for Redmine plugin views. Use Rails view helpers and partials where appropriate. Ensure code is secure and avoids XSS vulnerabilities. Follow Rails and Redmine conventions for HTML structure and accessibility."
-    },
-    {
-      "language": "javascript",
-      "instruction": "Write JavaScript for Redmine plugins using jQuery, as Redmine relies on it. Ensure code is unobtrusive, modular, and maintainable. Use jQuery for DOM manipulation and event handling. Avoid ES6+ features that may not be supported in all Redmine environments. Ensure compatibility with the Rails asset pipeline and Redmine's frontend structure."
-    },
-    {
-      "language": "css",
-      "instruction": "Write modular, maintainable CSS for Redmine plugins. Follow BEM or similar naming conventions. Ensure styles do not conflict with Redmine core or other plugins. Use variables and mixins where appropriate."
-    },
-    {
-      "language": "yaml",
-      "instruction": "Generate valid YAML for Redmine plugin configuration, localization, or CI/CD. Use proper indentation and follow Redmine conventions for keys and structure."
-    },
-    {
-      "language": "markdown",
-      "instruction": "Write clear, well-structured Markdown for Redmine plugin documentation, including README and CHANGELOG files. Use proper headings, lists, and code blocks. Follow Redmine and open source documentation standards."
-    },
-    {
-      "language": "html",
-      "instruction": "Generate clean, semantic HTML for use in Redmine plugin views. Follow accessibility best practices and ensure compatibility with ERB templates and Rails helpers. Structure markup to integrate smoothly with Redmine's UI."
-    },
-    {
-      "language": "rake",
-      "instruction": "Write Rake tasks for Redmine plugins following Ruby and Rails conventions. Ensure tasks are idempotent, well-documented, and placed in the appropriate namespace. Use Redmine and Rails APIs where applicable."
-    },
-    {
-      "text": "Tests for Redmine plugins",
-      "instruction": "Generate Minitest tests for Redmine plugins. Follow Redmine and Rails testing conventions. Ensure tests are clear, maintainable, and cover edge cases. Use fixtures for test data. Structure tests to be independent and idempotent."
-    },
-    {
-      "text": "Dev/Test setup",
-      "instruction": "Use docker compose, the container is always named like the workspace name."
-    },
-    {
-      "text": "General code generation",
-      "instruction": "Write readable, maintainable code. Follow best practices for the specific language and framework. Use idiomatic constructs and avoid unnecessary complexity. Only add comments for edge cases. Generate valid code for the Rails version defined for the redmine version of the current project, you get the redmine version from the changelog in the root directory."
-    }
-  ]
+  }
 }
+
