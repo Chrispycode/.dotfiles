@@ -14,8 +14,8 @@ return {
 	{
 		'neovim/nvim-lspconfig',
 		dependencies = {
-			{ 'williamboman/mason.nvim',          config = true },
-			{ 'williamboman/mason-lspconfig.nvim' },
+			{ 'mason-org/mason.nvim',          config = true },
+			{ 'mason-org/mason-lspconfig.nvim' },
 			'WhoIsSethDaniel/mason-tool-installer.nvim',
 			'saghen/blink.cmp',
 		},

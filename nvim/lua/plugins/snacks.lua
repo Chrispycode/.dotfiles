@@ -1,4 +1,3 @@
-local has_redrawn = false
 local file_ignore_patterns = { 'node_modules', 'tmp', 'log', '.git', '.bundle', 'public/plugin_assets',
   '.idea', '.loadpath', '.powrc', '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*',
   'vendor/cache', 'files', '_cacache', '.cache', '*.o', '*.a', '*.min.*', '*.min-*.*',
@@ -74,10 +73,6 @@ return {
           { section = "keys", padding = 1 },
           { icon = " ", title = "Recent Files", section = "recent_files", cwd = true, indent = 2, padding = 1 },
           function()
-            if not has_redrawn then
-              Snacks.explorer.open()
-              has_redrawn = true
-            end
             return {
               icon = " ",
               title = "Git Status",
