@@ -5,7 +5,7 @@ vim.opt.number = true
 vim.opt.mouse = 'a'
 vim.opt.showmode = false
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+	vim.opt.clipboard = 'unnamedplus'
 end)
 vim.opt.breakindent = true
 vim.opt.undofile = true
@@ -31,6 +31,9 @@ vim.opt.laststatus = 3
 vim.opt.wrap = false
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevelstart = 1
 vim.g.loaded_netrin = 0
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
@@ -39,44 +42,41 @@ vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.slim'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldlevelstart = 1
 
 vim.api.nvim_create_autocmd('TextYankPost', {
-  desc = 'Highlight when yanking (copying) text',
-  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-  callback = function()
-    vim.highlight.on_yank()
-  end,
+	desc = 'Highlight when yanking (copying) text',
+	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
 })
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-  local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
-  if vim.v.shell_error ~= 0 then
-    error('Error cloning lazy.nvim:\n' .. out)
-  end
+	local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
+	local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
+	if vim.v.shell_error ~= 0 then
+		error('Error cloning lazy.nvim:\n' .. out)
+	end
 end ---@diagnostic disable-next-line: undefined-field
 
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
-  {
-    'water-sucks/darkrose.nvim',
-    opts = {
-      colors = { bg = 'none' },
-      overrides = function(c)
-        return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' },  NormalFloat = { bg = c.bg } }
-      end,
-    },
-    priority = 1000,
-    init = function()
-      vim.cmd.colorscheme 'darkrose'
-    end,
-  },
-  'mg979/vim-visual-multi',
-  'nvim-pack/nvim-spectre',
-  { 'kevinhwang91/nvim-bqf', ft = 'qf' },
-  { import = 'plugins' },
+	{
+		'water-sucks/darkrose.nvim',
+		opts = {
+			colors = { bg = 'none' },
+			overrides = function(c)
+				return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' }, NormalFloat = { bg = c.bg } }
+			end,
+		},
+		priority = 1000,
+		init = function()
+			vim.cmd.colorscheme 'darkrose'
+		end,
+	},
+	'mg979/vim-visual-multi',
+	'nvim-pack/nvim-spectre',
+	{ 'kevinhwang91/nvim-bqf', ft = 'qf' },
+	{ import = 'plugins' },
 }
