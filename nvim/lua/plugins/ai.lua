@@ -46,7 +46,7 @@ return {
 								-- default = 'deepseek-r1:14b',
 								default = 'qwen2.5-coder:14b',
 							},
-							temperature = { default = 0.6 },
+							-- temperature = { default = 0.6 },
 						},
 					})
 				end,
@@ -54,10 +54,11 @@ return {
 					return require('codecompanion.adapters').extend('copilot', {
 						schema = {
 							model = {
-								default = 'claude-3.5-sonnet',
+								default = 'claude-4-sonnet',
+								-- default = 'claude-3.5-sonnet',
 								-- default = 'gpt-4.1',
 							},
-							temperature = { default = 0.6 },
+							-- temperature = { default = 0.6 },
 						},
 					})
 				end,
