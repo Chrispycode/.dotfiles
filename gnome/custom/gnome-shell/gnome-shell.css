@@ -48,7 +48,7 @@ stage {
 .background-app-item .close-button:focus {
   color: #f8f8f2;
   background-color: #281f1e;
-  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;
+  box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.7) !important;
 }
 
 #LookingGlassDialog .notebook-tab:focus:hover,
@@ -1761,8 +1761,9 @@ agenda-view .background {
 }
 
 /* OVERVIEW */
+
 #overviewGroup {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 /* Window Picker */

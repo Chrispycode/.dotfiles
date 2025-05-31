@@ -9,7 +9,7 @@
 @define-color success_fg_color #ffffff;
 @define-color warning_color #f8e45c;
 @define-color warning_bg_color #cd9309;
-@define-color warning_fg_color rgba(0, 0, 0, 0.8);
+@define-color warning_fg_color rgba(0, 0, 0, 1);
 @define-color error_color #ff7b63;
 @define-color error_bg_color #c01c28;
 @define-color error_fg_color #ffffff;
@@ -29,6 +29,7 @@
 @define-color dialog_fg_color @popover_fg_color;
 @define-color popover_bg_color #101010;
 @define-color popover_fg_color @view_fg_color;
+@define-color toast_bg_color @window_bg_color;
 @define-color shade_color rgba(0, 0, 0, 0.36);
 @define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
 @define-color blue_1 #99c1f1;
@@ -79,56 +80,22 @@
 
 /* GTK4 */
 
-windowcontrols>button {
-  color: white;
+/*Junction*/
+.background.csd.main {
+	background: @window_bg_color;
 }
 
 windowcontrols>button>image {
-  color: white;
-}
-
-button.titlebutton.close:hover,
-windowcontrols>button.close:hover {
-  opacity: 0.8;
-}
-
-button.titlebutton.maximize,
-windowcontrols>button.maximize {
-  background-color: #505050;
-}
-
-button.titlebutton.maximize:hover,
-windowcontrols>button.maximize:hover {
-  opacity: 0.8;
-}
-
-button.titlebutton.minimize,
-windowcontrols>button.minimize {
-  background-color: #505050;
-}
-
-button.titlebutton.minimize:hover,
-windowcontrols>button.minimize:hover {
-  opacity: 0.8;
-}
-
-.navigation-sidebar {
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
-}
-
-/*Junction*/
-.background.csd.main {
-  background: rgba(0, 0, 0, 0.9);
+	background: color(srgb 111/0, 1);
+	color: @light_1;
 }
 
 .nautilus-window,
 .nautilus-window headerbar,
-.sidebar-pane {
-  background: rgba(0, 0, 0, 0.9);
+toast {
+	background: @window_bg_color;
 }
 
-.top-bar {
-  background: rgba(0, 0, 0, 0.9);
-  color: white;
+.sidebar-pane {
+	background: none;
 }
