@@ -414,7 +414,7 @@ set -g mode-keys vi
 bind C-f run-shell "tmux neww tmux-sessionizer" #!important
 
 # vim-like pane split
-bind C-l last-window #!important
+# bind C-l last-window #!important
 bind C-v split-window -h #!important
 bind C-s split-window -v #!important
 bind C-d split-window -vf -l10
