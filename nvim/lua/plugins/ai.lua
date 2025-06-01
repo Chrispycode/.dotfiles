@@ -1,13 +1,39 @@
 return {
 	{
-		'github/copilot.vim',
+		'zbirenbaum/copilot.lua',
+		cmd = 'Copilot',
 		config = function()
-			vim.keymap.set('i', '<S-Tab>', 'copilot#Accept("\\<CR>")', {
-				expr = true,
-				replace_keycodes = false
+			require('copilot').setup({
+				suggestion = {
+					enabled = true,
+					auto_trigger = false,
+					keymap = {
+						accept = "<S-Tab>",
+						dismiss = "<C-]>",
+					},
+				},
+				panel = { enabled = false }, -- Disable panel to keep it simple
 			})
-			vim.g.copilot_no_tab_map = true
-		end
+		end,
+		keys = {
+			{
+				'<leader>lc',
+				function()
+					local clients = vim.lsp.get_clients({ name = "copilot" })
+					if #clients > 0 then
+						vim.cmd('Copilot disable')
+						vim.cmd('Copilot status')
+						print("Copilot stopped")
+					else
+						vim.cmd('Copilot enable')
+						vim.cmd('Copilot suggestion')
+						vim.cmd('Copilot status')
+						print("Copilot started")
+					end
+				end,
+				desc = 'Toggle Copilot'
+			},
+		}
 	},
 	{
 		'olimorris/codecompanion.nvim',
@@ -19,12 +45,19 @@ return {
 		opts = {
 			display = {
 				action_palette = {
-					provider = "default"
+					provider = "snacks"
 				},
 			},
 			strategies = {
 				chat = {
 					adapter = os.getenv 'LLM',
+					slash_commands = {
+						["buffer"] = {
+							opts = {
+								provider = "snacks"
+							}
+						}
+					}
 				},
 				inline = {
 					adapter = os.getenv 'LLM',

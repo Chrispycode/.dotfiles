@@ -53,7 +53,7 @@ return {
 						{ icon = "", key = "n", desc = "New file", action = "<cmd>ene<CR>" },
 						{ icon = "", key = "lg", desc = "Git", action = function() Snacks.lazygit() end },
 						{ icon = "󰏔", key = "lm", desc = "Mason", action = "<cmd>Mason<CR>" },
-						{ icon = "", key = "lc", desc = "Code", action = "<cmd>CodeCompanionActions<CR>" },
+						{ icon = "", key = "la", desc = "Code", action = "<cmd>CodeCompanionActions<CR>" },
 						{ icon = "", key = "lp", desc = "PLugins", action = "<cmd>Lazy<CR>" },
 						{ icon = "󰅚", key = "q", desc = "Quit", action = "<cmd>qa<CR>" },
 					},
@@ -83,21 +83,6 @@ return {
 					end,
 					{ section = "keys", padding = 1 },
 					{ icon = " ", title = "Recent Files", section = "recent_files", cwd = true, indent = 2, padding = 1 },
-					function()
-						return {
-							icon = " ",
-							title = "Git Status",
-							section = "terminal",
-							enabled = function()
-								return Snacks.git.get_root() ~= nil
-							end,
-							cmd = "git status --short --branch --renames",
-							height = 5,
-							padding = 1,
-							ttl = 5 * 60,
-							indent = 3,
-						}
-					end,
 				},
 			}
 		},
@@ -194,10 +179,10 @@ return {
 			{ '<leader>lz', function() Snacks.zen() end,                                                desc = 'ZenMode' },
 			{ '<leader>tn', '<cmd>tabnew<cr>',                                                          desc = 'new Tab' },
 			{ '<leader>lp', ':Lazy<cr>',                                                                desc = 'Lazy' },
-			{ '<leader>ls', ':LspStart<cr>',                                                            desc = 'LSP Start' },
-			{ '<leader>lk', ':LspStop<cr>',                                                             desc = 'LSP stop' },
+			{ '<leader>ls', ':LspStart',                                                                desc = 'LSP Start' },
+			{ '<leader>lk', ':LspStop',                                                                 desc = 'LSP stop' },
 			{ '<leader>lm', ':Mason<cr>',                                                               desc = 'Mason' },
-			{ '<leader>lc', ':CodeCompanionActions<cr>',                                                desc = 'CodeCompanion' },
+			{ '<leader>la', ':CodeCompanionActions<cr>',                                                desc = 'CodeCompanion' },
 			{ '<leader>lw', ':set wrap<cr>',                                                            desc = 'Toggle Wrap' },
 			{ '<Esc>',      '<cmd>nohlsearch<CR>',                                                      desc = 'cancel search' },
 			{ '<leader>q',  function() vim.diagnostic.setloclist() end,                                 desc = 'Open diagnostic [Q]uickfix list' },
