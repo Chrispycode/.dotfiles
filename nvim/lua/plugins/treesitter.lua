@@ -14,6 +14,7 @@ return {
 				'markdown_inline',
 				'embedded_template',
 				'ruby',
+				'slim',
 				'html',
 				'yaml',
 				'css',

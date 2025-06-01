@@ -52,8 +52,6 @@ return {
 					keys = {
 						{ icon = "", key = "n", desc = "New file", action = "<cmd>ene<CR>" },
 						{ icon = "", key = "lg", desc = "Git", action = function() Snacks.lazygit() end },
-						{ icon = "󰏔", key = "lm", desc = "Mason", action = "<cmd>Mason<CR>" },
-						{ icon = "", key = "la", desc = "Code", action = "<cmd>CodeCompanionActions<CR>" },
 						{ icon = "", key = "lp", desc = "PLugins", action = "<cmd>Lazy<CR>" },
 						{ icon = "󰅚", key = "q", desc = "Quit", action = "<cmd>qa<CR>" },
 					},
