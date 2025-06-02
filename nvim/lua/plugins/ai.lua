@@ -45,7 +45,7 @@ return {
 		opts = {
 			display = {
 				action_palette = {
-					provider = "snacks"
+					provider = "default"
 				},
 			},
 			strategies = {
@@ -77,6 +77,7 @@ return {
 							model = {
 								-- default = 'llama3.1:latest',
 								-- default = 'deepseek-r1:14b',
+								-- default = 'deepseek-r1:8b',
 								default = 'qwen2.5-coder:14b',
 							},
 							-- temperature = { default = 0.6 },
@@ -87,8 +88,8 @@ return {
 					return require('codecompanion.adapters').extend('copilot', {
 						schema = {
 							model = {
-								default = 'claude-sonnet-4',
-								-- default = 'claude-3.5-sonnet',
+								-- default = 'claude-sonnet-4',
+								default = 'claude-3.5-sonnet',
 								-- default = 'gpt-4.1',
 							},
 							-- temperature = { default = 0.6 },

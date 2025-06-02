@@ -2493,9 +2493,6 @@ agenda-view .background {
 
 #dashtopanelTaskbar,
 .show-apps:last {
-  /*border-radius: 99999px;*/
-  /*background-color: rgba(0, 0, 0, 0.8);*/
-  /*box-shadow: inset 0 0 0 2px rgba(98, 0, 0, 0.6) !important;*/
   background: transparent;
 }
 
