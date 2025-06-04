@@ -13,7 +13,6 @@ return {
 						dismiss = "<C-]>",
 					},
 				},
-				panel = { enabled = false }, -- Disable panel to keep it simple
 			})
 		end,
 		keys = {
