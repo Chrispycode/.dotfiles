@@ -31,7 +31,6 @@ return {
       return '%2l:%-2v'
     end
 
-    require('mini.diff').setup()
     require('mini.pairs').setup()
     require('mini.cursorword').setup()
 
