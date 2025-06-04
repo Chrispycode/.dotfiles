@@ -3,17 +3,8 @@ return {
 		'zbirenbaum/copilot.lua',
 		cmd = 'Copilot',
 		config = function()
-    	vim.keymap.del('i', '<S-Tab>')
-			require('copilot').setup({
-				suggestion = {
-					enabled = true,
-					auto_trigger = false,
-					keymap = {
-						accept = "<S-Tab>",
-						dismiss = "<C-]>",
-					},
-				},
-			})
+			vim.keymap.del('i', '<S-Tab>')
+			require('copilot').setup({ suggestion = { keymap = { accept = "<S-Tab>"}}})
 		end,
 		keys = {
 			{
@@ -78,7 +69,7 @@ return {
 								-- default = 'llama3.1:latest',
 								-- default = 'deepseek-r1:14b',
 								-- default = 'deepseek-r1:8b',
-								default = 'qwen2.5-coder:14b',
+								default = os.getenv('LLM_MODEL') or 'qwen2.5-coder:14b',
 							},
 							-- temperature = { default = 0.6 },
 						},
@@ -89,7 +80,7 @@ return {
 						schema = {
 							model = {
 								-- default = 'claude-sonnet-4',
-								default = 'claude-3.5-sonnet',
+								default = os.getenv('LLM_MODEL') or 'claude-sonnet-3.5',
 								-- default = 'gpt-4.1',
 							},
 							-- temperature = { default = 0.6 },
