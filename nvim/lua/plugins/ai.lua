@@ -80,7 +80,7 @@ return {
 						schema = {
 							model = {
 								-- default = 'claude-sonnet-4',
-								default = os.getenv('LLM_MODEL') or 'claude-sonnet-3.5',
+								default = os.getenv('LLM_MODEL') or 'claude-3.5-sonnet',
 								-- default = 'gpt-4.1',
 							},
 							-- temperature = { default = 0.6 },
