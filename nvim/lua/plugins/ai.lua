@@ -4,7 +4,7 @@ return {
 		cmd = 'Copilot',
 		config = function()
 			vim.keymap.del('i', '<S-Tab>')
-			require('copilot').setup({ suggestion = { keymap = { accept = "<S-Tab>"}}})
+			require('copilot').setup({ suggestion = { keymap = { accept = "<S-Tab>" } } })
 		end,
 		keys = {
 			{
@@ -47,7 +47,17 @@ return {
 							opts = {
 								provider = "snacks"
 							}
-						}
+						},
+						["file"] = {
+							opts = {
+								provider = "snacks"
+							}
+						},
+						["help"] = {
+							opts = {
+								provider = "snacks"
+							}
+						},
 					}
 				},
 				inline = {
