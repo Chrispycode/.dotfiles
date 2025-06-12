@@ -6,7 +6,7 @@ alias n="nvim"
 alias lg="lazygit"
 alias icat="kitty +kitten icat"
 dua() { dcup -d $@ && docker attach $@ }
-dup() { dcup -d $dcup -d $@ &&{PWD##*/} }
+dup() { dcup -d ${PWD##*/} }
 dupf() { dcup -d --force-recreate ${PWD##*/} }
 dupa() { dcup -d ${PWD##*/} && docker attach ${PWD##*/} }
 ds() { dcr --rm ${PWD##*/} }
