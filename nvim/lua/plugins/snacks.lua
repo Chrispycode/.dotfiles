@@ -188,10 +188,6 @@ return {
 			{ '<C-l>',      '<C-w><C-l>',                                                               desc = 'Move focus to the right window' },
 			{ '<C-j>',      '<C-w><C-j>',                                                               desc = 'Move focus to the lower window' },
 			{ '<C-k>',      '<C-w><C-k>',                                                               desc = 'Move focus to the upper window' },
-			{ '<leader>S',  function() require("spectre").toggle() end,                                 desc = 'Toggle Spectre' },
-			{ '<leader>sr', function() require("spectre").open_visual({ select_word = true }) end,      desc = 'Search current word' },
-			{ '<leader>sr', '<esc><cmd>lua require("spectre").open_visual()<CR>',                       desc = 'Search current word',            mode = "v" },
-			{ '<leader>sp', function() require("spectre").open_file_search({ select_word = true }) end, desc = 'Search on current file' },
 		},
 	},
 }
