@@ -89,10 +89,13 @@ windowcontrols>button>image {
 	color: @light_1;
 }
 
-toast {
+toast,
+dialog {
 	background: @window_bg_color;
 }
 
-.sidebar-pane {
+.sidebar-pane,
+.frame.sidebar,
+widget {
 	background: none;
 }
