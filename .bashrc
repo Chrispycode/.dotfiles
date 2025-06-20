@@ -39,5 +39,5 @@ else
   fi
 fi
 
-bindkey -s ^f "tmux-sessionizer\n"
+bind -x '"\C-f":tmux-sessionizer'
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
