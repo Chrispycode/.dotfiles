@@ -2,10 +2,10 @@
 # ~/.bashrc
 #
 
+export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-eval "$(starship init bash)"
 addToPathFront() { 
 	if [[ "$PATH" != *"$1"* ]]; then 
 		export PATH=$1:$PATH
@@ -13,20 +13,32 @@ addToPathFront() {
 }
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.dotfiles/scripts
+set -o vi
 
 export GOPATH="$HOME/.go"
 export EDITOR=nvim
 export VISUAL=nvim
 export RANGER_LOAD_DEFAULT_RC=false
+
+# Source custom bash completion configuration
+[[ -f ~/.dotfiles/bash/completion.bash ]] && source ~/.dotfiles/bash/completion.bash
 export LLM="ollama"
-export VI_MODE_SET_CURSOR=true
+
+# History settings
+HISTSIZE=500
+HISTFILESIZE=10000
+HISTTIMEFORMAT="%F %T"
+export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 [ -f ~/.dotfiles/preload.sh ] && source ~/.dotfiles/preload.sh
 
 source ~/.dotfiles/aliases.sh
 [[ -f ~/.dotfiles/overrides.sh  ]] && source ~/.dotfiles/overrides.sh
 
-export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
+# Starship specific settings
+export STARSHIP_LOG="error"
+
+eval "$(starship init bash)"
 
 if [ $(uname -s) = "Darwin" ]; then
   eval "$(/usr/local/bin/mise activate bash)"

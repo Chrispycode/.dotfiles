@@ -6,3 +6,4 @@ nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
 nvim/spell/*.*.sug
+bash/fzf-tab-completion
