@@ -177,8 +177,6 @@ return {
 			{ '<leader>lz', function() Snacks.zen() end,                                                desc = 'ZenMode' },
 			{ '<leader>tn', '<cmd>tabnew<cr>',                                                          desc = 'new Tab' },
 			{ '<leader>lp', ':Lazy<cr>',                                                                desc = 'Lazy' },
-			{ '<leader>ls', ':LspStart',                                                                desc = 'LSP Start' },
-			{ '<leader>lk', ':LspStop',                                                                 desc = 'LSP stop' },
 			{ '<leader>lm', ':Mason<cr>',                                                               desc = 'Mason' },
 			{ '<leader>la', ':CodeCompanionActions<cr>',                                                desc = 'CodeCompanion' },
 			{ '<leader>lw', ':set wrap<cr>',                                                            desc = 'Toggle Wrap' },
@@ -188,6 +186,7 @@ return {
 			{ '<C-l>',      '<C-w><C-l>',                                                               desc = 'Move focus to the right window' },
 			{ '<C-j>',      '<C-w><C-j>',                                                               desc = 'Move focus to the lower window' },
 			{ '<C-k>',      '<C-w><C-k>',                                                               desc = 'Move focus to the upper window' },
+			{ '<leader>lh', function() vim.lsp.document_color.enable(not vim.lsp.document_color.is_enabled()) end, desc = 'Toggle HighlightColors' }
 		},
 	},
 }

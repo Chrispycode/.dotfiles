@@ -12,7 +12,6 @@ return {
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter',
 			{ "nvim-lua/plenary.nvim",  branch = "master" },
-			{ 'stevearc/dressing.nvim', opts = {} }, -- Optional: Improves `vim.ui.select`
 		},
 		opts = {
 			display = {
@@ -35,6 +34,11 @@ return {
 							}
 						},
 						["help"] = {
+							opts = {
+								provider = "snacks"
+							}
+						},
+						["symbols"] = {
 							opts = {
 								provider = "snacks"
 							}

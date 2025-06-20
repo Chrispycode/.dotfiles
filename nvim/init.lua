@@ -77,6 +77,5 @@ require('lazy').setup {
 	'mg979/vim-visual-multi',
 	-- search and replace multifile use gc isntead of g for autoconfirm
 	-- :cfdo %s/stringOne/stringTwo/g | update | bd`
-	{ 'kevinhwang91/nvim-bqf', ft = 'qf' },
 	{ import = 'plugins' },
 }

@@ -81,10 +81,10 @@ tmux_conf_theme_window_status_last_fg="$tmux_conf_theme_colour_4"
 tmux_conf_theme_window_status_last_bg="$tmux_conf_theme_colour_2"
 tmux_conf_theme_window_status_last_attr="none"
 
-tmux_conf_theme_left_separator_main=''
-tmux_conf_theme_left_separator_sub=''
-tmux_conf_theme_right_separator_main=''
-tmux_conf_theme_status_left=" ❐ #S"
+# tmux_conf_theme_left_separator_main=''
+# tmux_conf_theme_left_separator_sub=''
+# tmux_conf_theme_right_separator_main=''
+tmux_conf_theme_status_left=" ❐ #S "
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} | RAM: #{ram_percentage} CPU: #{cpu_percentage} #{cpu_temp} | %R %d %b | #{username}#{root} "
 
 tmux_conf_theme_status_left_fg="$tmux_conf_theme_colour_6,$tmux_conf_theme_colour_7,$tmux_conf_theme_colour_8"
