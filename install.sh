@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# sudo pacman -Sy brave-browser tmux kitty btop docker easyeffects fzf neovim
-# sudo pamac build 1password annotator
+# sudo pacman -Sy brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship
+# sudo pamac build 1password
 
 # flatpak install brave ExtensionManager junction
 # sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
@@ -15,12 +15,16 @@
 # git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
 
 # mv "$HOME/.zshrc_bu"
-# # ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
-# # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
-# # ln -fs $HOME/.dotfiles/nvim ~/.config 
-# # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+# ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
+# ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+
+# ln -fs "$HOME/.dotfiles/.bashrc" "$HOME/.bashrc"
+
+# ln -fs $HOME/.dotfiles/nvim ~/.config 
+# ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
+# ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/Gemfile ~/
