@@ -6,8 +6,11 @@
 [[ $- != *i* ]] && return
 
 eval "$(starship init bash)"
-eval "$(~/.local/bin/mise activate bash)"
-addToPathFront() { if [[ "$PATH" != *"$1"* ]]; then; export PATH=$1:$PATH; fi }
+addToPathFront() { 
+	if [[ "$PATH" != *"$1"* ]]; then 
+		export PATH=$1:$PATH
+	fi
+}
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.dotfiles/scripts
 
