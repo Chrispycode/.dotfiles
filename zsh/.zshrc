@@ -23,7 +23,7 @@ plugins=(git cp vi-mode fzf fzf-tab tmux docker-compose ansible zsh-autosuggesti
 [ -f ~/.dotfiles/preload.sh ] && source ~/.dotfiles/preload.sh
 
 source $ZSH/oh-my-zsh.sh
-source ~/.dotfilesu/styles.zsh
+source ~/.dotfiles/zsh/styles.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
