@@ -34,9 +34,6 @@ vim.opt.spelllang = { 'en', 'de' }
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 1
-vim.g.loaded_netrin = 0
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }

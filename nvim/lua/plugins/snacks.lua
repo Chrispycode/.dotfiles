@@ -51,8 +51,6 @@ return {
 				preset = {
 					keys = {
 						{ icon = "", key = "n", desc = "New file", action = "<cmd>ene<CR>" },
-						{ icon = "", key = "lg", desc = "Git", action = function() Snacks.lazygit() end },
-						{ icon = "", key = "lp", desc = "PLugins", action = "<cmd>Lazy<CR>" },
 						{ icon = "󰅚", key = "q", desc = "Quit", action = "<cmd>qa<CR>" },
 					},
 					header = [[
