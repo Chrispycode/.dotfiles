@@ -12,13 +12,11 @@
 # git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 
 # mv "$HOME/.bashrc" "$HOME/.bashrc_bu"
 # git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash/fzf-tab-completion
-# ln -fs "$HOME/.dotfiles/.bashrc" "$HOME/.bashrc"
+# ln -fs "$HOME/.dotfiles/bash/.bashrc" "$HOME/.bashrc"
 
 # git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
 # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local

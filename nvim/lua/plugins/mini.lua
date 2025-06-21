@@ -1,7 +1,7 @@
 return {
 	'echasnovski/mini.nvim',
 	keys = {
-		{ "<leader>o", function() MiniFiles.open() end, desc = "File Explorer" },
+		{ "<leader>o", function() MiniFiles.open(vim.api.nvim_buf_get_name(0)) end, desc = "File Explorer" },
 	},
 	config = function()
 		require('mini.diff').setup()
