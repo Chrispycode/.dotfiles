@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship 1password
+# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship 1password unzip
 # yay -S plasma-meta dolphin konsole spectacle sddm-kcm 
 
 # flatpak install ExtensionManager junction
@@ -37,6 +37,7 @@
 # flatpak -u override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
 
+# ln -fs $HOME/.dotfiles/kde/BreezeOLED.colors ~/.local/share/color-schemes/BreezeOLED.colors
 
 # ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
 # ln -fs $HOME/.dotfiles/others/keybindings.json ~/.config/Code/User/keybindings.json
