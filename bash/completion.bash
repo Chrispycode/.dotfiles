@@ -15,18 +15,18 @@ export FZF_DEFAULT_OPTS="
 "
 
 if [ -f /usr/share/bash-completion/bash_completion ]; then
-	. /usr/share/bash-completion/bash_completion
+	source /usr/share/bash-completion/bash_completion
 elif [ -f /etc/bash_completion ]; then
-	. /etc/bash_completion
+	source /etc/bash_completion
 fi
 if [ -f /usr/share/fzf/shell/completion.bash ]; then
 	source /usr/share/fzf/shell/completion.bash 
-elif [ -f /usr/share/fzf/completion.bash]; then
+elif [ -f /usr/share/fzf/completion.bash ]; then
 	source /usr/share/fzf/completion.bash 
 fi
 if [ -f /usr/share/fzf/shell/key-bindings.bash ]; then
 	source /usr/share/fzf/shell/key-bindings.bash 
-elif [ -f /usr/share/fzf/key-bindings.bash]; then
+elif [ -f /usr/share/fzf/key-bindings.bash ]; then
 	source /usr/share/fzf/key-bindings.bash 
 fi
 if [ -f ~/.dotfiles/bash/fzf-tab-completion/bash/fzf-bash-completion.sh ]; then
