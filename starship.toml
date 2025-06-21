@@ -4,6 +4,7 @@ $directory\
 $git_branch\
 $git_status\
 $fill\
+$hostname\
 $status\
 $memory_usage\
 $cmd_duration\
@@ -140,6 +141,7 @@ symbol = " "
 symbol = " "
 
 [hostname]
+format = "[$ssh_symbol](bold blue) on [$hostname](bold red) " 
 ssh_symbol = " "
 
 [java]
@@ -158,7 +160,7 @@ symbol = " "
 disabled = false
 symbol = "󰍛 "
 threshold = -1
-format = "[$symbol$ram]($style) "
+format = "$symbol[$ram]($style) "
 style = 'bold dimmed green'
 
 [meson]
