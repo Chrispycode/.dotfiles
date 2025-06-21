@@ -19,8 +19,16 @@ if [ -f /usr/share/bash-completion/bash_completion ]; then
 elif [ -f /etc/bash_completion ]; then
 	. /etc/bash_completion
 fi
-[ -f /usr/share/fzf/completion.bash ] && source /usr/share/fzf/completion.bash
-[ -f /usr/share/fzf/shell/key-bindings.bash ] && source /usr/share/fzf/shell/key-bindings.bash
+if [ -f /usr/share/fzf/shell/completion.bash ]; then
+	source /usr/share/fzf/shell/completion.bash 
+elif [ -f /usr/share/fzf/completion.bash]; then
+	source /usr/share/fzf/completion.bash 
+fi
+if [ -f /usr/share/fzf/shell/key-bindings.bash ]; then
+	source /usr/share/fzf/shell/key-bindings.bash 
+elif [ -f /usr/share/fzf/key-bindings.bash]; then
+	source /usr/share/fzf/key-bindings.bash 
+fi
 if [ -f ~/.dotfiles/bash/fzf-tab-completion/bash/fzf-bash-completion.sh ]; then
 	source ~/.dotfiles/bash/fzf-tab-completion/bash/fzf-bash-completion.sh
 	bind -x '"\t": fzf_bash_completion'
