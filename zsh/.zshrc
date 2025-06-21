@@ -10,4 +10,5 @@ source ~/.dotfiles/sh/default.sh
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s "^[f" "fzfp\n"
 
-eval "$(starship init zsh)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
+

@@ -14,4 +14,4 @@ source ~/.dotfiles/sh/default.sh
 bind -x '"\C-f":tmux-sessionizer'
 bind -x '"\ef":fzfp'
 
-eval "$(starship init bash)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init bash)"
