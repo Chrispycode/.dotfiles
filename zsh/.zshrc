@@ -10,4 +10,3 @@ source ~/.dotfiles/default_shell.sh
 bindkey -s ^f "tmux-sessionizer\n"
 
 eval "$(starship init zsh)"
-export STARSHIP_CONFIG=~/.dotfiles/starship.toml

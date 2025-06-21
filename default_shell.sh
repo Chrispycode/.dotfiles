@@ -10,6 +10,7 @@ export GOPATH="$HOME/.go"
 export EDITOR=nvim
 export VISUAL=nvim
 export LLM="ollama"
+export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
 [ -f ~/.dotfiles/preload.sh ] && source ~/.dotfiles/preload.sh
 
