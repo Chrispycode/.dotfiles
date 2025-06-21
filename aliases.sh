@@ -22,6 +22,7 @@ ds() {
 }
 alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.socket"
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
+alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 
 
 if [ $(uname -s) = "Darwin" ]; then

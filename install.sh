@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# sudo pacman -Sy brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship
+# sudo yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship
 # sudo pamac build 1password
 
 # flatpak install ExtensionManager junction
