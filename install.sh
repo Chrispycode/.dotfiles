@@ -17,7 +17,7 @@
 # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 
 # mv "$HOME/.bashrc" "$HOME/.bashrc_bu"
-# git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash
+# git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash/fzf-tab-completion
 # ln -fs "$HOME/.dotfiles/.bashrc" "$HOME/.bashrc"
 
 # git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
