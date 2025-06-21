@@ -1,6 +1,6 @@
-overrides.sh
-preload.sh
-sessionizer-additions.sh
+sh/overrides.sh
+sh/preload.sh
+sh/sessionizer-additions.sh
 others/settings.json
 nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl

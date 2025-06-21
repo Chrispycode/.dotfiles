@@ -56,14 +56,14 @@ if command -v kitten > /dev/null; then
   # 2. The last line of the output is the ANSI reset code without newline.
   #    This confuses fzf and makes it render scroll offset indicator.
   #    So we remove the last line and append the reset code to its previous line.
-  kitty icat --clear --transfer-mode=$transfer_mode --unicode-placeholder --stdin=no --place=$dim@0x0 $file
+  kitty icat --clear --transfer-mode=$transfer_mode --unicode-placeholder --stdin=no --place=$dim@0x0 "${file}"
 
 elif [[ $TERM = "xterm-ghostty" ]] || [[ $GHOSTTY_BIN_DIR ]]; then
-  chafa --clear -f kitty -d 0 --animate=off -s "$dim" "$file"
+  chafa --clear -f kitty -d 0 --animate=off -s "$dim" "${file}"
 
 # 2. Use chafa with Sixel output
 elif command -v chafa > /dev/null; then
-  chafa --clear -d 0 --animate=off -s "$dim" "$file"
+  chafa --clear -d 0 --animate=off -s "$dim" "${file}"
   # Add a new line character so that fzf can display multiple images in the preview window
   echo
 
@@ -72,9 +72,9 @@ elif command -v imgcat > /dev/null; then
   # NOTE: We should use https://iterm2.com/utilities/it2check to check if the
   # user is running iTerm2. But for the sake of simplicity, we just assume
   # that's the case here.
-  imgcat -W "${dim%%x*}" -H "${dim##*x}" "$file"
+  imgcat -W "${dim%%x*}" -H "${dim##*x}" "${file}"
 
 # 4. Cannot find any suitable method to preview the image
 else
-  file "$file"
+  file "${file}"
 fi

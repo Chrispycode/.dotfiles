@@ -9,8 +9,9 @@ HISTTIMEFORMAT="%F %T"
 export HISTCONTROL=erasedups:ignoredups:ignorespace
 
 [[ -f ~/.dotfiles/bash/completion.bash ]] && source ~/.dotfiles/bash/completion.bash
-source ~/.dotfiles/default_shell.sh
+source ~/.dotfiles/sh/default.sh
 
 bind -x '"\C-f":tmux-sessionizer'
+bind -x '"\ef":fzfp'
 
 eval "$(starship init bash)"

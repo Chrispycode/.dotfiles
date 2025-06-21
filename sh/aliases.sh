@@ -5,6 +5,7 @@ alias s="ssh"
 alias n="nvim"
 alias lg="lazygit"
 alias icat="kitty +kitten icat"
+alias fzfp="fzf --preview='fzf-preview.sh {}'"
 dua() {
     dcup -d "$@" && docker attach "$@"
 }

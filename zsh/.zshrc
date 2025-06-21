@@ -5,8 +5,9 @@ plugins=(git cp vi-mode fzf fzf-tab tmux docker-compose ansible zsh-autosuggesti
 
 source $ZSH/oh-my-zsh.sh
 source ~/.dotfiles/zsh/styles.zsh
-source ~/.dotfiles/default_shell.sh
+source ~/.dotfiles/sh/default.sh
 
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s "^[f" "fzfp\n"
 
 eval "$(starship init zsh)"

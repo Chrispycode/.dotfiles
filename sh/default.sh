@@ -12,10 +12,10 @@ export VISUAL=nvim
 export LLM="ollama"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
-[ -f ~/.dotfiles/preload.sh ] && source ~/.dotfiles/preload.sh
+[ -f ~/.dotfiles/sh/preload.sh ] && source ~/.dotfiles/sh/preload.sh
 
-source ~/.dotfiles/aliases.sh
-[ -f ~/.dotfiles/overrides.sh ] && source ~/.dotfiles/overrides.sh
+source ~/.dotfiles/sh/aliases.sh
+[ -f ~/.dotfiles/sh/overrides.sh ] && source ~/.dotfiles/sh/overrides.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
