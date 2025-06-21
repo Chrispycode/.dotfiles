@@ -1,6 +1,7 @@
 sh/overrides.sh
 sh/preload.sh
 sh/sessionizer-additions.sh
+zsh/.p10k.zsh
 others/settings.json
 nvim/lua/plugins/extra.lua
 nvim/spell/*.*.add.spl
