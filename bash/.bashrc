@@ -1,5 +1,3 @@
-export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
-# If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 set -o vi
@@ -16,4 +14,3 @@ source ~/.dotfiles/default_shell.sh
 bind -x '"\C-f":tmux-sessionizer'
 
 eval "$(starship init bash)"
-export STARSHIP_CONFIG=~/.dotfiles/starship.toml
