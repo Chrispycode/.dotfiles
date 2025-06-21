@@ -3,33 +3,33 @@
 # sudo pacman -Sy brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship
 # sudo pamac build 1password
 
-# flatpak install brave ExtensionManager junction
+# flatpak install ExtensionManager junction
 # sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
-# chsh -s /bin/zsh
 
+# chsh -s /bin/zsh
+# mv "$HOME/.zshrc" "$HOME/.zshrc_bu"
 # git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
 # git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
-
-# mv "$HOME/.zshrc_bu"
 # ln -fs "$HOME/.dotfiles/zsh/.p10k.zsh" "$HOME/.p10k.zsh"
 # ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
 
+# mv "$HOME/.bashrc" "$HOME/.bashrc_bu"
+# git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash
 # ln -fs "$HOME/.dotfiles/.bashrc" "$HOME/.bashrc"
 
-# ln -fs $HOME/.dotfiles/nvim ~/.config 
+# git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
 # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+#
+# ln -fs $HOME/.dotfiles/nvim ~/.config 
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/Gemfile ~/
-
-# ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
 # mkdir ~/.themes
 # ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
@@ -50,6 +50,7 @@
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
 # newgrp docker
+# ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
 # ln -fs $HOME/.dotfiles/easyeffects/input $HOME/.config/easyeffects
 # ln -fs $HOME/.dotfiles/easyeffects/output $HOME/.config/easyeffects
