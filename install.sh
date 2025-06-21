@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-# sudo yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship
-# sudo pamac build 1password
+# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship 1password
+# yay -S plasma-meta dolphin konsole spectacle sddm-kcm 
 
 # flatpak install ExtensionManager junction
 # sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
