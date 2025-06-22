@@ -9,11 +9,6 @@ $status\
 $memory_usage\
 $cmd_duration\
 $jobs\
-$python\
-$nodejs\
-$ruby\
-$golang\
-$rust\
 $time\
 $line_break\
 $character"""
@@ -99,6 +94,7 @@ symbol = "  "
 
 [git_branch]
 symbol = " "
+style = "bold green"
 format = "[$symbol$branch]($style) "
 
 [git_commit]
