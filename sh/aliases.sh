@@ -7,19 +7,19 @@ alias lg="lazygit"
 alias icat="kitty +kitten icat"
 alias fzfp="fzf --preview='fzf-preview.sh {}'"
 dua() {
-    dcup -d "$@" && docker attach "$@"
+  docker compose up -d "$@" && docker attach "$@"
 }
 dup() {
-    dcup -d "$(basename "$PWD")"
+  docker compose up -d "$(basename "$PWD")"
 }
 dupf() {
-    dcup -d --force-recreate "$(basename "$PWD")"
+  docker compose up -d --force-recreate "$(basename "$PWD")"
 }
 dupa() {
-    dcup -d "$(basename "$PWD")" && docker attach "$(basename "$PWD")"
+  docker compose up -d "$(basename "$PWD")" && docker attach "$(basename "$PWD")"
 }
 ds() {
-    dcr --rm "$(basename "$PWD")"
+	docker compose run --rm "$(basename "$PWD")"
 }
 alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.socket"
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
