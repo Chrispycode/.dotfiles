@@ -40,6 +40,7 @@ vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
 vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, { pattern = { "*.slim*" }, command = "set ft=slim" })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
