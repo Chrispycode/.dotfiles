@@ -25,11 +25,12 @@
 # ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
 #
 # ln -fs $HOME/.dotfiles/nvim ~/.config 
-# ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty
+# ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty/
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
+# ln -fs $HOME/.dotfiles/walker ~/.config/
 # ln -fs $HOME/Gemfile ~/
 
 # mkdir ~/.themes

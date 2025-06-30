@@ -28,7 +28,7 @@ else
   export QT_AUTO_SCREEN_SCALE_FACTOR=1
   export QT_ENABLE_HIGHDPI_SCALING=1
 
-  if [[ -z $DISPLAY && $(tty) == /dev/tty1 && $XDG_SESSION_TYPE == tty ]]; then
+	if [[ -n "$GNOME_DESKTOP_SESSION_ID" || "$XDG_CURRENT_DESKTOP" == "GNOME" ]] && [[ -z $DISPLAY && $XDG_SESSION_TYPE == tty ]]; then
     MOZ_ENABLE_WAYLAND=1 QT_QPA_PLATFORM=wayland XDG_SESSION_TYPE=wayland exec dbus-run-session gnome-session
   fi
 fi
