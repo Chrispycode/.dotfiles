@@ -82,6 +82,7 @@
 /* active tab, and the toolbar underneath it*/
 window.background.chromium {
 	background: @window_bg_color;
+	color: @light_1;
 }
 
 windowcontrols>button>image {
@@ -92,10 +93,12 @@ windowcontrols>button>image {
 toast,
 dialog {
 	background: @window_bg_color;
+	color: @light_1;
 }
 
 .sidebar-pane,
 .frame.sidebar,
 widget {
 	background: none;
+	color: @light_1;
 }

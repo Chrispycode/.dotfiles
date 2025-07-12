@@ -232,6 +232,17 @@ placeholder = "Websearch"
 [[builtins.websearch.entries]]
 name = "Brave"
 url = "https://search.brave.com/search?q=%TERM%"
+prefix = "b"
+
+[[builtins.websearch.entries]]
+name = "Github"
+url = "https://github.com/search?q=%TERM%"
+prefix = "gh"
+
+[[builtins.websearch.entries]]
+name = "Flathub"
+url = "https://flathub.org/apps/search?q=%TERM%"
+prefix = "fh"
 
 [[builtins.websearch.entries]]
 name = "Google"

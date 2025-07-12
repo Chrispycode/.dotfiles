@@ -94,8 +94,10 @@ windowcontrols>button>image {
 .nautilus-window headerbar,
 toast {
 	background: @window_bg_color;
+	color: @light_1;
 }
 
 .sidebar-pane {
 	background: none;
+	color: @light_1;
 }
