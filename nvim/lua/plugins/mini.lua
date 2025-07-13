@@ -63,7 +63,7 @@ return {
 		local function section_codecompanion()
 			if not processing then return '' end
 			spinner_index = (spinner_index % #spinner_symbols) + 1
-			return '  ' .. spinner_symbols[spinner_index]
+			return '  ' .. spinner_symbols[spinner_index]
 		end
 
 		local group = vim.api.nvim_create_augroup("CodeCompanionHooks", {})

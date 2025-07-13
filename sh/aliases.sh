@@ -5,6 +5,10 @@ alias s="ssh"
 alias n="nvim"
 alias lg="lazygit"
 alias icat="kitty +kitten icat"
+alias ta="tmux attach"
+alias dco="dcoker compose"
+alias dcup="dcoker compose up"
+alias dcr="dcoker compose run --rm"
 dua() {
   docker compose up -d "$@" && docker attach "$@"
 }

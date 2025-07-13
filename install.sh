@@ -11,11 +11,12 @@
 
 # chsh -s /bin/zsh
 # mv "$HOME/.zshrc" "$HOME/.zshrc_bu"
-# git clone https://github.com/ohmyzsh/ohmyzsh.git ~/.oh-my-zsh
-# git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
-# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.zshrc"
+# mv "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc_bu"
+# mkdir "$HOME/.config/zsh/plugins/"
+# git clone https://github.com/Aloxaf/fzf-tab ~/.config/zsh/plugins/fzf-tab
+# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
+# ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.config/zsh/.zshrc"
 
 # mv "$HOME/.bashrc" "$HOME/.bashrc_bu"
 # git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash/fzf-tab-completion

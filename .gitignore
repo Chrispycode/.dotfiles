@@ -8,4 +8,7 @@ nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
 nvim/spell/*.*.sug
 bash/fzf-tab-completion
+zsh/fzf-tab
+zsh/zsh-autosuggestions
+zsh/zsh-syntax-highlighting
 walker/themes/default*.*
