@@ -13,6 +13,8 @@
 # mv "$HOME/.zshrc" "$HOME/.zshrc_bu"
 # mv "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc_bu"
 # mkdir "$HOME/.config/zsh/plugins/"
+# echo "export ZDOTDIR=$HOME/.config/zsh" >> "$HOME/.zshenv"
+# mv "$HOME/.zsh_history" "$HOME/.config/zsh/.histfile"
 # git clone https://github.com/Aloxaf/fzf-tab ~/.config/zsh/plugins/fzf-tab
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
