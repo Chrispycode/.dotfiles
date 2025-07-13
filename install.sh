@@ -12,7 +12,7 @@
 # chsh -s /bin/zsh
 # mv "$HOME/.zshrc" "$HOME/.zshrc_bu"
 # mv "$HOME/.config/zsh/.zshrc" "$HOME/.config/zsh/.zshrc_bu"
-# mkdir "$HOME/.config/zsh/plugins/"
+# mkdir -p "$HOME/.config/zsh/plugins/"
 # echo "export ZDOTDIR=$HOME/.config/zsh" >> "$HOME/.zshenv"
 # mv "$HOME/.zsh_history" "$HOME/.config/zsh/.histfile"
 # git clone https://github.com/Aloxaf/fzf-tab ~/.config/zsh/plugins/fzf-tab
