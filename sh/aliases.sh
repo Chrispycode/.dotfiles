@@ -9,6 +9,7 @@ alias ta="tmux attach"
 alias dco="dcoker compose"
 alias dcup="dcoker compose up"
 alias dcr="dcoker compose run --rm"
+alias dck="dcoker compose kill"
 dua() {
   docker compose up -d "$@" && docker attach "$@"
 }
