@@ -2,7 +2,7 @@ set -o vi
 
 HISTFILE=~/.config/zsh/.histfile
 HISTSIZE=500
-HISTFILESIZE=10000
+SAVEHIST=10000
 HISTTIMEFORMAT="%F %T"
 
 export HISTCONTROL=erasedups:ignoredups:ignorespace
