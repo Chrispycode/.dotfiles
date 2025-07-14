@@ -52,4 +52,6 @@ bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backwa
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s "^[f" "fzfp\n"
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
