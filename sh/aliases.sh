@@ -32,7 +32,10 @@ alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.s
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
 alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
 alias fzfp="fzf --preview='fzf-preview.sh {}'"
-alias sys="TEMD_COLORS=1 systemctl status"
+alias sys="TEMD_COLORS=1 systemctl"
+alias syss="TEMD_COLORS=1 systemctl status"
+alias sysd="TEMD_COLORS=1 systemctl disable"
+alias syse="TEMD_COLORS=1 systemctl enable"
 
 
 if [ $(uname -s) = "Darwin" ]; then
