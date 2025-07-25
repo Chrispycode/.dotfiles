@@ -7,6 +7,7 @@
 # localectl set-x11-keymap de
 
 # flatpak install ExtensionManager junction
+# flatpak install dev.zed.Zed app.zen_browser.zen com.vysp3r.ProtonPlus org.deskflow.deskflow org.gnome.DejaDup org.gtk.Gtk3theme.adw-gtk3
 # sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
 
 # chsh -s /bin/zsh
