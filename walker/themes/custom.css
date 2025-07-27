@@ -53,10 +53,8 @@ slider,
 }
 
 #prompt {
-  margin-left: 4px;
-  margin-right: 12px;
+  margin-right: 4px;
   color: @foreground;
-  opacity: 0.2;
 }
 
 #clear {
