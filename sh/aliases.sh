@@ -36,7 +36,9 @@ alias sys="TEMD_COLORS=1 systemctl"
 alias syss="TEMD_COLORS=1 systemctl status"
 alias sysd="TEMD_COLORS=1 systemctl disable"
 alias syse="TEMD_COLORS=1 systemctl enable"
-
+wallp() {
+	find ~/Pictures/wallpapers -type f | fzfp | xargs -I {} jq --arg path "{}" '.background.wallpaperPath = $path' "$HOME/.config/quickshell/config.json" > "$HOME/.config/quickshell/config.json.tmp" && mv "$HOME/.config/quickshell/config.json.tmp" "$HOME/.config/quickshell/config.json"
+}
 
 if [ $(uname -s) = "Darwin" ]; then
 	bat=batcat
