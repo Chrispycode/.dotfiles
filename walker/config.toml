@@ -13,8 +13,8 @@ force_keyboard_focus = false
 [keys]
 accept_typeahead = ["tab"]
 trigger_labels = "lalt"
-next = ["down"]
-prev = ["up"]
+next = ["down", "ctrl j"]
+prev = ["up", "ctrl k"]
 close = ["esc"]
 remove_from_history = ["shift backspace"]
 resume_query = ["ctrl r"]
@@ -39,7 +39,7 @@ on_query_change = ""
 
 [list]
 dynamic_sub = true
-keyboard_scroll_style = "emacs"
+keyboard_scroll_style = "vim"
 max_entries = 50
 show_initial_entries = true
 single_click = true
@@ -148,6 +148,8 @@ placeholder = "Clipboard"
 image_height = 300
 max_entries = 10
 switcher_only = true
+hidden=false
+prefix="-"
 
 [builtins.commands]
 weight = 5
@@ -171,6 +173,7 @@ switcher_only = true
 history = true
 typeahead = true
 show_unqualified = false
+prefix=":"
 
 [builtins.symbols]
 after_copy = ""
@@ -194,6 +197,7 @@ refresh = true
 concurrency = 8
 show_icon_when_single = true
 preview_images = false
+prefix="."
 
 [builtins.runner]
 eager_loading = true
@@ -207,6 +211,7 @@ generic_entry = false
 refresh = true
 use_fd = false
 switcher_only = true
+prefix=">"
 
 [builtins.ssh]
 weight = 5
