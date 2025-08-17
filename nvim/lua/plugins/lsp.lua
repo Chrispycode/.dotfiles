@@ -74,6 +74,9 @@ return {
 						return vim.loop.cwd()
 					end,
 				},
+				qmlls = {
+					cmd = { "qmlls", "-E" }
+				},
 				lua_ls = {
 					settings = {
 						Lua = {
