@@ -9,11 +9,7 @@ else
 	find_paths=$TMUX_PATHS
 	find_depth_paths="$HOME/repos $HOME/repos/code $TMUX_FIND_PATHS"
 	folders="$HOME/.dotfiles\n$find_paths\n$(find $find_depth_paths -mindepth 1 -maxdepth 1 -type d 2>/dev/null)"
-  if [ -f "/etc/debian_version" ]; then
-    selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); ls -1ah --color {})")
-  else
-    selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
-  fi
+  selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")
 fi
 
 if [[ -z $selected ]]; then

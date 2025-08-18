@@ -11,11 +11,7 @@ type=$(file --dereference --mime -- "$file")
 
 if [[ ! $type =~ image/ ]]; then
   if [[ $type =~ =binary ]]; then
-    if [ -f "/etc/debian_version" ]; then
-      ls -1lah --color "$1"
-    else
-      eza --git -hla --color=always --icons "$1"
-    fi
+    eza --git -hla --color=always --icons "$1"
  
     exit
   fi
