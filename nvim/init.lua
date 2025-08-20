@@ -28,11 +28,12 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.relativenumber = true
 vim.opt.laststatus = 3
-vim.opt.wrap = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
+vim.opt.wrap = false
+vim.opt.wrapmargin = 10
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 1
@@ -41,6 +42,7 @@ vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, { pattern = { "*.slim*" }, command = "set ft=slim" })
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" },	{ pattern = { "*_patch.rb", "*_hook.rb" }, command = "setlocal foldlevel=4" })
 
 vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
