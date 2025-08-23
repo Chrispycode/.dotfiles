@@ -25,8 +25,7 @@
 # git clone https://github.com/lincheney/fzf-tab-completion ~/.dotfiles/bash/fzf-tab-completion
 # ln -fs "$HOME/.dotfiles/bash/.bashrc" "$HOME/.bashrc"
 
-# git clone https://github.com/gpakosz/.tmux.git && ln -s -f $HOME/.tmux/.tmux.conf && cp $HOME/.tmux/.tmux.conf.local .
-# ln -fs $HOME/.dotfiles/.tmux.conf.local ~/.tmux.conf.local
+# ln -fs $HOME/.dotfiles/.tmux.conf ~/.tmux.conf
 #
 # ln -fs $HOME/.dotfiles/nvim ~/.config 
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty/
