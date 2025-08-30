@@ -86,7 +86,7 @@
 }
 
 windowcontrols>button>image {
-	background: color(srgb 111/0, 1);
+	/* background: color(srgb 111/0, 1); */
 	color: @light_1;
 }
 
