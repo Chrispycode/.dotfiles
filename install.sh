@@ -44,6 +44,7 @@
 # flatpak -u override --filesystem=xdg-config/gtk-3.0/gtk.css:ro
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
 
+# mkdir ~/.local/share/color-schemes
 # ln -fs $HOME/.dotfiles/kde/BreezeOLED.colors ~/.local/share/color-schemes/BreezeOLED.colors
 
 # ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
