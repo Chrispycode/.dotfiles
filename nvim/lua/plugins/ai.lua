@@ -11,7 +11,7 @@ return {
 		'olimorris/codecompanion.nvim',
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter',
-			{ "nvim-lua/plenary.nvim",  branch = "master" },
+			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
 		opts = {
 			display = {
@@ -21,7 +21,7 @@ return {
 			},
 			strategies = {
 				chat = {
-					adapter = os.getenv 'LLM',
+					adapter = os.getenv 'LLM' or 'ollama',
 					slash_commands = {
 						["buffer"] = {
 							opts = {
@@ -46,43 +46,45 @@ return {
 					}
 				},
 				inline = {
-					adapter = os.getenv 'LLM',
+					adapter = os.getenv 'LLM' or 'ollama',
 				},
 			},
 			adapters = {
-				ollama = function()
-					return require('codecompanion.adapters').extend('ollama', {
-						env = {
-							url = os.getenv 'LLM_URL',
-							api_key = os.getenv 'LLM_API_KEY',
-						},
-						schema = {
-							num_ctx = {
-								default = 64000,
+				http = {
+					ollama = function()
+						return require('codecompanion.adapters').extend('ollama', {
+							env = {
+								url = os.getenv 'LLM_URL',
+								api_key = os.getenv 'LLM_API_KEY',
 							},
-							model = {
-								-- default = 'llama3.1:latest',
-								-- default = 'deepseek-r1:14b',
-								-- default = 'deepseek-r1:8b',
-								default = os.getenv('LLM_MODEL') or 'qwen2.5-coder:14b',
+							schema = {
+								num_ctx = {
+									default = 64000,
+								},
+								model = {
+									-- default = 'llama3.1:latest',
+									-- default = 'deepseek-r1:14b',
+									-- default = 'deepseek-r1:8b',
+									default = os.getenv('LLM_MODEL') or 'qwen2.5-coder:14b',
+								},
+								-- temperature = { default = 0.6 },
 							},
-							-- temperature = { default = 0.6 },
-						},
-					})
-				end,
-				copilot = function()
-					return require('codecompanion.adapters').extend('copilot', {
-						schema = {
-							model = {
-								-- default = 'claude-sonnet-4',
-								default = os.getenv('LLM_MODEL') or 'claude-3.5-sonnet',
-								-- default = 'gpt-4.1',
+						})
+					end,
+					copilot = function()
+						return require('codecompanion.adapters').extend('copilot', {
+							schema = {
+								model = {
+									-- default = 'claude-sonnet-4',
+									default = os.getenv('LLM_MODEL') or 'claude-3.5-sonnet',
+									-- default = 'gpt-4.1',
+								},
+								-- temperature = { default = 0.6 },
 							},
-							-- temperature = { default = 0.6 },
-						},
-					})
-				end,
-			},
+						})
+					end,
+				},
+			}
 		}
 	},
 }

@@ -9,7 +9,6 @@ addToPathFront $HOME/.dotfiles/scripts
 export GOPATH="$HOME/.go"
 export EDITOR=nvim
 export VISUAL=nvim
-export LLM="ollama"
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
 
 [ -f ~/.dotfiles/sh/preload.sh ] && source ~/.dotfiles/sh/preload.sh
