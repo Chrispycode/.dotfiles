@@ -10,269 +10,126 @@ timeout = 0
 disable_click_to_close = false
 force_keyboard_focus = false
 
-[keys]
+[keybinds]
 accept_typeahead = ["tab"]
 trigger_labels = "lalt"
-next = ["down", "ctrl j"]
-prev = ["up", "ctrl k"]
-close = ["esc"]
+next = "ctrl j"
+previous = "ctrl k"
 remove_from_history = ["shift backspace"]
 resume_query = ["ctrl r"]
 toggle_exact_search = ["ctrl m"]
 
-[keys.activation_modifiers]
-keep_open = "shift"
-alternate = "alt"
+[providers]
+default = [
+  "desktopapplications",
+  "calc",
+  "menus",
+  "websearch",
+] # providers to be queried by default
+empty = ["desktopapplications"] # providers to be queried when query is empty
 
-[keys.ai]
-clear_session = ["ctrl x"]
-copy_last_response = ["ctrl c"]
-resume_session = ["ctrl r"]
-run_last_response = ["ctrl e"]
-
-[events]
-on_activate = ""
-on_selection = ""
-on_exit = ""
-on_launch = ""
-on_query_change = ""
-
-[list]
-dynamic_sub = true
-keyboard_scroll_style = "vim"
-max_entries = 50
-show_initial_entries = true
-single_click = true
-visibility_threshold = 20
-placeholder = "No Results"
-
-[search]
-argument_delimiter = "#"
-placeholder = "Search..."
-delay = 0
-resume_last_query = false
-
-[activation_mode]
-labels = "jkl;asdf"
-
-[builtins.applications]
-weight = 5
-name = "applications"
-placeholder = "Applications"
-prioritize_new = true
-hide_actions_with_empty_query = true
-context_aware = true
-refresh = true
-show_sub_when_single = true
-show_icon_when_single = true
-show_generic = true
-history = true
-
-[builtins.applications.actions]
-enabled = true
-hide_category = false
-hide_without_query = true
-
-[builtins.bookmarks]
-weight = 5
-placeholder = "Bookmarks"
-name = "bookmarks"
-icon = "bookmark"
-switcher_only = true
-
-[[builtins.bookmarks.entries]]
-label = "Hyprland Wiki"
-url = "https://wiki.hypr.land/"
-keywords = ["hypr", "wiki"]
-
-[[builtins.bookmarks.entries]]
-label = "HomeAssistant"
-url = "http://192.168.178.28:8123/lovelace/0"
-keywords = ["home", "ha"]
-
-[[builtins.bookmarks.entries]]
-label = "Github"
-url = "https://github.com"
-keywords = ["gh", "github"]
-
-[[builtins.bookmarks.entries]]
-label = "Walker"
-url = "https://github.com/abenz1267/walker"
-keywords = ["walker", "github"]
-
-[builtins.xdph_picker]
-hidden = true
-weight = 5
-placeholder = "Screen/Window Picker"
-show_sub_when_single = true
-name = "xdphpicker"
-switcher_only = true
-
-[builtins.ai]
-weight = 5
-placeholder = "AI"
-name = "ai"
-icon = "help-browser"
-switcher_only = true
-show_sub_when_single = true
-
-[[builtins.ai.anthropic.prompts]]
-model = "claude-3-7-sonnet-20250219"
-temperature = 1
-max_tokens = 1_000
-label = "General Assistant"
-prompt = "You are a helpful general assistant. Keep your answers short and precise."
-
-[builtins.calc]
-require_number = true
-weight = 5
-name = "calc"
-icon = "accessories-calculator"
-placeholder = "Calculator"
-min_chars = 4
-
-[builtins.windows]
-weight = 5
-icon = "view-restore"
-name = "windows"
-placeholder = "Windows"
-show_icon_when_single = true
-
-[builtins.clipboard]
-always_put_new_on_top = true
-exec = "wl-copy"
-weight = 5
-name = "clipboard"
-avoid_line_breaks = true
-placeholder = "Clipboard"
-image_height = 300
-max_entries = 10
-switcher_only = true
-hidden=false
-prefix="-"
-
-[builtins.commands]
-weight = 5
-icon = "utilities-terminal"
-switcher_only = true
-name = "commands"
-placeholder = "Commands"
-
-[builtins.custom_commands]
-weight = 5
-icon = "utilities-terminal"
-name = "custom_commands"
-placeholder = "Custom Commands"
-
-[builtins.emojis]
-exec = "wl-copy"
-weight = 5
-name = "emojis"
-placeholder = "Emojis"
-switcher_only = true
-history = true
-typeahead = true
-show_unqualified = false
-prefix=":"
-
-[builtins.symbols]
-after_copy = ""
-weight = 5
-name = "symbols"
-placeholder = "Symbols"
-switcher_only = true
-history = true
-typeahead = true
-
-[builtins.finder]
-use_fd = false
-fd_flags = "--ignore-vcs --type file"
-weight = 5
-icon = "file"
-name = "finder"
-placeholder = "Finder"
-switcher_only = true
-ignore_gitignore = true
-refresh = true
-concurrency = 8
-show_icon_when_single = true
-preview_images = false
-prefix="."
-
-[builtins.runner]
-eager_loading = true
-weight = 4
-icon = "utilities-terminal"
-name = "runner"
-placeholder = "Runner"
-typeahead = true
-history = true
-generic_entry = false
-refresh = true
-use_fd = false
-switcher_only = true
-prefix=">"
-
-[builtins.ssh]
-weight = 5
-icon = "preferences-system-network"
-name = "ssh"
-placeholder = "SSH"
-switcher_only = true
-history = true
-refresh = true
-
-[builtins.switcher]
-weight = 5
-name = "switcher"
-placeholder = "Switcher"
+[[providers.prefixes]]
 prefix = "/"
+provider = "providerlist"
 
-[builtins.websearch]
-keep_selection = true
-weight = 5
-icon = "applications-internet"
-name = "websearch"
-placeholder = "Websearch"
+[[providers.prefixes]]
+prefix = "."
+provider = "files"
 
-[[builtins.websearch.entries]]
-name = "Brave"
-url = "https://search.brave.com/search?q=%TERM%"
-prefix = "br"
+[[providers.prefixes]]
+prefix = ":"
+provider = "symbols"
 
-[[builtins.websearch.entries]]
-name = "Github"
-url = "https://github.com/search?q=%TERM%"
-prefix = "gh"
+[[providers.prefixes]]
+prefix = "!"
+provider = "todo"
 
-[[builtins.websearch.entries]]
-name = "Flathub"
-url = "https://flathub.org/apps/search?q=%TERM%"
-prefix = "fh"
+[[providers.prefixes]]
+prefix = "="
+provider = "calc"
 
-[[builtins.websearch.entries]]
-name = "Google"
-url = "https://www.google.com/search?q=%TERM%"
-switcher_only = true
+[[providers.prefixes]]
+prefix = "@"
+provider = "websearch"
 
-[[builtins.websearch.entries]]
-name = "DuckDuckGo"
-url = "https://duckduckgo.com/?q=%TERM%"
-switcher_only = true
+[[providers.prefixes]]
+prefix = ","
+provider = "clipboard"
 
-[builtins.dmenu]
-hidden = true
-weight = 5
-name = "dmenu"
-placeholder = "Dmenu"
-switcher_only = true
-show_icon_when_single = true
+[[providers.prefixes]]
+prefix = ">"
+provider = "runner"
 
-[builtins.translation]
-delay = 1000
-weight = 5
-name = "translation"
-icon = "accessories-dictionary"
-placeholder = "Translation"
-switcher_only = true
-provider = "googlefree"
+[providers.archlinuxpkgs]
+default = "install"
+install = "Return"
+remove = "ctrl d"
+
+[providers.calc]
+default = "copy"
+copy = "Return"
+save = "ctrl s"
+delete = "ctrl d"
+
+[providers.websearch]
+default = "search"
+search = "Return"
+remove_history = "ctrl BackSpace"
+
+[providers.providerlist]
+default = "activate"
+activate = "Return"
+
+[providers.clipboard]
+time_format = "%d.%m. - %H:%M" # format for the clipboard item date
+default = "copy"
+copy = "Return"
+delete = "ctrl d"
+edit = "ctrl o"
+toggle_images_only = "ctrl i"
+
+[providers.desktopapplications]
+default = "start"
+start = "Return"
+remove_history = "ctrl BackSpace"
+toggle_pin = "ctrl p"
+
+[providers.files]
+default = "open"
+open = "Return"
+open_dir = "ctrl Return"
+copy_path = "ctrl shift C"
+copy_file = "ctrl c"
+
+[providers.todo]
+default = "save"
+save = "Return"
+delete = "ctrl d"
+mark_active = "ctrl a"
+mark_done = "ctrl f"
+clear = "ctrl x"
+
+[providers.runner]
+default = "start"
+start = "Return"
+start_terminal = "shift Return"
+remove_history = "ctrl BackSpace"
+
+[providers.dmenu]
+default = "select"
+select = "Return"
+
+[providers.symbols]
+default = "copy"
+copy = "Return"
+remove_history = "ctrl BackSpace"
+
+[providers.unicode]
+default = "copy"
+copy = "Return"
+remove_history = "ctrl BackSpace"
+
+[providers.menus]
+default = "activate"
+activate = "Return"
+remove_history = "ctrl BackSpace"

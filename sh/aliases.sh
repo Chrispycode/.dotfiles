@@ -1,6 +1,5 @@
 alias subm='smerge'
 alias open="xdg-open"
-# alias s="kitty +kitten ssh"
 alias s="ssh"
 alias n="nvim"
 alias lg="lazygit"
