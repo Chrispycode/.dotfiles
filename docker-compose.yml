@@ -63,7 +63,7 @@ services:
   #     - mysql_data:/var/lib/mysql
   #
   mariadb:
-    image: mariadb:latest
+    image: docker.io/library/mariadb:latest
     command: --max_allowed_packet=100m --wait_timeout=600
     volumes:
       - mariadb:/var/lib/mariadb

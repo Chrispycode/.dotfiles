@@ -91,7 +91,9 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     float sdfCurrentCursor = getSdfRectangle(vu, currentCursor.xy - (currentCursor.zw * offsetFactor), currentCursor.zw * 0.5);
     float sdfTrail = getSdfParallelogram(vu, v0, v1, v2, v3);
 
-    float progress = clamp((iTime - iTimeCursorChange) / DURATION, 0.0, 1.0);
+    // Only animate if cursor has actually moved
+    float cursorMoved = step(0.001, distance(currentCursor.xy, previousCursor.xy));
+    float progress = clamp((iTime - iTimeCursorChange) / DURATION, 0.0, 1.0) * cursorMoved;
     float easedProgress = ease(progress);
     // Distance between cursors determine the total length of the parallelogram;
     vec2 centerCC = getRectangleCenter(currentCursor);
