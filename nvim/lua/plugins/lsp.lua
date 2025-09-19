@@ -74,6 +74,7 @@ return {
 						return vim.loop.cwd()
 					end,
 				},
+				herb_ls = {},
 				qmlls = {
 					cmd = { "qmlls", "-E" }
 				},
@@ -108,11 +109,11 @@ return {
 				automatic_enable = false,
 				ensure_installed = vim.tbl_keys(servers)
 			}
-
 			for server_name, server_config in pairs(servers) do
 				local capabilities = require('blink.cmp').get_lsp_capabilities()
 				server_config.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server_config.capabilities or {})
-				require('lspconfig')[server_name].setup(server_config)
+				vim.lsp.enable(server_name)
+				vim.lsp.config(server_name, { settings = server_config })
 			end
 		end,
 	},

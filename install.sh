@@ -34,7 +34,7 @@
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/.dotfiles/walker ~/.config/
-# ln -fs $HOME/Gemfile ~/
+# ln -fs $HOME/.dotfiles/Gemfile ~/
 
 # mkdir ~/.themes
 # ln -fs $HOME/.dotfiles/gnome/custom ~/.themes
