@@ -18,11 +18,10 @@ source ~/.dotfiles/sh/aliases.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
-if [ $(uname -s) = "Darwin" ]; then
-  eval "$(/usr/local/bin/mise activate bash)"
-else
-  eval "$($HOME/.local/bin/mise activate bash)"
+eval "$($HOME/.local/bin/mise activate bash)"
 
+if [ $(uname -s) = "Darwin" ]; then
+else
   export ELECTRON_OZONE_PLATFORM_HINT=auto
   export QT_AUTO_SCREEN_SCALE_FACTOR=1
   export QT_ENABLE_HIGHDPI_SCALING=1
