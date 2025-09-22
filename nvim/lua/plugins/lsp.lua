@@ -70,9 +70,6 @@ return {
 			local servers = {
 				ruby_lsp = {
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
-					root_dir = function()
-						return vim.loop.cwd()
-					end,
 				},
 				herb_ls = {},
 				qmlls = {
@@ -113,7 +110,7 @@ return {
 				local capabilities = require('blink.cmp').get_lsp_capabilities()
 				server_config.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server_config.capabilities or {})
 				vim.lsp.enable(server_name)
-				vim.lsp.config(server_name, { settings = server_config })
+				vim.lsp.config(server_name, server_config)
 			end
 		end,
 	},
