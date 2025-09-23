@@ -94,7 +94,6 @@ return {
 			local ensure_installed = vim.tbl_keys(servers or {})
 			vim.list_extend(ensure_installed, {
 				'stylua',
-				'htmlbeautifier',
 				'markdownlint',
 				'rufo',
 				'prettier'
@@ -131,8 +130,6 @@ return {
 		opts = {
 			notify_on_error = false,
 			formatters_by_ft = {
-				html = { 'htmlbeautifier', stop_after_first = true },
-				eruby = { 'htmlbeautifier', stop_after_first = true },
 				ruby = { 'rufo', stop_after_first = true },
 				json = { 'prettier', stop_after_first = true },
 				jsonc = { 'prettier', stop_after_first = true },
