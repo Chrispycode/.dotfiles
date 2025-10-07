@@ -70,6 +70,7 @@ return {
 			local servers = {
 				ruby_lsp = {
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
+					root_markers = { "Gemfile", ".git", "public" }
 				},
 				herb_ls = {},
 				qmlls = {
