@@ -70,7 +70,17 @@ return {
 			local servers = {
 				ruby_lsp = {
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
-					root_markers = { "Gemfile", ".git", "public" }
+					root_markers = { "public", ".git" },
+					reuse_client = function(client, config)
+						-- Get the main project's git root (from where you started Neovim)
+						local main_root = vim.fn.getcwd()
+
+						-- Check if both the client and new config are within the main project
+						local client_in_main = vim.startswith(client.config.root_dir or '', main_root)
+						local config_in_main = vim.startswith(config.root_dir or '', main_root)
+
+						return client_in_main and config_in_main
+					end,
 				},
 				herb_ls = {},
 				qmlls = {
