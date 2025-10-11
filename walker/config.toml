@@ -12,9 +12,9 @@ force_keyboard_focus = false
 
 [keybinds]
 accept_typeahead = ["tab"]
-trigger_labels = "lalt"
-next = "ctrl j"
-previous = "ctrl k"
+trigger_labels = ["lalt"]
+next = ["ctrl j", "Down"]
+previous = ["ctrl k", "Up"]
 remove_from_history = ["shift backspace"]
 resume_query = ["ctrl r"]
 toggle_exact_search = ["ctrl m"]

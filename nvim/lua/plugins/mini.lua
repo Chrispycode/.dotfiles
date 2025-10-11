@@ -1,5 +1,5 @@
 return {
-	'echasnovski/mini.nvim',
+	'nvim-mini/mini.nvim',
 	keys = {
 		{ "<leader>o", function() MiniFiles.open(vim.api.nvim_buf_get_name(0)) end, desc = "File Explorer" },
 	},
