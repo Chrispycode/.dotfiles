@@ -2,7 +2,7 @@ return {
 	{
 		'nvim-treesitter/nvim-treesitter',
 		dependencies = { 'OXY2DEV/markview.nvim' },
-		run = ':TSUpdate',
+		build = ':TSUpdate',
 		main = 'nvim-treesitter.configs',
 		opts = {
 			ensure_installed = {
@@ -40,3 +40,4 @@ return {
 		}
 	}
 }
+
