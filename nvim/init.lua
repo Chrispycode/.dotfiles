@@ -48,7 +48,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 	desc = 'Highlight when yanking (copying) text',
 	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
 	callback = function()
-		vim.highlight.on_yank()
+		vim.hl.on_yank()
 	end,
 })
 
@@ -63,21 +63,5 @@ end ---@diagnostic disable-next-line: undefined-field
 
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup {
-	{
-		'water-sucks/darkrose.nvim',
-		opts = {
-			colors = { bg = 'none' },
-			overrides = function(c)
-				return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' }, NormalFloat = { bg = c.bg } }
-			end,
-		},
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme 'darkrose'
-		end,
-	},
-	'mg979/vim-visual-multi',
-	-- search and replace multifile use gc isntead of g for autoconfirm
-	-- :cfdo %s/stringOne/stringTwo/g | update | bd`
 	{ import = 'plugins' },
 }

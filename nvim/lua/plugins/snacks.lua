@@ -179,7 +179,7 @@ return {
 			{ '<leader>lm', ':Mason<cr>',                                         desc = 'Mason' },
 			{ '<leader>la', ':CodeCompanionActions<cr>',                          desc = 'CodeCompanion' },
 			{ '<leader>lw', ':set wrap<cr>',                                      desc = 'Toggle Wrap' },
-			{ '<leader>fl', ':setlocal foldlevel=',                                      desc = 'Set specific foldlevel' },
+			{ '<leader>fl', ':setlocal foldlevel=',                               desc = 'Set specific foldlevel' },
 			{ '<Esc>',      '<cmd>nohlsearch<CR>',                                desc = 'cancel search' },
 			{ '<leader>q',  function() vim.diagnostic.setloclist() end,           desc = 'Open diagnostic [Q]uickfix list' },
 			{ '<C-h>',      '<C-w><C-h>',                                         desc = 'Move focus to the left window' },

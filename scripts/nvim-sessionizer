@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+[[ ! -f $HOME/.dotfiles/sh/sessionizer-additions.sh ]] || source $HOME/.dotfiles/sh/sessionizer-additions.sh
+
+# Special case for snippets
+if [[ $1 == "snippets" ]]; then
+  cd "$HOME/Documents" && exec nvim snippets.md
+  exit 0
+fi
+
+if [[ $# -eq 1 ]]; then
+  selected=$1
+else
+  # export TMUX_PATHS="$HOME\n$HOME/.config\n$HOME/.local/share/applications\n$HOME/Documents"
+	find_paths=$TMUX_PATHS
+	find_depth_paths="$HOME/repos $HOME/repos/code $TMUX_FIND_PATHS"
+	folders="snippets\n$HOME/.dotfiles\n$find_paths\n$(find $find_depth_paths -mindepth 1 -maxdepth 1 -type d 2>/dev/null)"
+  selected=$(echo -e "$folders" | fzf --preview="[[ -d {} ]] && eza -hla --color=always --icons --git-repos {}")
+fi
+
+if [[ -z $selected ]]; then
+  exit 0
+fi
+
+# Handle snippets selection from fzf
+if [[ $selected == "snippets" ]]; then
+  cd "$HOME/Documents" && exec nvim snippets.md
+  exit 0
+fi
+
+# Change to selected directory and open Neovim
+# Neovim will auto-restore the session for this directory
+cd "$selected" && exec nvim

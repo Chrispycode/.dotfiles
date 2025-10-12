@@ -3,7 +3,7 @@ return {
 		'zbirenbaum/copilot.lua',
 		cmd = 'Copilot',
 		config = function()
-			vim.keymap.del('i', '<S-Tab>')
+			pcall(vim.keymap.del, 'i', '<S-Tab>')
 			require('copilot').setup({ suggestion = { keymap = { accept = "<S-Tab>" } } })
 		end,
 	},
