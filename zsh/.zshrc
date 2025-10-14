@@ -1,4 +1,4 @@
-# set -o vi
+set -o vi
 set -o correct
 
 HISTFILE=~/.config/zsh/.histfile
