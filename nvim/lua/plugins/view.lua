@@ -21,14 +21,18 @@ return {
 	{
 		'water-sucks/darkrose.nvim',
 		priority = 1000,
-		init = function ()
+		init = function()
 			vim.cmd.colorscheme('darkrose')
 		end,
 		opts = function()
 			require('darkrose').setup({
 				colors = { bg = 'none' },
 				overrides = function(c)
-					return { QuickFixLine = { fg = c.fg_dark }, CursorColumn = { bg = '#20111a' }, NormalFloat = { bg = c.bg } }
+					return {
+						QuickFixLine = { fg = c.fg_dark },
+						CursorColumn = { bg = '#20111a' },
+						NormalFloat = { bg = c.bg }
+					}
 				end,
 			})
 		end

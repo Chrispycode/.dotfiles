@@ -9,7 +9,6 @@ vim.opt.showmode = false
 vim.schedule(function()
 	vim.opt.clipboard = 'unnamedplus'
 end)
-vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -32,6 +31,8 @@ vim.opt.relativenumber = true
 vim.opt.laststatus = 3
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
+vim.opt.breakindent = true
+vim.opt.formatoptions:remove({ 't' })
 vim.opt.wrap = false
 vim.opt.wrapmargin = 10
 vim.opt.foldmethod = "expr"
