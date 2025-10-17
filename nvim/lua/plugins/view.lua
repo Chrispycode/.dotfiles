@@ -31,7 +31,8 @@ return {
 					return {
 						QuickFixLine = { fg = c.fg_dark },
 						CursorColumn = { bg = '#20111a' },
-						NormalFloat = { bg = c.bg }
+						NormalFloat = { bg = c.bg },
+						Search = { fg = c.fg_light, bg = '#544100', bold = true }
 					}
 				end,
 			})
