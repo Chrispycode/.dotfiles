@@ -71,12 +71,8 @@ return {
 									default = 64000,
 								},
 								model = {
-									-- default = 'llama3.1:latest',
-									-- default = 'deepseek-r1:14b',
-									-- default = 'deepseek-r1:8b',
-									default = os.getenv('LLM_MODEL') or 'qwen2.5-coder:14b',
+									default = os.getenv('LLM_MODEL') or 'qwen3-coder',
 								},
-								-- temperature = { default = 0.6 },
 							},
 						})
 					end,
@@ -84,16 +80,13 @@ return {
 						return require('codecompanion.adapters').extend('copilot', {
 							schema = {
 								model = {
-									-- default = 'claude-sonnet-4',
-									default = os.getenv('LLM_MODEL') or 'claude-3.5-sonnet',
-									-- default = 'gpt-4.1',
+									default = os.getenv('LLM_MODEL') or 'gpt-5-mini',
 								},
-								-- temperature = { default = 0.6 },
 							},
 						})
 					end,
 				},
-			}
+			},
 		}
 	},
 }
