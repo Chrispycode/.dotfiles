@@ -57,9 +57,6 @@ return {
 			})
 			local servers = {
 				ruby_lsp = {
-					init_options = {
-						include = { "plugins/**/*.rb" }
-					},
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
 					reuse_client = function(client, config)
 						-- Get the main project's git root (from where you started Neovim)
