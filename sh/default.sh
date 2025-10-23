@@ -21,6 +21,7 @@ export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 eval "$($HOME/.local/bin/mise activate bash)"
 
 if [ $(uname -s) = "Darwin" ]; then
+    :
 else
   export ELECTRON_OZONE_PLATFORM_HINT=auto
   export QT_AUTO_SCREEN_SCALE_FACTOR=1
