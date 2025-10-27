@@ -9,6 +9,7 @@ return {
 	},
 	{
 		'olimorris/codecompanion.nvim',
+		version = '*',
 		dependencies = {
 			'nvim-treesitter/nvim-treesitter',
 			{ "nvim-lua/plenary.nvim", branch = "master" },
