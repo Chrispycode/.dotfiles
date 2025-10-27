@@ -38,6 +38,7 @@ vim.opt.wrapmargin = 10
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 1
+vim.opt.termguicolors = false
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
