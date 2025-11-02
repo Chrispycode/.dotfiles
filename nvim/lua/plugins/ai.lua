@@ -44,6 +44,12 @@ return {
 								provider = "snacks"
 							}
 						},
+					},
+					opts = {
+						system_prompt = function(ctx)
+							return ctx.default_system_prompt ..
+							"\nDo not create documentation or add comments to code unless the user explicitly requests you to do so."
+						end,
 					}
 				},
 				inline = {
