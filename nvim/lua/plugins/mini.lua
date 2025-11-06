@@ -48,15 +48,17 @@ return {
 			}
 
 			local function set_hlgroups()
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { fg = colors.black, bg = colors.gray, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { fg = colors.black, bg = colors.blue, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { fg = colors.black, bg = colors.yellow, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { fg = colors.black, bg = colors.red, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { fg = colors.black, bg = colors.green, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', { fg = colors.white, bg = colors.lightgray })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { fg = colors.gray, bg = colors.darkgray })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { fg = colors.white, bg = colors.lightgray })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { fg = colors.gray, bg = colors.darkgray })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { fg = colors.gray, bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { fg = colors.blue, bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { fg = colors.yellow, bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { fg = colors.red, bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { fg = colors.green, bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', { fg = colors.white, bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { fg = colors.gray, bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { fg = colors.white, bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { fg = colors.gray, bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'NONE' })
 			end
 
 			local spinner_symbols = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
