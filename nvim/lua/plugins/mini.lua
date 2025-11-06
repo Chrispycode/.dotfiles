@@ -11,6 +11,7 @@ return {
 			require('mini.cursorword').setup()
 			require('mini.files').setup()
 			require('mini.tabline').setup()
+			require('mini.animate').setup({ cursor = { enable = false } })
 			require('mini.git').setup()
 			-- Better Around/Inside textobjects
 			--
