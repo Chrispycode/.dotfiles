@@ -179,6 +179,7 @@ return {
 			{ "<leader>k",  function() Snacks.explorer() end,                     desc = "File Explorer" },
 			{ '<leader>lb', function() Snacks.dashboard.open() end,               desc = 'Dash[b]oard' },
 			{ '<leader>lz', function() Snacks.zen() end,                          desc = 'ZenMode' },
+			{ '<leader>ls', function() Snacks.picker.spelling() end,              desc = 'Spelling' },
 			{ '<leader>tn', '<cmd>tabnew<cr>',                                    desc = 'new Tab' },
 			{ '<leader>lp', ':Lazy<cr>',                                          desc = 'Lazy' },
 			{ '<leader>lm', ':Mason<cr>',                                         desc = 'Mason' },

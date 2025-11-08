@@ -9,6 +9,12 @@ return {
 		},
 		config = function()
 			vim.diagnostic.config { virtual_text = false }
+			vim.api.nvim_create_autocmd('TermOpen', {
+				group = vim.api.nvim_create_augroup('terminal_config', { clear = true }),
+				callback = function()
+					vim.opt_local.spell = false
+				end,
+			})
 			vim.api.nvim_create_autocmd('LspAttach', {
 				group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
 				callback = function(event)

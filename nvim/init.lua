@@ -31,6 +31,7 @@ vim.opt.relativenumber = true
 vim.opt.laststatus = 2
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
+vim.opt.spelloptions=camel
 vim.opt.breakindent = true
 vim.opt.formatoptions:remove({ 't' })
 vim.opt.wrap = false
