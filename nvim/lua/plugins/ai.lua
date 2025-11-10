@@ -48,7 +48,7 @@ return {
 					opts = {
 						system_prompt = function(ctx)
 							return ctx.default_system_prompt ..
-							"\nDo not create documentation or add comments to code unless the user explicitly requests you to do so."
+							"\n[NO_DOCUMENTATION] Do not produce comments, README files, design docs, usage guides, changelogs, or other explanatory text unless explicitly requested by the user. Only return the requested code/data."
 						end,
 					}
 				},
