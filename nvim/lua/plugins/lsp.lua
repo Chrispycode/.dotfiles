@@ -64,16 +64,9 @@ return {
 			local servers = {
 				ruby_lsp = {
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
-					single_file_support = false,
 					reuse_client = function(client, config)
-						-- Get the main project's git root (from where you started Neovim)
-						local main_root = vim.fn.getcwd()
-
-						-- Only reuse client if both are in the main project
-						local client_in_main = vim.startswith(client.config.root_dir or '', main_root)
-						local config_in_main = vim.startswith(config.root_dir or '', main_root)
-
-						return client_in_main and config_in_main
+						-- Always reuse the ruby_lsp instance across all buffers
+						return client.name == 'ruby_lsp'
 					end,
 				},
 				herb_ls = {},
@@ -142,3 +135,4 @@ return {
 		},
 	},
 }
+
