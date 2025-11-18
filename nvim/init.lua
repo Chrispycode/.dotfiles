@@ -42,18 +42,7 @@ vim.opt.foldlevelstart = 1
 vim.opt.termguicolors = false
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
-vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
-vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, { pattern = { "*.slim*" }, command = "set ft=slim" })
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" },	{ pattern = { "*_patch.rb", "*_hook.rb" }, command = "setlocal foldlevel=4" })
-
-vim.api.nvim_create_autocmd('TextYankPost', {
-	desc = 'Highlight when yanking (copying) text',
-	group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
-	callback = function()
-		vim.hl.on_yank()
-	end,
-})
+require('api')
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
