@@ -59,19 +59,10 @@ return {
 				ruby_lsp = {
 					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
 					reuse_client = function(client, config)
-						-- Always reuse the ruby_lsp instance across all buffers
 						return client.name == 'ruby_lsp'
 					end,
 				},
-				herb_ls = {
-					settings = {
-						languageServerHerb = {
-							linter = {
-								fixOnSave = false,
-							}
-						}
-					}
-				},
+				herb_ls = {},
 				qmlls = {
 					cmd = { "qmlls", "-E" }
 				},
