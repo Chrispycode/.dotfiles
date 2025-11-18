@@ -63,7 +63,15 @@ return {
 						return client.name == 'ruby_lsp'
 					end,
 				},
-				herb_ls = {},
+				herb_ls = {
+					settings = {
+						languageServerHerb = {
+							linter = {
+								fixOnSave = false,
+							}
+						}
+					}
+				},
 				qmlls = {
 					cmd = { "qmlls", "-E" }
 				},
