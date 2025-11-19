@@ -15,6 +15,13 @@ return {
 			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
 		opts = {
+			memory = {
+				opts = {
+					chat = {
+						enabled = true,
+					},
+				},
+			},
 			display = {
 				action_palette = {
 					provider = "default"
