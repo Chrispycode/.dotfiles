@@ -39,7 +39,6 @@ vim.opt.wrapmargin = 10
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 1
-vim.opt.termguicolors = false
 -- Paste mode handling
 vim.opt.paste = false  -- Don't use paste mode (it breaks mappings)
 -- vim.opt.pastetoggle = '<F2>'  -- Optional: quick toggle if needed
@@ -49,8 +48,7 @@ vim.opt.maxfuncdepth = 1000
 vim.opt.lazyredraw = true
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
-vim.api.nvim_set_hl(0, 'Normal', { bg = 0 })
-vim.api.nvim_set_hl(0, 'NonText', { bg = 0 })
+require('bloody')
 require('api')
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'

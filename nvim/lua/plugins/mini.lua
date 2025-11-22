@@ -33,29 +33,16 @@ return {
 				return '%2l:%-2v'
 			end
 
-			local colors = {
-				black = '#20111a',
-				white = '#eeeeee',
-				red = '#960000',
-				green = '#583636',
-				blue = '#5f4a4a',
-				yellow = '#914a4a',
-				gray = '#D48E85',
-				darkgray = '#20111a',
-				lightgray = '#000000',
-				inactivegray = '#7c6f64',
-			}
-
 			local function set_hlgroups()
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { fg = colors.gray, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { fg = colors.blue, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { fg = colors.yellow, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { fg = colors.red, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { fg = colors.green, bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', { fg = colors.white, bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { fg = colors.gray, bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { fg = colors.white, bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { fg = colors.gray, bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { link = "String", bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { link = "Type", bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { link = "Number", bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { link = "Error", bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { link = "Special", bold = true })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', { link = "Normal", bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { link = "String", bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { link = "Normal", bg = 'NONE' })
+				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { link = "NonText", bg = 'NONE' })
 				vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'NONE' })
 				vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'NONE' })
 			end
@@ -79,6 +66,7 @@ return {
 						processing = true
 					elseif request.match == "CodeCompanionRequestFinished" then
 						processing = false
+						io.write('\x07')
 					end
 					vim.cmd('redrawstatus')
 				end,

@@ -18,26 +18,26 @@ return {
 			{ '<leader>lh', function() require('nvim-highlight-colors').toggle() end, desc = 'Toggle HighlightColors' }
 		},
 	},
-	{
-		'water-sucks/darkrose.nvim',
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme('darkrose')
-		end,
-		opts = function()
-			require('darkrose').setup({
-				colors = { bg = 'none' },
-				overrides = function(c)
-					return {
-						QuickFixLine = { fg = c.fg_dark },
-						CursorColumn = { bg = '#20111a' },
-						NormalFloat = { bg = c.bg },
-						Search = { fg = '#ffffff', bg = '#544100', bold = true },
-						CurSearch = { fg = '#ffffff', bg = '#a67c00', bold = true }
-					}
-				end,
-			})
-		end
-	},
+	-- {
+	-- 	'water-sucks/darkrose.nvim',
+	-- 	priority = 1000,
+	-- 	init = function()
+	-- 		vim.cmd.colorscheme('darkrose')
+	-- 	end,
+	-- 	opts = function()
+	-- 		require('darkrose').setup({
+	-- 			colors = { bg = 'none' },
+	-- 			overrides = function(c)
+	-- 				return {
+	-- 					QuickFixLine = { fg = c.fg_dark },
+	-- 					CursorColumn = { bg = '#20111a' },
+	-- 					NormalFloat = { bg = c.bg },
+	-- 					Search = { fg = '#ffffff', bg = '#544100', bold = true },
+	-- 					CurSearch = { fg = '#ffffff', bg = '#a67c00', bold = true }
+	-- 				}
+	-- 			end,
+	-- 		})
+	-- 	end
+	-- },
 	{ 'mg979/vim-visual-multi' },
 }
