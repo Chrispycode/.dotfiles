@@ -42,6 +42,8 @@ c(0, "QuickFixLine", { fg = colors.red_light, bg = colors.bg })
 c(0, "qfLineNr", { fg = colors.red_, bg = colors.bg })
 c(0, "qfFileName", { fg = colors.red_light, bg = colors.bg })
 c(0, "SnacksIndent", { fg = colors.red_light, bg = colors.bg })
+c(0, "Question", { fg = colors.red_light, bg = colors.bg })
+c(0, "Directory", { fg = colors.red_light, bg = colors.bg })
 
 -- Statusline
 c(0, "StatusLine", { fg = colors.white, bg = colors.bg_light })
