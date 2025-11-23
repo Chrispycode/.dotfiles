@@ -31,7 +31,7 @@ vim.opt.relativenumber = true
 vim.opt.laststatus = 2
 vim.opt.spell = true
 vim.opt.spelllang = { 'en', 'de' }
-vim.opt.spelloptions=camel
+vim.opt.spelloptions = camel
 vim.opt.breakindent = true
 vim.opt.formatoptions:remove({ 't' })
 vim.opt.wrap = false
@@ -40,7 +40,7 @@ vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 1
 -- Paste mode handling
-vim.opt.paste = false  -- Don't use paste mode (it breaks mappings)
+vim.opt.paste = false -- Don't use paste mode (it breaks mappings)
 -- vim.opt.pastetoggle = '<F2>'  -- Optional: quick toggle if needed
 
 -- Better handling for large pastes
@@ -48,7 +48,6 @@ vim.opt.maxfuncdepth = 1000
 vim.opt.lazyredraw = true
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
-require('bloody')
 require('api')
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
