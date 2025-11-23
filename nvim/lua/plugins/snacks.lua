@@ -20,6 +20,7 @@ return {
 			git = {},
 			indent = {},
 			scope = {},
+			animate = {},
 			lazygit = {},
 			quickfile = {},
 			scratch = {},

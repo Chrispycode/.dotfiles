@@ -16,6 +16,7 @@ return {
 		-- Color palette
 		local colors = {
 			bg = "none",
+			bg_solid = "#000000",
 			bg_light = "#3d2a2a",
 			gray_dark = "#4a3838",
 			gray_med = "#6b5555",
@@ -41,8 +42,8 @@ return {
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
 		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg })
-		c(0, "CursorLine", { bg = colors.red_dark })
-		c(0, "CursorColumn", { bg = colors.red_dark })
+		c(0, "CursorLine", { fg = colors.bg_solid, bg = colors.red_dark })
+		c(0, "CursorColumn", { fg = colors.bg_solid, bg = colors.red_dark })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Folded", { fg = colors.red_light, bg = colors.bg_light })
 		c(0, "FoldColumn", { fg = colors.red_light, bg = colors.bg })
@@ -60,9 +61,10 @@ return {
 		c(0, "StatusLineTermNC", { fg = colors.bg_light, bg = colors.bg })
 
 		-- Search and highlighting
-		c(0, "Search", { fg = colors.bg, bg = colors.red_light })
-		c(0, "IncSearch", { fg = colors.bg, bg = colors.red_bright })
-		c(0, "Substitute", { fg = colors.bg, bg = colors.pink })
+		c(0, "Search", { fg = colors.bg_solid, bg = colors.red_light })
+		c(0, "CurSearch", { fg = colors.bg_solid, bg = colors.red_med })
+		c(0, "IncSearch", { fg = colors.bg_solid, bg = colors.red_bright })
+		c(0, "Substitute", { fg = colors.bg_solid, bg = colors.pink })
 
 		-- Visual mode
 		c(0, "Visual", { bg = colors.red_muted })

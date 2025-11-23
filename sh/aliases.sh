@@ -39,7 +39,7 @@ wallp() {
 	find ~/Pictures/wallpapers -type f | fzfp | xargs -I {} jq --arg path "{}" '.background.wallpaperPath = $path' "$HOME/.config/quickshell/config.json" > "$HOME/.config/quickshell/config.json.tmp" && mv "$HOME/.config/quickshell/config.json.tmp" "$HOME/.config/quickshell/config.json"
 }
 vwallp() {
-	find ~/Videos/vwalls/ -type f | fzfp | xargs -I {} jq --arg path "{}" '.background.wallpaperPath = $path' "$HOME/.config/quickshell/config.json" > "$HOME/.config/quickshell/config.json.tmp" && mv "$HOME/.config/quickshell/config.json.tmp" "$HOME/.config/quickshell/config.json"
+	find ~/Videos/vwalls/ -type f | fzfp | xargs -I {} jq --arg path "{}" '.background.vwallpaperPath = $path' "$HOME/.config/quickshell/config.json" > "$HOME/.config/quickshell/config.json.tmp" && mv "$HOME/.config/quickshell/config.json.tmp" "$HOME/.config/quickshell/config.json"
 }
 
 
