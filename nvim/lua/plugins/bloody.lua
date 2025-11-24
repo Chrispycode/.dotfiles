@@ -4,7 +4,7 @@ return {
 	config = function()
 		-- Bloody Neovim Color Scheme
 		-- Dark moody palette with deep reds and browns
-		-- vim.opt.termguicolors = false
+		vim.opt.termguicolors = true
 		vim.opt.background = "dark"
 		if vim.fn.exists("syntax_on") then
 			vim.cmd("syntax reset")
