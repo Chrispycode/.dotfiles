@@ -41,7 +41,7 @@ return {
 		-- UI elements
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
-		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg })
+		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg_solid })
 		c(0, "CursorLine", { fg = colors.bg_solid, bg = colors.red_dark })
 		c(0, "CursorColumn", { fg = colors.bg_solid, bg = colors.red_dark })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
@@ -94,7 +94,7 @@ return {
 		c(0, "PmenuThumb", { bg = colors.red_med })
 
 		-- Syntax highlighting
-		c(0, "Comment", { fg = colors.bg_light, italic = true })
+		c(0, "Comment", { fg = colors.gray_light, italic = true })
 		c(0, "Constant", { fg = colors.pink })
 		c(0, "String", { fg = colors.pink })
 		c(0, "Character", { fg = colors.pink })
@@ -137,7 +137,7 @@ return {
 		c(0, "Todo", { fg = colors.bg, bg = colors.red_light })
 
 		-- Treesitter
-		c(0, "@comment", { fg = colors.bg_light, italic = true })
+		c(0, "@comment", { fg = colors.gray_dark, italic = true })
 		c(0, "@string", { fg = colors.pink })
 		c(0, "@number", { fg = colors.red_light })
 		c(0, "@constant", { fg = colors.red_light })
@@ -159,5 +159,6 @@ return {
 		c(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = colors.red_light })
 		c(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = colors.red_med })
 		c(0, "DiagnosticUnderlineHint", { undercurl = true, sp = colors.brown })
+		c(0, "LspReferenceRead", { fg = colors.bg_solid, bg = colors.red_dark })
 	end
 }
