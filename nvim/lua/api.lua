@@ -29,4 +29,4 @@ vim.api.nvim_create_autocmd('TermOpen', {
 		vim.cmd('startinsert')
 	end,
 })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
