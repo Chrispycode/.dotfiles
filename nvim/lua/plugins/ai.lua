@@ -56,7 +56,13 @@ return {
 						system_prompt = function(ctx)
 							return ctx.default_system_prompt ..
 									"\nDo not create documentation or add comments to code unless the user explicitly requests you to do so." ..
-									"\n# `AGENTS.md` auto-context\n  \n            This file (plus the legacy `AGENT.md` variant) is always added to\n            the assistant’s context. It documents:\n  \n            -  common commands (typecheck, lint, build, test)\n  \n            -  code-style and naming preferences\n  \n            -  overall project structure\n  \n  \n            If you need new recurring commands or conventions, ask the user\n            whether to append them to `AGENTS.md` for future runs."
+									"\nDo not create commits!" ..
+									"\n# `AGENTS.md` auto-context\n" ..
+									"\nThis file (plus the legacy `AGENT.md` variant) is always added to the assistant’s context. It documents:" ..
+									"\n-  common commands (typecheck, lint, build, test)" ..
+									"\n-  code-style and naming preferences" ..
+									"\n-  overall project structure\n" ..
+									"\nIf you need new recurring commands or conventions, ask the user whether to append them to `AGENTS.md` for future runs."
 						end,
 					}
 				},
