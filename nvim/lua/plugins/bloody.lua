@@ -6,6 +6,8 @@ return {
 		-- Dark moody palette with deep reds and browns
 		vim.opt.termguicolors = true
 		vim.opt.background = "dark"
+		-- Make floating windows semi-transparent (0-100)
+		vim.o.winblend = 15
 		if vim.fn.exists("syntax_on") then
 			vim.cmd("syntax reset")
 		end
@@ -25,11 +27,11 @@ return {
 			red_med = "#9E4244",
 			red_muted = "#914a4a",
 			red_light = "#B76E79",
+			red_bright = "#ff4444",
 			pink = "#F6ACA7",
 			brown = "#ba8586",
 			orange = "#d4926a",
 			white = "#ffffff",
-			red_bright = "#ff4444",
 		}
 
 		-- Editor background and foreground
@@ -42,8 +44,8 @@ return {
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
 		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg_solid })
-		c(0, "CursorLine", { fg = colors.bg_solid, bg = colors.red_dark })
-		c(0, "CursorColumn", { fg = colors.bg_solid, bg = colors.red_dark })
+		c(0, "CursorLine", { fg = colors.bg_solid, bg = colors.red_dark, blend = 20 })
+		c(0, "CursorColumn", { fg = colors.bg_solid, bg = colors.red_dark, blend = 20 })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Folded", { fg = colors.red_light, bg = colors.bg_light })
 		c(0, "FoldColumn", { fg = colors.red_light, bg = colors.bg })
@@ -67,8 +69,8 @@ return {
 		c(0, "Substitute", { fg = colors.bg_solid, bg = colors.pink })
 
 		-- Visual mode
-		c(0, "Visual", { bg = colors.red_muted })
-		c(0, "VisualNOS", { bg = colors.red_muted })
+		c(0, "Visual", { bg = colors.red_muted, blend = 30 })
+		c(0, "VisualNOS", { bg = colors.red_muted, blend = 30 })
 
 		-- Cursor and selection
 		c(0, "Cursor", { fg = colors.bg, bg = colors.white })
@@ -82,14 +84,14 @@ return {
 		c(0, "MoreMsg", { fg = colors.red_light, bg = colors.bg })
 
 		-- Diff
-		c(0, "DiffAdd", { fg = colors.bg, bg = colors.red_dark })
-		c(0, "DiffDelete", { fg = colors.red_dark, bg = colors.bg })
-		c(0, "DiffChange", { fg = colors.white, bg = colors.red_muted })
-		c(0, "DiffText", { fg = colors.bg, bg = colors.red_light })
+		c(0, "DiffAdd", { fg = colors.white, bg = colors.red_dark, blend = 40 })
+		c(0, "DiffDelete", { fg = colors.gray_dark, bg = colors.bg, blend = 40 })
+		c(0, "DiffChange", { fg = colors.white, bg = colors.red_dark, blend = 50 })
+		c(0, "DiffText", { fg = colors.white, bg = colors.red_med, blend = 30 })
 
 		-- Completion menu
 		c(0, "Pmenu", { fg = colors.white, bg = colors.bg_light })
-		c(0, "PmenuSel", { fg = colors.bg, bg = colors.red_light })
+		c(0, "PmenuSel", { fg = colors.bg, bg = colors.red_light, blend = 15 })
 		c(0, "PmenuSbar", { bg = colors.bg_light })
 		c(0, "PmenuThumb", { bg = colors.red_med })
 
@@ -159,6 +161,6 @@ return {
 		c(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = colors.red_light })
 		c(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = colors.red_med })
 		c(0, "DiagnosticUnderlineHint", { undercurl = true, sp = colors.brown })
-		c(0, "LspReferenceRead", { fg = colors.bg_solid, bg = colors.red_dark })
+		c(0, "LspReferenceRead", { fg = colors.bg_solid, bg = colors.red_dark, blend = 30 })
 	end
 }
