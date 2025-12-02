@@ -57,8 +57,8 @@ return {
 		c(0, "Directory", { fg = colors.red_light, bg = colors.bg })
 
 		-- Statusline
-		c(0, "StatusLine", { fg = colors.white, bg = colors.bg })
-		c(0, "StatusLineNC", { fg = colors.bg_light, bg = colors.bg })
+		c(0, "StatusLine", { fg = colors.white, bg = colors.bg, underline = true, sp = colors.red_dark })
+		c(0, "StatusLineNC", { fg = colors.bg_light, bg = colors.bg, underline = true, sp = colors.gray_med })
 		c(0, "StatusLineTerm", { fg = colors.white, bg = colors.bg_light })
 		c(0, "StatusLineTermNC", { fg = colors.bg_light, bg = colors.bg })
 

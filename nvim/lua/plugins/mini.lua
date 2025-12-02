@@ -42,8 +42,6 @@ return {
 				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { link = "String", bg = 'NONE' })
 				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { link = "Normal", bg = 'NONE' })
 				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { link = "NonText", bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'StatusLine', { bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'StatusLineNC', { bg = 'NONE' })
 			end
 
 			local spinner_symbols = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
