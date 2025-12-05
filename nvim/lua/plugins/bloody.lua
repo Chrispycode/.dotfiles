@@ -30,7 +30,8 @@ return {
 			red_bright = "#ff4444",
 			pink = "#F6ACA7",
 			brown = "#ba8586",
-			orange = "#d4926a",
+			orange = "#472100",
+			green = "#003E00",
 			white = "#ffffff",
 		}
 
@@ -44,8 +45,8 @@ return {
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
 		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg_solid })
-		c(0, "CursorLine", { fg = colors.bg_solid, bg = colors.red_dark, blend = 20 })
-		c(0, "CursorColumn", { fg = colors.bg_solid, bg = colors.red_dark, blend = 20 })
+		c(0, "CursorLine", { fg = colors.white, bg = colors.red_dark })
+		c(0, "CursorColumn", { fg = colors.white, bg = colors.red_dark })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Folded", { fg = colors.red_light, bg = colors.bg_light })
 		c(0, "FoldColumn", { fg = colors.red_light, bg = colors.bg })
@@ -54,7 +55,7 @@ return {
 		c(0, "qfFileName", { fg = colors.red_light, bg = colors.bg })
 		c(0, "SnacksIndent", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Question", { fg = colors.red_light, bg = colors.bg })
-		c(0, "Directory", { fg = colors.red_light, bg = colors.bg })
+		c(0, "Directory", { fg = colors.red_light, bg = colors.bg_solid })
 
 		-- Statusline
 		c(0, "StatusLine", { fg = colors.white, bg = colors.bg, underline = true, sp = colors.red_dark })
@@ -84,10 +85,10 @@ return {
 		c(0, "MoreMsg", { fg = colors.red_light, bg = colors.bg })
 
 		-- Diff
-		c(0, "DiffAdd", { fg = colors.white, bg = colors.red_dark, blend = 40 })
-		c(0, "DiffDelete", { fg = colors.gray_dark, bg = colors.bg, blend = 40 })
-		c(0, "DiffChange", { fg = colors.white, bg = colors.red_dark, blend = 50 })
-		c(0, "DiffText", { fg = colors.white, bg = colors.red_med, blend = 30 })
+		c(0, "DiffAdd", { fg = colors.white, bg = colors.green, blend = 40 })
+		c(0, "DiffDelete", { fg = colors.white, bg = colors.red_dark, blend = 40 })
+		c(0, "DiffChange", { fg = colors.white, bg = colors.orange, blend = 50 })
+		c(0, "DiffText", { fg = colors.gray_dark, bg = colors.bg, blend = 30 })
 
 		-- Completion menu
 		c(0, "Pmenu", { fg = colors.white, bg = colors.bg_light })
