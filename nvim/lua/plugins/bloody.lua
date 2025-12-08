@@ -7,7 +7,7 @@ return {
 		vim.opt.termguicolors = true
 		vim.opt.background = "dark"
 		-- Make floating windows semi-transparent (0-100)
-		vim.o.winblend = 15
+		vim.o.winblend = 5
 		if vim.fn.exists("syntax_on") then
 			vim.cmd("syntax reset")
 		end
