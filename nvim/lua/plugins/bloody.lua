@@ -71,7 +71,7 @@ return {
 		c(0, "Substitute", { fg = colors.bg_solid, bg = colors.pink })
 
 		-- Visual mode
-		c(0, "Visual", { bg = colors.red_muted })
+		c(0, "Visual", { bg = colors.red_darker })
 		c(0, "VisualNOS", { bg = colors.red_muted })
 
 		-- Cursor and selection
