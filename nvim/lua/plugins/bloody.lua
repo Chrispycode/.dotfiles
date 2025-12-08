@@ -24,6 +24,7 @@ return {
 			gray_med = "#6b5555",
 			gray_light = "#9a7f7f",
 			red_dark = "#660011",
+			red_darker= "#330011",
 			red_med = "#9E4244",
 			red_muted = "#914a4a",
 			red_light = "#B76E79",
@@ -45,8 +46,8 @@ return {
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
 		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg_solid })
-		c(0, "CursorLine", { fg = colors.white, bg = colors.red_dark })
-		c(0, "CursorColumn", { fg = colors.white, bg = colors.red_dark })
+		c(0, "CursorLine", { bg = colors.red_darker, blend = 90 })
+		c(0, "CursorColumn", { bg = colors.red_darker, blend = 90 })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Folded", { fg = colors.red_light, bg = colors.bg_light })
 		c(0, "FoldColumn", { fg = colors.red_light, bg = colors.bg })
