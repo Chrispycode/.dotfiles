@@ -39,15 +39,15 @@ return {
 		-- Editor background and foreground
 		c(0, "Normal", { fg = colors.white, bg = colors.bg })
 		c(0, "NonText", { fg = colors.white, bg = colors.bg })
-		c(0, "NormalFloat", { fg = colors.white, bg = colors.bg })
+		c(0, "NormalFloat", { fg = colors.white, bg = colors.bg_solid })
 		c(0, "NormalNC", { fg = colors.white, bg = colors.bg })
 
 		-- UI elements
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
 		c(0, "LineNr", { fg = colors.bg_light, bg = colors.bg })
 		c(0, "CursorLineNr", { fg = colors.red_light, bg = colors.bg_solid })
-		c(0, "CursorLine", { bg = colors.red_darker, blend = 90 })
-		c(0, "CursorColumn", { bg = colors.red_darker, blend = 90 })
+		c(0, "CursorLine", { bg = colors.red_darker })
+		c(0, "CursorColumn", { bg = colors.red_darker })
 		c(0, "SignColumn", { fg = colors.red_light, bg = colors.bg })
 		c(0, "Folded", { fg = colors.red_light, bg = colors.bg_light })
 		c(0, "FoldColumn", { fg = colors.red_light, bg = colors.bg })
@@ -55,7 +55,7 @@ return {
 		c(0, "qfLineNr", { fg = colors.red_med, bg = colors.bg })
 		c(0, "qfFileName", { fg = colors.red_light, bg = colors.bg })
 		c(0, "SnacksIndent", { fg = colors.red_light, bg = colors.bg })
-		c(0, "Question", { fg = colors.red_light, bg = colors.bg })
+		c(0, "Question", { fg = colors.red_light, bg = colors.bg_solid })
 		c(0, "Directory", { fg = colors.red_light, bg = colors.bg_solid })
 
 		-- Statusline
@@ -71,13 +71,13 @@ return {
 		c(0, "Substitute", { fg = colors.bg_solid, bg = colors.pink })
 
 		-- Visual mode
-		c(0, "Visual", { bg = colors.red_muted, blend = 30 })
-		c(0, "VisualNOS", { bg = colors.red_muted, blend = 30 })
+		c(0, "Visual", { bg = colors.red_muted })
+		c(0, "VisualNOS", { bg = colors.red_muted })
 
 		-- Cursor and selection
-		c(0, "Cursor", { fg = colors.bg, bg = colors.white })
-		c(0, "lCursor", { fg = colors.bg, bg = colors.white })
-		c(0, "vCursor", { fg = colors.bg, bg = colors.white })
+		c(0, "Cursor", { fg = colors.bg_solid, bg = colors.white })
+		c(0, "lCursor", { fg = colors.bg_solid, bg = colors.white })
+		c(0, "vCursor", { fg = colors.bg_solid, bg = colors.white })
 
 		-- Messages and status
 		c(0, "ErrorMsg", { fg = colors.red_bright, bg = colors.bg })
@@ -103,7 +103,7 @@ return {
 		c(0, "String", { fg = colors.pink })
 		c(0, "Character", { fg = colors.pink })
 		c(0, "Number", { fg = colors.red_light })
-		c(0, "Float", { fg = colors.red_light })
+		c(0, "Float", { fg = colors.red_light, bg = colors.bg_solid })
 		c(0, "Boolean", { fg = colors.red_med })
 
 		c(0, "Identifier", { fg = colors.brown })
