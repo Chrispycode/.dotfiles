@@ -7,7 +7,7 @@ return {
 		vim.opt.termguicolors = true
 		vim.opt.background = "dark"
 		-- Make floating windows semi-transparent (0-100)
-		vim.o.winblend = 5
+		vim.o.winblend = 10
 		if vim.fn.exists("syntax_on") then
 			vim.cmd("syntax reset")
 		end
@@ -86,10 +86,10 @@ return {
 		c(0, "MoreMsg", { fg = colors.red_light, bg = colors.bg })
 
 		-- Diff
-		c(0, "DiffAdd", { fg = colors.white, bg = colors.green, blend = 40 })
-		c(0, "DiffDelete", { fg = colors.white, bg = colors.red_dark, blend = 40 })
-		c(0, "DiffChange", { fg = colors.white, bg = colors.orange, blend = 50 })
-		c(0, "DiffText", { fg = colors.gray_dark, bg = colors.bg, blend = 30 })
+		c(0, "DiffAdd", { fg = colors.white, bg = colors.green })
+		c(0, "DiffDelete", { fg = colors.white, bg = colors.red_dark })
+		c(0, "DiffChange", { fg = colors.white, bg = colors.orange })
+		c(0, "DiffText", { fg = colors.gray_dark, bg = colors.bg_solid })
 
 		-- Completion menu
 		c(0, "Pmenu", { fg = colors.white, bg = colors.bg_light })
