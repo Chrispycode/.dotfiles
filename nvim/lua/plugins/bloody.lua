@@ -38,9 +38,9 @@ return {
 
 		-- Editor background and foreground
 		c(0, "Normal", { fg = colors.white, bg = colors.bg })
-		c(0, "NonText", { fg = colors.white, bg = colors.bg })
-		c(0, "NormalFloat", { fg = colors.white, bg = colors.bg_solid })
-		c(0, "NormalNC", { fg = colors.white, bg = colors.bg })
+		-- c(0, "NonText", { fg = colors.white, bg = colors.bg })
+		c(0, "NormalFloat", { fg = colors.white, bg = colors.bg })
+		-- c(0, "NormalNC", { fg = colors.white, bg = colors.bg_solid })
 
 		-- UI elements
 		c(0, "Title", { fg = colors.red_med, bg = colors.bg })
