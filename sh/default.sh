@@ -18,10 +18,16 @@ source ~/.dotfiles/sh/aliases.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
-shell_name=$(basename $SHELL)
+if [ -n "$ZSH_VERSION" ]; then
+  shell_name="zsh"
+elif [ -n "$BASH_VERSION" ]; then
+  shell_name="bash"
+else
+  shell_name=$(basename $SHELL)
+fi
 
 eval "$($HOME/.local/bin/mise activate $shell_name)"
-command -v fzf >/dev/null 2>&1 && eval "$(fzf --$shell_name)"
+command -v fzf >/dev/null 2>&1 && source <(fzf --$shell_name)
 command -v starship >/dev/null 2>&1 && eval "$(starship init $shell_name)"
 
 if [ $(uname -s) = "Darwin" ]; then
