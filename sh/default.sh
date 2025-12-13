@@ -18,7 +18,11 @@ source ~/.dotfiles/sh/aliases.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
 
-eval "$($HOME/.local/bin/mise activate bash)"
+shell_name=$(basename $SHELL)
+
+eval "$($HOME/.local/bin/mise activate $shell_name)"
+command -v fzf >/dev/null 2>&1 && eval "$(fzf --$shell_name)"
+command -v starship >/dev/null 2>&1 && eval "$(starship init $shell_name)"
 
 if [ $(uname -s) = "Darwin" ]; then
     :
