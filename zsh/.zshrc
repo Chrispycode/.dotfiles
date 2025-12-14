@@ -7,7 +7,14 @@ SAVEHIST=10000
 HISTTIMEFORMAT="%F %T"
 
 export HISTCONTROL=erasedups:ignoredups:ignorespace
-autoload -U compinit; compinit
+export ZSH_CACHE_DIR=~/.config/zsh
+# Cache compinit for faster startup (invalidated when .zcompdump is older than any completion file)
+autoload -U compinit
+if [[ -f ~/.config/zsh/.zcompdump && ~/.config/zsh/.zcompdump -nt /usr/share/zsh ]]; then
+  compinit -C
+else
+  compinit
+fi
 if [[ -f ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh ]]; then
 	source ~/.config/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh
 fi
@@ -18,6 +25,8 @@ if [[ -f ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.p
 	source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 fi
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+# Lazy-load fzf-tab only when needed (it adds overhead to every completion)
+ZSH_LAZY_LOAD_PLUGINS=(fzf-tab)
 
 source ~/.dotfiles/sh/default.sh
 source ~/.dotfiles/zsh/styles.zsh

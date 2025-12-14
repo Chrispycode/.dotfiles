@@ -27,8 +27,15 @@ else
 fi
 
 eval "$($HOME/.local/bin/mise activate $shell_name)"
-command -v fzf >/dev/null 2>&1 && source <(fzf --$shell_name)
-command -v starship >/dev/null 2>&1 && eval "$(starship init $shell_name)"
+# Only source fzf if it exists and we haven't already loaded it
+if [[ -z "$FZF_SHELL_SOURCED" ]] && type fzf &>/dev/null; then
+  source <(fzf --$shell_name)
+  FZF_SHELL_SOURCED=1
+fi
+# Only init starship if it exists
+if type starship &>/dev/null; then
+  eval "$(starship init $shell_name)"
+fi
 
 if [ $(uname -s) = "Darwin" ]; then
     :
