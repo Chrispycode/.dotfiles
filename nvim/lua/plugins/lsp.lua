@@ -57,7 +57,21 @@ return {
 			})
 			local servers = {
 				ruby_lsp = {
-					cmd_env = { BUNDLE_GEMFILE = vim.fn.getenv 'GLOBAL_GEMFILE' },
+					-- root_markers = { {"Gemfile.lock", ".git"}, {"*.gemspec"} },
+					root_markers = { "Gemfile.lock", "*.gemspec", "Gemfile", ".git" },
+					on_new_config = function(new_config, root_dir)
+						local bundle_dir = root_dir and (root_dir .. '/.bundle') or nil
+						if bundle_dir and vim.loop.fs_stat(bundle_dir) then
+							new_config.cmd_env = { BUNDLE_PATH = bundle_dir }
+						else
+							local gemfile = vim.fn.getenv('GLOBAL_GEMFILE')
+							if gemfile and gemfile ~= '' then
+								new_config.cmd_env = { BUNDLE_GEMFILE = gemfile }
+							else
+								new_config.cmd_env = nil
+							end
+						end
+					end,
 					reuse_client = function(client, config)
 						return client.name == 'ruby_lsp'
 					end,
