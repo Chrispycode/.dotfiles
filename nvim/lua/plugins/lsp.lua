@@ -76,7 +76,19 @@ return {
 						return client.name == 'ruby_lsp'
 					end,
 				},
-				herb_ls = {},
+				herb_ls = {
+					settings = {
+						languageServerHerb = {
+							linter = {
+								excludedRules = { "erb-require-trailing-newline", "erb-no-extra-newline", "html-no-block-inside-inline" }
+							},
+							formatter = {
+								maxLineLength = 160,
+								enabled = true
+							},
+						},
+					},
+				},
 				qmlls = {
 					cmd = { "qmlls", "-E" }
 				},
