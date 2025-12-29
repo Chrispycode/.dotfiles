@@ -30,6 +30,7 @@
 # ln -fs $HOME/.dotfiles/nvim ~/.config 
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty/
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
+# ln -fs $HOME/.dotfiles/ghostty.conf $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
