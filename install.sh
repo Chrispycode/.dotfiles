@@ -1,7 +1,8 @@
 #!/usr/bin/env zsh
 
-# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman podman-docker podman-compose eza lazygit fastfetch starship 1password unzip
+# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman-docker podman-compose eza bat lazygit fastfetch starship 1password unzip
 # yay -S plasma-meta dolphin konsole spectacle sddm-kcm 
+
 # neovim build
 # sudo pacman -S base-devel cmake ninja curl
 # make CMAKE_BUILD_TYPE=Release && sudo make install
