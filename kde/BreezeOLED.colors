@@ -34,7 +34,7 @@ ForegroundVisited=155,89,182
 
 [Colors:Complementary]
 BackgroundAlternate=120,0,0
-BackgroundNormal=0,0,1
+BackgroundNormal=0,0,0
 DecorationFocus=140,0,0
 DecorationHover=140,0,0
 ForegroundActive=140,0,0
@@ -118,7 +118,7 @@ ForegroundVisited=155,89,182
 
 [Colors:Window]
 BackgroundAlternate=0,0,0
-BackgroundNormal=0,0,1
+BackgroundNormal=0,0,0
 DecorationFocus=140,0,0
 DecorationHover=140,0,0
 ForegroundActive=140,0,0
