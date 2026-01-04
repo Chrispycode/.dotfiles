@@ -38,6 +38,11 @@ GTK_DEBUG=interactive appname
 
 steam -dev
 
+##  Drive mount 
+
+LABEL=Files /mnt/Files ext4 defaults,rw,users,exec,suid,dev 0 2
+LABEL=SPEEDY /mnt/SPEEDY auto defaults,rw,users,exec,suid,dev 0 2
+
 ## launch options
 
 mangohud %command%
