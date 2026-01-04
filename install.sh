@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# yay -S brave-browser tmux ghostty btop easyeffects fzf neovim podman-docker podman-compose eza bat lazygit fastfetch starship 1password unzip
+# yay -S brave-browser tmux ghostty btop easyeffects lsp-plugins fzf neovim podman-docker podman-compose eza bat lazygit fastfetch starship 1password unzip
 # yay -S plasma-meta dolphin konsole spectacle sddm-kcm 
 
 # neovim build
@@ -15,7 +15,7 @@
 # localectl set-x11-keymap de
 
 # flatpak install ExtensionManager junction
-# flatpak install dev.zed.Zed app.zen_browser.zen com.vysp3r.ProtonPlus org.deskflow.deskflow org.gnome.DejaDup org.gtk.Gtk3theme.adw-gtk3
+# flatpak install dev.zed.Zed app.zen_browser.zen com.vysp3r.ProtonPlus org.gtk.Gtk3theme.adw-gtk3 gearlever
 # sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
 
 # chsh -s /bin/zsh
@@ -37,8 +37,10 @@
 #
 # ln -fs $HOME/.dotfiles/nvim ~/.config 
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty/
+# mkdir ~/.config/ghostty
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs $HOME/.dotfiles/ghostty.conf $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
+# mkdir ~/.config/btop
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
@@ -70,6 +72,7 @@
 # newgrp docker
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
+# rm -rf ~/.config/easyeffects/input ~/.config/easyeffects/output/
 # ln -fs $HOME/.dotfiles/easyeffects/input $HOME/.config/easyeffects
 # ln -fs $HOME/.dotfiles/easyeffects/output $HOME/.config/easyeffects
 
