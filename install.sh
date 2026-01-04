@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-# yay -S brave-browser tmux ghostty btop easyeffects lsp-plugins fzf neovim podman-docker podman-compose eza bat lazygit fastfetch starship 1password unzip
+# yay -S brave-browser tmux ghostty btop easyeffects lsp-plugins fzf neovim podman-docker podman-compose eza bat lazygit fastfetch starship 1password unzip unixodbc qt6-tools
 # yay -S plasma-meta dolphin konsole spectacle sddm-kcm 
 
 # neovim build
