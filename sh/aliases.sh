@@ -29,7 +29,10 @@ dsb() {
 }
 alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.socket"
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
-alias yayf="yay -Slq | fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75% | xargs -ro yay -S"
+alias fzfy="fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75%"
+alias yayf="yay -Slq | fzfy | xargs -ro yay -S"
+alias yays="yay -Q | fzfy"
+alias yayr="yay -Q | fzfy | xargs -ro yay -S"
 alias fzfp="fzf --preview='fzf-preview.sh {}'"
 alias sys="TEMD_COLORS=1 systemctl"
 alias syss="TEMD_COLORS=1 systemctl status"
