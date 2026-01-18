@@ -60,4 +60,5 @@ zstyle ':fzf-tab:complete:docker:*' fzf-preview 'docker --help | grep $word'
 zstyle ':fzf-tab:complete:*:*' fzf-preview 'fzf-preview.sh ${(Q)realpath}'
 zstyle ':fzf-tab:complete:*:options' fzf-preview
 zstyle ':fzf-tab:complete:*:argument-1' fzf-preview
+zstyle ':fzf-tab:complete:(pacman|yay):*' fzf-preview 'yay -Sii "$word" 2>/dev/null || pacman -Qi "$word" 2>/dev/null'
 zstyle ':fzf-tab:*' fzf-flags --height=100%

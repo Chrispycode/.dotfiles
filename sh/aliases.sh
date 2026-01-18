@@ -31,7 +31,6 @@ alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.s
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
 alias fzfy="fzf --multi --preview 'yay -Sii {1}' --preview-window=down:75%"
 alias yayf="yay -Slq | fzfy | xargs -ro yay -S"
-alias yays="yay -Q | fzfy"
 alias fzfp="fzf --preview='fzf-preview.sh {}'"
 alias sys="TEMD_COLORS=1 systemctl"
 alias syss="TEMD_COLORS=1 systemctl status"
@@ -43,7 +42,6 @@ wallp() {
 vwallp() {
 	find ~/Videos/vwalls/ -type f | fzfp | xargs -I {} jq --arg path "{}" '.background.vwallpaperPath = $path' "$HOME/.config/quickshell/config.json" > "$HOME/.config/quickshell/config.json.tmp" && mv "$HOME/.config/quickshell/config.json.tmp" "$HOME/.config/quickshell/config.json"
 }
-
 
 if [ $(uname -s) = "Darwin" ]; then
 	bat=batcat
