@@ -14,9 +14,8 @@
 # fix sddm using US layout
 # localectl set-x11-keymap de
 
-# flatpak install ExtensionManager junction
-# flatpak install dev.zed.Zed app.zen_browser.zen com.vysp3r.ProtonPlus org.gtk.Gtk3theme.adw-gtk3 gearlever
-# sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build gnome-tweaks
+# flatpak install dev.zed.Zed app.zen_browser.zen org.gtk.Gtk3theme.adw-gtk3 gearlever com.vysp3r.ProtonPlus 
+# sudo dnf in neovim kitty fzf zsh fastfetch btop bat eza easyeffects adw-gtk3-theme ruby-build 
 
 # chsh -s /bin/zsh
 # mv "$HOME/.zshrc" "$HOME/.zshrc_bu"
@@ -44,7 +43,6 @@
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
-# ln -fs $HOME/.dotfiles/walker ~/.config/
 # ln -fs $HOME/.dotfiles/Gemfile ~/
 
 # mkdir ~/.themes
@@ -63,13 +61,6 @@
 # ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
 # ln -fs $HOME/.dotfiles/others/keybindings.json ~/.config/Code/User/keybindings.json
 
-# tilix create shortcut with "tilix --quake" command
-# dconf load /com/gexperts/Tilix/ < $HOME/.dotfiles/others/tilix.dconf
-# gsettings set com.gexperts.Tilix.Settings quake-height-percent 100
-
-# sudo groupadd docker
-# sudo usermod -aG docker $USER
-# newgrp docker
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
 # rm -rf ~/.config/easyeffects/input ~/.config/easyeffects/output/

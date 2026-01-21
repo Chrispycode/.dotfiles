@@ -1,5 +1,5 @@
 alias subm='smerge'
-alias open="xdg-open"
+[[ $(uname -s) != "Darwin" ]] && alias open="xdg-open"
 alias s="ssh"
 alias n="nvim"
 alias lg="lazygit"
@@ -44,9 +44,14 @@ vwallp() {
 }
 
 if [ $(uname -s) = "Darwin" ]; then
-	bat=batcat
-else
 	bat=bat
+else
+	# Debian/Ubuntu installs bat as batcat
+	if command -v batcat &>/dev/null; then
+		bat=batcat
+	else
+		bat=bat
+	fi
 fi
 
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | $bat -p -lman'"
