@@ -86,6 +86,21 @@ mkdir -p "$HOME/.local/bin"
 # Link Gemfile
 ln -fs "$HOME/.dotfiles/Gemfile" "$HOME/Gemfile"
 
+# Setup Karabiner-Elements
+echo "Setting up Karabiner-Elements..."
+mkdir -p "$HOME/.config/karabiner"
+ln -fs "$HOME/.dotfiles/mac/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+
+# Setup AeroSpace
+echo "Setting up AeroSpace..."
+mkdir -p "$HOME/.config/aerospace"
+ln -fs "$HOME/.dotfiles/mac/.aerospace.toml" "$HOME/.config/aerospace/aerospace.toml"
+
+# Setup Leader Key
+echo "Setting up Leader Key..."
+mkdir -p "$HOME/Library/Application Support/Leader Key"
+ln -fs "$HOME/.dotfiles/mac/leader-key/config.json" "$HOME/Library/Application Support/Leader Key/config.json"
+
 # Install mise (runtime version manager)
 if ! command -v mise &>/dev/null; then
   echo "Installing mise..."

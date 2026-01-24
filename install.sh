@@ -40,7 +40,8 @@
 # ln -fs $HOME/.dotfiles/ghostty.conf ~/.config/ghostty/config
 # ln -fs $HOME/.dotfiles/ghostty.conf $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
 # ln -fs $HOME/.dotfiles/mac/leader-key/config.json $HOME/Library/Application\ Support/Leader\ Key/config.json
-# ln -fs "$HOME/.dotfiles/mac/.aerospace.toml" "$HOME/.aerospace.toml"
+# ln -fs "$HOME/.dotfiles/mac/.aerospace.toml" "$HOME/.config/aerospace/aerospace.toml"
+# ln -fs "$HOME/.dotfiles/mac/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 # mkdir ~/.config/btop
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
