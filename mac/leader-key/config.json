@@ -1,0 +1,170 @@
+{
+  "actions" : [
+    {
+      "key" : "enter",
+      "type" : "application",
+      "value" : "/Applications/Ghostty.app"
+    },
+    {
+      "key" : "b",
+      "type" : "application",
+      "value" : "/Applications/Zen.app"
+    },
+    {
+      "key" : "m",
+      "type" : "application",
+      "value" : "/System/Applications/Mail.app"
+    },
+    {
+      "key" : "i",
+      "type" : "application",
+      "value" : "/System/Applications/Music.app"
+    },
+    {
+      "key" : "h",
+      "label" : "focus left",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace focus left"
+    },
+    {
+      "key" : "j",
+      "label" : "focus down",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace focus down"
+    },
+    {
+      "key" : "k",
+      "label" : "focus up",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace focus up"
+    },
+    {
+      "key" : "l",
+      "label" : "focus right",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace focus right"
+    },
+    {
+      "key" : "H",
+      "label" : "move left",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace move left"
+    },
+    {
+      "key" : "J",
+      "label" : "move down",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace move down"
+    },
+    {
+      "key" : "K",
+      "label" : "move up",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace move up"
+    },
+    {
+      "key" : "L",
+      "label" : "move right",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace move right"
+    },
+    {
+      "key" : "1",
+      "label" : "workspace 1",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace workspace 1"
+    },
+    {
+      "key" : "2",
+      "label" : "workspace 2",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace workspace 2"
+    },
+    {
+      "key" : "3",
+      "label" : "workspace 3",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace workspace 3"
+    },
+    {
+      "key" : "4",
+      "label" : "workspace 4",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace workspace 4"
+    },
+    {
+      "key" : "5",
+      "label" : "workspace 5",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace workspace 5"
+    },
+    {
+      "key" : "f",
+      "label" : "fullscreen",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace fullscreen"
+    },
+    {
+      "key" : "F",
+      "label" : "floating",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
+    },
+    {
+      "key" : "r",
+      "label" : "reload",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace reload-config"
+    },
+    {
+      "key" : "R",
+      "label" : "reset",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace flatten-workspace-tree"
+    },
+    {
+      "key" : "q",
+      "label" : "close",
+      "type" : "command",
+      "value" : "/opt/homebrew/bin/aerospace close"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "1",
+          "label" : "move workspace 1",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1"
+        },
+        {
+          "key" : "2",
+          "label" : "move workspace 2",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2"
+        },
+        {
+          "key" : "3",
+          "label" : "move workspace 3",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3"
+        },
+        {
+          "key" : "4",
+          "label" : "move workspace 4",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4"
+        },
+        {
+          "key" : "5",
+          "label" : "move workspace 5",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 5"
+        }
+      ],
+      "key" : "w",
+      "label" : "move",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}
