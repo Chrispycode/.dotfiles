@@ -101,6 +101,12 @@ echo "Setting up Leader Key..."
 mkdir -p "$HOME/Library/Application Support/Leader Key"
 ln -fs "$HOME/.dotfiles/mac/leader-key/config.json" "$HOME/Library/Application Support/Leader Key/config.json"
 
+# Setup mac defaults
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true                                              │
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true                                          │
+defaults write com.apple.finder AppleShowAllFiles -bool true                                                          │
+defaults write -g NSWindowShouldDragOnGesture -bool true
+
 # Install mise (runtime version manager)
 if ! command -v mise &>/dev/null; then
   echo "Installing mise..."
