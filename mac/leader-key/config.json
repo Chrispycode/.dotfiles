@@ -21,6 +21,11 @@
       "value" : "/System/Applications/Music.app"
     },
     {
+      "key" : "f",
+      "type" : "folder",
+      "value" : "/Users/christopher"
+    },
+    {
       "actions" : [
         {
           "key" : "s",
@@ -36,11 +41,13 @@
       "actions" : [
         {
           "key" : "s",
+          "label" : "settings",
           "type" : "command",
           "value" : "open \"leaderkey://settings\""
         },
         {
           "key" : "r",
+          "label" : "reload",
           "type" : "command",
           "value" : "open \"leaderkey://config-reload\""
         }
@@ -183,6 +190,12 @@
           "label" : "reload",
           "type" : "command",
           "value" : "/opt/homebrew/bin/aerospace reload-config"
+        },
+        {
+          "key" : "s",
+          "label" : "split opposite",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace split opposite"
         },
         {
           "key" : "R",
