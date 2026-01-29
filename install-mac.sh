@@ -13,10 +13,10 @@ fi
 
 # Install packages via Homebrew
 echo "Installing packages..."
-brew install neovim tmux fzf eza bat lazygit fastfetch starship zsh-autosuggestions zsh-syntax-highlighting ripgrep fd
+brew install neovim tmux fzf eza bat lazygit fastfetch starship zsh-autosuggestions zsh-syntax-highlighting ripgrep fd btop
 
 # Optional: Install GUI apps via cask
-brew install --cask ghostty@tip 1password
+brew install --cask ghostty@tip 1password aerospace bazecor bruno finetune helium-browser karabiner-elements leader-key localsend monitorcontrol zed stats zen openvpn-connect
 
 # Setup zsh
 echo "Setting up zsh..."
@@ -102,10 +102,25 @@ mkdir -p "$HOME/Library/Application Support/Leader Key"
 ln -fs "$HOME/.dotfiles/mac/leader-key/config.json" "$HOME/Library/Application Support/Leader Key/config.json"
 
 # Setup mac defaults
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true                                              │
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true                                          │
-defaults write com.apple.finder AppleShowAllFiles -bool true                                                          │
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.finder AppleShowAllFiles -bool true
 defaults write -g NSWindowShouldDragOnGesture -bool true
+
+# Dock
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock tilesize -int 51
+defaults write com.apple.dock show-recents -bool false
+
+# Finder
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
+# Screenshots
+defaults write com.apple.screencapture location -string "~/screencapture"
+
+killall Dock Finder 2>/dev/null || true
 
 # Install mise (runtime version manager)
 if ! command -v mise &>/dev/null; then
