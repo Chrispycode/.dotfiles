@@ -184,7 +184,6 @@ return {
 			{ '<leader>tn', '<cmd>tabnew<cr>',                                    desc = 'new Tab' },
 			{ '<leader>lp', ':Lazy<cr>',                                          desc = 'Lazy' },
 			{ '<leader>lm', ':Mason<cr>',                                         desc = 'Mason' },
-			{ '<leader>la', ':CodeCompanionActions<cr>',                          desc = 'CodeCompanion' },
 			{ '<leader>lw', ':set wrap<cr>',                                      desc = 'Toggle Wrap' },
 			{ '<leader>fl', ':setlocal foldlevel=',                               desc = 'Set specific foldlevel' },
 			{ '<Esc>',      '<cmd>nohlsearch<CR>',                                desc = 'cancel search' },

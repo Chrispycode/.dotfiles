@@ -14,6 +14,10 @@ return {
 			'nvim-treesitter/nvim-treesitter',
 			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
+		keys = {
+			{ '<leader>la', ':CodeCompanionActions<cr>', desc = 'CodeCompanion' },
+			{ '<leader>lo', ':CodeCompanionChat adapter=opencode<cr>', desc = 'OpenCode Chat' }
+		},
 		opts = {
 			memory = {
 				opts = {
@@ -72,6 +76,9 @@ return {
 			},
 			adapters = {
 				acp = {
+					opencode = function()
+						return require("codecompanion.adapters").extend("opencode", {})
+					end,
 					claude_code = function()
 						return require("codecompanion.adapters").extend("claude_code", {
 							env = {
