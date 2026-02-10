@@ -5,6 +5,9 @@ addToPathFront() {
 }
 addToPathFront $HOME/.local/bin
 addToPathFront $HOME/.dotfiles/scripts
+addToPathFront $HOME/.opencode/bin
+
+[[ -z "$DISPLAY" && -z "$WAYLAND_DISPLAY" ]] && export PLAYWRIGHT_MCP_HEADLESS=true
 
 export GOPATH="$HOME/.go"
 export EDITOR=nvim
