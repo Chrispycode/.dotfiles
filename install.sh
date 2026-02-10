@@ -64,6 +64,8 @@
 # ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
 # ln -fs $HOME/.dotfiles/others/keybindings.json ~/.config/Code/User/keybindings.json
 
+# mkdir -p ~/.config/opencode
+# ln -fs "$HOME/.dotfiles/opencode.json" "$HOME/.config/opencode/opencode.json"
 # ln -s "$HOME/.dotfiles/docker-compose.yml" "$HOME/docker-compose.yml"
 
 # rm -rf ~/.config/easyeffects/input ~/.config/easyeffects/output/
