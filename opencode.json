@@ -27,7 +27,7 @@
         "--init",
         "--pull=always",
         "--network={env:DOCKER_NETWORK}",
-        "-v", "./tmp/playwright-output:/tmp/playwright-output",
+        "-v", "playwright-output:/tmp/playwright-output",
         "mcr.microsoft.com/playwright/mcp"
       ]
     }
