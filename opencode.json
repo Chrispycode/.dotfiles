@@ -1,5 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
   "provider": {
     "ollama": {
       "npm": "@ai-sdk/openai-compatible",
@@ -17,7 +18,17 @@
   "mcp": {
     "playwright": {
       "type": "local",
-      "command": ["npx", "-y", "@playwright/mcp@latest"]
+      "command": [
+        "docker",
+        "run",
+        "-i",
+        "--rm",
+        "--init",
+        "--pull=always",
+        "--network={env:DOCKER_NETWORK}",
+        "-v", "./tmp/playwright-output:/tmp/playwright-output",
+        "mcr.microsoft.com/playwright/mcp"
+      ]
     }
   }
 }

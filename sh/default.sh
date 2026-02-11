@@ -13,6 +13,7 @@ export GOPATH="$HOME/.go"
 export EDITOR=nvim
 export VISUAL=nvim
 export STARSHIP_CONFIG=~/.dotfiles/starship.toml
+export DOCKER_NETWORK=host
 
 [ -f ~/.dotfiles/sh/preload.sh ] && source ~/.dotfiles/sh/preload.sh
 

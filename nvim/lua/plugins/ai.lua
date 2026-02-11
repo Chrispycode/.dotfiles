@@ -58,15 +58,13 @@ return {
 					},
 					opts = {
 						system_prompt = function(ctx)
-							return ctx.default_system_prompt ..
-									"\nDo not create documentation or add comments to code unless the user explicitly requests you to do so." ..
-									"\nDo not create commits!" ..
-									"\n# `AGENTS.md` auto-context\n" ..
-									"\nThis file (plus the legacy `AGENT.md` variant) is always added to the assistant’s context. It documents:" ..
-									"\n-  common commands (typecheck, lint, build, test)" ..
-									"\n-  code-style and naming preferences" ..
-									"\n-  overall project structure\n" ..
-									"\nIf you need new recurring commands or conventions, ask the user whether to append them to `AGENTS.md` for future runs."
+							local prompt = ctx.default_system_prompt
+							local f = io.open(vim.fn.expand("~/.dotfiles/nvim/system-prompt-overrides.md"), "r")
+							if f then
+								prompt = prompt .. "\n" .. f:read("*a")
+								f:close()
+							end
+							return prompt
 						end,
 					}
 				},

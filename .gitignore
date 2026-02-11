@@ -4,6 +4,7 @@ sh/sessionizer-additions.sh
 zsh/.p10k.zsh
 others/settings.json
 nvim/lua/plugins/extra.lua
+nvim/system-prompt-overrides.md
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
 nvim/spell/*.*.sug
