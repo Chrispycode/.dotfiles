@@ -50,3 +50,10 @@ mangohud %command%
 ### debug game launch
 
 PROTON_LOG=1 %command%
+
+# ghostty not building on cachy os 
+
+sudo objcopy -R .sframe /usr/lib/crt1.o
+sudo objcopy -R .sframe /usr/lib/crti.o
+sudo objcopy -R .sframe /usr/lib/crtn.o
+
