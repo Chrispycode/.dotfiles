@@ -31,5 +31,15 @@
         "mcr.microsoft.com/playwright/mcp"
       ]
     }
-  }
+  },
+	"lsp": {
+		"ruby-lsp": {
+			"command": ["ruby-lsp"],
+			"initialization": {
+				"indexing": {
+					"excludedPatterns": ["plugins/*/Gemfile"]
+				}
+			}
+		}
+	}
 }
