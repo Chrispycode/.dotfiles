@@ -55,21 +55,29 @@ return {
 					end
 				end,
 			})
+			vim.api.nvim_create_user_command('RubyLspToggleGemfile', function()
+				vim.g.ruby_lsp_use_local_gemfile = not vim.g.ruby_lsp_use_local_gemfile
+				local label = vim.g.ruby_lsp_use_local_gemfile and 'local (cwd)' or 'global'
+				vim.notify('ruby_lsp: using ' .. label .. ' Gemfile', vim.log.levels.INFO)
+				if vim.fn.exists(':lsp') == 2 then
+					vim.cmd('lsp restart ruby_lsp')
+				elseif vim.fn.exists(':LspRestart') == 2 then
+					vim.cmd('LspRestart ruby_lsp')
+				end
+			end, {})
+			vim.keymap.set('n', '<leader>tg', '<cmd>RubyLspToggleGemfile<CR>', { desc = '[T]oggle ruby_lsp [G]emfile' })
+
 			local servers = {
 				ruby_lsp = {
-					-- root_markers = { {"Gemfile.lock", ".git"}, {"*.gemspec"} },
 					root_markers = { "Gemfile.lock", "*.gemspec", "Gemfile", ".git" },
 					on_new_config = function(new_config, root_dir)
-						local bundle_dir = root_dir and (root_dir .. '/.bundle') or nil
-						if bundle_dir and vim.loop.fs_stat(bundle_dir) then
-							new_config.cmd_env = { BUNDLE_PATH = bundle_dir }
-						else
+						if not vim.g.ruby_lsp_use_local_gemfile then
 							local gemfile = vim.fn.getenv('GLOBAL_GEMFILE')
 							if gemfile and gemfile ~= '' then
 								new_config.cmd_env = { BUNDLE_GEMFILE = gemfile }
-							else
-								new_config.cmd_env = nil
 							end
+						else
+							new_config.cmd_env = nil
 						end
 					end,
 					reuse_client = function(client, config)
