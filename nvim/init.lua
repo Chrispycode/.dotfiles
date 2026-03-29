@@ -48,6 +48,7 @@ vim.opt.maxfuncdepth = 1000
 vim.opt.lazyredraw = true
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
+require('vim._core.ui2').enable{}
 require('api')
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'

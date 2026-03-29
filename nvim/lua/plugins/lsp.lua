@@ -48,6 +48,9 @@ return {
 							end,
 						})
 					end
+					if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_documentColor, event.buf) then
+						vim.lsp.document_color.enable(true, { bufnr = event.buf })
+					end
 					if client and client_supports_method(client, vim.lsp.protocol.Methods.textDocument_inlayHint, event.buf) then
 						map('<leader>th', function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
