@@ -117,15 +117,17 @@ return {
 				ts_ls = {},
 				bashls = {},
 				emmet_language_server = {},
-			}
+				pyright = {},
+				}
 
-			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(ensure_installed, {
+				local ensure_installed = vim.tbl_keys(servers or {})
+				vim.list_extend(ensure_installed, {
 				'stylua',
 				'markdownlint',
 				'rufo',
-				'prettier'
-			})
+				'prettier',
+				'ruff',
+				})
 			require('mason').setup()
 			require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 			require('mason-lspconfig').setup {
@@ -160,6 +162,11 @@ return {
 				ruby = { 'rufo', stop_after_first = true },
 				json = { 'prettier', stop_after_first = true },
 				jsonc = { 'prettier', stop_after_first = true },
+				python = { 'ruff_format', stop_after_first = true },
+				javascript = { 'prettier', stop_after_first = true },
+				typescript = { 'prettier', stop_after_first = true },
+				javascriptreact = { 'prettier', stop_after_first = true },
+				typescriptreact = { 'prettier', stop_after_first = true },
 			},
 		},
 	},
