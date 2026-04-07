@@ -16,7 +16,9 @@ return {
 		},
 		keys = {
 			{ '<leader>la', ':CodeCompanionActions<cr>', desc = 'CodeCompanion' },
-			{ '<leader>lo', ':CodeCompanionChat adapter=opencode<cr>', desc = 'OpenCode Chat' }
+			{ '<leader>lo', ':CodeCompanionChat adapter=opencode<cr>', desc = 'OpenCode Chat' },
+			{ '<leader>lc', ':CodeCompanionChat adapter=claude_code<cr>', desc = 'Claude Code Chat' },
+			{ '<leader>lx', ':CodeCompanionChat adapter=codex<cr>', desc = 'Codex Chat' }
 		},
 		opts = {
 			memory = {
@@ -83,6 +85,9 @@ return {
 								CLAUDE_CODE_OAUTH_TOKEN = os.getenv("CLAUDE_CODE_OAUTH_TOKEN"),
 							},
 						})
+					end,
+					codex = function()
+						return require("codecompanion.adapters").extend("codex", {})
 					end,
 				},
 				http = {
