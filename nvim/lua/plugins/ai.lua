@@ -15,10 +15,10 @@ return {
 			{ "nvim-lua/plenary.nvim", branch = "master" },
 		},
 		keys = {
-			{ '<leader>la', ':CodeCompanionActions<cr>', desc = 'CodeCompanion' },
-			{ '<leader>lo', ':CodeCompanionChat adapter=opencode<cr>', desc = 'OpenCode Chat' },
+			{ '<leader>la', ':CodeCompanionActions<cr>',                  desc = 'CodeCompanion' },
+			{ '<leader>lo', ':CodeCompanionChat adapter=opencode<cr>',    desc = 'OpenCode Chat' },
 			{ '<leader>lc', ':CodeCompanionChat adapter=claude_code<cr>', desc = 'Claude Code Chat' },
-			{ '<leader>lx', ':CodeCompanionChat adapter=codex<cr>', desc = 'Codex Chat' }
+			{ '<leader>lx', ':CodeCompanionChat adapter=codex<cr>',       desc = 'Codex Chat' }
 		},
 		opts = {
 			memory = {
@@ -87,7 +87,14 @@ return {
 						})
 					end,
 					codex = function()
-						return require("codecompanion.adapters").extend("codex", {})
+						return require("codecompanion.adapters").extend("codex", {
+							commands = {
+								default = { "npx", "@zed-industries/codex-acp" },
+							},
+							defaults = {
+								auth_method = "chatgpt", -- "openai-api-key"|"codex-api-key"|"chatgpt"
+							},
+						})
 					end,
 				},
 				http = {
