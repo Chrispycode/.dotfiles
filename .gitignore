@@ -5,6 +5,7 @@ zsh/.p10k.zsh
 others/settings.json
 nvim/lua/plugins/extra.lua
 nvim/system-prompt-overrides.md
+nvim/theme-colors.lua
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
 nvim/spell/*.*.sug
