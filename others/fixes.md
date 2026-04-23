@@ -57,3 +57,8 @@ sudo objcopy -R .sframe /usr/lib/crt1.o
 sudo objcopy -R .sframe /usr/lib/crti.o
 sudo objcopy -R .sframe /usr/lib/crtn.o
 
+
+# hibernate wifi bug
+
+sudo modprobe -r mt7921e && sudo modprobe mt7921e
+
