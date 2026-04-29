@@ -58,13 +58,19 @@ return {
 					end
 				end,
 			})
+			local global_gemfile = vim.fn.getenv('GLOBAL_GEMFILE')
+			local ruby_lsp_cmd_env = nil
+			if global_gemfile and global_gemfile ~= '' then
+				ruby_lsp_cmd_env = { BUNDLE_GEMFILE = global_gemfile }
+			end
+
 			local servers = {
 				ruby_lsp = {
 					root_markers = { "Gemfile.lock", "*.gemspec", "Gemfile", ".git" },
+					cmd_env = ruby_lsp_cmd_env,
 					on_new_config = function(new_config, root_dir)
-						local gemfile = vim.fn.getenv('GLOBAL_GEMFILE')
-						if gemfile and gemfile ~= '' then
-							new_config.cmd_env = vim.tbl_extend('force', new_config.cmd_env or {}, { BUNDLE_GEMFILE = gemfile })
+						if global_gemfile and global_gemfile ~= '' then
+							new_config.cmd_env = vim.tbl_extend('force', new_config.cmd_env or {}, { BUNDLE_GEMFILE = global_gemfile })
 						end
 					end,
 					reuse_client = function(client, config)
@@ -122,8 +128,8 @@ return {
 			for server_name, server_config in pairs(servers) do
 				local capabilities = require('blink.cmp').get_lsp_capabilities()
 				server_config.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server_config.capabilities or {})
-				vim.lsp.enable(server_name)
 				vim.lsp.config(server_name, server_config)
+				vim.lsp.enable(server_name)
 			end
 		end,
 	},
