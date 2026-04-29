@@ -68,13 +68,24 @@ return {
 				ruby_lsp = {
 					root_markers = { "Gemfile.lock", "*.gemspec", "Gemfile", ".git" },
 					cmd_env = ruby_lsp_cmd_env,
+					cmd = function(dispatchers, config)
+						return vim.lsp.rpc.start(
+							{ 'ruby-lsp' },
+							dispatchers,
+							{
+								cwd = config and config.root_dir and (config.cmd_cwd or config.root_dir) or nil,
+								env = config.cmd_env,
+							}
+						)
+					end,
 					on_new_config = function(new_config, root_dir)
 						if global_gemfile and global_gemfile ~= '' then
 							new_config.cmd_env = vim.tbl_extend('force', new_config.cmd_env or {}, { BUNDLE_GEMFILE = global_gemfile })
 						end
 					end,
 					reuse_client = function(client, config)
-						return client.name == 'ruby_lsp'
+						config.cmd_cwd = config.root_dir
+						return client.name == config.name and client.config.cmd_cwd == config.cmd_cwd
 					end,
 				},
 				herb_ls = {
