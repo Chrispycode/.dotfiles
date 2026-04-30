@@ -69,8 +69,13 @@ return {
 					root_markers = { "Gemfile.lock", "*.gemspec", "Gemfile", ".git" },
 					cmd_env = ruby_lsp_cmd_env,
 					cmd = function(dispatchers, config)
+						local cmd = { 'ruby-lsp' }
+						if config and config.cmd_env and config.cmd_env.BUNDLE_GEMFILE then
+							cmd = { 'bundle', 'exec', 'ruby-lsp' }
+						end
+
 						return vim.lsp.rpc.start(
-							{ 'ruby-lsp' },
+							cmd,
 							dispatchers,
 							{
 								cwd = config and config.root_dir and (config.cmd_cwd or config.root_dir) or nil,
