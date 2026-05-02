@@ -1,5 +1,4 @@
 alias subm='smerge'
-[[ $(uname -s) != "Darwin" ]] && alias open="xdg-open"
 alias s="ssh"
 alias n="nvim"
 alias lg="lazygit"
@@ -40,6 +39,11 @@ alias syse="TEMD_COLORS=1 systemctl enable"
 if [ $(uname -s) = "Darwin" ]; then
 	bat=bat
 else
+	# change xdg-open default before
+	# xdg-mime default org.gnome.Nautilus.desktop inode/directory
+	open() { 
+		xdg-open "$@" >/dev/null 2>&1 & disown; 
+	}
 	# Debian/Ubuntu installs bat as batcat
 	if command -v batcat &>/dev/null; then
 		bat=batcat
