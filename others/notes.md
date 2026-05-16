@@ -1,6 +1,4 @@
-# fixes
-
-## invalid or corrupted database (PGP signature)
+# invalid or corrupted database (PGP signature)
 
 sudo rm -R /var/lib/pacman/sync
 
@@ -12,18 +10,16 @@ sudo modprobe -r btusb && sudo modprobe btusb && sudo systemctl restart bluetoot
 
 File: /etc/modules-load.d/modules.conf
 
+# wifi fix
+
+sudo modprobe -r mt7921e && sudo modprobe mt7921e
+
 # List of modules to load at boot
 
 i2c-dev # openrgb
 i2c-piix4 # openrgb
 btusb # bluetoth long term fix
 
-# patriot viper open rgb
-
-sudo vim /etc/default/grub
-Add to GRUB_CMDLINE_LINUX="acpi_enforce_resources=lax"
-sudo update-grub
-restart
 
 # run electron in wayland mode
 
@@ -62,3 +58,14 @@ sudo objcopy -R .sframe /usr/lib/crtn.o
 
 sudo modprobe -r mt7921e && sudo modprobe mt7921e
 
+# neovim build
+
+sudo pacman -S base-devel cmake ninja curl
+make CMAKE_BUILD_TYPE=Release && sudo make install
+
+# ghostty build
+sudo pacman -S gtk4 gtk4-layer-shell libadwaita gettext
+zig build -p $HOME/.local -Doptimize=ReleaseFast
+
+# fix sddm using US layout
+localectl set-x11-keymap de
