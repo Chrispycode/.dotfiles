@@ -32,18 +32,6 @@ return {
 				return '%2l:%-2v'
 			end
 
-			local function set_hlgroups()
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeNormal', { link = "String", bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeInsert', { link = "Type", bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeVisual', { link = "Number", bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeReplace', { link = "Error", bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineModeCommand', { link = "Special", bold = true })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineDevinfo', { link = "Normal", bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFilename', { link = "String", bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineFileinfo', { link = "Normal", bg = 'NONE' })
-				vim.api.nvim_set_hl(0, 'MiniStatuslineInactive', { link = "NonText", bg = 'NONE' })
-			end
-
 			local spinner_symbols = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
 			local spinner_index = 1
 			local processing = false
@@ -100,8 +88,6 @@ return {
 					{ hl = mode_hl,                  strings = { search, location } },
 				})
 			end
-
-			set_hlgroups()
 
 			statusline.setup({
 				content = {
