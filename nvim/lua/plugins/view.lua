@@ -3,20 +3,14 @@ return {
 		'OXY2DEV/markview.nvim',
 		lazy = false,
 		priority = 49,
-		ft = { "markdown", "codecompanion" },
+		ft = { "markdown" },
 		opts = {
 			preview = {
-				filetypes = { "markdown", "quarto", "rmd", "codecompanion" },
+				filetypes = { "markdown", "quarto", "rmd" },
 				ignore_buftypes = {},
 				hybrid_modes = { "n" },
 			}
 		}
-	},
-	{
-		'brenoprata10/nvim-highlight-colors',
-		keys = {
-			{ '<leader>lh', function() require('nvim-highlight-colors').toggle() end, desc = 'Toggle HighlightColors' }
-		},
 	},
 	{ 'mg979/vim-visual-multi' },
 }

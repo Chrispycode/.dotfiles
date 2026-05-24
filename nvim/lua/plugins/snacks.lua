@@ -6,7 +6,6 @@ local file_ignore_patterns = { 'node_modules', 'tmp', 'log', '.git', '.bundle', 
 	'*.sqlite3', '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war' }
 
 return {
-	'folke/which-key.nvim',
 	{
 		"folke/snacks.nvim",
 		version = "*",

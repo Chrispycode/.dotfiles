@@ -2,6 +2,7 @@ return {
 	{
 		'echasnovski/mini.nvim',
 		version = "*",
+		event = "VeryLazy",
 		keys = {
 			{ "<leader>o", function() require('mini.files').open(vim.api.nvim_buf_get_name(0)) end, desc = "MiniFiles" },
 		},
@@ -11,6 +12,76 @@ return {
 			require('mini.cursorword').setup()
 			require('mini.files').setup()
 			require('mini.git').setup()
+
+			-- Highlight hex colors (#fff / #ffffff / #ffffffaa) inline
+			local hipatterns = require('mini.hipatterns')
+			hipatterns.setup({
+				highlighters = {
+					hex_color = hipatterns.gen_highlighter.hex_color(),
+				},
+			})
+			vim.keymap.set('n', '<leader>lh', function()
+				require('mini.hipatterns').toggle()
+			end, { desc = 'Toggle HighlightColors' })
+
+			-- Nice icons in completion menu + kind tweaks
+			require('mini.icons').setup()
+			MiniIcons.mock_nvim_web_devicons()
+			MiniIcons.tweak_lsp_kind()
+
+			local miniclue = require('mini.clue')
+			miniclue.setup({
+				triggers = {
+					{ mode = 'n', keys = '<Leader>' },
+					{ mode = 'x', keys = '<Leader>' },
+					{ mode = 'n', keys = 'g' },
+					{ mode = 'x', keys = 'g' },
+					{ mode = 'n', keys = "'" },
+					{ mode = 'n', keys = '`' },
+					{ mode = 'x', keys = "'" },
+					{ mode = 'x', keys = '`' },
+					{ mode = 'n', keys = '"' },
+					{ mode = 'x', keys = '"' },
+					{ mode = 'i', keys = '<C-r>' },
+					{ mode = 'c', keys = '<C-r>' },
+					{ mode = 'n', keys = '<C-w>' },
+					{ mode = 'n', keys = 'z' },
+					{ mode = 'x', keys = 'z' },
+					{ mode = 'n', keys = '[' },
+					{ mode = 'n', keys = ']' },
+				},
+				clues = {
+					miniclue.gen_clues.builtin_completion(),
+					miniclue.gen_clues.g(),
+					miniclue.gen_clues.marks(),
+					miniclue.gen_clues.registers(),
+					miniclue.gen_clues.windows(),
+					miniclue.gen_clues.z(),
+					-- Custom groups
+					{ mode = 'n', keys = '<Leader>l', desc = '+LSP' },
+					{ mode = 'n', keys = '<Leader>t', desc = '+Toggle' },
+					{ mode = 'n', keys = '<Leader>f', desc = 'Format buffer' },
+					{ mode = 'n', keys = '<Leader>o', desc = 'MiniFiles' },
+				},
+				window = {
+					delay = 300,
+					config = { border = 'rounded' },
+				},
+			})
+
+			-- Native-popup completion (blink-like UX, no extra plugin)
+			require('mini.completion').setup({
+				delay = { completion = 100, info = 100, signature = 50 },
+				window = {
+					info = { height = 25, width = 80, border = 'rounded' },
+					signature = { height = 25, width = 80, border = 'rounded' },
+				},
+				lsp_completion = {
+					source_func = 'completefunc',
+					auto_setup = true,
+				},
+				fallback_action = '<C-x><C-n>',
+			})
 			-- Better Around/Inside textobjects
 			--
 			-- Examples:

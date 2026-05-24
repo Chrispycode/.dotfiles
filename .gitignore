@@ -9,6 +9,7 @@ nvim/theme-colors.lua
 nvim/spell/*.*.add.spl
 nvim/spell/*.*.spl
 nvim/spell/*.*.sug
+nvim/node_modules
 bash/fzf-tab-completion
 zsh/fzf-tab
 zsh/zsh-autosuggestions

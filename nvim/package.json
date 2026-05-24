@@ -1,0 +1,13 @@
+{
+  "name": "nvim-lsp-deps",
+  "version": "1.0.0",
+  "description": "Language servers used by the Neovim config. Run `npm ci` to install. Versions are pinned in package-lock.json. bash-language-server, @olrtg/emmet-language-server and typescript are intentionally NOT included (supply-chain risk).",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "@herb-tools/language-server": "*",
+    "pyright": "*",
+    "typescript-language-server": "*",
+    "vscode-langservers-extracted": "*"
+  }
+}
