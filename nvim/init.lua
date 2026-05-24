@@ -1,3 +1,6 @@
+-- Capture startup time for dashboard's stats section.
+_G._STARTUP_TIME = vim.uv.hrtime()
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
@@ -51,16 +54,16 @@ vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 require('vim._core.ui2').enable{}
 require('api')
 
-local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = 'https://github.com/folke/lazy.nvim.git'
-	local out = vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
-	if vim.v.shell_error ~= 0 then
-		error('Error cloning lazy.nvim:\n' .. out)
-	end
-end ---@diagnostic disable-next-line: undefined-field
+-- Plugins are managed by vim.pack (Neovim 0.12+). Each file calls
+-- vim.pack.add() and configures its plugins. Order matters: snacks before
+-- theme (priority), mini before theme (provides base16).
+require('plugins.snacks')
+require('plugins.mini')
+require('plugins.theme')
+require('plugins.treesitter')
+require('plugins.view')
+require('plugins.extra')
+require('plugins.lsp')
+require('plugins.cmp')
 
-vim.opt.rtp:prepend(lazypath)
-require('lazy').setup {
-	{ import = 'plugins' },
-}
+require('pkg')
