@@ -1,6 +1,3 @@
--- Capture startup time for dashboard's stats section.
-_G._STARTUP_TIME = vim.uv.hrtime()
-
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
@@ -52,7 +49,7 @@ vim.opt.lazyredraw = true
 vim.filetype.add { pattern = { ['.*%.api%.rsb'] = 'ruby' } }
 vim.filetype.add { pattern = { ['.*%.yml%.j2'] = 'yaml' } }
 require('vim._core.ui2').enable{}
-require('api')
+require('autocmds')
 
 -- Plugins are managed by vim.pack (Neovim 0.12+). Each file calls
 -- vim.pack.add() and configures its plugins. Order matters: snacks before

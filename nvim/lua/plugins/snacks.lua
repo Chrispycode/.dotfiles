@@ -67,20 +67,7 @@ require('snacks').setup({
 		},
 		sections = {
 			{ section = "header", padding = 1 },
-			function()
-				local plugins = #vim.pack.get()
-				local ms = math.floor((vim.uv.hrtime() - (_G._STARTUP_TIME or vim.uv.hrtime())) / 1e6)
-				return {
-					align = 'center',
-					padding = 1,
-					text = {
-						{ '⚡ ',                            hl = 'SnacksDashboardSpecial' },
-						{ tostring(plugins) .. ' plugins ', hl = 'SnacksDashboardKey' },
-						{ 'loaded in ',                     hl = 'SnacksDashboardDesc' },
-						{ tostring(ms) .. 'ms',             hl = 'SnacksDashboardKey' },
-					},
-				}
-			end,
+			{ section = "startup", padding = 1 },
 			function()
 				local version = vim.version()
 				return {
