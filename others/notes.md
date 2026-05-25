@@ -61,7 +61,7 @@ sudo modprobe -r mt7921e && sudo modprobe mt7921e
 # neovim build
 
 sudo pacman -S base-devel cmake ninja curl
-make CMAKE_BUILD_TYPE=Release && sudo make install
+sudo make CMAKE_BUILD_TYPE=Release && sudo make install
 
 # ghostty build
 sudo pacman -S gtk4 gtk4-layer-shell libadwaita gettext
