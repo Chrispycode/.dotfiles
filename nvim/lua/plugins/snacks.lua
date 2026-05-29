@@ -8,7 +8,7 @@ local file_ignore_patterns = {
 	'.idea', '.loadpath', '.powrc', '.rvmc', '.ruby-version', 'db/*.db', 'db/*.sqlite3*',
 	'vendor/cache', 'files', '_cacache', '.cache', '*.o', '*.a', '*.min.*', '*.min-*.*',
 	'*.out', '*.class', '*.pdf', '*.mkv', '*.mp4', '*.zip', 'plugins_*', 'modules_*', '*.db', '*_bu',
-	'*.venv', '*.pycache',
+	'*.venv', '*.pycache', 'dist',
 	'*.sqlite3', '*.sqlite', '*.sql', '*.pyc', '*.pyo', '*.lock', '*cache', '*.gem', '*.jar', '*.war',
 }
 
