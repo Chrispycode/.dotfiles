@@ -58,6 +58,16 @@ sudo objcopy -R .sframe /usr/lib/crtn.o
 
 sudo modprobe -r mt7921e && sudo modprobe mt7921e
 
+# switch NM backend
+
+sudo systemctl disable --now wpa_supplicant.service
+sudo systemctl mask wpa_supplicant.service
+sudo tee /etc/NetworkManager/conf.d/wifi-backend.conf >/dev/null <<'EOF'
+[device]
+wifi.backend=iwd
+EOF
+sudo systemctl restart NetworkManager
+
 # neovim build
 
 sudo pacman -S base-devel cmake ninja curl
