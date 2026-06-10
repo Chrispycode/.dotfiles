@@ -30,7 +30,7 @@
 # ln -fs $HOME/.dotfiles/zathura ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/.dotfiles/Gemfile ~/
-# ln -fs $HOME/.dotfiles/gnome/steam.css ~/repos/Adwaita-for-Steam/custom/custom.css
+# ln -fs $HOME/.dotfiles/gnome/steam.css ~/Projects/Adwaita-for-Steam/custom/custom.css
 
 # ln -fs $HOME/.dotfiles/others/settings.json ~/.config/Code/User/settings.json
 # ln -fs $HOME/.dotfiles/others/keybindings.json ~/.config/Code/User/keybindings.json

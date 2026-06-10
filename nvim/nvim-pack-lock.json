@@ -6,11 +6,11 @@
       "version": "'main'"
     },
     "markview.nvim": {
-      "rev": "a55e91f25994617a477d4a0e0b326f9dfa648f80",
+      "rev": "fbe5ec7d127ab3435ffd62740a7b27e7fabf42dc",
       "src": "https://github.com/OXY2DEV/markview.nvim"
     },
     "mini.nvim": {
-      "rev": "d5e6f5b843f1d813d9c4bfb242b751dc5ab6f8ae",
+      "rev": "ff8b3580935818ef2f21bdd651f057a2ae071eab",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-treesitter": {

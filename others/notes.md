@@ -47,12 +47,38 @@ mangohud %command%
 
 PROTON_LOG=1 %command%
 
-# ghostty not building on cachy os 
+## keyboard
+
+sudo nvim /etc/environment
+
+Add the following line (replace de with your layout code, e.g., fr, se, sv):
+
+```shell
+XKB_DEFAULT_LAYOUT=de
+```
+
+To use multiple layouts with a toggle shortcut, add:
+
+```shell
+XKB_DEFAULT_LAYOUT=de,us
+XKB_DEFAULT_OPTIONS=grp:rctrl_rshift_toggle
+```
+
+# ghostty 
+
+## not building on cachy os 
 
 sudo objcopy -R .sframe /usr/lib/crt1.o
 sudo objcopy -R .sframe /usr/lib/crti.o
 sudo objcopy -R .sframe /usr/lib/crtn.o
 
+## dead keys 
+
+add this to the service above exec in ~/.local/share/systemd/user/app-com.mitchellh.ghostty.service
+
+```shell
+Environment=GTK_IM_MODULE=simple
+```
 
 # hibernate wifi bug
 
