@@ -1,16 +1,12 @@
 {
   "plugins": {
     "amp.nvim": {
-      "rev": "3b9ad5ef0328de1b35cc9bfa723a37db5daf9434",
+      "rev": "b851d97d8e8782e58343608d8de7d9eb3a88090f",
       "src": "https://github.com/sourcegraph/amp.nvim",
       "version": "'main'"
     },
-    "markview.nvim": {
-      "rev": "fbe5ec7d127ab3435ffd62740a7b27e7fabf42dc",
-      "src": "https://github.com/OXY2DEV/markview.nvim"
-    },
     "mini.nvim": {
-      "rev": "ff8b3580935818ef2f21bdd651f057a2ae071eab",
+      "rev": "a59a9b7fb0a42cbcf022938ee5f0724320b66f63",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-treesitter": {
