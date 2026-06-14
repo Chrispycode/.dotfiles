@@ -57,6 +57,7 @@ require('autocmds')
 -- theme (priority), mini before theme (provides base16).
 require('plugins.snacks')
 require('plugins.mini')
+require('plugins.theme')
 require('plugins.treesitter')
 require('plugins.view')
 require('plugins.extra')

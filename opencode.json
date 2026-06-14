@@ -11,6 +11,12 @@
       "models": {
         "qwen2.5-coder": {
           "name": "qwen2.5-coder"
+        },
+        "gemma4": {
+          "name": "gemma4"
+        },
+        "qwen3.6": {
+          "name": "qwen3.6"
         }
       }
     }
