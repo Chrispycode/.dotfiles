@@ -35,7 +35,7 @@ require('mini.base16').setup({ palette = gui, use_cterm = cterm })
 -- Keep the editor area transparent so the terminal background shows through,
 -- while leaving mini.base16's statusline colors intact.
 for _, group in ipairs({
-	"Normal", "NormalFloat", "SignColumn", "LineNr", "LineNrAbove",
+	"Normal", "NormalNC", "NormalFloat", "SignColumn", "LineNr", "LineNrAbove",
 	"LineNrBelow", "CursorLineNr", "FoldColumn", "NonText", "Whitespace",
 }) do
 	local hl = vim.api.nvim_get_hl(0, { name = group })
