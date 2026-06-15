@@ -52,12 +52,8 @@ vim.filetype.add { pattern = { ['.*%.css%.template'] = 'css' } }
 require('vim._core.ui2').enable{}
 require('autocmds')
 
--- Plugins are managed by vim.pack (Neovim 0.12+). Each file calls
--- vim.pack.add() and configures its plugins. Order matters: snacks before
--- theme (priority), mini before theme (provides base16).
 require('plugins.snacks')
 require('plugins.mini')
-require('plugins.theme')
 require('plugins.treesitter')
 require('plugins.view')
 require('plugins.extra')
