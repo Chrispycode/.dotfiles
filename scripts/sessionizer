@@ -1,0 +1,263 @@
+#!/usr/bin/env bash
+
+[[ ! -f $HOME/.dotfiles/sh/sessionizer-additions.sh ]] || source $HOME/.dotfiles/sh/sessionizer-additions.sh
+
+project_name() {
+  basename "$1" | tr . _
+}
+
+folders() {
+  local find_paths="$TMUX_PATHS"
+  local find_depth_paths="$HOME/Projects $TMUX_FIND_PATHS"
+  printf 'snippets\n%s/.dotfiles\n%b\n' "$HOME" "$find_paths"
+  find $find_depth_paths -mindepth 1 -maxdepth 1 \( -type d -o -type l \) 2>/dev/null
+}
+
+nvim_projects() {
+  local dir
+  folders | while IFS= read -r dir; do
+    if [[ $dir == "snippets" ]]; then
+      printf 'snippets\tsnippets\t%s\t%s\n' "$(snippets_dir)" "$(snippets_file)"
+    else
+      printf '%s\t%s\t%s\t\n' "$dir" "$(project_name "$dir")" "$dir"
+    fi
+  done
+}
+
+select_project() {
+  local preview="$1"
+  folders | fzf --preview="$preview"
+}
+
+snippets_dir() {
+  printf '%s/Documents' "$HOME"
+}
+
+snippets_file() {
+  printf 'snippets.md'
+}
+
+nvim_server_socket() {
+  local name="${1:-main}"
+  local runtime_dir="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}"
+  [[ -d "$runtime_dir" ]] || runtime_dir="/tmp"
+  printf '%s/nvim-%s-%s.pipe' "$runtime_dir" "$USER" "$name"
+}
+
+nvim_last_server_file() {
+  local state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/nvim"
+  mkdir -p "$state_dir"
+  printf '%s/last-server' "$state_dir"
+}
+
+nvim_previous_server_file() {
+  local state_dir="${XDG_STATE_HOME:-$HOME/.local/state}/nvim"
+  mkdir -p "$state_dir"
+  printf '%s/previous-server' "$state_dir"
+}
+
+nvim_record_last_server() {
+  local last_server_file
+  last_server_file="$(nvim_last_server_file)"
+  if [[ -r "$last_server_file" ]]; then
+    local previous_socket
+    previous_socket="$(cat "$last_server_file")"
+    if [[ -n "$previous_socket" && "$previous_socket" != "$1" ]]; then
+      printf '%s\n' "$previous_socket" >"$(nvim_previous_server_file)"
+    fi
+  fi
+  printf '%s\n' "$1" >"$last_server_file"
+}
+
+nvim_live_servers() {
+  local runtime_dir="${XDG_RUNTIME_DIR:-}"
+  local uid_runtime_dir="/run/user/$(id -u)"
+  local socket name dir
+  for dir in "$runtime_dir" "$uid_runtime_dir" /tmp; do
+    [[ -n "$dir" && -d "$dir" ]] || continue
+    find "$dir" -maxdepth 1 -name 'nvim-*.pipe' \( -type s -o -type p \) 2>/dev/null
+  done | while IFS= read -r socket; do
+    [[ -S "$socket" || -p "$socket" ]] || continue
+    command nvim --server "$socket" --remote-expr '1' >/dev/null 2>&1 || continue
+    name="${socket##*/}"
+    name="${name#nvim-}"
+    name="${name%.pipe}"
+    printf '%s\t%s\n' "$name" "$socket"
+  done
+}
+
+nvim_sockets() {
+  local runtime_dir="${XDG_RUNTIME_DIR:-}"
+  local uid_runtime_dir="/run/user/$(id -u)"
+  local socket dir
+  for dir in "$runtime_dir" "$uid_runtime_dir" /tmp; do
+    [[ -n "$dir" && -d "$dir" ]] || continue
+    find "$dir" -maxdepth 1 -name 'nvim-*.pipe' \( -type s -o -type p \) 2>/dev/null
+  done | sort -u
+}
+
+nvim_attach_socket() {
+  local socket="$1"
+  nvim_record_last_server "$socket"
+  command nvim --server "$socket" --remote-ui || { sleep 0.1; command nvim --server "$socket" --remote-ui; }
+}
+
+nvim_attach_or_start() {
+  local name="$1"
+  shift
+
+  local socket
+  socket="$(nvim_server_socket "$name")"
+
+  if ! command nvim --server "$socket" --remote-expr '1' >/dev/null 2>&1; then
+    command nvim --headless --listen "$socket" "$@" >/tmp/nvim-$USER-$name.log 2>&1 &
+    disown
+    while [[ ! -S "$socket" && ! -p "$socket" ]]; do
+      sleep 0.05
+    done
+  fi
+
+  nvim_attach_socket "$socket"
+}
+
+cmd_nvim() {
+  local selected selected_name
+
+  if [[ ${1:-} == "snippets" ]]; then
+    cd "$(snippets_dir)" && nvim_attach_or_start snippets "$(snippets_file)"
+    return
+  fi
+
+  if [[ $# -eq 1 ]]; then
+    selected=$1
+  else
+    selected="$(select_project "[[ -d {} ]] && eza -hla --color=always --icons --git-repos {}")"
+  fi
+
+  [[ -n $selected ]] || return
+
+  if [[ $selected == "snippets" ]]; then
+    cd "$(snippets_dir)" && nvim_attach_or_start snippets "$(snippets_file)"
+    return
+  fi
+
+  selected_name="$(project_name "$selected")"
+  cd "$selected" && nvim_attach_or_start "$selected_name"
+}
+
+cmd_nvim_attach() {
+  nvim_attach_or_start "${1:-main}"
+}
+
+cmd_nvim_last() {
+  local last_server_file socket
+  last_server_file="$(nvim_last_server_file)"
+  socket=""
+
+  if [[ -r "$last_server_file" ]]; then
+    socket="$(cat "$last_server_file")"
+    if ! command nvim --server "$socket" --remote-expr '1' >/dev/null 2>&1; then
+      socket=""
+    fi
+  fi
+
+  if [[ -z "$socket" ]]; then
+    local selected servers
+    servers="$(nvim_live_servers | sort -u)"
+
+    if [[ -z "$servers" ]]; then
+      echo "No live Nvim servers found" >&2
+      return 1
+    fi
+
+    if [[ "$(printf '%s\n' "$servers" | wc -l)" -eq 1 ]]; then
+      selected="$servers"
+    elif command -v fzf >/dev/null 2>&1; then
+      selected="$(printf '%s\n' "$servers" | fzf --with-nth=1 --delimiter=$'\t' --preview='echo {2}' || true)"
+    else
+      selected="$(printf '%s\n' "$servers" | head -n 1)"
+    fi
+
+    if [[ -z "$selected" ]]; then
+      echo "No Nvim server selected" >&2
+      return 1
+    fi
+
+    socket="${selected#*$'\t'}"
+  fi
+
+  if ! command nvim --server "$socket" --remote-expr '1' >/dev/null 2>&1; then
+    echo "Nvim server is not running: $socket" >&2
+    return 1
+  fi
+
+  nvim_attach_socket "$socket"
+}
+
+tmux_attach_or_start() {
+  local selected="$1"
+  local selected_name="$2"
+  shift 2
+
+  local tmux_running
+  tmux_running=$(pgrep tmux)
+
+  if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+    tmux new-session -s "$selected_name" -c "$selected" "$@"
+    exit 0
+  fi
+
+  if ! tmux has-session -t="$selected_name" 2> /dev/null; then
+    tmux new-session -ds "$selected_name" -c "$selected" "$@"
+  fi
+
+  if [[ -z $TMUX ]]; then
+    tmux attach-session -t "$selected_name"
+  else
+    tmux switch-client -t "$selected_name"
+  fi
+}
+
+cmd_tmux() {
+  local selected selected_name
+
+  if [[ ${1:-} == "snippets" ]]; then
+    tmux_attach_or_start "$(snippets_dir)" snippets "nvim $(snippets_file)"
+    return
+  fi
+
+  if [[ $# -eq 1 ]]; then
+    selected=$1
+  else
+    selected="$(select_project "[[ -d {} ]] && (tmux ls | grep \$(basename {}); eza -hla --color=always --icons --git-repos {})")"
+  fi
+
+  [[ -n $selected ]] || return
+
+  if [[ $selected == "snippets" ]]; then
+    tmux_attach_or_start "$(snippets_dir)" snippets "nvim $(snippets_file)"
+    return
+  fi
+
+  selected_name="$(project_name "$selected")"
+  tmux_attach_or_start "$selected" "$selected_name"
+}
+
+case "${1:-}" in
+  tmux) shift; cmd_tmux "$@" ;;
+  nvim) shift; cmd_nvim "$@" ;;
+  nvim-attach) shift; cmd_nvim_attach "$@" ;;
+  nvim-last) shift; cmd_nvim_last "$@" ;;
+  nvim-live) shift; nvim_live_servers "$@" ;;
+  nvim-sockets) shift; nvim_sockets "$@" ;;
+  nvim-socket) shift; nvim_server_socket "$@" ;;
+  folders) shift; folders "$@" ;;
+  nvim-projects) shift; nvim_projects "$@" ;;
+  project-name) shift; project_name "$@" ;;
+  snippets-dir) shift; snippets_dir "$@" ;;
+  snippets-file) shift; snippets_file "$@" ;;
+  *)
+    echo "Usage: sessionizer {tmux|nvim|nvim-attach|nvim-last|nvim-live|nvim-sockets|nvim-socket|folders|nvim-projects|project-name|snippets-dir|snippets-file} [args...]" >&2
+    exit 2
+    ;;
+esac

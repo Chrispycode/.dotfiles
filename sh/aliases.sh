@@ -4,27 +4,34 @@ alias n="nvim"
 alias lg="lazygit"
 alias icat="kitty +kitten icat"
 alias ta="tmux attach"
-alias dco="docker compose"
-alias dcup="docker compose up"
-alias dcr="docker compose run --rm"
-alias dck="docker compose kill"
+docker_compose() {
+	if [ -n "$GLOBAL_DOCKER_COMPOSE_FILE" ]; then
+		docker compose -f "$GLOBAL_DOCKER_COMPOSE_FILE" "$@"
+	else
+		docker compose "$@"
+	fi
+}
+alias dco="docker_compose"
+alias dcup="docker_compose up"
+alias dcr="docker_compose run --rm"
+alias dck="docker_compose kill"
 dua() {
-  docker compose up -d "$@" && docker attach "$@"
+  docker_compose up -d "$@" && docker attach "$@"
 }
 dup() {
-  docker compose up -d "$(basename "$PWD")"
+  docker_compose up -d "$(basename "$PWD")"
 }
 dupf() {
-  docker compose up -d --force-recreate "$(basename "$PWD")"
+  docker_compose up -d --force-recreate "$(basename "$PWD")"
 }
 dupa() {
-  docker compose up -d "$(basename "$PWD")" && docker attach "$(basename "$PWD")"
+  docker_compose up -d "$(basename "$PWD")" && docker attach "$(basename "$PWD")"
 }
 ds() {
-	docker compose run --rm "$(basename "$PWD")"
+	docker_compose run --rm "$(basename "$PWD")"
 }
 dsb() {
-	docker compose run --rm "$(basename "$PWD")" bash
+	docker_compose run --rm "$(basename "$PWD")" bash
 }
 alias dev_start="sudo systemctl start ollama.service" #" docker.service docker.socket"
 alias dev_stop="sudo systemctl stop ollama.service" #" docker.service docker.socket containerd.service"
@@ -35,6 +42,9 @@ alias sys="TEMD_COLORS=1 systemctl"
 alias syss="TEMD_COLORS=1 systemctl status"
 alias sysd="TEMD_COLORS=1 systemctl disable"
 alias syse="TEMD_COLORS=1 systemctl enable"
+
+nva() { sessionizer nvim-attach "${1:-main}"; }
+na() { sessionizer nvim-last; }
 
 if [ $(uname -s) = "Darwin" ]; then
 	bat=bat

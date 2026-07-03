@@ -11,5 +11,6 @@ export HISTCONTROL=erasedups:ignoredups:ignorespace
 [[ -f ~/.dotfiles/bash/completion.bash ]] && source ~/.dotfiles/bash/completion.bash
 source ~/.dotfiles/sh/default.sh
 
-bind -x '"\C-f":tmux-sessionizer'
+bind -x '"\C-f":sessionizer tmux'
+bind -x '"\C-n":sessionizer nvim'
 bind -x '"\ef":fzfp'

@@ -170,6 +170,10 @@ vim.api.nvim_create_autocmd('UIEnter', {
 	callback = function()
 		vim.schedule(function()
 			require('mini.diff').setup()
+			require('mini.sessions').setup({
+				autoread = false,
+				autowrite = true,
+			})
 			require('mini.pairs').setup()
 			require('mini.cursorword').setup()
 			require('mini.git').setup()

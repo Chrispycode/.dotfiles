@@ -21,6 +21,7 @@ source ~/.dotfiles/sh/aliases.sh
 [ -f ~/.dotfiles/sh/overrides.sh ] && source ~/.dotfiles/sh/overrides.sh
 
 export GLOBAL_GEMFILE=${GLOBAL_GEMFILE:=~/Gemfile}
+export GLOBAL_DOCKER_COMPOSE_FILE=${GLOBAL_DOCKER_COMPOSE_FILE:=}
 
 if [ -n "$ZSH_VERSION" ]; then
   shell_name="zsh"

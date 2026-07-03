@@ -58,5 +58,6 @@ fi
 bindkey -M viins "^[[3~" delete-char
 bindkey -M viins "^[3;5~" delete-char
 # utilities
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^f "sessionizer tmux\n"
+bindkey -s ^n "sessionizer nvim\n"
 bindkey -s "^[f" "fzfp\n"
