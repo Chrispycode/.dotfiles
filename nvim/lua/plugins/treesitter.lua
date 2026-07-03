@@ -1,6 +1,5 @@
--- nvim-treesitter + treesitter-context
--- nvim-treesitter master branch keeps the classic configs API; the default
--- (main) branch is the new v1.0 API which doesn't have configs.setup.
+-- nvim-treesitter is only used as a parser installer. Highlighting and folds
+-- are handled by Neovim's native Tree-sitter APIs.
 vim.pack.add({
 	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter', version = 'master' },
 	{ src = 'https://github.com/nvim-treesitter/nvim-treesitter-context' },
@@ -15,11 +14,13 @@ require('nvim-treesitter.configs').setup({
 	},
 	endwise = { enable = true },
 	auto_install = true,
-	highlight = {
-		enable = true,
-		additional_vim_regex_highlighting = { 'ruby' },
-	},
-	indent = { enable = true, disable = { 'ruby' } },
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+	group = vim.api.nvim_create_augroup('user-treesitter-start', { clear = true }),
+	callback = function(args)
+		pcall(vim.treesitter.start, args.buf)
+	end,
 })
 
 -- Defer treesitter-context (only matters once you're scrolling code)
