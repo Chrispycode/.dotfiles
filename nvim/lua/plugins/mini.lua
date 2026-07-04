@@ -44,6 +44,13 @@ for _, group in ipairs({
 	vim.api.nvim_set_hl(0, group, hl)
 end
 
+-- Keep selected text readable with the 16-color terminal palette. Snacks picker
+-- maps its focused item to CursorLine/Visual, which can otherwise become a
+-- light bar with light text depending on the terminal ANSI colors.
+vim.api.nvim_set_hl(0, 'Visual', { fg = gui.base07, bg = gui.base0D, ctermfg = cterm.base07, ctermbg = cterm.base0D })
+vim.api.nvim_set_hl(0, 'PmenuSel', { fg = gui.base07, bg = gui.base0D, ctermfg = cterm.base07, ctermbg = cterm.base0D })
+vim.api.nvim_set_hl(0, 'SnacksPickerListCursorLine', { fg = gui.base07, bg = gui.base0D, ctermfg = cterm.base07, ctermbg = cterm.base0D })
+
 -- Icons (consumed by completion, snacks, statusline)
 require('mini.icons').setup()
 MiniIcons.mock_nvim_web_devicons()
