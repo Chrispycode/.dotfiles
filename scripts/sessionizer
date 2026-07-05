@@ -149,6 +149,14 @@ cmd_nvim_attach() {
   nvim_attach_or_start "${1:-main}"
 }
 
+cmd_nvim_new() {
+  local selected selected_name
+  selected="$PWD"
+  selected_name="$(project_name "$selected")"
+
+  nvim_attach_or_start "$selected_name" "$@"
+}
+
 cmd_nvim_last() {
   local last_server_file socket
   last_server_file="$(nvim_last_server_file)"
@@ -248,6 +256,7 @@ case "${1:-}" in
   nvim) shift; cmd_nvim "$@" ;;
   nvim-attach) shift; cmd_nvim_attach "$@" ;;
   nvim-last) shift; cmd_nvim_last "$@" ;;
+  nvim-new) shift; cmd_nvim_new "$@" ;;
   nvim-live) shift; nvim_live_servers "$@" ;;
   nvim-sockets) shift; nvim_sockets "$@" ;;
   nvim-socket) shift; nvim_server_socket "$@" ;;
@@ -257,7 +266,7 @@ case "${1:-}" in
   snippets-dir) shift; snippets_dir "$@" ;;
   snippets-file) shift; snippets_file "$@" ;;
   *)
-    echo "Usage: sessionizer {tmux|nvim|nvim-attach|nvim-last|nvim-live|nvim-sockets|nvim-socket|folders|nvim-projects|project-name|snippets-dir|snippets-file} [args...]" >&2
+    echo "Usage: sessionizer {tmux|nvim|nvim-attach|nvim-last|nvim-new|nvim-live|nvim-sockets|nvim-socket|folders|nvim-projects|project-name|snippets-dir|snippets-file} [args...]" >&2
     exit 2
     ;;
 esac

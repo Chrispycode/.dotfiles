@@ -45,6 +45,7 @@ alias syse="TEMD_COLORS=1 systemctl enable"
 
 nva() { sessionizer nvim-attach "${1:-main}"; }
 na() { sessionizer nvim-last; }
+ns() { sessionizer nvim-new; }
 
 if [ $(uname -s) = "Darwin" ]; then
 	bat=bat
