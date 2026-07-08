@@ -66,7 +66,7 @@ local function apply_base16_palette(next_gui)
 	vim.api.nvim_set_hl(0, 'Visual', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
 	vim.api.nvim_set_hl(0, 'PmenuSel', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
 	vim.api.nvim_set_hl(0, 'SnacksPickerListCursorLine', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
-	vim.cmd('redraw!')
+	if vim.v.vim_did_enter == 1 then vim.cmd('redraw!') end
 end
 
 local terminal_palette = {}
