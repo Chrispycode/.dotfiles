@@ -8,10 +8,11 @@ vim.pack.add({
 -- EAGER: required before first render, statusline, or keypress
 -- ============================================================================
 
-vim.o.termguicolors = false
+vim.o.termguicolors = true
 
 -- Same base-slot -> ANSI-color mapping the generator template encodes,
--- expressed as cterm indices (0-15) instead of hex.
+-- expressed as cterm indices (0-15) instead of hex. For truecolor, the same
+-- mapping is filled dynamically from the terminal's ANSI RGB palette via OSC 4.
 local cterm = {
 	base00 = 0, base01 = 0, base02 = 8, base03 = 8,
 	base04 = 7, base05 = 7, base06 = 15, base07 = 15,
@@ -19,37 +20,118 @@ local cterm = {
 	base0C = 6, base0D = 4, base0E = 5, base0F = 13,
 }
 
--- A gui palette is mandatory but unused while 'termguicolors' is off; use a
--- standard base16 scheme so nothing breaks if truecolor is toggled on.
-local gui = {
+local base16_slot_order = {
+	'base00', 'base01', 'base02', 'base03', 'base04', 'base05', 'base06', 'base07',
+	'base08', 'base09', 'base0A', 'base0B', 'base0C', 'base0D', 'base0E', 'base0F',
+}
+local terminal_base16_slots = cterm
+
+-- Fallback until the terminal answers, or for terminals which don't support
+-- OSC 4 palette queries.
+local fallback_gui = {
 	base00 = "#181818", base01 = "#282828", base02 = "#383838", base03 = "#585858",
 	base04 = "#b8b8b8", base05 = "#d8d8d8", base06 = "#e8e8e8", base07 = "#f8f8f8",
 	base08 = "#ab4642", base09 = "#dc9656", base0A = "#f7ca88", base0B = "#a1b56c",
 	base0C = "#86c1b9", base0D = "#7cafc2", base0E = "#ba8baf", base0F = "#a16946",
 }
 
--- mini.base16 styles everything (incl. StatusLine and all MiniStatusline*
--- groups) straight from the palette, so no manual highlight wiring is needed.
-require('mini.base16').setup({ palette = gui, use_cterm = cterm })
+local gui = vim.deepcopy(fallback_gui)
 
--- Keep the editor area transparent so the terminal background shows through,
--- while leaving mini.base16's statusline colors intact.
-for _, group in ipairs({
-	"Normal", "NormalNC", "NormalFloat", "SignColumn", "LineNr", "LineNrAbove",
-	"LineNrBelow", "CursorLineNr", "FoldColumn", "NonText", "Whitespace",
-}) do
-	local hl = vim.api.nvim_get_hl(0, { name = group })
-	hl.bg = nil
-	hl.ctermbg = nil
-	vim.api.nvim_set_hl(0, group, hl)
+local function osc_component_to_hex(component)
+	-- OSC 4 commonly returns 16-bit components; keep the high byte to get
+	-- regular #RRGGBB colors. If a terminal returns 8-bit components, use them.
+	if #component > 2 then component = component:sub(1, 2) end
+	return component:lower()
 end
 
--- Keep selected text readable with the 16-color terminal palette. Snacks picker
--- maps its focused item to CursorLine/Visual, which can otherwise become a
--- light bar with light text depending on the terminal ANSI colors.
-vim.api.nvim_set_hl(0, 'Visual', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
-vim.api.nvim_set_hl(0, 'PmenuSel', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
-vim.api.nvim_set_hl(0, 'SnacksPickerListCursorLine', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
+local function apply_base16_palette(next_gui)
+	gui = next_gui
+	require('mini.base16').setup({ palette = gui, use_cterm = cterm })
+
+	-- Keep the editor area transparent so the terminal background shows through,
+	-- while leaving mini.base16's statusline colors intact.
+	for _, group in ipairs({
+		"Normal", "NormalNC", "NormalFloat", "SignColumn", "LineNr", "LineNrAbove",
+		"LineNrBelow", "CursorLineNr", "FoldColumn", "NonText", "Whitespace",
+	}) do
+		local hl = vim.api.nvim_get_hl(0, { name = group })
+		hl.bg = nil
+		hl.ctermbg = nil
+		vim.api.nvim_set_hl(0, group, hl)
+	end
+
+	-- Keep selected text readable with the 16-color terminal palette. Snacks picker
+	-- maps its focused item to CursorLine/Visual, which can otherwise become a
+	-- light bar with light text depending on the terminal ANSI colors.
+	vim.api.nvim_set_hl(0, 'Visual', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
+	vim.api.nvim_set_hl(0, 'PmenuSel', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
+	vim.api.nvim_set_hl(0, 'SnacksPickerListCursorLine', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
+	vim.cmd('redraw!')
+end
+
+local terminal_palette = {}
+local last_terminal_palette_key
+
+local function terminal_palette_to_base16()
+	local next_gui = {}
+	for slot, ansi in pairs(terminal_base16_slots) do
+		local color = terminal_palette[ansi]
+		if color == nil then return nil end
+		next_gui[slot] = color
+	end
+	return next_gui
+end
+
+local function reload_terminal_theme()
+	terminal_palette = {}
+	for ansi = 0, 15 do
+		vim.api.nvim_ui_send(('\027]4;%d;?\027\\'):format(ansi))
+	end
+end
+
+vim.api.nvim_create_autocmd('TermResponse', {
+	group = vim.api.nvim_create_augroup('user-terminal-theme', { clear = true }),
+	callback = function(ev)
+		local ansi, r, g, b = ev.data.sequence:match('\027%]4;(%d+);rgb:(%x+)/(%x+)/(%x+)')
+		if ansi == nil then return end
+
+		terminal_palette[tonumber(ansi)] = ('#%s%s%s'):format(
+			osc_component_to_hex(r),
+			osc_component_to_hex(g),
+			osc_component_to_hex(b)
+		)
+
+		local next_gui = terminal_palette_to_base16()
+		if next_gui == nil then return end
+
+		local key = table.concat(vim.tbl_map(function(slot)
+			return next_gui[slot]
+		end, base16_slot_order), '|')
+		if key == last_terminal_palette_key then return end
+
+		last_terminal_palette_key = key
+		apply_base16_palette(next_gui)
+	end,
+})
+
+vim.api.nvim_create_user_command('ReloadTerminalTheme', reload_terminal_theme, {})
+
+-- Polling is deliberate: terminal emulators usually don't notify applications
+-- when their theme changes. OSC queries work the same locally, over SSH, and
+-- inside tmux as long as the terminal/multiplexer forwards OSC 4 responses.
+local terminal_theme_timer = vim.uv.new_timer()
+terminal_theme_timer:start(250, 5000, vim.schedule_wrap(reload_terminal_theme))
+vim.api.nvim_create_autocmd('VimLeavePre', {
+	group = vim.api.nvim_create_augroup('user-terminal-theme-cleanup', { clear = true }),
+	callback = function()
+		terminal_theme_timer:stop()
+		terminal_theme_timer:close()
+	end,
+})
+
+-- mini.base16 styles everything (incl. StatusLine and all MiniStatusline*
+-- groups) straight from the palette, so no manual highlight wiring is needed.
+apply_base16_palette(gui)
 
 -- Icons (consumed by completion, snacks, statusline)
 require('mini.icons').setup()
