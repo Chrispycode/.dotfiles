@@ -46,6 +46,10 @@ alias syse="TEMD_COLORS=1 systemctl enable"
 nva() { sessionizer nvim-attach "${1:-main}"; }
 na() { sessionizer nvim-last; }
 ns() { sessionizer nvim-new; }
+edit-desktop() {
+	find /usr/share/applications /usr/local/share/applications/ ~/.local/share/applications -name "*.desktop" 2>/dev/null | \
+  fzfp --bind "enter:become(nvim {})"
+}
 
 if [ $(uname -s) = "Darwin" ]; then
 	bat=bat

@@ -1,12 +1,7 @@
 {
   "plugins": {
-    "amp.nvim": {
-      "rev": "b851d97d8e8782e58343608d8de7d9eb3a88090f",
-      "src": "https://github.com/sourcegraph/amp.nvim",
-      "version": "'main'"
-    },
     "mini.nvim": {
-      "rev": "bcb4b2688b38f5c48ada025abe130d41840e11d5",
+      "rev": "8cef23520832134c05e4524e49f0468623501053",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-treesitter": {
