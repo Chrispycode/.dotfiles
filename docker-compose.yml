@@ -12,7 +12,21 @@ services:
       WEBUI_SECRET_KEY: "test"
     extra_hosts:
       - host.docker.internal:host-gateway
-    restart: unless-stopped
+
+  llama-cpp:
+    image: ghcr.io/ggml-org/llama.cpp:server-rocm
+    container_name: llama-cpp
+    command: --host 0.0.0.0 --port 8080 --n-gpu-layers 99 --models-max 1 --models-preset /models.ini
+    devices:
+      - /dev/kfd:/dev/kfd
+      - /dev/dri:/dev/dri
+    security_opt:
+      - seccomp=unconfined
+    volumes:
+      - ./llama-models.ini:/models.ini:ro
+      - llama-cpp-cache:/root/.cache
+    ports:
+      - "8080:8080"
 
   # adguard:
   #   container_name: adguardhome
@@ -163,5 +177,5 @@ volumes:
   # rabbit_logs:
   # mongodb_data:
   mariadb:
+  llama-cpp-cache:
   open-webui:
-
