@@ -64,22 +64,6 @@ XKB_DEFAULT_LAYOUT=de,us
 XKB_DEFAULT_OPTIONS=grp:rctrl_rshift_toggle
 ```
 
-# ghostty 
-
-## not building on cachy os 
-
-sudo objcopy -R .sframe /usr/lib/crt1.o
-sudo objcopy -R .sframe /usr/lib/crti.o
-sudo objcopy -R .sframe /usr/lib/crtn.o
-
-## dead keys 
-
-add this to the service above exec in ~/.local/share/systemd/user/app-com.mitchellh.ghostty.service
-
-```shell
-Environment=GTK_IM_MODULE=simple
-```
-
 # hibernate wifi bug
 
 sudo modprobe -r mt7921e && sudo modprobe mt7921e
@@ -99,9 +83,30 @@ sudo systemctl restart NetworkManager
 sudo pacman -S base-devel cmake ninja curl
 sudo make CMAKE_BUILD_TYPE=Release && sudo make install
 
-# ghostty build
+# ghostty 
+
+## build
+
 sudo pacman -S gtk4 gtk4-layer-shell libadwaita gettext
 zig build -p $HOME/.local -Doptimize=ReleaseFast
+
+## not building on cachy os 
+
+sudo objcopy -R .sframe /usr/lib/crt1.o
+sudo objcopy -R .sframe /usr/lib/crti.o
+sudo objcopy -R .sframe /usr/lib/crtn.o
+
+## dead keys 
+
+add this to the service above exec in ~/.local/share/systemd/user/app-com.mitchellh.ghostty.service
+
+```shell
+Environment=GTK_IM_MODULE=simple
+```
+
+# nautilus neovim ghostty fix
+
+sudo sed -i -E 's|^Exec=.*nvim %F$|Exec=ghostty +new-window -e nvim %F|; s|^Terminal=.*$|Terminal=false|' /usr/local/share/applications/nvim.desktop && sudo update-desktop-database /usr/local/share/applications
 
 # fix sddm using US layout
 localectl set-x11-keymap de
