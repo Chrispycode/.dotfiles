@@ -28,6 +28,7 @@
 # mkdir ~/.config/btop
 # ln -fs "$HOME/.dotfiles/btop.conf" "$HOME/.config/btop/btop.conf"
 # ln -fs $HOME/.dotfiles/zathura ~/.config
+# ln -fs $HOME/.dotfiles/yazi ~/.config
 # ln -fs $HOME/.dotfiles/fastfetch ~/.config/
 # ln -fs $HOME/.dotfiles/Gemfile ~/
 # ln -fs $HOME/.dotfiles/gnome/steam.css ~/Projects/Adwaita-for-Steam/custom/custom.css

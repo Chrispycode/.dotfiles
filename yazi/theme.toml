@@ -1,0 +1,6 @@
+[indicator]
+padding = { open = "▐", close = "▌" }
+
+[status]
+sep_right = { open = "▐", close = "▌" }
+sep_left = { open = "▐", close = "▌" }
