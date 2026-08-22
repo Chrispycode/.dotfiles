@@ -1,43 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "model": "{env:OP_MODEL}",
-  "provider": {
-    "ollama": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "Ollama (local)",
-      "options": {
-        "baseURL": "http://localhost:11434/v1"
-      },
-      "models": {
-        "qwen2.5-coder": {
-          "name": "qwen2.5-coder"
-        },
-        "gemma4": {
-          "name": "gemma4"
-        },
-        "qwen3.6": {
-          "name": "qwen3.6"
-        }
-      }
-    }
-  },
-  "mcp": {
-    "playwright": {
-      "type": "local",
-			"enabled": false,
-      "command": [
-        "docker",
-        "run",
-        "-i",
-        "--rm",
-        "--init",
-        "--pull=always",
-        "--network={env:DOCKER_NETWORK}",
-        "-v", "playwright-output:/tmp/playwright-output",
-        "mcr.microsoft.com/playwright/mcp"
-      ]
-    }
-  },
 	"lsp": {
 		"ruby-lsp": {
 			"command": ["ruby-lsp"],
