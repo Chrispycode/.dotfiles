@@ -16,3 +16,4 @@ zsh/zsh-autosuggestions
 zsh/zsh-syntax-highlighting
 walker/themes/default*.*
 llama-models.ini
+docker-compose.yml
