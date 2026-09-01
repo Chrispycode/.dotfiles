@@ -64,6 +64,7 @@ local function apply_base16_palette(next_gui)
 	-- maps its focused item to CursorLine/Visual, which can otherwise become a
 	-- light bar with light text depending on the terminal ANSI colors.
 	vim.api.nvim_set_hl(0, 'Visual', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
+	vim.api.nvim_set_hl(0, 'MCursor', { reverse = true, bold = true })
 	vim.api.nvim_set_hl(0, 'PmenuSel', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
 	vim.api.nvim_set_hl(0, 'SnacksPickerListCursorLine', { fg = gui.base00, bg = gui.base0D, ctermfg = cterm.base00, ctermbg = cterm.base0D })
 	if vim.v.vim_did_enter == 1 then vim.cmd('redraw!') end
