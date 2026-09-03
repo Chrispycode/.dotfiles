@@ -17,7 +17,6 @@ vim.api.nvim_create_autocmd('FileType', {
 			preview = {
 				filetypes = { 'markdown', 'quarto', 'rmd' },
 				ignore_buftypes = {},
-				hybrid_modes = { 'n' },
 			},
 		})
 	end,
