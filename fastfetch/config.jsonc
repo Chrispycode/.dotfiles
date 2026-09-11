@@ -65,6 +65,10 @@
       "keyColor": "green",
     },
     {
+      "type": "bios",
+      "keyColor": "green",
+    },
+    {
       "type": "cpu",
       "key": "│ ├󰻠",
       "keyColor": "green",
