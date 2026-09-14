@@ -226,6 +226,60 @@ tmux_attach_or_start() {
   fi
 }
 
+herdr_attach_or_start() {
+  local selected="$1"
+  local selected_name="$2"
+  shift 2
+
+  local workspace_json workspace_id pane_json created pane_id
+  selected="$(cd "$selected" && pwd -P)" || return 1
+
+  if ! command -v jq >/dev/null 2>&1; then
+    echo "sessionizer herdr requires jq" >&2
+    return 1
+  fi
+
+  if ! workspace_json="$(herdr workspace list 2>/dev/null)"; then
+    if [[ ${HERDR_ENV:-} == 1 ]]; then
+      echo "Unable to reach the Herdr server from this pane" >&2
+      return 1
+    fi
+
+    cd "$selected" && exec herdr
+  fi
+
+  workspace_id="$(jq -r --arg cwd "$selected" '
+    .result.workspaces[]
+    | select(.worktree?.checkout_path == $cwd)
+    | .workspace_id
+  ' <<<"$workspace_json" | head -n 1)"
+
+  if [[ -z $workspace_id ]]; then
+    local candidate_id
+    while IFS= read -r candidate_id; do
+      pane_json="$(herdr pane list --workspace "$candidate_id")" || return 1
+      if jq -e --arg cwd "$selected" '.result.panes | any(.cwd == $cwd)' <<<"$pane_json" >/dev/null; then
+        workspace_id="$candidate_id"
+        break
+      fi
+    done < <(jq -r '.result.workspaces[].workspace_id' <<<"$workspace_json")
+  fi
+
+  if [[ -n $workspace_id ]]; then
+    herdr workspace focus "$workspace_id" >/dev/null || return 1
+  else
+    created="$(herdr workspace create --cwd "$selected" --label "$selected_name" --focus)" || return 1
+    pane_id="$(jq -r '.result.root_pane.pane_id' <<<"$created")"
+    if [[ $# -gt 0 && -n $pane_id && $pane_id != null ]]; then
+      herdr pane run "$pane_id" "$@" >/dev/null || return 1
+    fi
+  fi
+
+  if [[ ${HERDR_ENV:-} != 1 ]]; then
+    exec herdr
+  fi
+}
+
 cmd_tmux() {
   local selected selected_name
 
@@ -251,8 +305,34 @@ cmd_tmux() {
   tmux_attach_or_start "$selected" "$selected_name"
 }
 
+cmd_herdr() {
+  local selected selected_name
+
+  if [[ ${1:-} == "snippets" ]]; then
+    herdr_attach_or_start "$(snippets_dir)" snippets "nvim $(snippets_file)"
+    return
+  fi
+
+  if [[ $# -eq 1 ]]; then
+    selected=$1
+  else
+    selected="$(select_project "[[ -d {} ]] && eza -hla --color=always --icons --git-repos {}")"
+  fi
+
+  [[ -n $selected ]] || return
+
+  if [[ $selected == "snippets" ]]; then
+    herdr_attach_or_start "$(snippets_dir)" snippets "nvim $(snippets_file)"
+    return
+  fi
+
+  selected_name="$(project_name "$selected")"
+  herdr_attach_or_start "$selected" "$selected_name"
+}
+
 case "${1:-}" in
   tmux) shift; cmd_tmux "$@" ;;
+  herdr) shift; cmd_herdr "$@" ;;
   nvim) shift; cmd_nvim "$@" ;;
   nvim-attach) shift; cmd_nvim_attach "$@" ;;
   nvim-last) shift; cmd_nvim_last "$@" ;;
@@ -266,7 +346,7 @@ case "${1:-}" in
   snippets-dir) shift; snippets_dir "$@" ;;
   snippets-file) shift; snippets_file "$@" ;;
   *)
-    echo "Usage: sessionizer {tmux|nvim|nvim-attach|nvim-last|nvim-new|nvim-live|nvim-sockets|nvim-socket|folders|nvim-projects|project-name|snippets-dir|snippets-file} [args...]" >&2
+    echo "Usage: sessionizer {tmux|herdr|nvim|nvim-attach|nvim-last|nvim-new|nvim-live|nvim-sockets|nvim-socket|folders|nvim-projects|project-name|snippets-dir|snippets-file} [args...]" >&2
     exit 2
     ;;
 esac

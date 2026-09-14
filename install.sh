@@ -16,6 +16,8 @@
 # ln -fs "$HOME/.dotfiles/bash/.bashrc" "$HOME/.bashrc"
 
 # ln -fs $HOME/.dotfiles/.tmux.conf ~/.tmux.conf
+# mkdir -p "$HOME/.config/herdr"
+# ln -fs "$HOME/.dotfiles/herdr.toml" "$HOME/.config/herdr/config.toml"
 #
 # ln -fs $HOME/.dotfiles/nvim ~/.config 
 # ln -fs $HOME/.dotfiles/kitty.conf ~/.config/kitty/

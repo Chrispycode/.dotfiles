@@ -1,0 +1,33 @@
+onboarding = false
+
+[terminal]
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+a"
+reload_config = "prefix+shift+r"
+toggle_sidebar = "prefix+b"
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+resize_mode = "prefix+r"
+previous_tab = "prefix+ctrl+h"
+next_tab = "prefix+ctrl+l"
+split_vertical = "prefix+ctrl+v"
+split_horizontal = "prefix+ctrl+s"
+previous_workspace = "prefix+shift+l"
+last_pane = "prefix+tab"
+workspace_picker = "prefix+w"
+goto = "prefix+g"
+new_workspace = "prefix+shift+n"
+new_tab = "prefix+c"
+detach = "prefix+q"
+
+[[keys.command]]
+key = "prefix+ctrl+f"
+type = "popup"
+command = "~/.dotfiles/scripts/sessionizer herdr"
+description = "Open or focus project workspace"
+width = "80%"
+height = "80%"

@@ -13,7 +13,7 @@ fi
 
 # Install packages via Homebrew
 echo "Installing packages..."
-brew install neovim tmux fzf eza bat lazygit fastfetch starship zsh-autosuggestions zsh-syntax-highlighting ripgrep fd btop
+brew install neovim tmux herdr fzf eza bat lazygit fastfetch starship zsh-autosuggestions zsh-syntax-highlighting ripgrep fd btop
 
 # Optional: Install GUI apps via cask
 brew install --cask ghostty@tip 1password aerospace bazecor bruno finetune helium-browser karabiner-elements leader-key localsend monitorcontrol zed stats zen openvpn-connect
@@ -47,6 +47,11 @@ ln -fs "$HOME/.dotfiles/zsh/.zshrc" "$HOME/.config/zsh/.zshrc"
 # Setup tmux
 echo "Setting up tmux..."
 ln -fs "$HOME/.dotfiles/.tmux.conf" "$HOME/.tmux.conf"
+
+# Setup Herdr
+echo "Setting up Herdr..."
+mkdir -p "$HOME/.config/herdr"
+ln -fs "$HOME/.dotfiles/herdr.toml" "$HOME/.config/herdr/config.toml"
 
 # Setup neovim
 echo "Setting up neovim..."
