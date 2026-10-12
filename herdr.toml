@@ -22,12 +22,17 @@ workspace_picker = "prefix+w"
 goto = "prefix+g"
 new_workspace = "prefix+shift+n"
 new_tab = "prefix+c"
-detach = "prefix+q"
+detach = "prefix+d"
+settings = "prefix+shift+s"
 
 [[keys.command]]
 key = "prefix+ctrl+f"
 type = "popup"
 command = "~/.dotfiles/scripts/sessionizer herdr"
 description = "Open or focus project workspace"
-width = "80%"
-height = "80%"
+width = "90%"
+height = "90%"
+
+[theme]
+name = "terminal"
+auto_switch = false
