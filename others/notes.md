@@ -88,6 +88,7 @@ sudo make CMAKE_BUILD_TYPE=Release && sudo make install
 ## build
 
 sudo pacman -S gtk4 gtk4-layer-shell libadwaita gettext
+zig build -p $HOME/.local -Doptimize=ReleaseFast -Dinstalled-exe-path=$HOME/.local/bin/ghostty
 zig build -p $HOME/.local -Doptimize=ReleaseFast
 
 ## not building on cachy os 
@@ -104,9 +105,6 @@ add this to the service above exec in ~/.local/share/systemd/user/app-com.mitche
 Environment=GTK_IM_MODULE=simple
 ```
 
-# nautilus neovim ghostty fix
-
-sudo sed -i -E 's|^Exec=.*nvim %F$|Exec=ghostty +new-window -e nvim %F|; s|^Terminal=.*$|Terminal=false|' /usr/local/share/applications/nvim.desktop && sudo update-desktop-database /usr/local/share/applications
 
 # fix sddm using US layout
 localectl set-x11-keymap de
